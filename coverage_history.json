@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-02-26",
+    "total_ops": 913,
+    "torch_supported": 702,
+    "mindspore_supported": 428,
+    "both_supported": 389,
+    "torch_coverage_rate": 76.9,
+    "mindspore_coverage_rate": 46.9,
+    "both_coverage_rate": 42.6
+  }
+]
