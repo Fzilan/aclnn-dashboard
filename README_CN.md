@@ -107,7 +107,7 @@ python3 -m http.server 8000
 - 调度：每天 `UTC 02:00`
 - 自动拉取：
   - `https://gitcode.com/Ascend/op-plugin` 的 `master`
-  - `https://gitcode.com/machangwei/mindspore` 的 `master`
+  - `https://gitcode.com/mindspore/mindspore` 的 `master`
 - 执行 `run_pipeline.sh`
 - 产物变更时自动 commit & push
 

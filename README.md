@@ -109,7 +109,7 @@ Workflow: `.github/workflows/refresh-aclnn-dashboard.yml`
 - Schedule: daily at `UTC 02:00`
 - Pulls automatically:
   - `https://gitcode.com/Ascend/op-plugin` at `master`
-  - `https://gitcode.com/machangwei/mindspore` at `master`
+  - `https://gitcode.com/mindspore/mindspore` at `master`
 - Runs `run_pipeline.sh`
 - Auto commits and pushes when artifacts change
 
