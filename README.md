@@ -1,5 +1,7 @@
 # 🚀 ACLNN Supported Dashboard
 
+https://fzilan.github.io/aclnn-dashboard/
+
 Automatically generates and visualizes ACLNN support coverage across Torch-NPU and MindSpore, including:
 
 - Daily automated scanning and data refresh
