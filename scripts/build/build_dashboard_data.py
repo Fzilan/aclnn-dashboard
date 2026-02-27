@@ -6,9 +6,12 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from datetime import datetime
+import os
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+
+BJT = timezone(timedelta(hours=8))
 
 
 def parse_args() -> argparse.Namespace:
@@ -23,6 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--merged-csv", default=str(root / "data" / "reports" / "aclnn_to_all.csv"))
     parser.add_argument("--merged-md", default=str(root / "data" / "reports" / "aclnn_to_all.md"))
     parser.add_argument("--history-file", default=str(dashboard_dir / "coverage_history.json"))
+    parser.add_argument("--run-timestamp", default="")
     parser.add_argument("--output", default=str(dashboard_dir / "data.json"))
     return parser.parse_args()
 
@@ -75,7 +79,7 @@ def flag(raw: str) -> bool:
 
 
 def iso_mtime(path: Path) -> str:
-    return datetime.fromtimestamp(path.stat().st_mtime).isoformat(timespec="seconds")
+    return datetime.fromtimestamp(path.stat().st_mtime, tz=BJT).isoformat(timespec="seconds")
 
 
 def load_history(path: Path) -> list[dict[str, Any]]:
@@ -199,6 +203,11 @@ def build_data(args: argparse.Namespace) -> dict[str, Any]:
 
     latest_update = max(iso_mtime(path) for path in source_files)
     history = load_history(history_file)
+    pipeline_run_time = (
+        args.run_timestamp.strip()
+        or os.environ.get("DASHBOARD_PIPELINE_RUN_TIME", "").strip()
+        or datetime.now(BJT).replace(microsecond=0).isoformat()
+    )
     data = {
         "metrics": {
             "total_ops": total_ops,
@@ -212,7 +221,8 @@ def build_data(args: argparse.Namespace) -> dict[str, Any]:
             "mindspore_coverage_rate": round((ms_supported / total_ops) * 100, 1) if total_ops else 0.0,
             "both_coverage_rate": round((both_supported / total_ops) * 100, 1) if total_ops else 0.0,
             "last_update_time": latest_update,
-            "generated_at": datetime.now().isoformat(timespec="seconds"),
+            "generated_at": datetime.now(BJT).isoformat(timespec="seconds"),
+            "pipeline_run_time": pipeline_run_time,
             "torch_speed_pp_per_day_7d": speed_pp_per_day(history, "torch_coverage_rate", days=7),
             "mindspore_speed_pp_per_day_7d": speed_pp_per_day(history, "mindspore_coverage_rate", days=7),
         },

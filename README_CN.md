@@ -108,7 +108,7 @@ python3 -m http.server 8000
 
 工作流：`.github/workflows/refresh-aclnn-dashboard.yml`
 
-- 调度：每天 `UTC 02:00`
+- 调度：每天北京时间 `08:30`（即 `UTC 00:30`）
 - 自动拉取：
   - `https://gitcode.com/Ascend/op-plugin` 的 `master`
   - `https://gitcode.com/mindspore/mindspore` 的 `master`

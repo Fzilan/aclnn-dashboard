@@ -110,7 +110,7 @@ Open: `http://localhost:8000`
 
 Workflow: `.github/workflows/refresh-aclnn-dashboard.yml`
 
-- Schedule: daily at `UTC 02:00`
+- Schedule: daily at `08:30` Beijing Time (`UTC 00:30`)
 - Pulls automatically:
   - `https://gitcode.com/Ascend/op-plugin` at `master`
   - `https://gitcode.com/mindspore/mindspore` at `master`

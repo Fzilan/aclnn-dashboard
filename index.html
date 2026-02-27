@@ -46,7 +46,10 @@
           </p>
           <p class="mt-2 text-sm text-[color:var(--muted)]">Datasource: CANN 8.5 + Torch-NPU master + MindSpore master</p>
         </div>
-        <div class="text-sm text-[color:var(--muted)]">最后更新: {{ fmtTime(metrics.last_update_time) }}</div>
+        <div class="text-right text-sm text-[color:var(--muted)]">
+          <div>Last Data Update: {{ fmtTime(metrics.last_update_time) }}</div>
+          <div>Pipeline Run: {{ fmtTime(metrics.pipeline_run_time) }}</div>
+        </div>
       </div>
     </header>
 

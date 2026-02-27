@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${ROOT_DIR}"
+RUN_TIMESTAMP="$(TZ=Asia/Shanghai date +"%Y-%m-%dT%H:%M:%S+08:00")"
 
 OP_PLUGIN_ROOT=""
 MINDSPORE_ROOT=""
@@ -60,11 +61,12 @@ python3 scripts/scan/aclnn_merge_report.py \
   --out-csv data/reports/aclnn_to_all.csv \
   --out-md data/reports/aclnn_to_all.md
 
-python3 scripts/build/build_dashboard_data.py --output data.json
+python3 scripts/build/build_dashboard_data.py --run-timestamp "${RUN_TIMESTAMP}" --output data.json
 python3 scripts/build/update_coverage_history.py \
   --data-json data.json \
   --history-file coverage_history.json
 python3 scripts/build/build_dashboard_data.py \
+  --run-timestamp "${RUN_TIMESTAMP}" \
   --history-file coverage_history.json \
   --output data.json
 
