@@ -1,49 +1,49 @@
 {
   "metrics": {
     "total_ops": 913,
-    "torch_supported": 702,
-    "mindspore_supported": 428,
-    "both_supported": 389,
-    "torch_only": 313,
-    "mindspore_only": 39,
-    "unsupported": 172,
-    "torch_coverage_rate": 76.9,
-    "mindspore_coverage_rate": 46.9,
-    "both_coverage_rate": 42.6,
-    "last_update_time": "2026-02-26T16:51:07",
-    "generated_at": "2026-02-26T16:51:07",
-    "torch_speed_pp_per_day_7d": 0.0,
-    "mindspore_speed_pp_per_day_7d": 0.0
+    "torch_supported": 711,
+    "mindspore_supported": 431,
+    "both_supported": 391,
+    "torch_only": 320,
+    "mindspore_only": 40,
+    "unsupported": 162,
+    "torch_coverage_rate": 77.9,
+    "mindspore_coverage_rate": 47.2,
+    "both_coverage_rate": 42.8,
+    "last_update_time": "2026-02-27T02:53:42",
+    "generated_at": "2026-02-27T02:53:42",
+    "torch_speed_pp_per_day_7d": 1.0,
+    "mindspore_speed_pp_per_day_7d": 0.3
   },
   "meta": {
     "source_files": [
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-02-26T16:48:53"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
+        "mtime": "2026-02-27T02:52:18"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-02-26T16:51:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
+        "mtime": "2026-02-27T02:53:40"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-02-26T16:51:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
+        "mtime": "2026-02-27T02:53:40"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-02-26T16:51:06"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
+        "mtime": "2026-02-27T02:53:42"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-02-26T16:51:06"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
+        "mtime": "2026-02-27T02:53:42"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-02-26T16:51:07"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
+        "mtime": "2026-02-27T02:53:42"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-02-26T16:51:07"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
+        "mtime": "2026-02-27T02:53:42"
       }
     ],
     "markdown_row_counts": {
@@ -64,6 +64,16 @@
         "torch_coverage_rate": 76.9,
         "mindspore_coverage_rate": 46.9,
         "both_coverage_rate": 42.6
+      },
+      {
+        "date": "2026-02-27",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 431,
+        "both_supported": 391,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 47.2,
+        "both_coverage_rate": 42.8
       }
     ],
     "last_7_days": [
@@ -76,6 +86,16 @@
         "torch_coverage_rate": 76.9,
         "mindspore_coverage_rate": 46.9,
         "both_coverage_rate": 42.6
+      },
+      {
+        "date": "2026-02-27",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 431,
+        "both_supported": 391,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 47.2,
+        "both_coverage_rate": 42.8
       }
     ]
   },
@@ -338,7 +358,7 @@
           "adaptive_avg_pool2d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AdaptiveAvgPool2dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AdaptiveAvgPool2dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -629,7 +649,7 @@
           "adaptive_max_pool3d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AdaptiveMaxPool3dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AdaptiveMaxPool3dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -673,7 +693,7 @@
           "adaptive_max_pool3d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AdaptiveMaxPool3dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AdaptiveMaxPool3dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -720,7 +740,7 @@
           "add_out_npu_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -783,7 +803,7 @@
           "npu_add_layer_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddLayerNormKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddLayerNormKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -835,7 +855,7 @@
           "npu_add_layer_norm_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddLayerNormBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddLayerNormBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -882,7 +902,7 @@
           "npu_batch_gather_matmul_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BatchGatherMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BatchGatherMatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -1112,7 +1132,7 @@
           "npu_add_rms_norm_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddRmsNormQuantKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddRmsNormQuantKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -1164,7 +1184,7 @@
           "npu_add_rms_norm_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddRmsNormQuantKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddRmsNormQuantKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -1210,7 +1230,7 @@
           "addbmm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddbmmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddbmmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -1270,7 +1290,7 @@
           "addcdiv_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddcdivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddcdivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -1318,7 +1338,7 @@
           "addcmul_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddcmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddcmulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -1368,8 +1388,8 @@
           "npu_linear"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LinearKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LinearKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -1430,7 +1450,7 @@
           "addmm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -1477,7 +1497,7 @@
           "addmv_out_op_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddmvKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddmvKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -1575,7 +1595,7 @@
           "add_out_npu_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -1628,7 +1648,7 @@
           "npu_advance_step_flashattn"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AdvanceStepKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AdvanceStepKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -1667,7 +1687,7 @@
           "npu_advance_step_flashattn"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AdvanceStepKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AdvanceStepKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -1704,7 +1724,7 @@
           "OPS_ERROR"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AffineGridGeneratorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AffineGridGeneratorKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -1752,7 +1772,7 @@
           "all_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AllKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AllKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -1803,7 +1823,7 @@
           "npu_all_gather_base_mm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AllGatherBaseMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AllGatherBaseMatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -1847,7 +1867,8 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "npu_all_gather_base_mm"
+          "npu_all_gather_base_mm",
+          "npu_all_gather_quant_mm"
         ],
         "direct_match_ops": [],
         "evidence": [
@@ -1855,12 +1876,14 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "npu_all_gather_base_mm"
+          "npu_all_gather_base_mm",
+          "npu_all_gather_quant_mm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AllGatherBaseMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AllGatherBaseMatmulKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/AllGatherQuantMatmulKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -1937,8 +1960,8 @@
           "options"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AllToAllvGmmNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/GmmAllToAllvNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AllToAllvGmmNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/GmmAllToAllvNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -2065,7 +2088,7 @@
           "aminmax_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AminmaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AminmaxKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -2183,7 +2206,7 @@
           "any_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AnyKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AnyKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -2210,17 +2233,25 @@
     {
       "aclnn_api": "aclnnApplyAdamW",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_apply_adam_w.out"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_apply_adam_w_out"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/ApplyAdamWKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -2286,8 +2317,8 @@
           "size"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -2409,7 +2440,7 @@
           "npu_apply_rotary_pos_emb"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ApplyRotaryPosEmbNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ApplyRotaryPosEmbNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -2495,7 +2526,7 @@
           "arange_out_op_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ArangeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ArangeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -2551,7 +2582,7 @@
           "argmax_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ArgmaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ArgmaxKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -2608,7 +2639,7 @@
           "argmin_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ArgminKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ArgminKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -2697,7 +2728,7 @@
           "npu_anti_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AntiQuantKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AntiQuantKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -2724,21 +2755,19 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [
-          "npu_quantize"
-        ],
+        "via_ops": [],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "npu_quantize"
+          "npu_quantize_by_ascend_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantizeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantizeKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
       "mindspore": {
         "supported": true,
@@ -2775,21 +2804,19 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [
-          "npu_quantize"
-        ],
+        "via_ops": [],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "npu_quantize"
+          "npu_quantize_by_ascend_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantizeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantizeKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
       "mindspore": {
         "supported": false,
@@ -2960,7 +2987,7 @@
           "atan2_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/Atan2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/Atan2KernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3048,7 +3075,7 @@
           "npu_attention_update"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AttentionUpdateKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AttentionUpdateKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -3093,7 +3120,7 @@
           "avg_pool2d_out_npu_nocheck_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AvgPool2dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AvgPool2dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3158,7 +3185,7 @@
           "avg_pool2d_backward_out_npu_nocheck_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AvgPool2dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AvgPool2dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3216,7 +3243,7 @@
           "avg_pool3d_out_npu_nocheck_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AvgPool3dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AvgPool3dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3276,7 +3303,7 @@
           "avg_pool3d_backward_out_npu_nocheck_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AvgPool3dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AvgPool3dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3368,7 +3395,7 @@
           "baddbmm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BaddbmmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BaddbmmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -3427,8 +3454,8 @@
           "bmm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AffineGridGeneratorBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AffineGridGeneratorBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -3527,7 +3554,7 @@
           "bmm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3647,7 +3674,7 @@
           "native_batch_norm_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BatchNormBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BatchNormBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -3705,7 +3732,7 @@
           "batch_norm_elemt_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BatchNormElemtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BatchNormElemtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -3836,17 +3863,27 @@
     {
       "aclnn_api": "aclnnBatchNormReduce",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
-        "direct_match_ops": [],
-        "evidence": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "batch_norm_reduce"
+        ],
+        "direct_match_ops": [
+          "batch_norm_reduce"
+        ],
+        "evidence": [
+          "src_scan"
+        ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "cpp_funcs": [
+          "batch_norm_reduce"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/BatchNormReduceKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -3883,7 +3920,7 @@
           "batch_norm_backward_reduce"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BatchNormBackwardReduceKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BatchNormBackwardReduceKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -4345,7 +4382,7 @@
           "bincount"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BincountKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BincountKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -4403,7 +4440,7 @@
           "bitwise_and_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -4458,7 +4495,7 @@
           "bitwise_and_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -4554,7 +4591,7 @@
           "bitwise_or_out_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseOrKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseOrKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -4609,7 +4646,7 @@
           "bitwise_or_out_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseOrKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseOrKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -4659,7 +4696,7 @@
           "bitwise_xor_out_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -4714,7 +4751,7 @@
           "bitwise_xor_out_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -4886,7 +4923,7 @@
           "npu_dtype_cast_impl_op_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/CastKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/CastKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -4953,7 +4990,7 @@
           "cat_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/CatKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/CatKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -5585,7 +5622,7 @@
           "complex_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ComplexKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ComplexKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -5626,7 +5663,7 @@
           "constant_pad_nd"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ConstantPadNdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ConstantPadNdKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -5682,7 +5719,7 @@
           "_conv_depthwise2d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ConvDepthwise2dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ConvDepthwise2dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -5760,7 +5797,7 @@
           "conv_tbc_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ConvolutionBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ConvolutionBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -5849,8 +5886,8 @@
           "...(+3)"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ConvolutionKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NnpackSpatialConvolutionKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ConvolutionKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NnpackSpatialConvolutionKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_10_ops;src_only"
       },
@@ -5936,7 +5973,7 @@
           "slow_conv_transpose2d_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ConvolutionBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ConvolutionBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -6182,7 +6219,7 @@
           "_ctc_loss"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/CtcLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/CtcLossKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6258,7 +6295,7 @@
           "_cummax_helper"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/CummaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/CummaxKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6313,7 +6350,7 @@
           "_cummin_helper"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/CumminKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/CumminKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6410,7 +6447,7 @@
           "cumsum_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/CumsumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/CumsumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -6494,7 +6531,7 @@
           "npu_deep_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DeepNormKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DeepNormKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6533,7 +6570,7 @@
           "npu_deep_norm_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DeepNormBackwardKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DeepNormBackwardKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6636,8 +6673,8 @@
           "npu_rope_quant_kvcache"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DequantRopeQuantKVCacheKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/RopeQuantKVCacheKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DequantRopeQuantKVCacheKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/RopeQuantKVCacheKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -6676,7 +6713,7 @@
           "npu_dequant_swiglu_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DequantSwigluQuantOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DequantSwigluQuantOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6836,7 +6873,7 @@
           "_npu_distribute_barrier"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DistributeBarrierOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DistributeBarrierOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6875,7 +6912,7 @@
           "_npu_distribute_barrier"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DistributeBarrierOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DistributeBarrierOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -6928,7 +6965,7 @@
           "div_out_npu_opapi_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -6982,7 +7019,7 @@
           "div_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -7045,7 +7082,7 @@
           "div_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -7109,7 +7146,7 @@
           "div_out_npu_opapi_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -7288,7 +7325,7 @@
           "npu_dropout_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -7335,17 +7372,25 @@
     {
       "aclnn_api": "aclnnDropoutGenMask",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_dropout_gen_mask"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_dropout_gen_mask"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/DropoutGenMaskKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -7384,14 +7429,15 @@
           "_npu_dropout",
           "_npu_dropout_gen_mask",
           "dropout_gen_mask_impl",
+          "dropout_gen_mask_tensor_impl",
           "gen_mask_impl",
           "native_dropout"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DropoutGenMaskKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/FlashAttentionKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/FlashAttentionV2KernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DropoutGenMaskKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/FlashAttentionKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/FlashAttentionV2KernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -7445,10 +7491,12 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "_npu_dropout"
+          "_npu_dropout",
+          "dropout_gen_mask_tensor_impl"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FlashAttentionKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -7487,7 +7535,7 @@
           "npu_dynamic_block_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DynamicBlockQuantNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DynamicBlockQuantNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -7524,7 +7572,7 @@
           "npu_dynamic_quant_v0"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -7565,7 +7613,7 @@
           "npu_dynamic_quant_asymmetric"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -7735,7 +7783,7 @@
           "embedding_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EmbeddingKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EmbeddingKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -7794,7 +7842,7 @@
           "_embedding_bag_forward_only"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EmbeddingBagNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EmbeddingBagNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -7886,7 +7934,7 @@
           "embedding_renorm_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EmbeddingRenormKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EmbeddingRenormKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -7942,7 +7990,7 @@
           "eq_out_npu_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -8004,7 +8052,7 @@
           "eq_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -8049,7 +8097,7 @@
           "equal"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EqualKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EqualKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -8519,7 +8567,7 @@
           "eye_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EyeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EyeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -8620,7 +8668,7 @@
           "npu_ffn"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FFNKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FFNKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -8690,7 +8738,7 @@
           "fake_quantize_per_channel_affine_cachemask"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FakeQuantizeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FakeQuantizeKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -8729,7 +8777,7 @@
           "_fake_quantize_per_tensor_affine_cachemask_tensor_qparams"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FakeQuantizeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FakeQuantizeKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -8799,7 +8847,7 @@
           "npu_fast_gelu"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FastGeluNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FastGeluNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -8838,7 +8886,7 @@
           "npu_fast_gelu_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FastGeluNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FastGeluNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -9508,12 +9556,16 @@
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "yaml_only"
+        "cpp_funcs": [
+          "npu_kronecker_quant"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/KroneckerQuantKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -9675,7 +9727,7 @@
           "floor_divide_out_npu_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -9730,7 +9782,7 @@
           "floor_divide_out_npu_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -9870,7 +9922,7 @@
           "_split_and_exec_npu_cmd_abs"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAbsKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAbsKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -9914,7 +9966,7 @@
           "_split_and_exec_npu_cmd_acos"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAcosKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAcosKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -9952,8 +10004,8 @@
           "_foreach_add_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -9999,8 +10051,8 @@
           "_split_and_exec_npu_cmd_add"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10038,8 +10090,8 @@
           "_foreach_add_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -10085,8 +10137,8 @@
           "_split_and_exec_npu_cmd_add_scalarlist"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10132,8 +10184,8 @@
           "_split_and_exec_npu_cmd_add_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10202,7 +10254,7 @@
           "_foreach_addcdiv_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddcdivScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddcdivScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -10239,7 +10291,7 @@
           "_split_and_exec_npu_cmd_addcdiv_tensor"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddcdivTensorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddcdivTensorKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -10285,7 +10337,7 @@
           "_split_and_exec_npu_cmd_addcdiv_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddcdivScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddcdivScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10354,7 +10406,7 @@
           "_foreach_addcmul_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddcmulScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddcmulScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -10391,7 +10443,7 @@
           "_split_and_exec_npu_cmd_addcmul_tensor"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddcmulTensorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddcmulTensorKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -10437,7 +10489,7 @@
           "_split_and_exec_npu_cmd_addcmul_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAddcmulScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAddcmulScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10481,7 +10533,7 @@
           "_split_and_exec_npu_cmd_asin"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAsinKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAsinKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -10525,7 +10577,7 @@
           "_split_and_exec_npu_cmd_atan"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachAtanKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachAtanKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -10565,7 +10617,7 @@
           "exec_npu_cmd_copy"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachCopyKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachCopyKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -10609,7 +10661,7 @@
           "_split_and_exec_npu_cmd_cos"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachCosKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachCosKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -10653,7 +10705,7 @@
           "_split_and_exec_npu_cmd_cosh"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachCoshKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachCoshKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -10699,7 +10751,7 @@
           "_split_and_exec_npu_cmd_div"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10737,7 +10789,7 @@
           "_foreach_div_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -10783,7 +10835,7 @@
           "_split_and_exec_npu_cmd_div_scalar_list"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10829,7 +10881,7 @@
           "_split_and_exec_npu_cmd_div_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachDivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -10873,7 +10925,7 @@
           "_split_and_exec_npu_cmd_erf"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachErfKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachErfKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -10917,7 +10969,7 @@
           "_split_and_exec_npu_cmd_erfc"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachErfcKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachErfcKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -10961,7 +11013,7 @@
           "_split_and_exec_npu_cmd_exp"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachExpKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachExpKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11005,7 +11057,7 @@
           "_split_and_exec_npu_cmd_expm1"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachExpm1KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachExpm1KernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11048,8 +11100,8 @@
           "_foreach_lerp_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachLerpListKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachLerpScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLerpListKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLerpScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -11093,8 +11145,8 @@
           "adaptToDouble"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachLerpListKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachLerpScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLerpListKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLerpScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -11138,7 +11190,7 @@
           "_split_and_exec_npu_cmd_log"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachLogKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLogKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11182,7 +11234,7 @@
           "_split_and_exec_npu_cmd_log10"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachLog10KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLog10KernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11226,7 +11278,7 @@
           "_split_and_exec_npu_cmd_log1p"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachLog1pKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLog1pKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11270,7 +11322,7 @@
           "_split_and_exec_npu_cmd_log2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachLog2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachLog2KernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11316,7 +11368,7 @@
           "_split_and_exec_npu_cmd_max"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11354,7 +11406,7 @@
           "_foreach_maximum_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -11400,7 +11452,7 @@
           "_split_and_exec_npu_cmd_max_scalar_list"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11446,7 +11498,7 @@
           "_split_and_exec_npu_cmd_max_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMaximumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11492,7 +11544,7 @@
           "_split_and_exec_npu_cmd_min"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11530,7 +11582,7 @@
           "_foreach_minimum_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -11576,7 +11628,7 @@
           "_split_and_exec_npu_cmd_min_scalar_list"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11622,7 +11674,7 @@
           "_split_and_exec_npu_cmd_min_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMinimumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11668,8 +11720,8 @@
           "_split_and_exec_npu_cmd_mul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11707,7 +11759,7 @@
           "_foreach_mul_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -11753,8 +11805,8 @@
           "_split_and_exec_npu_cmd_mul_scalarlist"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11800,8 +11852,8 @@
           "_split_and_exec_npu_cmd_mul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachMulScalarKernelOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -11845,7 +11897,7 @@
           "_split_and_exec_npu_cmd_neg"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachNegKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachNegKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -11882,7 +11934,7 @@
           "_split_and_exec_npu_cmd_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AmpForeachNonFiniteCheckAndUnscaleKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AmpForeachNonFiniteCheckAndUnscaleKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -11924,7 +11976,7 @@
           "_split_and_exec_npu_cmd_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachNormKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachNormKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -11971,9 +12023,9 @@
           "_split_and_exec_npu_cmd_pow"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_7_ops;src_only"
       },
@@ -12011,7 +12063,7 @@
           "_foreach_pow_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -12054,9 +12106,9 @@
           "_split_and_exec_npu_cmd_pow_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -12103,9 +12155,9 @@
           "_split_and_exec_npu_cmd_pow_scalarlist"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_7_ops;src_only"
       },
@@ -12152,9 +12204,9 @@
           "_split_and_exec_npu_cmd_pow_kernel"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarAndTensorKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachPowScalarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_7_ops;src_only"
       },
@@ -12198,7 +12250,7 @@
           "_split_and_exec_npu_cmd_reciprocal"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachReciprocalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachReciprocalKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12236,7 +12288,7 @@
           "exec_npu_cmd_v2_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachRoundOffNumberKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachRoundOffNumberKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -12292,7 +12344,7 @@
           "...(+3)"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachRoundOffNumberKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachRoundOffNumberKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_10_ops;src_only"
       },
@@ -12336,7 +12388,7 @@
           "_split_and_exec_npu_cmd_sigmoid"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSigmoidKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSigmoidKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12380,7 +12432,7 @@
           "_split_and_exec_npu_cmd_sign"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSignKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSignKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12424,7 +12476,7 @@
           "_split_and_exec_npu_cmd_sin"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSinKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSinKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12468,7 +12520,7 @@
           "_split_and_exec_npu_cmd_sinh"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSinhKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSinhKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12512,7 +12564,7 @@
           "_split_and_exec_npu_cmd_sqrt"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSqrtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSqrtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12550,8 +12602,8 @@
           "_foreach_sub_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -12597,8 +12649,8 @@
           "_split_and_exec_npu_cmd_sub"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -12636,8 +12688,8 @@
           "_foreach_sub_v1_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -12683,8 +12735,8 @@
           "_split_and_exec_npu_cmd_sub_scalarlist"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -12730,8 +12782,8 @@
           "_split_and_exec_npu_cmd_sub_scalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ForeachSubScalarInplaceKernelOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -12775,7 +12827,7 @@
           "_split_and_exec_npu_cmd_tan"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachTanKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachTanKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12819,7 +12871,7 @@
           "_split_and_exec_npu_cmd_tanh"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachTanhKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachTanhKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -12859,7 +12911,7 @@
           "_split_and_exec_npu_cmd_zero"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ForeachZeroInplaceKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ForeachZeroInplaceKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -12945,7 +12997,7 @@
           "fused_cross_entropy_loss_with_max_sum"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13120,7 +13172,7 @@
           "fused_linear_cross_entropy_loss_with_max_sum_grad"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13161,7 +13213,7 @@
           "fused_linear_online_max_sum"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13209,7 +13261,7 @@
           "gather_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GatherKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GatherKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -13497,7 +13549,7 @@
           "npu_geglu"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeGluKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeGluKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13536,7 +13588,7 @@
           "npu_geglu_grad"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeGluKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeGluKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13579,7 +13631,7 @@
           "ge_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -13626,7 +13678,7 @@
           "ge_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -13658,20 +13710,20 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "gelu"
+          "gelu.out"
         ],
         "direct_match_ops": [
-          "gelu"
+          "gelu.out"
         ],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": false,
         "cpp_funcs": [
-          "gelu"
+          "gelu_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeluKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeluOutKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13718,7 +13770,7 @@
           "gelu_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeluBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeluBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -13773,7 +13825,7 @@
           "gelu_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeluBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeluBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;yaml+src"
       },
@@ -13848,7 +13900,7 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "gelu",
+          "gelu.out",
           "npu_gelu"
         ],
         "direct_match_ops": [],
@@ -13857,10 +13909,10 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "gelu"
+          "gelu_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeluKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeluOutKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;yaml+src"
       },
@@ -13934,7 +13986,7 @@
           "npu_gemma_rms_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GemmaRmsNormKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GemmaRmsNormKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -14383,7 +14435,7 @@
           "native_group_norm_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupNormBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupNormBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -14698,8 +14750,8 @@
           "options"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AllToAllvGmmNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/GmmAllToAllvNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AllToAllvGmmNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/GmmAllToAllvNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -14739,7 +14791,7 @@
           "npu_grouped_matmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -14767,17 +14819,21 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "npu_grouped_matmul_add",
-          "npu_grouped_matmul_add_"
+          "npu_grouped_matmul_add"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "shared_by_2_ops;yaml_only"
+        "cpp_funcs": [
+          "IsAclnnOnly",
+          "npu_grouped_matmul_add"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulAddNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -14845,7 +14901,7 @@
           "npu_grouped_matmul_finalize_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -14884,7 +14940,7 @@
           "npu_grouped_matmul_finalize_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -14923,7 +14979,7 @@
           "npu_grouped_matmul_finalize_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -14962,7 +15018,7 @@
           "npu_grouped_matmul_finalize_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -15183,7 +15239,7 @@
           "npu_grouped_matmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -15237,7 +15293,7 @@
           "npu_grouped_matmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -15277,7 +15333,7 @@
           "npu_grouped_matmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -15320,7 +15376,7 @@
           "gt_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -15363,7 +15419,7 @@
           "gt_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -15643,7 +15699,7 @@
           "hardswish_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/HardSwishBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/HardSwishBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -15884,7 +15940,7 @@
           "im2col_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/Im2colKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/Im2colKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -16109,7 +16165,7 @@
           "index_high_dims_op_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -16170,10 +16226,10 @@
           "index_add"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -16274,7 +16330,7 @@
           "index_fill"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -16314,7 +16370,7 @@
           "index_fill"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -16380,7 +16436,7 @@
           "index_put_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexPutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexPutKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -16443,7 +16499,7 @@
           "index_select_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexSelectKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexSelectKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -16598,7 +16654,7 @@
           "inplace_add_out_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -16670,17 +16726,27 @@
     {
       "aclnn_api": "aclnnInplaceAddRmsNorm",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_add_rms_norm_v2",
+          "npu_add_rms_norm_v2_functional"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_add_rms_norm_v2",
+          "npu_add_rms_norm_v2_functional"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/AddRmsNormV2KernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -16750,7 +16816,7 @@
           "addcdiv_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddcdivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddcdivKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -16791,7 +16857,7 @@
           "addcmul_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddcmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddcmulKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -16832,7 +16898,7 @@
           "addmm_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -16926,7 +16992,7 @@
           "inplace_add_out_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AddKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -17090,7 +17156,7 @@
           "atan2_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/Atan2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/Atan2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -17169,7 +17235,7 @@
           "attention_worker_scheduler"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AttentionWorkerSchedulerKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AttentionWorkerSchedulerKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;yaml+src"
       },
@@ -17247,7 +17313,7 @@
           "bernoulli_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BernoulliKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BernoulliKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -17304,7 +17370,7 @@
           "bernoulli_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BernoulliKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BernoulliKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -17367,7 +17433,7 @@
           "bitwise_and_inplace_op_api_out_npu_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -17408,7 +17474,7 @@
           "bitwise_and_inplace_op_api_out_npu_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseAndKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -17431,26 +17497,17 @@
     {
       "aclnn_api": "aclnnInplaceBitwiseOrScalar",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "__ior__.Scalar",
-          "__ior__.Tensor"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "__ior__"
-        ],
-        "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/__Ior__KernelNpuOpApi.cpp"
-        ],
-        "remarks": "shared_by_2_ops;src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -17471,26 +17528,17 @@
     {
       "aclnn_api": "aclnnInplaceBitwiseOrTensor",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "__ior__.Scalar",
-          "__ior__.Tensor"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "__ior__"
-        ],
-        "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/__Ior__KernelNpuOpApi.cpp"
-        ],
-        "remarks": "shared_by_2_ops;src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -17528,7 +17576,7 @@
           "bitwise_xor_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -17568,7 +17616,7 @@
           "bitwise_xor_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -17980,7 +18028,7 @@
           "inplace_div_out_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -18035,7 +18083,7 @@
           "inplace_div_out_mode_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -18090,7 +18138,7 @@
           "inplace_div_out_mode_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -18145,7 +18193,7 @@
           "inplace_div_out_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/DivKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -18254,7 +18302,7 @@
           "eq_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -18294,7 +18342,7 @@
           "eq_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/EqKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -18590,7 +18638,7 @@
           "ffn_worker_scheduler"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FfnWorkerSchedulerKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FfnWorkerSchedulerKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;yaml+src"
       },
@@ -18683,7 +18731,7 @@
           "fill_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -18765,7 +18813,7 @@
           "fill_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -18884,7 +18932,7 @@
           "inplace_floor_divide_out_npu_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -18941,7 +18989,7 @@
           "inplace_floor_divide_out_npu_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FloorDivideKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19104,7 +19152,7 @@
           "ge_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19144,7 +19192,7 @@
           "ge_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19184,7 +19232,7 @@
           "gt_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19224,7 +19272,7 @@
           "gt_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19447,7 +19495,7 @@
           "index_fill_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19487,7 +19535,7 @@
           "index_fill_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexFillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19549,7 +19597,7 @@
           "le_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19589,7 +19637,7 @@
           "le_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -19739,7 +19787,7 @@
           "log_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -19981,7 +20029,7 @@
           "logical_or_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogicalOrKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogicalOrKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -20021,7 +20069,7 @@
           "lt_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20061,7 +20109,7 @@
           "lt_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20101,7 +20149,7 @@
           "masked_fill_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaskedFillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaskedFillKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20161,7 +20209,7 @@
           "IsCPUScalar"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaskedFillKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaskedFillKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -20221,9 +20269,9 @@
           "check_memory"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -20323,7 +20371,7 @@
           "mish_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MishKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MishKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -20367,7 +20415,7 @@
           "mul_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20424,7 +20472,7 @@
           "mul_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20481,7 +20529,7 @@
           "nan_to_num_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NanToNumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NanToNumKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -20521,7 +20569,7 @@
           "ne_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20561,7 +20609,7 @@
           "ne_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -20633,7 +20681,7 @@
           "normal_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -20697,7 +20745,7 @@
           "normal_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -20745,8 +20793,8 @@
           "ones_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/OnesKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/OnesLikeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/OnesKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/OnesLikeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -20871,9 +20919,9 @@
           "check_memory"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -20961,7 +21009,7 @@
           "npu_quant_scatter_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantScatterKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantScatterKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21000,7 +21048,7 @@
           "rrelu_with_noise_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RReluWithNoiseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RReluWithNoiseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -21046,7 +21094,7 @@
           "random_op_api_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -21106,7 +21154,7 @@
           "random_op_api_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -21236,7 +21284,7 @@
           "remainder_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21288,7 +21336,7 @@
           "remainder_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21341,7 +21389,7 @@
           "renorm_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RenormKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RenormKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -21418,7 +21466,7 @@
           "round_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RoundDecimalsKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RoundDecimalsKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21498,7 +21546,7 @@
           "scatter_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21554,7 +21602,7 @@
           "scatter_update_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterUpdateKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterUpdateKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -21607,7 +21655,7 @@
           "scatter_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21902,7 +21950,7 @@
           "sub_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -21951,7 +21999,7 @@
           "sub_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -22043,7 +22091,7 @@
           "tanh_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/TanhKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/TanhKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -22100,7 +22148,7 @@
           "threshold_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ThresholdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ThresholdKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -22268,7 +22316,7 @@
           "uniform_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UniformKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UniformKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -22339,7 +22387,7 @@
           "uniform_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UniformKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UniformKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -22467,8 +22515,7 @@
           "zero_",
           "zeros",
           "zeros.names",
-          "zeros.out",
-          "zeros_like"
+          "zeros.out"
         ],
         "direct_match_ops": [
           "zero_"
@@ -22480,15 +22527,14 @@
         "cpp_funcs": [
           "zero_",
           "zeros",
-          "zeros_like",
           "zeros_out",
           "zeros_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ZerosKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ZerosLikeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ZerosKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ZerosLikeKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_5_ops;src_only"
+        "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -23071,7 +23117,7 @@
           "kthvalue_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/KthvalueKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/KthvalueKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -23214,10 +23260,13 @@
           "Tensor"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
+          "...(+1)"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -23270,7 +23319,7 @@
           "native_layer_norm_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LayerNormBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LayerNormBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -23358,7 +23407,7 @@
           "le_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -23401,11 +23450,11 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -23652,7 +23701,7 @@
     {
       "aclnn_api": "aclnnLightningIndexerGrad",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "mindspore_only",
       "torch": {
         "supported": false,
         "status": "未接入",
@@ -23665,35 +23714,64 @@
         "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
-        "supported": false,
-        "status": "未接入",
-        "pyboost": false,
-        "kbk": false,
-        "via_ops": [],
-        "direct_match_ops": [],
-        "evidence": [],
+        "supported": true,
+        "status": "已接入",
+        "pyboost": true,
+        "kbk": true,
+        "via_ops": [
+          "LightningIndexerGrad"
+        ],
+        "direct_match_ops": [
+          "LightningIndexerGrad"
+        ],
+        "evidence": [
+          "kernel_mod_src+pyboost_src+custom_dispatch"
+        ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "kernel_mod_files": [],
-        "pyboost_files": [],
-        "custom_dispatch_names": [],
-        "remarks": ""
+        "cpp_funcs": [
+          "LightningIndexerGradAscend",
+          "pyboost::lightning_indexer_grad"
+        ],
+        "kernel_mod_files": [
+          "kernel_mod_impl/customize/lightning_indexer_grad_aclnn_kernel.cc",
+          "kernel_mod_impl/customize/lightning_indexer_grad_aclnn_kernel.h"
+        ],
+        "pyboost_files": [
+          "pyboost_impl/customize/lightning_indexer_grad.cc"
+        ],
+        "custom_dispatch_names": [
+          "LightningIndexerGradAscend"
+        ],
+        "remarks": "pyboost_op_inferred_from_filename;has_custom_dispatch"
       }
     },
     {
       "aclnn_api": "aclnnLinalgCholesky",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
-        "direct_match_ops": [],
-        "evidence": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "linalg_cholesky",
+          "linalg_cholesky.out"
+        ],
+        "direct_match_ops": [
+          "linalg_cholesky",
+          "linalg_cholesky.out"
+        ],
+        "evidence": [
+          "src_scan"
+        ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "cpp_funcs": [
+          "linalg_cholesky",
+          "linalg_cholesky_out"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/LinalgCholeskyKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -23786,7 +23864,7 @@
           "linalg_qr_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LinalgQrKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LinalgQrKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -23846,7 +23924,7 @@
           "linalg_vector_norm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LinalgNormKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LinalgNormKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -23906,7 +23984,7 @@
           "linspace_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LinspaceKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LinspaceKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -23964,9 +24042,9 @@
           "log"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -24238,7 +24316,7 @@
           "log_sigmoid_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -24325,10 +24403,10 @@
           "log_sigmoid_forward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -24475,11 +24553,11 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -24650,7 +24728,7 @@
           "logical_or_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogicalOrKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogicalOrKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -24745,7 +24823,7 @@
           "logit_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogitKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogitKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -24786,7 +24864,7 @@
           "logit_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LogitBackwardKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LogitBackwardKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -24809,7 +24887,7 @@
     {
       "aclnn_api": "aclnnLtScalar",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "both",
       "torch": {
         "supported": true,
         "status": "已接入",
@@ -24829,24 +24907,38 @@
           "lt_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
-        "supported": false,
-        "status": "未接入",
-        "pyboost": false,
-        "kbk": false,
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "pyboost": true,
+        "kbk": true,
+        "via_ops": [
+          "LessScalar"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "kernel_mod_files": [],
-        "pyboost_files": [],
-        "custom_dispatch_names": [],
-        "remarks": ""
+        "evidence": [
+          "kernel_mod_src+pyboost_src+custom_dispatch"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "LessScalarAscend",
+          "pyboost::less_scalar"
+        ],
+        "kernel_mod_files": [
+          "kernel_mod_impl/customize/less_scalar_aclnn_kernel.cc",
+          "kernel_mod_impl/customize/less_scalar_aclnn_kernel.h"
+        ],
+        "pyboost_files": [
+          "pyboost_impl/customize/less_scalar.cc"
+        ],
+        "custom_dispatch_names": [
+          "LessScalarAscend"
+        ],
+        "remarks": "pyboost_op_inferred_from_filename;has_custom_dispatch"
       }
     },
     {
@@ -24872,7 +24964,7 @@
           "lt_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -24921,7 +25013,7 @@
           "masked_select_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaskedSelectKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaskedSelectKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -25010,11 +25102,11 @@
           "npu_attn_softmax_backward_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/FFTc2cKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulDoubleBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/FFTc2cKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulDoubleBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -25083,7 +25175,7 @@
           "npu_mm_all_reduce_base"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -25180,7 +25272,7 @@
           "npu_mm_all_reduce_base"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -25279,8 +25371,8 @@
           "size"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -25323,20 +25415,24 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [],
+        "via_ops": [
+          "npu_quant_mm_reduce_scatter"
+        ],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
+          "npu_quant_mm_reduce_scatter",
           "size"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantMatmulReduceScatterKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -25376,10 +25472,10 @@
           "mm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulDoubleBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MatmulKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulDoubleBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MatmulKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -25430,7 +25526,7 @@
           "max"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -25487,7 +25583,7 @@
           "max_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -25590,17 +25686,31 @@
     {
       "aclnn_api": "aclnnMaxPool2dWithIndices",
       "tag": "all",
-      "coverage_status": "mindspore_only",
+      "coverage_status": "both",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
-        "direct_match_ops": [],
-        "evidence": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "max_pool2d_with_indices",
+          "max_pool2d_with_indices.out"
+        ],
+        "direct_match_ops": [
+          "max_pool2d_with_indices",
+          "max_pool2d_with_indices.out"
+        ],
+        "evidence": [
+          "src_scan"
+        ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "cpp_funcs": [
+          "exec_max_pool2d_with_indices",
+          "max_pool2d_with_indices",
+          "max_pool2d_with_indices_out"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -25635,17 +25745,30 @@
     {
       "aclnn_api": "aclnnMaxPool2dWithIndicesBackward",
       "tag": "all",
-      "coverage_status": "mindspore_only",
+      "coverage_status": "both",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
-        "direct_match_ops": [],
-        "evidence": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "max_pool2d_with_indices_backward",
+          "max_pool2d_with_indices_backward.grad_input"
+        ],
+        "direct_match_ops": [
+          "max_pool2d_with_indices_backward",
+          "max_pool2d_with_indices_backward.grad_input"
+        ],
+        "evidence": [
+          "src_scan"
+        ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "cpp_funcs": [
+          "max_pool2d_with_indices_backward",
+          "max_pool2d_with_indices_backward_out"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesBackwardKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -25697,7 +25820,7 @@
           "max_pool2d_with_indices_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -25744,12 +25867,17 @@
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "shared_by_2_ops;yaml_only"
+        "cpp_funcs": [
+          "max_pool2d_with_indices_backward",
+          "max_pool2d_with_indices_backward_out"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesBackwardKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -25803,7 +25931,7 @@
           "max_pool3d_with_indices_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaxPool3dWithIndicesKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaxPool3dWithIndicesKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -25844,7 +25972,7 @@
           "max_pool3d_with_indices_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaxPool3dWithIndicesBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaxPool3dWithIndicesBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -26074,10 +26202,10 @@
           "maximum"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -26134,11 +26262,11 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -26322,7 +26450,7 @@
           "min"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -26379,7 +26507,7 @@
           "min_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -26471,7 +26599,7 @@
           "minimum_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -26521,7 +26649,7 @@
           "mish_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MishKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MishKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -26698,7 +26826,7 @@
           "npu_mla_prolog_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MlaPrologV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MlaPrologV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -26739,7 +26867,7 @@
           "npu_mla_prolog_v3_functional"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MlaPrologV3KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MlaPrologV3KernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -26787,8 +26915,8 @@
           "npu_linear_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LinearKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MmKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LinearKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MmKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -26944,7 +27072,7 @@
           "npu_moe_distribute_combine"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -26999,7 +27127,7 @@
           "npu_moe_distribute_combine_add_rms_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeCombineAddRmsNormKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeCombineAddRmsNormKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27038,7 +27166,7 @@
           "npu_moe_distribute_combine_add_rms_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeCombineAddRmsNormKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeCombineAddRmsNormKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27077,7 +27205,7 @@
           "npu_moe_distribute_combine_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelV2OpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelV2OpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27116,7 +27244,7 @@
           "npu_moe_distribute_combine_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelV2OpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelV2OpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27155,7 +27283,7 @@
           "npu_moe_distribute_combine_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelV2OpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeCombineKernelV2OpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27194,7 +27322,7 @@
           "npu_moe_distribute_dispatch"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27249,7 +27377,7 @@
           "npu_moe_distribute_dispatch_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchV2KernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchV2KernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27288,7 +27416,7 @@
           "npu_moe_distribute_dispatch_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchV2KernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchV2KernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27327,7 +27455,7 @@
           "npu_moe_distribute_dispatch_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchV2KernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeDistributeDispatchV2KernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27366,7 +27494,7 @@
           "npu_moe_finalize_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27405,7 +27533,7 @@
           "npu_moe_finalize_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27506,7 +27634,7 @@
           "npu_moe_gating_top_k"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeGatingTopKKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27545,7 +27673,7 @@
           "npu_moe_gating_top_k_softmax"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeGatingTopKSoftmaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKSoftmaxKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27568,17 +27696,25 @@
     {
       "aclnn_api": "aclnnMoeGatingTopKSoftmaxV2",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_moe_gating_top_k_softmax_v2"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_moe_gating_top_k_softmax_v2"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKSoftmaxV2KernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -27615,7 +27751,7 @@
           "npu_moe_init_routing"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeInitRoutingKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27685,7 +27821,7 @@
           "npu_moe_init_routing_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeInitRoutingQuantKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingQuantKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27735,7 +27871,7 @@
           "npu_moe_init_routing_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -27816,7 +27952,7 @@
           "npu_moe_init_routing_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -28009,7 +28145,7 @@
           "npu_moe_token_permute_with_routing_map"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -28046,7 +28182,7 @@
           "npu_moe_token_permute_with_routing_map_grad_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapGradOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapGradOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -28245,7 +28381,7 @@
           "_npu_moe_token_unpermute_with_routing_map"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -28284,7 +28420,7 @@
           "npu_moe_token_unpermute_with_routing_map_grad"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapGradKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapGradKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -28394,11 +28530,11 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -28541,7 +28677,7 @@
           "mul_out_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -28605,7 +28741,7 @@
           "mul_out_npu_no_check"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MulKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -28752,7 +28888,7 @@
           "multilabel_margin_loss_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MultilabelMarginLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MultilabelMarginLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -28794,10 +28930,13 @@
         "cpp_funcs": [
           "currentStreamCaptureStatusMayInitCtx",
           "multinomial",
-          "multinomial_out"
+          "multinomial_out",
+          "multinomial_top_k_top_p_sample",
+          "multinomial_top_k_top_p_sample_op_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MultinomialKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MultinomialKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/TopKTopPSampleKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -28843,10 +28982,12 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "currentStreamCaptureStatusMayInitCtx"
+          "currentStreamCaptureStatusMayInitCtx",
+          "multinomial_top_k_top_p_sample_op_api"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MultinomialKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MultinomialKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/TopKTopPSampleKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -28890,7 +29031,7 @@
           "mv_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MvKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MvKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -28947,7 +29088,7 @@
           "nll_loss_forward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NLLLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NLLLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29006,10 +29147,13 @@
           "nll_loss2d_forward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
+          "...(+1)"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29068,10 +29212,13 @@
           "nll_loss2d_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
+          "...(+1)"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29125,10 +29272,13 @@
           "nll_loss_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
+          "...(+1)"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29255,7 +29405,7 @@
           "nan_to_num_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NanToNumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NanToNumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29314,7 +29464,7 @@
           "ne_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -29377,7 +29527,7 @@
           "ne_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -29502,7 +29652,7 @@
           "nonzero_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NonzeroKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NonzeroKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29610,7 +29760,7 @@
           "norm_out_npu_nocheck_opapi"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -29735,7 +29885,7 @@
           "normal_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_8_ops;src_only"
       },
@@ -29798,7 +29948,7 @@
           "normal_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_8_ops;src_only"
       },
@@ -29861,7 +30011,7 @@
           "normal_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_8_ops;src_only"
       },
@@ -29924,7 +30074,7 @@
           "normal_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_8_ops;src_only"
       },
@@ -30393,7 +30543,7 @@
           "obfuscation_calculate"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ObfuscationCalculateKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ObfuscationCalculateKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -30465,8 +30615,8 @@
           "obfuscation_initialize"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ObfuscationFinalizeKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ObfuscationInitializeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ObfuscationFinalizeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ObfuscationInitializeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -30494,6 +30644,7 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
+          "npu_one_hot",
           "one_hot"
         ],
         "direct_match_ops": [
@@ -30504,12 +30655,13 @@
         ],
         "suspected_fusion": false,
         "cpp_funcs": [
+          "npu_one_hot",
           "one_hot"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/OneHotKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/OneHotKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -30560,7 +30712,7 @@
           "_pdist_forward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/PdistKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/PdistKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -30941,7 +31093,7 @@
           "_prelu_kernel_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/PreluBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/PreluBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -30990,7 +31142,7 @@
           "prod"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -31040,10 +31192,10 @@
           "prod"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -31216,17 +31368,26 @@
     {
       "aclnn_api": "aclnnQuantConvolution",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_quant_conv2d"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_quant_conv2d",
+          "npu_quant_conv2d_out"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/QuantConv2DKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -31329,7 +31490,7 @@
           "npu_mm_all_reduce_base"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -31399,7 +31560,7 @@
           "npu_mm_all_reduce_base"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -31447,7 +31608,7 @@
           "npu_mm_all_reduce_base"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -31521,7 +31682,7 @@
           "npu_quant_matmul_reduce_sum"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantMatmulReduceSumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantMatmulReduceSumKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -31606,23 +31767,17 @@
     {
       "aclnn_api": "aclnnQuantMatmulV4",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
+        "supported": false,
+        "status": "未接入",
         "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_quant_matmul_symint"
-        ],
-        "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -31659,19 +31814,21 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [],
+        "via_ops": [
+          "npu_quant_matmul"
+        ],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "npu_quant_matmul_symint"
+          "npu_quant_matmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": true,
@@ -31704,19 +31861,21 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [],
+        "via_ops": [
+          "npu_quant_matmul"
+        ],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "npu_quant_matmul_symint"
+          "npu_quant_matmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -31752,11 +31911,13 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "_quantize_per_channel_impl_out",
-          "_quantize_per_tensor_impl_out"
+          "_quantize_per_tensor_impl_out",
+          "npu_quantize_by_kernel"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/QuantizePerChannelKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/QuantizePerTensorKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/QuantizeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantizePerChannelKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/QuantizePerTensorKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -31828,7 +31989,7 @@
           "rrelu_with_noise_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RReluWithNoiseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RReluWithNoiseKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -31907,7 +32068,7 @@
           "randperm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -31965,7 +32126,7 @@
           "range_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RangeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RangeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -32082,7 +32243,7 @@
           "npu_recurrent_gated_delta_rule_functional"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RecurrentGatedDeltaRuleKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RecurrentGatedDeltaRuleKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -32150,11 +32311,11 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -32209,7 +32370,7 @@
           "sum"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SumKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -32581,7 +32742,7 @@
           "remainder"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -32631,7 +32792,7 @@
           "remainder_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -32681,7 +32842,7 @@
           "remainder_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -32731,7 +32892,7 @@
           "renorm_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RenormKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RenormKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -32829,7 +32990,7 @@
           "repeat_interleave_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -32874,7 +33035,7 @@
           "repeat_interleave_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -32923,7 +33084,7 @@
           "repeat_interleave_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -33011,7 +33172,7 @@
           "repeat_interleave_symint"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RepeatInterLeaveKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -33341,17 +33502,30 @@
     {
       "aclnn_api": "aclnnRightShift",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "__irshift__.Scalar",
+          "__irshift__.Tensor",
+          "__rshift__.Scalar",
+          "__rshift__.Tensor"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "__irshift__",
+          "__rshift__"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/__iRshift__KernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -33466,7 +33640,7 @@
           "npu_rms_norm"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RmsNormKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RmsNormKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -33521,7 +33695,7 @@
           "npu_rms_norm_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RmsNormBackwardKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RmsNormBackwardKernelOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -33559,12 +33733,16 @@
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "yaml_only"
+        "cpp_funcs": [
+          "npu_rms_norm_quant"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/RmsNormQuantKernelOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -33772,7 +33950,7 @@
           "npu_rotary_mul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RotaryMulKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RotaryMulKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -33817,7 +33995,7 @@
           "npu_rotary_mul_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RotaryMulBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RotaryMulBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -33919,7 +34097,7 @@
           "round_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/RoundDecimalsKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/RoundDecimalsKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -34090,7 +34268,7 @@
           "where_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/WhereKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/WhereKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -34153,7 +34331,8 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "_masked_softmax"
+          "_masked_softmax",
+          "npu_scaled_masked_softmax"
         ],
         "direct_match_ops": [],
         "evidence": [
@@ -34161,12 +34340,14 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "_masked_softmax"
+          "_masked_softmax",
+          "npu_scaled_masked_softmax"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MaskedSoftMaxKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaskedSoftMaxKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/ScaledMaskedSoftmaxKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -34187,17 +34368,25 @@
     {
       "aclnn_api": "aclnnScaledMaskedSoftmaxBackward",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_scaled_masked_softmax_backward"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_scaled_masked_softmax_backward"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/ScaledMaskedSoftmaxKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -34238,7 +34427,7 @@
           "scatter_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -34289,7 +34478,7 @@
           "scatter_add_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterAddKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterAddKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -34389,7 +34578,7 @@
           "npu_scatter_nd_update_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterNdUpdateKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterNdUpdateKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -34460,7 +34649,7 @@
           "scatter_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -34801,7 +34990,7 @@
           "sgn_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SignKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SignKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;yaml+src"
       },
@@ -34956,7 +35145,7 @@
           "_npu_silent_check_v2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SilentCheckV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SilentCheckV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -35007,7 +35196,7 @@
           "_npu_silent_check_v3"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SilentCheckV3KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SilentCheckV3KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -35115,12 +35304,16 @@
           "silu_backward.grad_input"
         ],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "shared_by_2_ops;yaml_only"
+        "cpp_funcs": [
+          "silu_backward"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/SiluBackwardKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -35161,7 +35354,7 @@
           "npu_sim_exponential_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SimExponentialNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SimExponentialNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -35446,7 +35639,7 @@
           "slogdet"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SlogdetKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SlogdetKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -35490,7 +35683,7 @@
           "smooth_l1_loss_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SmoothL1LossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SmoothL1LossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -35550,7 +35743,7 @@
           "smooth_l1_loss_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SmoothL1LossBackwrdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SmoothL1LossBackwrdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -35767,7 +35960,7 @@
           "npu_attn_softmax_backward_"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;yaml+src"
       },
@@ -36052,7 +36245,7 @@
           "sort_output"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SortKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SortKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_6_ops;src_only"
       },
@@ -36093,7 +36286,7 @@
     {
       "aclnn_api": "aclnnSparseFlashAttentionGrad",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "mindspore_only",
       "torch": {
         "supported": false,
         "status": "未接入",
@@ -36106,19 +36299,35 @@
         "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
-        "supported": false,
-        "status": "未接入",
-        "pyboost": false,
-        "kbk": false,
-        "via_ops": [],
-        "direct_match_ops": [],
-        "evidence": [],
+        "supported": true,
+        "status": "已接入",
+        "pyboost": true,
+        "kbk": true,
+        "via_ops": [
+          "SparseFlashAttentionGrad"
+        ],
+        "direct_match_ops": [
+          "SparseFlashAttentionGrad"
+        ],
+        "evidence": [
+          "kernel_mod_src+pyboost_src+custom_dispatch"
+        ],
         "suspected_fusion": false,
-        "cpp_funcs": [],
-        "kernel_mod_files": [],
-        "pyboost_files": [],
-        "custom_dispatch_names": [],
-        "remarks": ""
+        "cpp_funcs": [
+          "SparseFlashAttentionGradAscend",
+          "pyboost::sparse_flash_attention_grad"
+        ],
+        "kernel_mod_files": [
+          "kernel_mod_impl/customize/sparse_flash_attention_grad_aclnn_kernel.cc",
+          "kernel_mod_impl/customize/sparse_flash_attention_grad_aclnn_kernel.h"
+        ],
+        "pyboost_files": [
+          "pyboost_impl/customize/sparse_flash_attention_grad.cc"
+        ],
+        "custom_dispatch_names": [
+          "SparseFlashAttentionGradAscend"
+        ],
+        "remarks": "pyboost_op_inferred_from_filename;has_custom_dispatch"
       }
     },
     {
@@ -36217,7 +36426,7 @@
           "split_with_sizes_copy_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SplitWithSizesCopyNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SplitWithSizesCopyNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -36396,7 +36605,7 @@
           "std_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/StdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/StdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -36451,7 +36660,7 @@
           "std_mean"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/StdMeanKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/StdMeanKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -36541,7 +36750,7 @@
           "sub_out_npu_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -36604,7 +36813,7 @@
           "sub_out_npu_nocheck"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -36672,17 +36881,21 @@
     {
       "aclnn_api": "aclnnSvd",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "_linalg_svd.U"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
+        "evidence": [
+          "yaml_exec"
+        ],
+        "suspected_fusion": true,
         "cpp_funcs": [],
         "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "remarks": "yaml_only"
       },
       "mindspore": {
         "supported": false,
@@ -36832,7 +37045,7 @@
           "npu_swiglu_quant"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/SwigluquantKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/SwigluquantKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -36979,17 +37192,26 @@
     {
       "aclnn_api": "aclnnSyncBatchNormGatherStats",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "batch_norm_gather_stats_update"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "batch_norm_gather_stats_update",
+          "batch_norm_gather_stats_update_npu_impl"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/BatchNormGatherStatsUpdateKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -37131,7 +37353,7 @@
           "tanh_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/TanhKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/TanhKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -37306,7 +37528,7 @@
           "threshold_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/ThresholdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/ThresholdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -37400,21 +37622,17 @@
     {
       "aclnn_api": "aclnnTopKTopPSample",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_top_k_top_p_sample"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "yaml_exec"
-        ],
-        "suspected_fusion": true,
+        "evidence": [],
+        "suspected_fusion": false,
         "cpp_funcs": [],
         "cpp_files": [],
-        "remarks": "yaml_only"
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -37456,7 +37674,7 @@
           "topk_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/TopKKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/TopKKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -37635,8 +37853,8 @@
           "npu_weight_quant_batchmatmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/TransQuantParamKernelNpuOpApi.cpp",
-          "../op-plugin/op_plugin/ops/opapi/WeightQuantBatchMatmulV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/TransQuantParamKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/WeightQuantBatchMatmulV2KernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -37683,7 +37901,7 @@
           "npu_trans_quant_param"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/TransQuantParamKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/TransQuantParamKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -37724,7 +37942,7 @@
           "_transform_bias_rescale_qkv"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/TransfromBiasRescaleQKVKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/TransfromBiasRescaleQKVKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -37800,7 +38018,7 @@
           "exec_triangular_solve"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/LinalgSolveTriangularKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LinalgSolveTriangularKernelNpuOpApi.cpp"
         ],
         "remarks": "yaml+src;src_hit_but_op_name_unresolved"
       },
@@ -37983,7 +38201,7 @@
           "unfold_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UnfoldBackwardLernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UnfoldBackwardLernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -38024,7 +38242,7 @@
           "_unique"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/_UniqueKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/_UniqueKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -38074,7 +38292,7 @@
           "_unique2"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/Unique2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/Unique2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -38128,7 +38346,7 @@
           "unique_consecutive"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UniqueConsecutiveKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UniqueConsecutiveKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -38182,7 +38400,7 @@
           "unique_dim"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UniqueDimKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UniqueDimKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -38240,7 +38458,7 @@
           "upsample_bicubic2d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38297,7 +38515,7 @@
           "_upsample_bicubic2d_aa_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dAAKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dAAKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38338,7 +38556,7 @@
           "_upsample_bicubic2d_aa_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dAABackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dAABackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38382,7 +38600,7 @@
           "upsample_bicubic2d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBicubic2dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38439,7 +38657,7 @@
           "upsample_bilinear2d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38496,7 +38714,7 @@
           "_upsample_bilinear2d_aa_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dAAKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dAAKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38537,7 +38755,7 @@
           "_upsample_bilinear2d_aa_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dAABackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dAABackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38575,7 +38793,7 @@
           "upsample_bilinear2d_backward_old_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -38616,7 +38834,7 @@
           "upsample_bilinear2d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleBilinear2dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38673,7 +38891,7 @@
           "upsample_linear1d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleLinear1dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleLinear1dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38730,7 +38948,7 @@
           "upsample_linear1d_backward"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleLinear1dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleLinear1dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -38781,7 +38999,7 @@
           "upsample_nearest1d_old_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest1dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest1dKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -38841,7 +39059,7 @@
           "upsample_nearest1d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest1dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest1dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38895,7 +39113,7 @@
           "upsample_nearest1d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest1dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest1dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -38933,7 +39151,7 @@
           "upsample_nearest2d_old_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest2dKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest2dKernelOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -38993,7 +39211,7 @@
           "upsample_nearest2d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest2dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest2dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39047,7 +39265,7 @@
           "upsample_nearest2d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest2dKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest2dKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39091,7 +39309,7 @@
           "upsample_nearest3d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest3dKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest3dKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39151,7 +39369,7 @@
           "upsample_nearest3d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearest3dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearest3dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39208,7 +39426,7 @@
           "_upsample_nearest_exact1d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearestExact1dKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearestExact1dKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39252,7 +39470,7 @@
           "_upsample_nearest_exact1d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearestExact1dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearestExact1dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39296,7 +39514,7 @@
           "_upsample_nearest_exact2d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearestExact2dKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearestExact2dKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39340,7 +39558,7 @@
           "_upsample_nearest_exact2d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearestExact2dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearestExact2dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39384,7 +39602,7 @@
           "_upsample_nearest_exact3d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearestExact3dKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearestExact3dKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39428,7 +39646,7 @@
           "_upsample_nearest_exact3d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleNearestExact3dBackwardKernelOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleNearestExact3dBackwardKernelOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39473,7 +39691,7 @@
           "upsample_trilinear3d_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleTrilinear3dKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleTrilinear3dKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39534,7 +39752,7 @@
           "upsample_trilinear3d_backward_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/UpsampleTrilinear3dBackwardKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/UpsampleTrilinear3dBackwardKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39623,7 +39841,7 @@
           "var_out"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/VarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/VarKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -39676,7 +39894,7 @@
           "var_mean"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/VarKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/VarKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -39762,7 +39980,7 @@
           "npu_weight_quant_batchmatmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/WeightQuantBatchMatmulV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/WeightQuantBatchMatmulV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -39813,7 +40031,7 @@
           "npu_weight_quant_batchmatmul"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/WeightQuantBatchMatmulV2KernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/WeightQuantBatchMatmulV2KernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },
@@ -39852,7 +40070,7 @@
           "npu_mm_all_reduce_base"
         ],
         "cpp_files": [
-          "../op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
       },

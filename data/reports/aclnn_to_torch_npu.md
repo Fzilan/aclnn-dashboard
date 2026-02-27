@@ -40,7 +40,7 @@
 | aclnnAffineGrid | 已接入 | src_scan |  |  | True | OPS_ERROR | src_only;src_hit_but_op_name_unresolved |
 | aclnnAll | 已接入 | src_scan | all;all.all_out;all.dim;all.out | all;all.all_out;all.dim;all.out | False | all;all_out | shared_by_4_ops;src_only |
 | aclnnAllGatherMatmul | 已接入 | src_scan | npu_all_gather_base_mm |  | True | npu_all_gather_base_mm | src_only |
-| aclnnAllGatherMatmulV2 | 已接入 | src_scan | npu_all_gather_base_mm |  | True | npu_all_gather_base_mm | src_only |
+| aclnnAllGatherMatmulV2 | 已接入 | src_scan | npu_all_gather_base_mm;npu_all_gather_quant_mm |  | True | npu_all_gather_base_mm;npu_all_gather_quant_mm | shared_by_2_ops;src_only |
 | aclnnAlltoAllAllGatherBatchMatMul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAlltoAllvGroupedMatMul | 已接入 | src_scan |  |  | True | options | src_only;src_hit_but_op_name_unresolved |
 | aclnnAmax | 已接入 | yaml_exec | amax;amax.out | amax;amax.out | False |  | shared_by_2_ops;yaml_only |
@@ -49,7 +49,7 @@
 | aclnnAminmaxAll | 已接入 | yaml_exec | _aminmax |  | True |  | yaml_only |
 | aclnnAminmaxDim | 已接入 | yaml_exec | _aminmax.dim |  | True |  | yaml_only |
 | aclnnAny | 已接入 | src_scan | any;any.all_out;any.dim;any.out | any;any.all_out;any.dim;any.out | False | any;any_out | shared_by_4_ops;src_only |
-| aclnnApplyAdamW | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnApplyAdamW | 已接入 | src_scan | npu_apply_adam_w.out |  | True | npu_apply_adam_w_out | src_only |
 | aclnnApplyAdamWQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnApplyAdamWV2 | 已接入 | src_scan |  |  | True | size | src_only;src_hit_but_op_name_unresolved |
 | aclnnApplyFusedEmaAdam | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -61,8 +61,8 @@
 | aclnnArgMin | 已接入 | src_scan | argmin;argmin.out |  | True | argmin;argmin_exec;argmin_out | shared_by_2_ops;src_only |
 | aclnnArgsort | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAscendAntiQuant | 已接入 | src_scan | npu_anti_quant |  | True | npu_anti_quant | src_only |
-| aclnnAscendQuant | 已接入 | src_scan | npu_quantize |  | True | npu_quantize | src_only |
-| aclnnAscendQuantV3 | 已接入 | src_scan | npu_quantize |  | True | npu_quantize | src_only |
+| aclnnAscendQuant | 已接入 | src_scan |  |  | True | npu_quantize_by_ascend_quant | src_only;src_hit_but_op_name_unresolved |
+| aclnnAscendQuantV3 | 已接入 | src_scan |  |  | True | npu_quantize_by_ascend_quant | src_only;src_hit_but_op_name_unresolved |
 | aclnnAsin | 已接入 | yaml_exec | asin;asin.out | asin;asin.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAsinh | 已接入 | yaml_exec | asinh;asinh.out | asinh;asinh.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAtan | 已接入 | yaml_exec | atan;atan.out | atan;atan.out | False |  | shared_by_2_ops;yaml_only |
@@ -84,7 +84,7 @@
 | aclnnBatchNormElemt | 已接入 | src_scan | batch_norm_elemt;batch_norm_elemt.out | batch_norm_elemt;batch_norm_elemt.out | False | batch_norm_elemt;batch_norm_elemt_out | shared_by_2_ops;src_only |
 | aclnnBatchNormElemtBackward | 已接入 | yaml_exec | batch_norm_backward_elemt |  | True |  | yaml_only |
 | aclnnBatchNormGatherStatsWithCounts | 已接入 | yaml_exec | batch_norm_gather_stats_with_counts | batch_norm_gather_stats_with_counts | False |  | yaml_only |
-| aclnnBatchNormReduce | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnBatchNormReduce | 已接入 | src_scan | batch_norm_reduce | batch_norm_reduce | False | batch_norm_reduce | src_only |
 | aclnnBatchNormReduceBackward | 已接入 | src_scan | batch_norm_backward_reduce |  | True | batch_norm_backward_reduce | src_only |
 | aclnnBatchNormStats | 已接入 | yaml_exec | batch_norm_stats | batch_norm_stats | False |  | yaml_only |
 | aclnnBernoulli | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -163,9 +163,9 @@
 | aclnnDropout | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDropoutBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDropoutDoMask | 已接入 | src_scan | _npu_dropout;native_dropout;native_dropout_backward;npu_dropout_backward |  | True | _npu_dropout;native_dropout;native_dropout_backward;npu_dropout_backward | shared_by_4_ops;src_only |
-| aclnnDropoutGenMask | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnDropoutGenMaskV2 | 已接入 | src_scan | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout |  | True | _npu_dropout;_npu_dropout_gen_mask;dropout_gen_mask_impl;gen_mask_impl;native_dropout | shared_by_3_ops;src_only |
-| aclnnDropoutGenMaskV2Tensor | 已接入 | src_scan | _npu_dropout |  | True | _npu_dropout | src_only |
+| aclnnDropoutGenMask | 已接入 | src_scan | npu_dropout_gen_mask |  | True | npu_dropout_gen_mask | src_only |
+| aclnnDropoutGenMaskV2 | 已接入 | src_scan | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout |  | True | _npu_dropout;_npu_dropout_gen_mask;dropout_gen_mask_impl;dropout_gen_mask_tensor_impl;gen_mask_impl;native_dropout | shared_by_3_ops;src_only |
+| aclnnDropoutGenMaskV2Tensor | 已接入 | src_scan | _npu_dropout |  | True | _npu_dropout;dropout_gen_mask_tensor_impl | src_only |
 | aclnnDynamicBlockQuant | 已接入 | src_scan | npu_dynamic_block_quant |  | True | npu_dynamic_block_quant | src_only |
 | aclnnDynamicQuant | 已接入 | src_scan |  |  | True | npu_dynamic_quant_v0 | src_only;src_hit_but_op_name_unresolved |
 | aclnnDynamicQuantV2 | 已接入 | src_scan | npu_dynamic_quant;npu_dynamic_quant_asymmetric |  | True | npu_dynamic_quant;npu_dynamic_quant_asymmetric | shared_by_2_ops;src_only |
@@ -216,7 +216,7 @@
 | aclnnFlashAttentionVarLenScoreV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFlashAttentionVarLenScoreV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFlashAttentionVarLenScoreV5 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnFlatQuant | 已接入 | yaml_exec | npu_kronecker_quant |  | True |  | yaml_only |
+| aclnnFlatQuant | 已接入 | src_scan | npu_kronecker_quant |  | True | npu_kronecker_quant | src_only |
 | aclnnFlatten | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFlip | 已接入 | yaml_exec | flip | flip | False |  | yaml_only |
 | aclnnFloor | 已接入 | yaml_exec | floor;floor.out | floor;floor.out | False |  | shared_by_2_ops;yaml_only |
@@ -314,11 +314,11 @@
 | aclnnGeGluV3Backward | 已接入 | src_scan | npu_geglu_grad |  | True | npu_geglu_grad | src_only |
 | aclnnGeScalar | 已接入 | src_scan | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out |  | True | ge;ge_out | shared_by_4_ops;src_only |
 | aclnnGeTensor | 已接入 | src_scan | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out |  | True | ge;ge_out | shared_by_4_ops;src_only |
-| aclnnGelu | 已接入 | src_scan | gelu | gelu | False | gelu | src_only |
+| aclnnGelu | 已接入 | src_scan | gelu.out | gelu.out | False | gelu_out | src_only |
 | aclnnGeluBackward | 已接入 | src_scan | gelu_backward | gelu_backward | False | gelu_backward | src_only |
 | aclnnGeluBackwardV2 | 已接入 | yaml_exec+src_scan | gelu_backward;npu_gelu_backward |  | True | gelu_backward | shared_by_2_ops;yaml+src |
 | aclnnGeluMul | 已接入 | yaml_exec | npu_gelu_mul |  | True |  | yaml_only |
-| aclnnGeluV2 | 已接入 | yaml_exec+src_scan | gelu;npu_gelu |  | True | gelu | shared_by_2_ops;yaml+src |
+| aclnnGeluV2 | 已接入 | yaml_exec+src_scan | gelu.out;npu_gelu |  | True | gelu_out | shared_by_2_ops;yaml+src |
 | aclnnGemm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGemmaRmsNorm | 已接入 | src_scan | npu_gemma_rms_norm |  | True | npu_gemma_rms_norm | src_only |
 | aclnnGer | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -342,7 +342,7 @@
 | aclnnGroupedMatMulAllReduce | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatMulAlltoAllv | 已接入 | src_scan |  |  | True | options | src_only;src_hit_but_op_name_unresolved |
 | aclnnGroupedMatmul | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
-| aclnnGroupedMatmulAdd | 已接入 | yaml_exec | npu_grouped_matmul_add;npu_grouped_matmul_add_ |  | True |  | shared_by_2_ops;yaml_only |
+| aclnnGroupedMatmulAdd | 已接入 | src_scan | npu_grouped_matmul_add |  | True | IsAclnnOnly;npu_grouped_matmul_add | src_only |
 | aclnnGroupedMatmulFinalizeRouting | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulFinalizeRoutingV2 | 已接入 | src_scan | npu_grouped_matmul_finalize_routing |  | True | npu_grouped_matmul_finalize_routing | src_only |
 | aclnnGroupedMatmulFinalizeRoutingV3 | 已接入 | src_scan | npu_grouped_matmul_finalize_routing |  | True | npu_grouped_matmul_finalize_routing | src_only |
@@ -387,7 +387,7 @@
 | aclnnInplaceAcosh | 已接入 | yaml_exec | acosh_ | acosh_ | False |  | yaml_only |
 | aclnnInplaceAdd | 已接入 | src_scan | add_.Scalar;add_.Tensor | add_.Scalar;add_.Tensor | False | add_;inplace_add_out_npu_no_check | shared_by_2_ops;src_only |
 | aclnnInplaceAddRelu | 已接入 | yaml_exec | _add_relu_.Tensor | _add_relu_.Tensor | False |  | yaml_only |
-| aclnnInplaceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnInplaceAddRmsNorm | 已接入 | src_scan | npu_add_rms_norm_v2;npu_add_rms_norm_v2_functional |  | True | npu_add_rms_norm_v2;npu_add_rms_norm_v2_functional | shared_by_2_ops;src_only |
 | aclnnInplaceAddbmm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceAddcdiv | 已接入 | src_scan | addcdiv_ | addcdiv_ | False | addcdiv_ | src_only |
 | aclnnInplaceAddcmul | 已接入 | src_scan | addcmul_ | addcmul_ | False | addcmul_ | src_only |
@@ -405,8 +405,8 @@
 | aclnnInplaceBernoulliTensor | 已接入 | src_scan | bernoulli;bernoulli.out;bernoulli.p;bernoulli_.Tensor;bernoulli_.float |  | True | bernoulli;bernoulli_;bernoulli_out | shared_by_5_ops;src_only |
 | aclnnInplaceBitwiseAndScalar | 已接入 | src_scan | bitwise_and_.Scalar;bitwise_and_.Tensor |  | True | bitwise_and_;bitwise_and_inplace_op_api_out_npu_nocheck | shared_by_2_ops;src_only |
 | aclnnInplaceBitwiseAndTensor | 已接入 | src_scan | bitwise_and_.Scalar;bitwise_and_.Tensor |  | True | bitwise_and_;bitwise_and_inplace_op_api_out_npu_nocheck | shared_by_2_ops;src_only |
-| aclnnInplaceBitwiseOrScalar | 已接入 | src_scan | __ior__.Scalar;__ior__.Tensor |  | True | __ior__ | shared_by_2_ops;src_only |
-| aclnnInplaceBitwiseOrTensor | 已接入 | src_scan | __ior__.Scalar;__ior__.Tensor |  | True | __ior__ | shared_by_2_ops;src_only |
+| aclnnInplaceBitwiseOrScalar | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnInplaceBitwiseOrTensor | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceBitwiseXorScalar | 已接入 | src_scan | bitwise_xor_.Scalar;bitwise_xor_.Tensor |  | True | bitwise_xor_ | shared_by_2_ops;src_only |
 | aclnnInplaceBitwiseXorTensor | 已接入 | src_scan | bitwise_xor_.Scalar;bitwise_xor_.Tensor |  | True | bitwise_xor_ | shared_by_2_ops;src_only |
 | aclnnInplaceCeil | 已接入 | yaml_exec | ceil_ | ceil_ | False |  | yaml_only |
@@ -517,7 +517,7 @@
 | aclnnInplaceWeightQuantMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceXLogYScalarOther | 已接入 | yaml_exec | xlogy_.Scalar_Other |  | True |  | yaml_only |
 | aclnnInplaceXLogYTensor | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnInplaceZero | 已接入 | src_scan | zero_;zeros;zeros.names;zeros.out;zeros_like | zero_ | False | zero_;zeros;zeros_like;zeros_out;zeros_symint | shared_by_5_ops;src_only |
+| aclnnInplaceZero | 已接入 | src_scan | zero_;zeros;zeros.names;zeros.out | zero_ | False | zero_;zeros;zeros_out;zeros_symint | shared_by_4_ops;src_only |
 | aclnnInstanceNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInverse | 已接入 | yaml_exec | inverse;inverse.out | inverse;inverse.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnIou | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -544,7 +544,7 @@
 | aclnnLerps | 已接入 | yaml_exec | lerp.Scalar;lerp.Scalar_out |  | True |  | shared_by_2_ops;yaml_only |
 | aclnnLgamma | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnLightningIndexerGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnLinalgCholesky | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnLinalgCholesky | 已接入 | src_scan | linalg_cholesky;linalg_cholesky.out | linalg_cholesky;linalg_cholesky.out | False | linalg_cholesky;linalg_cholesky_out | shared_by_2_ops;src_only |
 | aclnnLinalgCross | 已接入 | yaml_exec | linalg_cross;linalg_cross.out | linalg_cross;linalg_cross.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnLinalgQr | 已接入 | src_scan | linalg_qr;linalg_qr.out | linalg_qr;linalg_qr.out | False | linalg_qr;linalg_qr_out | shared_by_2_ops;src_only |
 | aclnnLinalgVectorNorm | 已接入 | src_scan | linalg_vector_norm;linalg_vector_norm.out | linalg_vector_norm;linalg_vector_norm.out | False | linalg_vector_norm;linalg_vector_norm_out | shared_by_2_ops;src_only |
@@ -579,16 +579,16 @@
 | aclnnMatmulCompress | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMatmulCompressDequant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMatmulReduceScatter | 已接入 | src_scan |  |  | True | size | src_only;src_hit_but_op_name_unresolved |
-| aclnnMatmulReduceScatterV2 | 已接入 | src_scan |  |  | True | size | src_only;src_hit_but_op_name_unresolved |
+| aclnnMatmulReduceScatterV2 | 已接入 | src_scan | npu_quant_mm_reduce_scatter |  | True | npu_quant_mm_reduce_scatter;size | src_only |
 | aclnnMatmulWeightNz | 已接入 | src_scan | mm;mm.out |  | True | matmul_implement_npu;mm;mm_out | shared_by_2_ops;src_only |
 | aclnnMax | 已接入 | src_scan | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | False | max | shared_by_6_ops;src_only |
 | aclnnMaxDim | 已接入 | src_scan | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out |  | True | max;max_out | shared_by_6_ops;src_only |
 | aclnnMaxN | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMaxPool | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnMaxPool2dWithIndices | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnMaxPool2dWithIndicesBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnMaxPool2dWithIndices | 已接入 | src_scan | max_pool2d_with_indices;max_pool2d_with_indices.out | max_pool2d_with_indices;max_pool2d_with_indices.out | False | exec_max_pool2d_with_indices;max_pool2d_with_indices;max_pool2d_with_indices_out | shared_by_2_ops;src_only |
+| aclnnMaxPool2dWithIndicesBackward | 已接入 | src_scan | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input | False | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward_out | shared_by_2_ops;src_only |
 | aclnnMaxPool2dWithMask | 已接入 | src_scan | max_pool2d_with_indices;max_pool2d_with_indices.out |  | True | exec_max_pool2d_with_indices;max_pool2d_with_indices;max_pool2d_with_indices_out | shared_by_2_ops;src_only |
-| aclnnMaxPool2dWithMaskBackward | 已接入 | yaml_exec | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input |  | True |  | shared_by_2_ops;yaml_only |
+| aclnnMaxPool2dWithMaskBackward | 已接入 | src_scan | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input |  | True | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward_out | shared_by_2_ops;src_only |
 | aclnnMaxPool3dWithArgmax | 已接入 | src_scan | max_pool3d_with_indices;max_pool3d_with_indices.out |  | True | exec_max_pool3d_with_indices;max_pool3d_with_indices;max_pool3d_with_indices_out | shared_by_2_ops;src_only |
 | aclnnMaxPool3dWithArgmaxBackward | 已接入 | src_scan | max_pool3d_with_indices_backward;max_pool3d_with_indices_backward.grad_input |  | True | max_pool3d_with_indices_backward;max_pool3d_with_indices_backward_out | shared_by_2_ops;src_only |
 | aclnnMaxUnpool2d | 已接入 | yaml_exec | max_unpool2d;max_unpool2d.out | max_unpool2d;max_unpool2d.out | False |  | shared_by_2_ops;yaml_only |
@@ -632,7 +632,7 @@
 | aclnnMoeFusedTopk | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeGatingTopK | 已接入 | src_scan | npu_moe_gating_top_k |  | True | npu_moe_gating_top_k | src_only |
 | aclnnMoeGatingTopKSoftmax | 已接入 | src_scan | npu_moe_gating_top_k_softmax |  | True | npu_moe_gating_top_k_softmax | src_only |
-| aclnnMoeGatingTopKSoftmaxV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnMoeGatingTopKSoftmaxV2 | 已接入 | src_scan | npu_moe_gating_top_k_softmax_v2 |  | True | npu_moe_gating_top_k_softmax_v2 | src_only |
 | aclnnMoeInitRouting | 已接入 | src_scan | npu_moe_init_routing |  | True | npu_moe_init_routing | src_only |
 | aclnnMoeInitRoutingQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeInitRoutingQuantV2 | 已接入 | src_scan | npu_moe_init_routing_quant |  | True | npu_moe_init_routing_quant | src_only |
@@ -661,8 +661,8 @@
 | aclnnMultiScaleDeformableAttentionGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMultiScaleDeformableAttnFunction | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMultilabelMarginLoss | 已接入 | src_scan | multilabel_margin_loss.out;multilabel_margin_loss_forward;multilabel_margin_loss_forward.output | multilabel_margin_loss.out | False | multilabel_margin_loss_forward;multilabel_margin_loss_forward_out;multilabel_margin_loss_out | shared_by_3_ops;src_only |
-| aclnnMultinomial | 已接入 | src_scan | multinomial;multinomial.out | multinomial;multinomial.out | False | currentStreamCaptureStatusMayInitCtx;multinomial;multinomial_out | shared_by_2_ops;src_only |
-| aclnnMultinomialTensor | 已接入 | src_scan |  |  | True | currentStreamCaptureStatusMayInitCtx | src_only;src_hit_but_op_name_unresolved |
+| aclnnMultinomial | 已接入 | src_scan | multinomial;multinomial.out | multinomial;multinomial.out | False | currentStreamCaptureStatusMayInitCtx;multinomial;multinomial_out;multinomial_top_k_top_p_sample;multinomial_top_k_top_p_sample_op_api | shared_by_2_ops;src_only |
+| aclnnMultinomialTensor | 已接入 | src_scan |  |  | True | currentStreamCaptureStatusMayInitCtx;multinomial_top_k_top_p_sample_op_api | src_only;src_hit_but_op_name_unresolved |
 | aclnnMv | 已接入 | src_scan | mv;mv.out | mv;mv.out | False | mv;mv_out | shared_by_2_ops;src_only |
 | aclnnNLLLoss | 已接入 | src_scan | nll_loss_forward;nll_loss_forward.output |  | True | nll_loss_forward;nll_loss_forward_out | shared_by_2_ops;src_only |
 | aclnnNLLLoss2d | 已接入 | src_scan | nll_loss2d_forward;nll_loss2d_forward.output |  | True | Tensor;nll_loss2d_forward | shared_by_2_ops;src_only |
@@ -697,7 +697,7 @@
 | aclnnObfuscationCalculateV2 | 已接入 | src_scan | obfuscation_calculate |  | True | obfuscation_calculate | src_only |
 | aclnnObfuscationSetup | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnObfuscationSetupV2 | 已接入 | src_scan | obfuscation_finalize;obfuscation_initialize |  | True | obfuscation_finalize;obfuscation_initialize | shared_by_2_ops;src_only |
-| aclnnOneHot | 已接入 | src_scan | one_hot | one_hot | False | one_hot | src_only |
+| aclnnOneHot | 已接入 | src_scan | npu_one_hot;one_hot | one_hot | False | npu_one_hot;one_hot | shared_by_2_ops;src_only |
 | aclnnPdist | 已接入 | src_scan | _pdist_forward |  | True | _pdist_forward | src_only |
 | aclnnPdistForward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnPermute | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -714,7 +714,7 @@
 | aclnnPromptFlashAttentionV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnPromptFlashAttentionV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQr | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnQuantConvolution | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnQuantConvolution | 已接入 | src_scan | npu_quant_conv2d |  | True | npu_quant_conv2d;npu_quant_conv2d_out | src_only |
 | aclnnQuantGroupedMatmulDequant | 已接入 | yaml_exec | npu_quant_grouped_matmul_dequant |  | True |  | yaml_only |
 | aclnnQuantMatmul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulAllReduce | 已接入 | src_scan | npu_mm_all_reduce_base |  | True | npu_mm_all_reduce_base | src_only |
@@ -725,10 +725,10 @@
 | aclnnQuantMatmulReduceSumWeightNz | 已接入 | src_scan | npu_quant_matmul_reduce_sum |  | True | npu_quant_matmul_reduce_sum | src_only |
 | aclnnQuantMatmulV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnQuantMatmulV4 | 已接入 | src_scan |  |  | True | npu_quant_matmul_symint | src_only;src_hit_but_op_name_unresolved |
-| aclnnQuantMatmulV5 | 已接入 | src_scan |  |  | True | npu_quant_matmul_symint | src_only;src_hit_but_op_name_unresolved |
-| aclnnQuantMatmulWeightNz | 已接入 | src_scan |  |  | True | npu_quant_matmul_symint | src_only;src_hit_but_op_name_unresolved |
-| aclnnQuantize | 已接入 | src_scan | _quantize_per_channel_impl.out;_quantize_per_tensor_impl.out |  | True | _quantize_per_channel_impl_out;_quantize_per_tensor_impl_out | shared_by_2_ops;src_only |
+| aclnnQuantMatmulV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnQuantMatmulV5 | 已接入 | src_scan | npu_quant_matmul |  | True | npu_quant_matmul | src_only |
+| aclnnQuantMatmulWeightNz | 已接入 | src_scan | npu_quant_matmul |  | True | npu_quant_matmul | src_only |
+| aclnnQuantize | 已接入 | src_scan | _quantize_per_channel_impl.out;_quantize_per_tensor_impl.out |  | True | _quantize_per_channel_impl_out;_quantize_per_tensor_impl_out;npu_quantize_by_kernel | shared_by_2_ops;src_only |
 | aclnnQuantizedBatchNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRReluWithNoise | 已接入 | src_scan | rrelu_with_noise;rrelu_with_noise.out |  | True | rrelu_with_noise;rrelu_with_noise_out | shared_by_2_ops;src_only |
 | aclnnRainFusionAttention | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -764,12 +764,12 @@
 | aclnnReplicationPad3d | 已接入 | yaml_exec | replication_pad3d;replication_pad3d.out | replication_pad3d;replication_pad3d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnReplicationPad3dBackward | 已接入 | yaml_exec | replication_pad3d_backward;replication_pad3d_backward.grad_input | replication_pad3d_backward;replication_pad3d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnResize | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnRightShift | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnRightShift | 已接入 | src_scan | __irshift__.Scalar;__irshift__.Tensor;__rshift__.Scalar;__rshift__.Tensor |  | True | __irshift__;__rshift__ | shared_by_4_ops;src_only |
 | aclnnRingAttentionUpdate | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRingAttentionUpdateV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRmsNorm | 已接入 | src_scan | npu_rms_norm |  | True | npu_rms_norm | src_only |
 | aclnnRmsNormGrad | 已接入 | src_scan | npu_rms_norm_backward |  | True | npu_rms_norm_backward | src_only |
-| aclnnRmsNormQuant | 已接入 | yaml_exec | npu_rms_norm_quant |  | True |  | yaml_only |
+| aclnnRmsNormQuant | 已接入 | src_scan | npu_rms_norm_quant |  | True | npu_rms_norm_quant | src_only |
 | aclnnRoiAlign | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRoiAlignV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRoiAlignV2Backward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -784,8 +784,8 @@
 | aclnnRsubs | 已接入 | yaml_exec | rsub.Scalar |  | True |  | yaml_only |
 | aclnnSWhere | 已接入 | src_scan | where;where.self;where.self_out |  | True | where;where_out | shared_by_3_ops;src_only |
 | aclnnScale | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnScaledMaskedSoftmax | 已接入 | src_scan | _masked_softmax |  | True | _masked_softmax | src_only |
-| aclnnScaledMaskedSoftmaxBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnScaledMaskedSoftmax | 已接入 | src_scan | _masked_softmax;npu_scaled_masked_softmax |  | True | _masked_softmax;npu_scaled_masked_softmax | shared_by_2_ops;src_only |
+| aclnnScaledMaskedSoftmaxBackward | 已接入 | src_scan | npu_scaled_masked_softmax_backward |  | True | npu_scaled_masked_softmax_backward | src_only |
 | aclnnScatter | 已接入 | src_scan | scatter.src_out;scatter.value_out | scatter.src_out;scatter.value_out | False | scatter_out | shared_by_2_ops;src_only |
 | aclnnScatterAdd | 已接入 | src_scan | scatter_add;scatter_add.dimname;scatter_add_ | scatter_add;scatter_add.dimname | False | scatter_add;scatter_add_ | shared_by_3_ops;src_only |
 | aclnnScatterNd | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -806,7 +806,7 @@
 | aclnnSilentCheck | 已接入 | src_scan | _npu_silent_check_v2 |  | True | _npu_silent_check_v2 | src_only |
 | aclnnSilentCheckV2 | 已接入 | src_scan | _npu_silent_check_v3 |  | True | _npu_silent_check_v3 | src_only |
 | aclnnSilu | 已接入 | yaml_exec | silu;silu.out;silu_ | silu;silu.out | False |  | shared_by_3_ops;yaml_only |
-| aclnnSiluBackward | 已接入 | yaml_exec | silu_backward;silu_backward.grad_input | silu_backward;silu_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
+| aclnnSiluBackward | 已接入 | src_scan | silu_backward;silu_backward.grad_input | silu_backward;silu_backward.grad_input | False | silu_backward | shared_by_2_ops;src_only |
 | aclnnSimThreadExponential | 已接入 | src_scan | npu_sim_exponential_ |  | True | npu_sim_exponential_ | src_only |
 | aclnnSin | 已接入 | yaml_exec | sin;sin.out | sin;sin.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnSinc | 已接入 | yaml_exec | sinc;sinc.out | sinc;sinc.out | False |  | shared_by_2_ops;yaml_only |
@@ -840,7 +840,7 @@
 | aclnnSub | 已接入 | src_scan | sub.Scalar;sub.Tensor;sub.out | sub.Scalar;sub.Tensor;sub.out | False | sub;sub_out;sub_out_npu_nocheck | shared_by_3_ops;src_only |
 | aclnnSubs | 已接入 | src_scan | sub.Scalar;sub.Tensor;sub.out |  | True | sub;sub_out;sub_out_npu_nocheck | shared_by_3_ops;src_only |
 | aclnnSum | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnSvd | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnSvd | 已接入 | yaml_exec | _linalg_svd.U |  | True |  | yaml_only |
 | aclnnSwiGlu | 已接入 | yaml_exec | npu_swiglu |  | True |  | yaml_only |
 | aclnnSwiGluGrad | 已接入 | yaml_exec | npu_swiglu_backward |  | True |  | yaml_only |
 | aclnnSwiGluQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -849,7 +849,7 @@
 | aclnnSwinTransformerLnQkvQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwish | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwishBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnSyncBatchNormGatherStats | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnSyncBatchNormGatherStats | 已接入 | src_scan | batch_norm_gather_stats_update |  | True | batch_norm_gather_stats_update;batch_norm_gather_stats_update_npu_impl | src_only |
 | aclnnTake | 已接入 | yaml_exec | take;take.out | take;take.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnTan | 已接入 | yaml_exec | tan;tan.out | tan;tan.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnTanh | 已接入 | src_scan | tanh;tanh.out | tanh;tanh.out | False | tanh;tanh_out | shared_by_2_ops;src_only |
@@ -858,7 +858,7 @@
 | aclnnThreeInterpolateBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnThreshold | 已接入 | src_scan | threshold;threshold.out | threshold;threshold.out | False | threshold;threshold_out | shared_by_2_ops;src_only |
 | aclnnThresholdBackward | 已接入 | yaml_exec | threshold_backward | threshold_backward | False |  | yaml_only |
-| aclnnTopKTopPSample | 已接入 | yaml_exec | npu_top_k_top_p_sample |  | True |  | yaml_only |
+| aclnnTopKTopPSample | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnTopk | 已接入 | src_scan | topk;topk.values | topk;topk.values | False | topk;topk_out | shared_by_2_ops;src_only |
 | aclnnTrace | 已接入 | yaml_exec | trace | trace | False |  | yaml_only |
 | aclnnTransConvolutionWeight | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

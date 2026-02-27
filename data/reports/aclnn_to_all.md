@@ -1,11 +1,11 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：702 / 913（76.9%）
-- mindspore 已接入：428 / 913（46.9%）
-- 两者都接入：389 / 913（42.6%）
-- 仅 torch-npu：313 / 913（34.3%）
-- 仅 mindspore：39 / 913（4.3%）
+- torch-npu 已接入：711 / 913（77.9%）
+- mindspore 已接入：431 / 913（47.2%）
+- 两者都接入：391 / 913（42.8%）
+- 仅 torch-npu：320 / 913（35.0%）
+- 仅 mindspore：40 / 913（4.4%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
 复算命令：`python3 scripts/scan/aclnn_merge_report.py --torch-npu-csv data/reports/aclnn_to_torch_npu.csv --mindspore-csv data/reports/aclnn_to_mindspore.csv --out-md data/reports/aclnn_to_all.md --out-csv data/reports/aclnn_to_all.csv`
@@ -50,7 +50,7 @@
 | aclnnAffineGrid | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAll | ✅ | all;all.all_out;all.dim;all.out | ✅ | ✅ | ✅ | ReduceAll |
 | aclnnAllGatherMatmul | ✅ | npu_all_gather_base_mm | ✅ | ✅ | ✅ | AllGatherMatmul |
-| aclnnAllGatherMatmulV2 | ✅ | npu_all_gather_base_mm | ✖️ | ✖️ | ✖️ |  |
+| aclnnAllGatherMatmulV2 | ✅ | npu_all_gather_base_mm;npu_all_gather_quant_mm | ✖️ | ✖️ | ✖️ |  |
 | aclnnAlltoAllAllGatherBatchMatMul | ✖️ |  | ✅ | ✖️ | ✅ | AlltoAllAllGatherBatchMatMul |
 | aclnnAlltoAllvGroupedMatMul | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAmax | ✅ | amax;amax.out | ✅ | ✅ | ✅ | ReduceMax |
@@ -59,7 +59,7 @@
 | aclnnAminmaxAll | ✅ | _aminmax | ✖️ | ✖️ | ✖️ |  |
 | aclnnAminmaxDim | ✅ | _aminmax.dim | ✖️ | ✖️ | ✖️ |  |
 | aclnnAny | ✅ | any;any.all_out;any.dim;any.out | ✅ | ✅ | ✅ | ReduceAny |
-| aclnnApplyAdamW | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnApplyAdamW | ✅ | npu_apply_adam_w.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnApplyAdamWQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnApplyAdamWV2 | ✅ |  | ✅ | ✅ | ✅ | AdamW;Adamw |
 | aclnnApplyFusedEmaAdam | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -71,8 +71,8 @@
 | aclnnArgMin | ✅ | argmin;argmin.out | ✅ | ✅ | ✅ | ArgMinExt;ArgminExt |
 | aclnnArgsort | ✖️ |  | ✅ | ✅ | ✅ |  |
 | aclnnAscendAntiQuant | ✅ | npu_anti_quant | ✖️ | ✖️ | ✖️ |  |
-| aclnnAscendQuant | ✅ | npu_quantize | ✅ | ✅ | ✅ | QuantV2 |
-| aclnnAscendQuantV3 | ✅ | npu_quantize | ✖️ | ✖️ | ✖️ |  |
+| aclnnAscendQuant | ✅ |  | ✅ | ✅ | ✅ | QuantV2 |
+| aclnnAscendQuantV3 | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAsin | ✅ | asin;asin.out | ✅ | ✅ | ✅ | AsinExt |
 | aclnnAsinh | ✅ | asinh;asinh.out | ✅ | ✅ | ✅ | AsinhExt |
 | aclnnAtan | ✅ | atan;atan.out | ✅ | ✅ | ✅ | AtanExt |
@@ -94,7 +94,7 @@
 | aclnnBatchNormElemt | ✅ | batch_norm_elemt;batch_norm_elemt.out | ✅ | ✅ | ✅ | BatchNormElemt |
 | aclnnBatchNormElemtBackward | ✅ | batch_norm_backward_elemt | ✅ | ✅ | ✅ | BatchNormElemtGrad |
 | aclnnBatchNormGatherStatsWithCounts | ✅ | batch_norm_gather_stats_with_counts | ✅ | ✅ | ✅ | BatchNormGatherStatsWithCounts |
-| aclnnBatchNormReduce | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnBatchNormReduce | ✅ | batch_norm_reduce | ✖️ | ✖️ | ✖️ |  |
 | aclnnBatchNormReduceBackward | ✅ | batch_norm_backward_reduce | ✅ | ✅ | ✅ | BatchNormReduceGrad |
 | aclnnBatchNormStats | ✅ | batch_norm_stats | ✅ | ✅ | ✅ | BatchNormStats |
 | aclnnBernoulli | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -173,7 +173,7 @@
 | aclnnDropout | ✖️ |  | ✅ | ✖️ | ✅ | DropoutExt |
 | aclnnDropoutBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDropoutDoMask | ✅ | _npu_dropout;native_dropout;native_dropout_backward;npu_dropout_backward | ✅ | ✅ | ✅ | DropoutDoMaskExt;DropoutExt;DropoutGradExt |
-| aclnnDropoutGenMask | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnDropoutGenMask | ✅ | npu_dropout_gen_mask | ✖️ | ✖️ | ✖️ |  |
 | aclnnDropoutGenMaskV2 | ✅ | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout | ✅ | ✅ | ✅ | DropoutExt;DropoutGenMaskExt |
 | aclnnDropoutGenMaskV2Tensor | ✅ | _npu_dropout | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicBlockQuant | ✅ | npu_dynamic_block_quant | ✖️ | ✖️ | ✖️ |  |
@@ -324,11 +324,11 @@
 | aclnnGeGluV3Backward | ✅ | npu_geglu_grad | ✖️ | ✖️ | ✖️ |  |
 | aclnnGeScalar | ✅ | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out | ✅ | ✅ | ✅ | GreaterEqualScalar |
 | aclnnGeTensor | ✅ | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out | ✅ | ✅ | ✅ | GreaterEqual |
-| aclnnGelu | ✅ | gelu | ✅ | ✅ | ✅ | GeLU |
+| aclnnGelu | ✅ | gelu.out | ✅ | ✅ | ✅ | GeLU |
 | aclnnGeluBackward | ✅ | gelu_backward | ✅ | ✅ | ✅ | GeLUGrad;GeluGrad |
 | aclnnGeluBackwardV2 | ✅ | gelu_backward;npu_gelu_backward | ✅ | ✅ | ✅ | GeluGradExt |
 | aclnnGeluMul | ✅ | npu_gelu_mul | ✖️ | ✖️ | ✖️ |  |
-| aclnnGeluV2 | ✅ | gelu;npu_gelu | ✅ | ✅ | ✅ | GeluExt |
+| aclnnGeluV2 | ✅ | gelu.out;npu_gelu | ✅ | ✅ | ✅ | GeluExt |
 | aclnnGemm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGemmaRmsNorm | ✅ | npu_gemma_rms_norm | ✖️ | ✖️ | ✖️ |  |
 | aclnnGer | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -352,7 +352,7 @@
 | aclnnGroupedMatMulAllReduce | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatMulAlltoAllv | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmul | ✅ | npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
-| aclnnGroupedMatmulAdd | ✅ | npu_grouped_matmul_add;npu_grouped_matmul_add_ | ✖️ | ✖️ | ✖️ |  |
+| aclnnGroupedMatmulAdd | ✅ | npu_grouped_matmul_add | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulFinalizeRouting | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulFinalizeRoutingV2 | ✅ | npu_grouped_matmul_finalize_routing | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulFinalizeRoutingV3 | ✅ | npu_grouped_matmul_finalize_routing | ✖️ | ✖️ | ✖️ |  |
@@ -397,7 +397,7 @@
 | aclnnInplaceAcosh | ✅ | acosh_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAdd | ✅ | add_.Scalar;add_.Tensor | ✅ | ✅ | ✅ | InplaceAddExt |
 | aclnnInplaceAddRelu | ✅ | _add_relu_.Tensor | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceAddRmsNorm | ✅ | npu_add_rms_norm_v2;npu_add_rms_norm_v2_functional | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAddbmm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAddcdiv | ✅ | addcdiv_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAddcmul | ✅ | addcmul_ | ✖️ | ✖️ | ✖️ |  |
@@ -415,8 +415,8 @@
 | aclnnInplaceBernoulliTensor | ✅ | bernoulli;bernoulli.out;bernoulli.p;bernoulli_.Tensor;bernoulli_.float | ✅ | ✅ | ✅ | BernoulliExt;InplaceBernoulliTensor |
 | aclnnInplaceBitwiseAndScalar | ✅ | bitwise_and_.Scalar;bitwise_and_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseAndTensor | ✅ | bitwise_and_.Scalar;bitwise_and_.Tensor | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceBitwiseOrScalar | ✅ | __ior__.Scalar;__ior__.Tensor | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceBitwiseOrTensor | ✅ | __ior__.Scalar;__ior__.Tensor | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceBitwiseOrScalar | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceBitwiseOrTensor | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseXorScalar | ✅ | bitwise_xor_.Scalar;bitwise_xor_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseXorTensor | ✅ | bitwise_xor_.Scalar;bitwise_xor_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceCeil | ✅ | ceil_ | ✖️ | ✖️ | ✖️ |  |
@@ -527,7 +527,7 @@
 | aclnnInplaceWeightQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceXLogYScalarOther | ✅ | xlogy_.Scalar_Other | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceXLogYTensor | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceZero | ✅ | zero_;zeros;zeros.names;zeros.out;zeros_like | ✅ | ✅ | ✅ | GatherDGradV2;InplaceZero;IsInf;Isinf;MaskedSelectGrad;MultiScaleDeformableAttnGrad;NewZeros;Zeros;ZerosLikeExt |
+| aclnnInplaceZero | ✅ | zero_;zeros;zeros.names;zeros.out | ✅ | ✅ | ✅ | GatherDGradV2;InplaceZero;IsInf;Isinf;MaskedSelectGrad;MultiScaleDeformableAttnGrad;NewZeros;Zeros;ZerosLikeExt |
 | aclnnInstanceNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInverse | ✅ | inverse;inverse.out | ✅ | ✅ | ✅ | MatrixInverseExt |
 | aclnnIou | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -553,8 +553,8 @@
 | aclnnLerp | ✅ | lerp.Tensor;lerp.Tensor_out | ✅ | ✅ | ✅ | Lerp |
 | aclnnLerps | ✅ | lerp.Scalar;lerp.Scalar_out | ✅ | ✅ | ✅ | LerpScalar |
 | aclnnLgamma | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnLightningIndexerGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnLinalgCholesky | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnLightningIndexerGrad | ✖️ |  | ✅ | ✅ | ✅ | LightningIndexerGrad |
+| aclnnLinalgCholesky | ✅ | linalg_cholesky;linalg_cholesky.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnLinalgCross | ✅ | linalg_cross;linalg_cross.out | ✅ | ✅ | ✅ | Cross |
 | aclnnLinalgQr | ✅ | linalg_qr;linalg_qr.out | ✅ | ✅ | ✅ | LinalgQr |
 | aclnnLinalgVectorNorm | ✅ | linalg_vector_norm;linalg_vector_norm.out | ✅ | ✅ | ✅ | LinalgVectorNorm |
@@ -578,7 +578,7 @@
 | aclnnLogicalXor | ✅ | logical_xor;logical_xor.out | ✅ | ✅ | ✅ | LogicalXor |
 | aclnnLogit | ✅ | logit;logit.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnLogitGrad | ✅ | logit_backward;logit_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
-| aclnnLtScalar | ✅ | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✖️ | ✖️ | ✖️ |  |
+| aclnnLtScalar | ✅ | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✅ | ✅ | ✅ | LessScalar |
 | aclnnLtTensor | ✅ | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✅ | ✅ | ✅ | Less |
 | aclnnMaskedSelect | ✅ | masked_select;masked_select.out | ✅ | ✅ | ✅ | MaskedSelect |
 | aclnnMaskedSoftmaxWithRelPosBias | ✅ | npu_masked_softmax_with_rel_pos_bias | ✖️ | ✖️ | ✖️ |  |
@@ -589,14 +589,14 @@
 | aclnnMatmulCompress | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulCompressDequant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulReduceScatter | ✅ |  | ✅ | ✅ | ✅ | MatmulReduceScatter |
-| aclnnMatmulReduceScatterV2 | ✅ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMatmulReduceScatterV2 | ✅ | npu_quant_mm_reduce_scatter | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulWeightNz | ✅ | mm;mm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnMax | ✅ | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | ✅ | ✅ | ✅ | BincountExt;Max |
 | aclnnMaxDim | ✅ | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | ✅ | ✅ | ✅ | ArgMaxWithValue;ArgmaxWithValue;MaxDim |
 | aclnnMaxN | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMaxPool | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMaxPool2dWithIndices | ✖️ |  | ✅ | ✅ | ✅ | MaxPoolWithIndices |
-| aclnnMaxPool2dWithIndicesBackward | ✖️ |  | ✅ | ✅ | ✅ | MaxPoolGradWithIndices |
+| aclnnMaxPool2dWithIndices | ✅ | max_pool2d_with_indices;max_pool2d_with_indices.out | ✅ | ✅ | ✅ | MaxPoolWithIndices |
+| aclnnMaxPool2dWithIndicesBackward | ✅ | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input | ✅ | ✅ | ✅ | MaxPoolGradWithIndices |
 | aclnnMaxPool2dWithMask | ✅ | max_pool2d_with_indices;max_pool2d_with_indices.out | ✅ | ✅ | ✅ | MaxPoolWithMask |
 | aclnnMaxPool2dWithMaskBackward | ✅ | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input | ✅ | ✅ | ✅ | MaxPoolGradWithMask |
 | aclnnMaxPool3dWithArgmax | ✅ | max_pool3d_with_indices;max_pool3d_with_indices.out | ✖️ | ✖️ | ✖️ |  |
@@ -642,7 +642,7 @@
 | aclnnMoeFusedTopk | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeGatingTopK | ✅ | npu_moe_gating_top_k | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeGatingTopKSoftmax | ✅ | npu_moe_gating_top_k_softmax | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeGatingTopKSoftmaxV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeGatingTopKSoftmaxV2 | ✅ | npu_moe_gating_top_k_softmax_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeInitRouting | ✅ | npu_moe_init_routing | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeInitRoutingQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeInitRoutingQuantV2 | ✅ | npu_moe_init_routing_quant | ✅ | ✖️ | ✅ | MoeInitRoutingQuantV2 |
@@ -707,7 +707,7 @@
 | aclnnObfuscationCalculateV2 | ✅ | obfuscation_calculate | ✖️ | ✖️ | ✖️ |  |
 | aclnnObfuscationSetup | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnObfuscationSetupV2 | ✅ | obfuscation_finalize;obfuscation_initialize | ✖️ | ✖️ | ✖️ |  |
-| aclnnOneHot | ✅ | one_hot | ✅ | ✅ | ✅ | OneHotExt |
+| aclnnOneHot | ✅ | npu_one_hot;one_hot | ✅ | ✅ | ✅ | OneHotExt |
 | aclnnPdist | ✅ | _pdist_forward | ✖️ | ✖️ | ✖️ |  |
 | aclnnPdistForward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnPermute | ✖️ |  | ✅ | ✅ | ✅ | Dense;TExt;Transpose;TransposeExt;TransposeExtView |
@@ -724,7 +724,7 @@
 | aclnnPromptFlashAttentionV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnPromptFlashAttentionV3 | ✖️ |  | ✅ | ✅ | ✅ | PromptFlashAttention |
 | aclnnQr | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantConvolution | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantConvolution | ✅ | npu_quant_conv2d | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantGroupedMatmulDequant | ✅ | npu_quant_grouped_matmul_dequant | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulAllReduce | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
@@ -735,9 +735,9 @@
 | aclnnQuantMatmulReduceSumWeightNz | ✅ | npu_quant_matmul_reduce_sum | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantMatmulV4 | ✅ |  | ✅ | ✅ | ✅ | QuantBatchMatmul |
-| aclnnQuantMatmulV5 | ✅ |  | ✅ | ✅ | ✖️ | QuantMatmul |
-| aclnnQuantMatmulWeightNz | ✅ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantMatmulV4 | ✖️ |  | ✅ | ✅ | ✅ | QuantBatchMatmul |
+| aclnnQuantMatmulV5 | ✅ | npu_quant_matmul | ✅ | ✅ | ✖️ | QuantMatmul |
+| aclnnQuantMatmulWeightNz | ✅ | npu_quant_matmul | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantize | ✅ | _quantize_per_channel_impl.out;_quantize_per_tensor_impl.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantizedBatchNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRReluWithNoise | ✅ | rrelu_with_noise;rrelu_with_noise.out | ✖️ | ✖️ | ✖️ |  |
@@ -774,7 +774,7 @@
 | aclnnReplicationPad3d | ✅ | replication_pad3d;replication_pad3d.out | ✅ | ✅ | ✅ | ReplicationPad3D |
 | aclnnReplicationPad3dBackward | ✅ | replication_pad3d_backward;replication_pad3d_backward.grad_input | ✅ | ✅ | ✅ | ReplicationPad3DGrad |
 | aclnnResize | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnRightShift | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnRightShift | ✅ | __irshift__.Scalar;__irshift__.Tensor;__rshift__.Scalar;__rshift__.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnRingAttentionUpdate | ✖️ |  | ✅ | ✅ | ✅ | RingAttentionUpdate |
 | aclnnRingAttentionUpdateV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRmsNorm | ✅ | npu_rms_norm | ✅ | ✅ | ✅ | RmsNorm |
@@ -794,8 +794,8 @@
 | aclnnRsubs | ✅ | rsub.Scalar | ✖️ | ✖️ | ✖️ |  |
 | aclnnSWhere | ✅ | where;where.self;where.self_out | ✅ | ✅ | ✅ | Select |
 | aclnnScale | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnScaledMaskedSoftmax | ✅ | _masked_softmax | ✖️ | ✖️ | ✖️ |  |
-| aclnnScaledMaskedSoftmaxBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnScaledMaskedSoftmax | ✅ | _masked_softmax;npu_scaled_masked_softmax | ✖️ | ✖️ | ✖️ |  |
+| aclnnScaledMaskedSoftmaxBackward | ✅ | npu_scaled_masked_softmax_backward | ✖️ | ✖️ | ✖️ |  |
 | aclnnScatter | ✅ | scatter.src_out;scatter.value_out | ✅ | ✅ | ✅ | Scatter |
 | aclnnScatterAdd | ✅ | scatter_add;scatter_add.dimname;scatter_add_ | ✅ | ✅ | ✅ | GatherDGradV2;InplaceScatterAdd;ScatterAddExt |
 | aclnnScatterNd | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -837,7 +837,7 @@
 | aclnnSoftshrink | ✅ | softshrink;softshrink.out | ✅ | ✅ | ✅ | SoftShrink;Softshrink |
 | aclnnSoftshrinkBackward | ✅ | softshrink_backward;softshrink_backward.grad_input | ✅ | ✅ | ✅ | SoftShrinkGrad;SoftshrinkGrad |
 | aclnnSort | ✅ | sort;sort.dimname;sort.dimname_values;sort.stable;sort.values;sort.values_stable | ✅ | ✅ | ✅ | ArgSort;SortExt |
-| aclnnSparseFlashAttentionGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnSparseFlashAttentionGrad | ✖️ |  | ✅ | ✅ | ✅ | SparseFlashAttentionGrad |
 | aclnnSparseLightningIndexerGradKLLoss | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSplitTensor | ✖️ |  | ✅ | ✅ | ✅ | Chunk;SplitTensor |
 | aclnnSplitWithSize | ✅ | split_with_sizes_copy.out | ✅ | ✅ | ✅ | SplitWithSize |
@@ -850,7 +850,7 @@
 | aclnnSub | ✅ | sub.Scalar;sub.Tensor;sub.out | ✅ | ✅ | ✅ | Sub;SubExt |
 | aclnnSubs | ✅ | sub.Scalar;sub.Tensor;sub.out | ✅ | ✅ | ✅ | SubScalar |
 | aclnnSum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnSvd | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnSvd | ✅ | _linalg_svd.U | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwiGlu | ✅ | npu_swiglu | ✅ | ✅ | ✅ | Swiglu |
 | aclnnSwiGluGrad | ✅ | npu_swiglu_backward | ✅ | ✅ | ✅ | SwigluGrad |
 | aclnnSwiGluQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -859,7 +859,7 @@
 | aclnnSwinTransformerLnQkvQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwish | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwishBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnSyncBatchNormGatherStats | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnSyncBatchNormGatherStats | ✅ | batch_norm_gather_stats_update | ✖️ | ✖️ | ✖️ |  |
 | aclnnTake | ✅ | take;take.out | ✅ | ✅ | ✅ | Take |
 | aclnnTan | ✅ | tan;tan.out | ✅ | ✅ | ✅ | Tan |
 | aclnnTanh | ✅ | tanh;tanh.out | ✅ | ✅ | ✅ | Tanh |
@@ -868,7 +868,7 @@
 | aclnnThreeInterpolateBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnThreshold | ✅ | threshold;threshold.out | ✅ | ✅ | ✅ | Threshold |
 | aclnnThresholdBackward | ✅ | threshold_backward | ✅ | ✅ | ✅ | ReluGrad;ThresholdGrad |
-| aclnnTopKTopPSample | ✅ | npu_top_k_top_p_sample | ✖️ | ✖️ | ✖️ |  |
+| aclnnTopKTopPSample | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnTopk | ✅ | topk;topk.values | ✅ | ✅ | ✅ | TopkExt |
 | aclnnTrace | ✅ | trace | ✅ | ✅ | ✅ | TraceExt |
 | aclnnTransConvolutionWeight | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
