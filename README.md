@@ -1,6 +1,8 @@
 # 🚀 ACLNN Supported Dashboard
 
-https://fzilan.github.io/aclnn-dashboard/
+[English](./README.md) | [中文](./README_CN.md)
+
+Dashboard: `https://fzilan.github.io/aclnn-dashboard/`
 
 Automatically generates and visualizes ACLNN support coverage across Torch-NPU and MindSpore, including:
 
@@ -60,24 +62,18 @@ python3 -m pip install -U pip pyyaml playwright
 python3 -m playwright install chromium
 ```
 
-## Usage
+## Local Usage
 
-### 1) Full local pipeline
-
-Run in `aclnn-dashboard/`:
+### Setup
 
 ```bash
-bash run_pipeline.sh \
-  --op-plugin-root /path/to/op-plugin \
-  --mindspore-root /path/to/mindspore
+git clone https://github.com/Fzilan/aclnn-dashboard.git
+cd aclnn-dashboard
 ```
 
-Notes:
+### Choose One Workflow (3 options)
 
-- `--op-plugin-root`: path to the `op-plugin` repo root (master)
-- `--mindspore-root`: path to the `mindspore` repo root (master)
-
-### 2) Skip crawling, rerun scan + build only
+1. Scan + Merge + Build (recommended for daily updates)
 
 ```bash
 bash run_pipeline.sh \
@@ -86,7 +82,15 @@ bash run_pipeline.sh \
   --mindspore-root /path/to/mindspore
 ```
 
-### 3) Rebuild frontend data only
+2. Full pipeline including ACLNN crawl (only when ACLNN upstream list changes)
+
+```bash
+bash run_pipeline.sh \
+  --op-plugin-root /path/to/op-plugin \
+  --mindspore-root /path/to/mindspore
+```
+
+3. Rebuild frontend data only (no scan)
 
 ```bash
 python3 scripts/build/build_dashboard_data.py \
@@ -94,7 +98,7 @@ python3 scripts/build/build_dashboard_data.py \
   --output data.json
 ```
 
-### 4) Preview locally
+### Preview locally
 
 ```bash
 python3 -m http.server 8000
@@ -110,8 +114,9 @@ Workflow: `.github/workflows/refresh-aclnn-dashboard.yml`
 - Pulls automatically:
   - `https://gitcode.com/Ascend/op-plugin` at `master`
   - `https://gitcode.com/mindspore/mindspore` at `master`
-- Runs `run_pipeline.sh`
+- Runs `run_pipeline.sh --skip-scrape` (skip ACLNN crawling by default)
 - Auto commits and pushes when artifacts change
+- After workflow succeeds, view the dashboard directly on GitHub Pages: `https://fzilan.github.io/aclnn-dashboard/`
 
 ## Frontend Data Contract
 

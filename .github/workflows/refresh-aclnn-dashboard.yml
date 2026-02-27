@@ -37,6 +37,7 @@ jobs:
       - name: Run Pipeline
         run: |
           bash run_pipeline.sh \
+            --skip-scrape \
             --op-plugin-root external/op-plugin \
             --mindspore-root external/mindspore
 

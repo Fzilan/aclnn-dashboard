@@ -1,3 +1,6 @@
+> This plan is written for the Codex agent to execute implementation tasks step by step.
+> We appreciate Codex's technical support and disciplined execution throughout this implementation.
+
 **【Role & Objective】**
 基于我本地已经跑通的扫描数据，帮我构建一个“ACLNN 接入数字化看板 (Dashboard)”。计划部署到GitHub Pages。
 
@@ -47,7 +50,7 @@
 * 抽屉内详细展示该算子对应的 `torch_evidence` 和 `ms_evidence`（这些数据已在 JSON 中就绪）。
 
 **【Future Roadmap (保持代码的扩展性)】**
-* Phase 2 我们会加入更多维度的代码扫描指标或者框架算子健康度指标，比如追踪 海思 ACLNN cann 版本支持变化、 aclnn 算子在不同框架的dtype支持/device支持/算子性能数据等），并可能通过定时任务自动触发 Python 脚本更新 JSON。请确保 Python 的指标生成模块和前端的展现模块高度解耦。
+* Phase 2 我们会加入更多维度的代码扫描指标或者框架算子指标，比如追踪 海思 ACLNN cann 版本支持变化、 aclnn 算子在不同框架的dtype支持/device支持/算子性能数据等），并可能通过定时任务自动触发 Python 脚本更新 JSON。请确保 Python 的指标生成模块和前端的展现模块高度解耦。
 
-* 与你的自动化工作流打通，让数据保鲜。
-后续希望自动触发部署 (GitHub Actions)： 数据发生变更被推送到仓库，GitHub Actions 就会自动触发 Pages 的重新构建。这样，每天看到的就是最新的算子作战地图，而且整个过程是完全自动化的。
+* 自动化工作流打通，让数据保鲜：
+后续希望自动触发部署 (GitHub Actions)，数据发生变更被推送到仓库，GitHub Actions 就会自动触发 Pages 的重新构建。这样，每天看到的就是最新的算子作战地图，而且整个过程是完全自动化的。

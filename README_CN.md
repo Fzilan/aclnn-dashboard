@@ -1,5 +1,7 @@
 # 🚀 ACLNN Supported Dashboard
 
+Dashboard: `https://fzilan.github.io/aclnn-dashboard/`
+
 自动生成 ACLNN 在 Torch-NPU / MindSpore 的接入覆盖情况，包含：
 
 - 每日自动扫描与数据更新
@@ -58,24 +60,18 @@ python3 -m pip install -U pip pyyaml playwright
 python3 -m playwright install chromium
 ```
 
-## 使用方法
+## 本地使用
 
-### 1) 本地全量流水线
-
-在 `aclnn-dashboard/` 目录执行：
+### 环境准备
 
 ```bash
-bash run_pipeline.sh \
-  --op-plugin-root /path/to/op-plugin \
-  --mindspore-root /path/to/mindspore
+git clone https://github.com/Fzilan/aclnn-dashboard.git
+cd aclnn-dashboard
 ```
 
-说明：
+### 3选1 工作流
 
-- `--op-plugin-root`：应指向 `op-plugin` 仓根目录（master）
-- `--mindspore-root`：应指向 `mindspore` 仓根目录（master）
-
-### 2) 跳过抓取，仅重跑扫描与构建
+1. 扫描 + 合并 + 构建（推荐日常使用）
 
 ```bash
 bash run_pipeline.sh \
@@ -84,7 +80,15 @@ bash run_pipeline.sh \
   --mindspore-root /path/to/mindspore
 ```
 
-### 3) 仅重建前端数据
+2. 含 ACLNN 抓取的全流程（仅当 ACLNN 官网清单变化时）
+
+```bash
+bash run_pipeline.sh \
+  --op-plugin-root /path/to/op-plugin \
+  --mindspore-root /path/to/mindspore
+```
+
+3. 仅重建前端数据（不扫描）
 
 ```bash
 python3 scripts/build/build_dashboard_data.py \
@@ -92,7 +96,7 @@ python3 scripts/build/build_dashboard_data.py \
   --output data.json
 ```
 
-### 4) 本地预览页面
+### 本地预览页面
 
 ```bash
 python3 -m http.server 8000
@@ -108,8 +112,9 @@ python3 -m http.server 8000
 - 自动拉取：
   - `https://gitcode.com/Ascend/op-plugin` 的 `master`
   - `https://gitcode.com/mindspore/mindspore` 的 `master`
-- 执行 `run_pipeline.sh`
+- 执行 `run_pipeline.sh --skip-scrape`（默认跳过 ACLNN 官网抓取）
 - 产物变更时自动 commit & push
+- 流水线完成后可直接在 GitHub Pages 查看：`https://fzilan.github.io/aclnn-dashboard/`
 
 ## 前端数据契约
 
