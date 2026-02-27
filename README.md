@@ -2,7 +2,7 @@
 
 [English](./README.md) | [中文](./README_CN.md)
 
-Dashboard: `https://fzilan.github.io/aclnn-dashboard/`
+Dashboard: https://fzilan.github.io/aclnn-dashboard/
 
 Automatically generates and visualizes ACLNN support coverage across Torch-NPU and MindSpore, including:
 

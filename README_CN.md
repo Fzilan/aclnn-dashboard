@@ -1,6 +1,6 @@
 # 🚀 ACLNN Supported Dashboard
 
-Dashboard: `https://fzilan.github.io/aclnn-dashboard/`
+Dashboard: https://fzilan.github.io/aclnn-dashboard/
 
 自动生成 ACLNN 在 Torch-NPU / MindSpore 的接入覆盖情况，包含：
 
