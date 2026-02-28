@@ -222,8 +222,8 @@
 | aclnnFloor | 已接入 | yaml_exec | floor;floor.out | floor;floor.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnFloorDivide | 已接入 | src_scan | floor_divide;floor_divide.Scalar;floor_divide.out | floor_divide;floor_divide.Scalar;floor_divide.out | False | floor_divide;floor_divide_out;floor_divide_out_npu_opapi | shared_by_3_ops;src_only |
 | aclnnFloorDivides | 已接入 | src_scan | floor_divide;floor_divide.Scalar;floor_divide.out |  | True | floor_divide;floor_divide_out;floor_divide_out_npu_opapi | shared_by_3_ops;src_only |
-| aclnnFmodScalar | 已接入 | yaml_exec | fmod.Scalar;fmod.Scalar_out |  | True |  | shared_by_2_ops;yaml_only |
-| aclnnFmodTensor | 已接入 | yaml_exec | fmod.Tensor;fmod.Tensor_out |  | True |  | shared_by_2_ops;yaml_only |
+| aclnnFmodScalar | 已接入 | yaml_exec+src_scan | fmod.Scalar;fmod.Scalar_out;fmod.Tensor;fmod.Tensor_out |  | True | fmod;fmod_out;fmod_out_npu_no_check | shared_by_4_ops;yaml+src |
+| aclnnFmodTensor | 已接入 | src_scan | fmod.Scalar;fmod.Scalar_out;fmod.Tensor;fmod.Tensor_out |  | True | fmod;fmod_out;fmod_out_npu_no_check | shared_by_4_ops;src_only |
 | aclnnForeachAbs | 已接入 | src_scan | _foreach_abs;_foreach_abs_ | _foreach_abs | False | _foreach_abs;_foreach_abs_;_split_and_exec_npu_cmd_abs | shared_by_2_ops;src_only |
 | aclnnForeachAcos | 已接入 | src_scan | _foreach_acos;_foreach_acos_ | _foreach_acos | False | _foreach_acos;_foreach_acos_;_split_and_exec_npu_cmd_acos | shared_by_2_ops;src_only |
 | aclnnForeachAddList | 已接入 | src_scan |  |  | True | _foreach_add_v1;_foreach_add_v1_ | src_only;src_hit_but_op_name_unresolved |
@@ -438,8 +438,8 @@
 | aclnnInplaceFloor | 已接入 | yaml_exec | floor_ | floor_ | False |  | yaml_only |
 | aclnnInplaceFloorDivide | 已接入 | src_scan | floor_divide_.Scalar;floor_divide_.Tensor | floor_divide_.Scalar;floor_divide_.Tensor | False | floor_divide_;inplace_floor_divide_out_npu_opapi | shared_by_2_ops;src_only |
 | aclnnInplaceFloorDivides | 已接入 | src_scan | floor_divide_.Scalar;floor_divide_.Tensor |  | True | floor_divide_;inplace_floor_divide_out_npu_opapi | shared_by_2_ops;src_only |
-| aclnnInplaceFmodScalar | 已接入 | yaml_exec | fmod_.Scalar |  | True |  | yaml_only |
-| aclnnInplaceFmodTensor | 已接入 | yaml_exec | fmod_.Tensor |  | True |  | yaml_only |
+| aclnnInplaceFmodScalar | 已接入 | yaml_exec+src_scan | fmod_.Scalar;fmod_.Tensor |  | True | fmod_;inplace_fmod_out_npu_no_check | shared_by_2_ops;yaml+src |
+| aclnnInplaceFmodTensor | 已接入 | src_scan | fmod_.Scalar;fmod_.Tensor |  | True | fmod_;inplace_fmod_out_npu_no_check | shared_by_2_ops;src_only |
 | aclnnInplaceFrac | 已接入 | yaml_exec | frac_ | frac_ | False |  | yaml_only |
 | aclnnInplaceGeScalar | 已接入 | src_scan | ge_.Scalar;ge_.Tensor |  | True | ge_ | shared_by_2_ops;src_only |
 | aclnnInplaceGeTensor | 已接入 | src_scan | ge_.Scalar;ge_.Tensor |  | True | ge_ | shared_by_2_ops;src_only |

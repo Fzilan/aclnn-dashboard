@@ -232,8 +232,8 @@
 | aclnnFloor | ✅ | floor;floor.out | ✅ | ✅ | ✅ | Floor |
 | aclnnFloorDivide | ✅ | floor_divide;floor_divide.Scalar;floor_divide.out | ✅ | ✅ | ✅ | FloorDiv |
 | aclnnFloorDivides | ✅ | floor_divide;floor_divide.Scalar;floor_divide.out | ✅ | ✅ | ✅ | FloorDivScalar |
-| aclnnFmodScalar | ✅ | fmod.Scalar;fmod.Scalar_out | ✅ | ✅ | ✅ | FmodScalar |
-| aclnnFmodTensor | ✅ | fmod.Tensor;fmod.Tensor_out | ✅ | ✅ | ✅ | FmodTensor |
+| aclnnFmodScalar | ✅ | fmod.Scalar;fmod.Scalar_out;fmod.Tensor;fmod.Tensor_out | ✅ | ✅ | ✅ | FmodScalar |
+| aclnnFmodTensor | ✅ | fmod.Scalar;fmod.Scalar_out;fmod.Tensor;fmod.Tensor_out | ✅ | ✅ | ✅ | FmodTensor |
 | aclnnForeachAbs | ✅ | _foreach_abs;_foreach_abs_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachAcos | ✅ | _foreach_acos;_foreach_acos_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachAddList | ✅ |  | ✖️ | ✖️ | ✖️ |  |
@@ -448,8 +448,8 @@
 | aclnnInplaceFloor | ✅ | floor_ | ✅ | ✅ | ✅ | InplaceFloor |
 | aclnnInplaceFloorDivide | ✅ | floor_divide_.Scalar;floor_divide_.Tensor | ✅ | ✅ | ✅ | InplaceFloorDivide |
 | aclnnInplaceFloorDivides | ✅ | floor_divide_.Scalar;floor_divide_.Tensor | ✅ | ✅ | ✅ | InplaceFloorDivides |
-| aclnnInplaceFmodScalar | ✅ | fmod_.Scalar | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceFmodTensor | ✅ | fmod_.Tensor | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceFmodScalar | ✅ | fmod_.Scalar;fmod_.Tensor | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceFmodTensor | ✅ | fmod_.Scalar;fmod_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceFrac | ✅ | frac_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceGeScalar | ✅ | ge_.Scalar;ge_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceGeTensor | ✅ | ge_.Scalar;ge_.Tensor | ✖️ | ✖️ | ✖️ |  |

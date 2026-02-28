@@ -10,41 +10,41 @@
     "torch_coverage_rate": 77.9,
     "mindspore_coverage_rate": 47.2,
     "both_coverage_rate": 42.8,
-    "last_update_time": "2026-02-27T10:53:42+08:00",
-    "generated_at": "2026-02-27T10:53:42+08:00",
-    "pipeline_run_time": "2026-02-27T10:53:42+08:00",
-    "torch_speed_pp_per_day_7d": 1.0,
-    "mindspore_speed_pp_per_day_7d": 0.3
+    "last_update_time": "2026-02-28T10:43:16+08:00",
+    "generated_at": "2026-02-28T10:43:16+08:00",
+    "pipeline_run_time": "2026-02-28T10:43:14+08:00",
+    "torch_speed_pp_per_day_7d": 0.5,
+    "mindspore_speed_pp_per_day_7d": 0.15
   },
   "meta": {
     "source_files": [
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-02-26T16:48:53+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
+        "mtime": "2026-02-28T10:42:10+08:00"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-02-27T11:12:27+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
+        "mtime": "2026-02-28T10:43:15+08:00"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-02-27T11:12:27+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
+        "mtime": "2026-02-28T10:43:15+08:00"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-02-27T11:12:27+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
+        "mtime": "2026-02-28T10:43:16+08:00"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-02-27T11:12:27+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
+        "mtime": "2026-02-28T10:43:16+08:00"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-02-27T11:12:27+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
+        "mtime": "2026-02-28T10:43:16+08:00"
       },
       {
-        "path": "/Users/fanzhilan/project/mindspore-agent/workspace-mindspore-framework/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-02-27T11:12:27+08:00"
+        "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
+        "mtime": "2026-02-28T10:43:16+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -75,6 +75,16 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 47.2,
         "both_coverage_rate": 42.8
+      },
+      {
+        "date": "2026-02-28",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 431,
+        "both_supported": 391,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 47.2,
+        "both_coverage_rate": 42.8
       }
     ],
     "last_7_days": [
@@ -90,6 +100,16 @@
       },
       {
         "date": "2026-02-27",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 431,
+        "both_supported": 391,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 47.2,
+        "both_coverage_rate": 42.8
+      },
+      {
+        "date": "2026-02-28",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 431,
@@ -9824,16 +9844,24 @@
         "status": "已接入",
         "via_ops": [
           "fmod.Scalar",
-          "fmod.Scalar_out"
+          "fmod.Scalar_out",
+          "fmod.Tensor",
+          "fmod.Tensor_out"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "yaml_exec+src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "shared_by_2_ops;yaml_only"
+        "cpp_funcs": [
+          "fmod",
+          "fmod_out",
+          "fmod_out_npu_no_check"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/FmodKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_4_ops;yaml+src"
       },
       "mindspore": {
         "supported": true,
@@ -9865,17 +9893,25 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
+          "fmod.Scalar",
+          "fmod.Scalar_out",
           "fmod.Tensor",
           "fmod.Tensor_out"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "shared_by_2_ops;yaml_only"
+        "cpp_funcs": [
+          "fmod",
+          "fmod_out",
+          "fmod_out_npu_no_check"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/FmodKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -19034,16 +19070,22 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "fmod_.Scalar"
+          "fmod_.Scalar",
+          "fmod_.Tensor"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "yaml_exec+src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "yaml_only"
+        "cpp_funcs": [
+          "fmod_",
+          "inplace_fmod_out_npu_no_check"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/FmodKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;yaml+src"
       },
       "mindspore": {
         "supported": false,
@@ -19069,16 +19111,22 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
+          "fmod_.Scalar",
           "fmod_.Tensor"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "yaml_only"
+        "cpp_funcs": [
+          "fmod_",
+          "inplace_fmod_out_npu_no_check"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/FmodKernelNpuOpApi.cpp"
+        ],
+        "remarks": "shared_by_2_ops;src_only"
       },
       "mindspore": {
         "supported": false,
