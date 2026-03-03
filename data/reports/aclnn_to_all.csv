@@ -143,7 +143,7 @@ aclnnCumsum,✅,cumsum;cumsum.dimname_out;cumsum.out,✅,✅,✅,CumsumExt
 aclnnCumsumV2,✖️,,✖️,✖️,✖️,
 aclnnDeepNorm,✅,npu_deep_norm,✖️,✖️,✖️,
 aclnnDeepNormGrad,✅,npu_deep_norm_backward,✖️,✖️,✖️,
-aclnnDeformableConv2d,✖️,,✖️,✖️,✖️,
+aclnnDeformableConv2d,✅,npu_deformable_conv2d,✖️,✖️,✖️,
 aclnnDequantBias,✖️,,✖️,✖️,✖️,
 aclnnDequantRopeQuantKvcache,✅,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,✖️,✖️,✖️,
 aclnnDequantSwigluQuant,✅,npu_dequant_swiglu_quant,✅,✅,✅,DequantSwigluQuant
@@ -163,7 +163,7 @@ aclnnDropoutDoMask,✅,_npu_dropout;native_dropout;native_dropout_backward;npu_d
 aclnnDropoutGenMask,✅,npu_dropout_gen_mask,✖️,✖️,✖️,
 aclnnDropoutGenMaskV2,✅,_npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout,✅,✅,✅,DropoutExt;DropoutGenMaskExt
 aclnnDropoutGenMaskV2Tensor,✅,_npu_dropout,✖️,✖️,✖️,
-aclnnDynamicBlockQuant,✅,npu_dynamic_block_quant,✖️,✖️,✖️,
+aclnnDynamicBlockQuant,✅,npu_dynamic_block_quant,✅,✅,✖️,DynamicBlockQuant
 aclnnDynamicQuant,✅,,✖️,✖️,✖️,
 aclnnDynamicQuantV2,✅,npu_dynamic_quant;npu_dynamic_quant_asymmetric,✖️,✖️,✖️,
 aclnnEinsum,✖️,,✖️,✖️,✖️,

@@ -143,7 +143,7 @@ all,aclnnCumsum,已接入,src_scan,cumsum;cumsum.dimname_out;cumsum.out,,cumsum;
 all,aclnnCumsumV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDeepNorm,已接入,src_scan,npu_deep_norm,,npu_deep_norm,npu_deep_norm,external/op-plugin/op_plugin/ops/opapi/DeepNormKernelOpApi.cpp,all_version,,True,src_only
 all,aclnnDeepNormGrad,已接入,src_scan,npu_deep_norm_backward,,npu_deep_norm_backward,npu_deep_norm_backward,external/op-plugin/op_plugin/ops/opapi/DeepNormBackwardKernelOpApi.cpp,all_version,,True,src_only
-all,aclnnDeformableConv2d,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnDeformableConv2d,已接入,src_scan,npu_deformable_conv2d,,npu_deformable_conv2d,npu_deformable_conv2d;npu_deformable_conv2d_out,external/op-plugin/op_plugin/ops/opapi/DeformableConv2dKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnDequantBias,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDequantRopeQuantKvcache,已接入,src_scan,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,external/op-plugin/op_plugin/ops/opapi/DequantRopeQuantKVCacheKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/RopeQuantKVCacheKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnDequantSwigluQuant,已接入,src_scan,npu_dequant_swiglu_quant,,npu_dequant_swiglu_quant,npu_dequant_swiglu_quant,external/op-plugin/op_plugin/ops/opapi/DequantSwigluQuantOpApi.cpp,all_version,,True,src_only

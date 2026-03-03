@@ -146,7 +146,7 @@
 | aclnnCumsumV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDeepNorm | 已接入 | src_scan | npu_deep_norm |  | True | npu_deep_norm | src_only |
 | aclnnDeepNormGrad | 已接入 | src_scan | npu_deep_norm_backward |  | True | npu_deep_norm_backward | src_only |
-| aclnnDeformableConv2d | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnDeformableConv2d | 已接入 | src_scan | npu_deformable_conv2d |  | True | npu_deformable_conv2d;npu_deformable_conv2d_out | src_only |
 | aclnnDequantBias | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDequantRopeQuantKvcache | 已接入 | src_scan | npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache |  | True | npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache | shared_by_2_ops;src_only |
 | aclnnDequantSwigluQuant | 已接入 | src_scan | npu_dequant_swiglu_quant |  | True | npu_dequant_swiglu_quant | src_only |

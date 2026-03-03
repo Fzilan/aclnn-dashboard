@@ -1,9 +1,9 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：711 / 913（77.9%）
-- mindspore 已接入：431 / 913（47.2%）
-- 两者都接入：391 / 913（42.8%）
+- torch-npu 已接入：712 / 913（78.0%）
+- mindspore 已接入：432 / 913（47.3%）
+- 两者都接入：392 / 913（42.9%）
 - 仅 torch-npu：320 / 913（35.0%）
 - 仅 mindspore：40 / 913（4.4%）
 
@@ -156,7 +156,7 @@
 | aclnnCumsumV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDeepNorm | ✅ | npu_deep_norm | ✖️ | ✖️ | ✖️ |  |
 | aclnnDeepNormGrad | ✅ | npu_deep_norm_backward | ✖️ | ✖️ | ✖️ |  |
-| aclnnDeformableConv2d | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnDeformableConv2d | ✅ | npu_deformable_conv2d | ✖️ | ✖️ | ✖️ |  |
 | aclnnDequantBias | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDequantRopeQuantKvcache | ✅ | npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache | ✖️ | ✖️ | ✖️ |  |
 | aclnnDequantSwigluQuant | ✅ | npu_dequant_swiglu_quant | ✅ | ✅ | ✅ | DequantSwigluQuant |
@@ -176,7 +176,7 @@
 | aclnnDropoutGenMask | ✅ | npu_dropout_gen_mask | ✖️ | ✖️ | ✖️ |  |
 | aclnnDropoutGenMaskV2 | ✅ | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout | ✅ | ✅ | ✅ | DropoutExt;DropoutGenMaskExt |
 | aclnnDropoutGenMaskV2Tensor | ✅ | _npu_dropout | ✖️ | ✖️ | ✖️ |  |
-| aclnnDynamicBlockQuant | ✅ | npu_dynamic_block_quant | ✖️ | ✖️ | ✖️ |  |
+| aclnnDynamicBlockQuant | ✅ | npu_dynamic_block_quant | ✅ | ✅ | ✖️ | DynamicBlockQuant |
 | aclnnDynamicQuant | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicQuantV2 | ✅ | npu_dynamic_quant;npu_dynamic_quant_asymmetric | ✖️ | ✖️ | ✖️ |  |
 | aclnnEinsum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |

@@ -163,7 +163,7 @@ aclnnDropoutDoMask,✅,✅,✅,✅,✅,✖️,✖️,kernel_mod_src+pyboost_src,
 aclnnDropoutGenMask,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
 aclnnDropoutGenMaskV2,✅,✅,✅,✅,✅,✖️,✖️,kernel_mod_src+pyboost_src,DropoutExt;DropoutGenMaskExt,DropoutExt;DropoutGenMaskExt,DropoutExt;DropoutGenMaskExt,,,,,,True,DropoutExtAscend;DropoutGenMaskExtAscend;pyboost::dropout_ext;pyboost::dropout_gen_mask_ext,kernel_mod_impl/customize/dropout_ext_aclnn_kernel.cc;kernel_mod_impl/customize/dropout_ext_aclnn_kernel.h;kernel_mod_impl/customize/dropout_gen_mask_ext_aclnn_kernel.cc;kernel_mod_impl/customize/dropout_gen_mask_ext_aclnn_kernel.h,pyboost_impl/customize/dropout_ext.cc;pyboost_impl/customize/dropout_gen_mask_ext.cc,pyboost_op_inferred_from_filename;shared_by_2_ops
 aclnnDropoutGenMaskV2Tensor,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
-aclnnDynamicBlockQuant,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
+aclnnDynamicBlockQuant,✅,✅,✖️,✖️,✅,✖️,✖️,pyboost_src,DynamicBlockQuant,,DynamicBlockQuant,,,,,DynamicBlockQuant,False,pyboost::dynamic_block_quant,,pyboost_impl/customize/dynamic_block_quant.cc,pyboost_op_inferred_from_filename
 aclnnDynamicQuant,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
 aclnnDynamicQuantV2,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
 aclnnEinsum,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
