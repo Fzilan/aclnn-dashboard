@@ -302,7 +302,7 @@
 | aclnnFusedInferAttentionScoreV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFusedLinearCrossEntropyLossGrad | 已接入 | src_scan | fused_linear_cross_entropy_loss_with_max_sum_grad |  | True | fused_linear_cross_entropy_loss_with_max_sum_grad | src_only |
 | aclnnFusedLinearOnlineMaxSum | 已接入 | src_scan | fused_linear_online_max_sum | fused_linear_online_max_sum | False | fused_linear_online_max_sum | src_only |
-| aclnnGather | 已接入 | src_scan | gather;gather.dimname;gather.dimname_out;gather.out | gather;gather.dimname;gather.dimname_out;gather.out | False | gather;gather_out | shared_by_4_ops;src_only |
+| aclnnGather | 已接入 | src_scan | gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample | gather;gather.dimname;gather.dimname_out;gather.out | False | gather;gather_out;npu_top_k_top_p_sample | shared_by_5_ops;src_only |
 | aclnnGatherNd | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGatherPaKvCache | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGatherV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -774,7 +774,7 @@
 | aclnnRoiAlignV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRoiAlignV2Backward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRoll | 已接入 | yaml_exec | roll | roll | False |  | yaml_only |
-| aclnnRopeWithSinCosCache | 已接入 | yaml_exec | npu_mrope |  | True |  | yaml_only |
+| aclnnRopeWithSinCosCache | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRotaryPositionEmbedding | 已接入 | src_scan | npu_rotary_mul |  | True | npu_rotary_mul | src_only |
 | aclnnRotaryPositionEmbeddingGrad | 已接入 | src_scan | npu_rotary_mul_backward |  | True | npu_rotary_mul_backward | src_only |
 | aclnnRound | 已接入 | yaml_exec | round;round.out | round;round.out | False |  | shared_by_2_ops;yaml_only |

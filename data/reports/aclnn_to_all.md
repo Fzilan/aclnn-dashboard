@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：712 / 913（78.0%）
+- torch-npu 已接入：711 / 913（77.9%）
 - mindspore 已接入：432 / 913（47.3%）
 - 两者都接入：392 / 913（42.9%）
-- 仅 torch-npu：320 / 913（35.0%）
+- 仅 torch-npu：319 / 913（34.9%）
 - 仅 mindspore：40 / 913（4.4%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -312,7 +312,7 @@
 | aclnnFusedInferAttentionScoreV4 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnFusedLinearCrossEntropyLossGrad | ✅ | fused_linear_cross_entropy_loss_with_max_sum_grad | ✖️ | ✖️ | ✖️ |  |
 | aclnnFusedLinearOnlineMaxSum | ✅ | fused_linear_online_max_sum | ✖️ | ✖️ | ✖️ |  |
-| aclnnGather | ✅ | gather;gather.dimname;gather.dimname_out;gather.out | ✅ | ✅ | ✅ | GatherD |
+| aclnnGather | ✅ | gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample | ✅ | ✅ | ✅ | GatherD |
 | aclnnGatherNd | ✖️ |  | ✅ | ✅ | ✅ | GatherNdExt |
 | aclnnGatherPaKvCache | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGatherV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -784,7 +784,7 @@
 | aclnnRoiAlignV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRoiAlignV2Backward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRoll | ✅ | roll | ✅ | ✅ | ✅ | Roll |
-| aclnnRopeWithSinCosCache | ✅ | npu_mrope | ✖️ | ✖️ | ✖️ |  |
+| aclnnRopeWithSinCosCache | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRotaryPositionEmbedding | ✅ | npu_rotary_mul | ✅ | ✅ | ✅ | RotaryPositionEmbedding |
 | aclnnRotaryPositionEmbeddingGrad | ✅ | npu_rotary_mul_backward | ✅ | ✅ | ✅ | RotaryPositionEmbeddingGrad |
 | aclnnRound | ✅ | round;round.out | ✅ | ✅ | ✅ |  |

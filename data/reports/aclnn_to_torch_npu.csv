@@ -299,7 +299,7 @@ all,aclnnFusedInferAttentionScoreV3,未接入,,,,,,,,,False,no_yaml_exec_and_no_
 all,aclnnFusedInferAttentionScoreV4,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnFusedLinearCrossEntropyLossGrad,已接入,src_scan,fused_linear_cross_entropy_loss_with_max_sum_grad,,fused_linear_cross_entropy_loss_with_max_sum_grad,fused_linear_cross_entropy_loss_with_max_sum_grad,external/op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnFusedLinearOnlineMaxSum,已接入,src_scan,fused_linear_online_max_sum,,fused_linear_online_max_sum,fused_linear_online_max_sum,external/op-plugin/op_plugin/ops/opapi/FusedLinearCrossEntropyLossKernelNpuOpApi.cpp,all_version,fused_linear_online_max_sum,False,src_only
-all,aclnnGather,已接入,src_scan,gather;gather.dimname;gather.dimname_out;gather.out,,gather;gather.dimname;gather.dimname_out;gather.out,gather;gather_out,external/op-plugin/op_plugin/ops/opapi/GatherKernelNpuOpApi.cpp,all_version,gather;gather.dimname;gather.dimname_out;gather.out,False,shared_by_4_ops;src_only
+all,aclnnGather,已接入,src_scan,gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample,,gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample,gather;gather_out;npu_top_k_top_p_sample,external/op-plugin/op_plugin/ops/opapi/GatherKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/TopKTopPSampleKernelNpuOpApi.cpp,all_version,gather;gather.dimname;gather.dimname_out;gather.out,False,shared_by_5_ops;src_only
 all,aclnnGatherNd,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGatherPaKvCache,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGatherV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
@@ -771,7 +771,7 @@ all,aclnnRoiAlign,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnRoiAlignV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnRoiAlignV2Backward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnRoll,已接入,yaml_exec,roll,roll,,,,"['v2.1', 'newest']",roll,False,yaml_only
-all,aclnnRopeWithSinCosCache,已接入,yaml_exec,npu_mrope,npu_mrope,,,,all_version,,True,yaml_only
+all,aclnnRopeWithSinCosCache,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnRotaryPositionEmbedding,已接入,src_scan,npu_rotary_mul,,npu_rotary_mul,npu_rotary_mul,external/op-plugin/op_plugin/ops/opapi/RotaryMulKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnRotaryPositionEmbeddingGrad,已接入,src_scan,npu_rotary_mul_backward,,npu_rotary_mul_backward,npu_rotary_mul_backward,external/op-plugin/op_plugin/ops/opapi/RotaryMulBackwardKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnRound,已接入,yaml_exec,round;round.out,round;round.out,,,,all_version,round;round.out,False,shared_by_2_ops;yaml_only

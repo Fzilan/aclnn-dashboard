@@ -299,7 +299,7 @@ aclnnFusedInferAttentionScoreV3,✖️,,✖️,✖️,✖️,
 aclnnFusedInferAttentionScoreV4,✖️,,✖️,✖️,✖️,
 aclnnFusedLinearCrossEntropyLossGrad,✅,fused_linear_cross_entropy_loss_with_max_sum_grad,✖️,✖️,✖️,
 aclnnFusedLinearOnlineMaxSum,✅,fused_linear_online_max_sum,✖️,✖️,✖️,
-aclnnGather,✅,gather;gather.dimname;gather.dimname_out;gather.out,✅,✅,✅,GatherD
+aclnnGather,✅,gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample,✅,✅,✅,GatherD
 aclnnGatherNd,✖️,,✅,✅,✅,GatherNdExt
 aclnnGatherPaKvCache,✖️,,✖️,✖️,✖️,
 aclnnGatherV2,✖️,,✖️,✖️,✖️,
@@ -771,7 +771,7 @@ aclnnRoiAlign,✖️,,✖️,✖️,✖️,
 aclnnRoiAlignV2,✖️,,✖️,✖️,✖️,
 aclnnRoiAlignV2Backward,✖️,,✖️,✖️,✖️,
 aclnnRoll,✅,roll,✅,✅,✅,Roll
-aclnnRopeWithSinCosCache,✅,npu_mrope,✖️,✖️,✖️,
+aclnnRopeWithSinCosCache,✖️,,✖️,✖️,✖️,
 aclnnRotaryPositionEmbedding,✅,npu_rotary_mul,✅,✅,✅,RotaryPositionEmbedding
 aclnnRotaryPositionEmbeddingGrad,✅,npu_rotary_mul_backward,✅,✅,✅,RotaryPositionEmbeddingGrad
 aclnnRound,✅,round;round.out,✅,✅,✅,
