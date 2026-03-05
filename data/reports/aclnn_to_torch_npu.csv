@@ -542,7 +542,7 @@ all,aclnnLerps,已接入,yaml_exec,lerp.Scalar;lerp.Scalar_out,lerp.Scalar;lerp.
 all,aclnnLgamma,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnLightningIndexerGrad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnLinalgCholesky,已接入,src_scan,linalg_cholesky;linalg_cholesky.out,,linalg_cholesky;linalg_cholesky.out,linalg_cholesky;linalg_cholesky_out,external/op-plugin/op_plugin/ops/opapi/LinalgCholeskyKernelNpuOpApi.cpp,all_version,linalg_cholesky;linalg_cholesky.out,False,shared_by_2_ops;src_only
-all,aclnnLinalgCross,已接入,yaml_exec,linalg_cross;linalg_cross.out,linalg_cross;linalg_cross.out,,,,all_version,linalg_cross;linalg_cross.out,False,shared_by_2_ops;yaml_only
+all,aclnnLinalgCross,已接入,src_scan,linalg_cross;linalg_cross.out,,linalg_cross;linalg_cross.out,linalg_cross;linalg_cross_out,external/op-plugin/op_plugin/ops/opapi/LinalgCrossKernelNpuOpApi.cpp,all_version,linalg_cross;linalg_cross.out,False,shared_by_2_ops;src_only
 all,aclnnLinalgQr,已接入,src_scan,linalg_qr;linalg_qr.out,,linalg_qr;linalg_qr.out,linalg_qr;linalg_qr_out,external/op-plugin/op_plugin/ops/opapi/LinalgQrKernelNpuOpApi.cpp,all_version,linalg_qr;linalg_qr.out,False,shared_by_2_ops;src_only
 all,aclnnLinalgVectorNorm,已接入,src_scan,linalg_vector_norm;linalg_vector_norm.out,,linalg_vector_norm;linalg_vector_norm.out,linalg_vector_norm;linalg_vector_norm_out,external/op-plugin/op_plugin/ops/opapi/LinalgNormKernelNpuOpApi.cpp,all_version,linalg_vector_norm;linalg_vector_norm.out,False,shared_by_2_ops;src_only
 all,aclnnLinspace,已接入,src_scan,linspace;linspace.out,,linspace;linspace.out,linspace;linspace_out,external/op-plugin/op_plugin/ops/opapi/LinspaceKernelNpuOpApi.cpp,all_version,linspace;linspace.out,False,shared_by_2_ops;src_only

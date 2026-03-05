@@ -545,7 +545,7 @@
 | aclnnLgamma | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnLightningIndexerGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnLinalgCholesky | 已接入 | src_scan | linalg_cholesky;linalg_cholesky.out | linalg_cholesky;linalg_cholesky.out | False | linalg_cholesky;linalg_cholesky_out | shared_by_2_ops;src_only |
-| aclnnLinalgCross | 已接入 | yaml_exec | linalg_cross;linalg_cross.out | linalg_cross;linalg_cross.out | False |  | shared_by_2_ops;yaml_only |
+| aclnnLinalgCross | 已接入 | src_scan | linalg_cross;linalg_cross.out | linalg_cross;linalg_cross.out | False | linalg_cross;linalg_cross_out | shared_by_2_ops;src_only |
 | aclnnLinalgQr | 已接入 | src_scan | linalg_qr;linalg_qr.out | linalg_qr;linalg_qr.out | False | linalg_qr;linalg_qr_out | shared_by_2_ops;src_only |
 | aclnnLinalgVectorNorm | 已接入 | src_scan | linalg_vector_norm;linalg_vector_norm.out | linalg_vector_norm;linalg_vector_norm.out | False | linalg_vector_norm;linalg_vector_norm_out | shared_by_2_ops;src_only |
 | aclnnLinspace | 已接入 | src_scan | linspace;linspace.out | linspace;linspace.out | False | linspace;linspace_out | shared_by_2_ops;src_only |
