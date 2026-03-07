@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：711 / 913（77.9%）
+- torch-npu 已接入：712 / 913（78.0%）
 - mindspore 已接入：432 / 913（47.3%）
 - 两者都接入：392 / 913（42.9%）
-- 仅 torch-npu：319 / 913（34.9%）
+- 仅 torch-npu：320 / 913（35.0%）
 - 仅 mindspore：40 / 913（4.4%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -587,7 +587,7 @@
 | aclnnMatmulAllReduceAddRmsNorm | ✖️ |  | ✅ | ✅ | ✅ | MatmulAllReduceAddRmsNorm;MatmulAllreduceAddRmsnorm |
 | aclnnMatmulAllReduceV2 | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulCompress | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMatmulCompressDequant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMatmulCompressDequant | ✅ | npu_matmul_compress_dequant | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulReduceScatter | ✅ |  | ✅ | ✅ | ✅ | MatmulReduceScatter |
 | aclnnMatmulReduceScatterV2 | ✅ | npu_quant_mm_reduce_scatter | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulWeightNz | ✅ | mm;mm.out | ✖️ | ✖️ | ✖️ |  |

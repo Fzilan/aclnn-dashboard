@@ -574,7 +574,7 @@ aclnnMatmulAllReduce,✅,npu_mm_all_reduce_base,✅,✖️,✅,MatMulAllReduce
 aclnnMatmulAllReduceAddRmsNorm,✖️,,✅,✅,✅,MatmulAllReduceAddRmsNorm;MatmulAllreduceAddRmsnorm
 aclnnMatmulAllReduceV2,✅,npu_mm_all_reduce_base,✖️,✖️,✖️,
 aclnnMatmulCompress,✖️,,✖️,✖️,✖️,
-aclnnMatmulCompressDequant,✖️,,✖️,✖️,✖️,
+aclnnMatmulCompressDequant,✅,npu_matmul_compress_dequant,✖️,✖️,✖️,
 aclnnMatmulReduceScatter,✅,,✅,✅,✅,MatmulReduceScatter
 aclnnMatmulReduceScatterV2,✅,npu_quant_mm_reduce_scatter,✖️,✖️,✖️,
 aclnnMatmulWeightNz,✅,mm;mm.out,✖️,✖️,✖️,

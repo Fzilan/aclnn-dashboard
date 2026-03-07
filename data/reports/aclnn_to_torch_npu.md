@@ -577,7 +577,7 @@
 | aclnnMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMatmulAllReduceV2 | 已接入 | src_scan | npu_mm_all_reduce_base |  | True | npu_mm_all_reduce_base | src_only |
 | aclnnMatmulCompress | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnMatmulCompressDequant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnMatmulCompressDequant | 已接入 | src_scan | npu_matmul_compress_dequant |  | True | npu_matmul_compress_dequant | src_only |
 | aclnnMatmulReduceScatter | 已接入 | src_scan |  |  | True | size | src_only;src_hit_but_op_name_unresolved |
 | aclnnMatmulReduceScatterV2 | 已接入 | src_scan | npu_quant_mm_reduce_scatter |  | True | npu_quant_mm_reduce_scatter;size | src_only |
 | aclnnMatmulWeightNz | 已接入 | src_scan | mm;mm.out |  | True | matmul_implement_npu;mm;mm_out | shared_by_2_ops;src_only |
