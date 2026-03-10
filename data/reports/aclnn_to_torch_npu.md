@@ -867,7 +867,7 @@
 | aclnnTransQuantParamV2 | 已接入 | src_scan | npu_trans_quant_param;npu_weight_quant_batchmatmul |  | True | npu_trans_quant_param;npu_weight_quant_batchmatmul | shared_by_2_ops;src_only |
 | aclnnTransQuantParamV3 | 已接入 | src_scan | npu_trans_quant_param |  | True | npu_trans_quant_param | src_only |
 | aclnnTransformBiasRescaleQkv | 已接入 | src_scan | _transform_bias_rescale_qkv | _transform_bias_rescale_qkv | False | _transform_bias_rescale_qkv | src_only |
-| aclnnTransposeBatchMatMul | 已接入 | yaml_exec | npu_transpose_batchmatmul |  | True |  | yaml_only |
+| aclnnTransposeBatchMatMul | 已接入 | src_scan | npu_transpose_batchmatmul |  | True | npu_transpose_batchmatmul | src_only |
 | aclnnTriangularSolve | 已接入 | yaml_exec+src_scan | triangular_solve.X | triangular_solve.X | False | exec_triangular_solve | yaml+src;src_hit_but_op_name_unresolved |
 | aclnnTril | 已接入 | yaml_exec | tril;tril.out | tril;tril.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnTriu | 已接入 | yaml_exec | triu;triu.out | triu;triu.out | False |  | shared_by_2_ops;yaml_only |
