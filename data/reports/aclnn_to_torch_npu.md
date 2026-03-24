@@ -368,7 +368,7 @@
 | aclnnHardtanh | 已接入 | yaml_exec | hardtanh;hardtanh.out | hardtanh;hardtanh.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnHardtanhBackward | 已接入 | yaml_exec | hardtanh_backward;hardtanh_backward.grad_input | hardtanh_backward;hardtanh_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnHeaviside | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnHistc | 已接入 | yaml_exec | histc;histc.out | histc;histc.out | False |  | shared_by_2_ops;yaml_only |
+| aclnnHistc | 已接入 | src_scan | histc;histc.out | histc;histc.out | False | histc;histc_out | shared_by_2_ops;src_only |
 | aclnnIm2col | 已接入 | src_scan | im2col;im2col.out | im2col;im2col.out | False | im2col;im2col_out | shared_by_2_ops;src_only |
 | aclnnIm2colBackward | 已接入 | yaml_exec | col2im;col2im.out |  | True |  | shared_by_2_ops;yaml_only |
 | aclnnIncreFlashAttention | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

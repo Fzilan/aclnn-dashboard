@@ -365,7 +365,7 @@ all,aclnnHardswishBackwardV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_sca
 all,aclnnHardtanh,已接入,yaml_exec,hardtanh;hardtanh.out,hardtanh;hardtanh.out,,,,all_version,hardtanh;hardtanh.out,False,shared_by_2_ops;yaml_only
 all,aclnnHardtanhBackward,已接入,yaml_exec,hardtanh_backward;hardtanh_backward.grad_input,hardtanh_backward;hardtanh_backward.grad_input,,,,all_version,hardtanh_backward;hardtanh_backward.grad_input,False,shared_by_2_ops;yaml_only
 all,aclnnHeaviside,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnHistc,已接入,yaml_exec,histc;histc.out,histc;histc.out,,,,all_version,histc;histc.out,False,shared_by_2_ops;yaml_only
+all,aclnnHistc,已接入,src_scan,histc;histc.out,,histc;histc.out,histc;histc_out,external/op-plugin/op_plugin/ops/opapi/HistcKernelNpuOpApi.cpp,all_version,histc;histc.out,False,shared_by_2_ops;src_only
 all,aclnnIm2col,已接入,src_scan,im2col;im2col.out,,im2col;im2col.out,im2col;im2col_out,external/op-plugin/op_plugin/ops/opapi/Im2colKernelNpuOpApi.cpp,all_version,im2col;im2col.out,False,shared_by_2_ops;src_only
 all,aclnnIm2colBackward,已接入,yaml_exec,col2im;col2im.out,col2im;col2im.out,,,,"['v2.1', 'newest']",,True,shared_by_2_ops;yaml_only
 all,aclnnIncreFlashAttention,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
