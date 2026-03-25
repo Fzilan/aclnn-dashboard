@@ -476,8 +476,8 @@ all,aclnnInplaceNeg,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceNormal,已接入,src_scan,normal_,,normal_,normal_,external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp,all_version,normal_,False,src_only
 all,aclnnInplaceNormalTensor,已接入,src_scan,normal_,,normal_,normal_,external/op-plugin/op_plugin/ops/opapi/NormalKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnInplaceOne,已接入,src_scan,one_;ones;ones.names;ones.out;ones_like,,one_;ones;ones.names;ones.out;ones_like,one_;ones;ones_like;ones_out,external/op-plugin/op_plugin/ops/opapi/OnesKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/OnesLikeKernelNpuOpApi.cpp,"['v2.1', 'newest'];all_version",one_,False,shared_by_5_ops;src_only
-all,aclnnInplacePowTensorScalar,已接入,yaml_exec,pow_.Scalar,pow_.Scalar,,,,all_version,,True,yaml_only
-all,aclnnInplacePowTensorTensor,已接入,yaml_exec,pow_.Tensor,pow_.Tensor,,,,all_version,,True,yaml_only
+all,aclnnInplacePowTensorScalar,已接入,yaml_exec+src_scan,pow_.Scalar,pow_.Scalar,,inplace_pow_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/PowKernelNpuOpApi.cpp,all_version,,True,yaml+src;src_hit_but_op_name_unresolved
+all,aclnnInplacePowTensorTensor,已接入,src_scan,pow_.Scalar;pow_.Tensor,,pow_.Scalar;pow_.Tensor,inplace_pow_out_npu_nocheck;pow_,external/op-plugin/op_plugin/ops/opapi/PowKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplacePut,已接入,src_scan,,,,check_memory,external/op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
 all,aclnnInplaceQuantMatmulAllReduceAddRmsNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceQuantScatter,已接入,src_scan,npu_quant_scatter;npu_quant_scatter_,,npu_quant_scatter;npu_quant_scatter_,npu_quant_scatter;npu_quant_scatter_,external/op-plugin/op_plugin/ops/opapi/QuantScatterKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
@@ -700,8 +700,8 @@ all,aclnnPdistForward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnPermute,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnPolar,已接入,yaml_exec,polar;polar.out,polar;polar.out,,,,all_version,polar;polar.out,False,shared_by_2_ops;yaml_only
 all,aclnnPowScalarTensor,已接入,yaml_exec,pow.Scalar;pow.Scalar_out,pow.Scalar;pow.Scalar_out,,,,all_version,,True,shared_by_2_ops;yaml_only
-all,aclnnPowTensorScalar,已接入,yaml_exec,pow.Tensor_Scalar;pow.Tensor_Scalar_out,pow.Tensor_Scalar;pow.Tensor_Scalar_out,,,,all_version,,True,shared_by_2_ops;yaml_only
-all,aclnnPowTensorTensor,已接入,yaml_exec,pow.Tensor_Tensor;pow.Tensor_Tensor_out,pow.Tensor_Tensor;pow.Tensor_Tensor_out,,,,all_version,,True,shared_by_2_ops;yaml_only
+all,aclnnPowTensorScalar,已接入,yaml_exec+src_scan,pow.Tensor_Scalar;pow.Tensor_Scalar_out,pow.Tensor_Scalar;pow.Tensor_Scalar_out,,pow_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/PowKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;yaml+src;src_hit_but_op_name_unresolved
+all,aclnnPowTensorTensor,已接入,src_scan,pow.Scalar;pow.Scalar_out;pow.Tensor_Scalar;pow.Tensor_Scalar_out;pow.Tensor_Tensor;pow.Tensor_Tensor_out,,pow.Scalar;pow.Scalar_out;pow.Tensor_Scalar;pow.Tensor_Scalar_out;pow.Tensor_Tensor;pow.Tensor_Tensor_out,pow;pow_out;pow_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/PowKernelNpuOpApi.cpp,all_version,,True,shared_by_6_ops;src_only
 all,aclnnPrecisionCompare,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnPrelu,已接入,yaml_exec,_prelu_kernel,_prelu_kernel,,,,"['v2.1', 'newest']",,True,yaml_only
 all,aclnnPreluBackward,已接入,src_scan,_prelu_kernel_backward,,_prelu_kernel_backward,_prelu_kernel_backward,external/op-plugin/op_plugin/ops/opapi/PreluBackwardKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
@@ -855,7 +855,7 @@ all,aclnnTfScatterAdd,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnThreeInterpolateBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnThreshold,已接入,src_scan,threshold;threshold.out,,threshold;threshold.out,threshold;threshold_out,external/op-plugin/op_plugin/ops/opapi/ThresholdKernelNpuOpApi.cpp,all_version,threshold;threshold.out,False,shared_by_2_ops;src_only
 all,aclnnThresholdBackward,已接入,yaml_exec,threshold_backward,threshold_backward,,,,all_version,threshold_backward,False,yaml_only
-all,aclnnTopKTopPSample,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnTopKTopPSample,已接入,src_scan,npu_top_k_top_p_sample,,npu_top_k_top_p_sample,npu_top_k_top_p_sample,external/op-plugin/op_plugin/ops/opapi/TopKTopPSampleKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnTopk,已接入,src_scan,topk;topk.values,,topk;topk.values,topk;topk_out,external/op-plugin/op_plugin/ops/opapi/TopKKernelNpuOpApi.cpp,"['v2.1', 'newest']",topk;topk.values,False,shared_by_2_ops;src_only
 all,aclnnTrace,已接入,yaml_exec,trace,trace,,,,all_version,trace,False,yaml_only
 all,aclnnTransConvolutionWeight,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit

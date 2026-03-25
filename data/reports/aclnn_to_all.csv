@@ -477,7 +477,7 @@ aclnnInplaceNormal,✅,normal_,✅,✅,✅,InplaceNormal;Randn;RandnLike
 aclnnInplaceNormalTensor,✅,normal_,✖️,✖️,✖️,
 aclnnInplaceOne,✅,one_;ones;ones.names;ones.out;ones_like,✅,✅,✅,Ones;OnesLikeExt
 aclnnInplacePowTensorScalar,✅,pow_.Scalar,✖️,✖️,✖️,
-aclnnInplacePowTensorTensor,✅,pow_.Tensor,✖️,✖️,✖️,
+aclnnInplacePowTensorTensor,✅,pow_.Scalar;pow_.Tensor,✖️,✖️,✖️,
 aclnnInplacePut,✅,,✅,✅,✅,InplacePut
 aclnnInplaceQuantMatmulAllReduceAddRmsNorm,✖️,,✖️,✖️,✖️,
 aclnnInplaceQuantScatter,✅,npu_quant_scatter;npu_quant_scatter_,✖️,✖️,✖️,
@@ -701,7 +701,7 @@ aclnnPermute,✖️,,✅,✅,✅,Dense;TExt;Transpose;TransposeExt;TransposeExtV
 aclnnPolar,✅,polar;polar.out,✅,✅,✅,Polar
 aclnnPowScalarTensor,✅,pow.Scalar;pow.Scalar_out,✅,✅,✅,PowScalarTensor
 aclnnPowTensorScalar,✅,pow.Tensor_Scalar;pow.Tensor_Scalar_out,✅,✅,✅,PowTensorScalar
-aclnnPowTensorTensor,✅,pow.Tensor_Tensor;pow.Tensor_Tensor_out,✅,✅,✅,Pow
+aclnnPowTensorTensor,✅,pow.Scalar;pow.Scalar_out;pow.Tensor_Scalar;pow.Tensor_Scalar_out;pow.Tensor_Tensor;pow.Tensor_Tensor_out,✅,✅,✅,Pow
 aclnnPrecisionCompare,✖️,,✖️,✖️,✖️,
 aclnnPrelu,✅,_prelu_kernel,✅,✅,✅,PReLU
 aclnnPreluBackward,✅,_prelu_kernel_backward,✅,✅,✅,PReLUGrad
@@ -855,7 +855,7 @@ aclnnTfScatterAdd,✖️,,✅,✅,✅,TensorScatterAdd
 aclnnThreeInterpolateBackward,✖️,,✖️,✖️,✖️,
 aclnnThreshold,✅,threshold;threshold.out,✅,✅,✅,Threshold
 aclnnThresholdBackward,✅,threshold_backward,✅,✅,✅,ReluGrad;ThresholdGrad
-aclnnTopKTopPSample,✖️,,✖️,✖️,✖️,
+aclnnTopKTopPSample,✅,npu_top_k_top_p_sample,✖️,✖️,✖️,
 aclnnTopk,✅,topk;topk.values,✅,✅,✅,TopkExt
 aclnnTrace,✅,trace,✅,✅,✅,TraceExt
 aclnnTransConvolutionWeight,✖️,,✖️,✖️,✖️,

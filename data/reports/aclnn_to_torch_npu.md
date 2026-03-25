@@ -479,8 +479,8 @@
 | aclnnInplaceNormal | 已接入 | src_scan | normal_ | normal_ | False | normal_ | src_only |
 | aclnnInplaceNormalTensor | 已接入 | src_scan | normal_ |  | True | normal_ | src_only |
 | aclnnInplaceOne | 已接入 | src_scan | one_;ones;ones.names;ones.out;ones_like | one_ | False | one_;ones;ones_like;ones_out | shared_by_5_ops;src_only |
-| aclnnInplacePowTensorScalar | 已接入 | yaml_exec | pow_.Scalar |  | True |  | yaml_only |
-| aclnnInplacePowTensorTensor | 已接入 | yaml_exec | pow_.Tensor |  | True |  | yaml_only |
+| aclnnInplacePowTensorScalar | 已接入 | yaml_exec+src_scan | pow_.Scalar |  | True | inplace_pow_out_npu_nocheck | yaml+src;src_hit_but_op_name_unresolved |
+| aclnnInplacePowTensorTensor | 已接入 | src_scan | pow_.Scalar;pow_.Tensor |  | True | inplace_pow_out_npu_nocheck;pow_ | shared_by_2_ops;src_only |
 | aclnnInplacePut | 已接入 | src_scan |  |  | True | check_memory | src_only;src_hit_but_op_name_unresolved |
 | aclnnInplaceQuantMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceQuantScatter | 已接入 | src_scan | npu_quant_scatter;npu_quant_scatter_ |  | True | npu_quant_scatter;npu_quant_scatter_ | shared_by_2_ops;src_only |
@@ -703,8 +703,8 @@
 | aclnnPermute | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnPolar | 已接入 | yaml_exec | polar;polar.out | polar;polar.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnPowScalarTensor | 已接入 | yaml_exec | pow.Scalar;pow.Scalar_out |  | True |  | shared_by_2_ops;yaml_only |
-| aclnnPowTensorScalar | 已接入 | yaml_exec | pow.Tensor_Scalar;pow.Tensor_Scalar_out |  | True |  | shared_by_2_ops;yaml_only |
-| aclnnPowTensorTensor | 已接入 | yaml_exec | pow.Tensor_Tensor;pow.Tensor_Tensor_out |  | True |  | shared_by_2_ops;yaml_only |
+| aclnnPowTensorScalar | 已接入 | yaml_exec+src_scan | pow.Tensor_Scalar;pow.Tensor_Scalar_out |  | True | pow_out_npu_nocheck | shared_by_2_ops;yaml+src;src_hit_but_op_name_unresolved |
+| aclnnPowTensorTensor | 已接入 | src_scan | pow.Scalar;pow.Scalar_out;pow.Tensor_Scalar;pow.Tensor_Scalar_out;pow.Tensor_Tensor;pow.Tensor_Tensor_out |  | True | pow;pow_out;pow_out_npu_nocheck | shared_by_6_ops;src_only |
 | aclnnPrecisionCompare | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnPrelu | 已接入 | yaml_exec | _prelu_kernel |  | True |  | yaml_only |
 | aclnnPreluBackward | 已接入 | src_scan | _prelu_kernel_backward |  | True | _prelu_kernel_backward | src_only |
@@ -858,7 +858,7 @@
 | aclnnThreeInterpolateBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnThreshold | 已接入 | src_scan | threshold;threshold.out | threshold;threshold.out | False | threshold;threshold_out | shared_by_2_ops;src_only |
 | aclnnThresholdBackward | 已接入 | yaml_exec | threshold_backward | threshold_backward | False |  | yaml_only |
-| aclnnTopKTopPSample | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnTopKTopPSample | 已接入 | src_scan | npu_top_k_top_p_sample |  | True | npu_top_k_top_p_sample | src_only |
 | aclnnTopk | 已接入 | src_scan | topk;topk.values | topk;topk.values | False | topk;topk_out | shared_by_2_ops;src_only |
 | aclnnTrace | 已接入 | yaml_exec | trace | trace | False |  | yaml_only |
 | aclnnTransConvolutionWeight | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：712 / 913（78.0%）
+- torch-npu 已接入：713 / 913（78.1%）
 - mindspore 已接入：432 / 913（47.3%）
 - 两者都接入：392 / 913（42.9%）
-- 仅 torch-npu：320 / 913（35.0%）
+- 仅 torch-npu：321 / 913（35.2%）
 - 仅 mindspore：40 / 913（4.4%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -490,7 +490,7 @@
 | aclnnInplaceNormalTensor | ✅ | normal_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceOne | ✅ | one_;ones;ones.names;ones.out;ones_like | ✅ | ✅ | ✅ | Ones;OnesLikeExt |
 | aclnnInplacePowTensorScalar | ✅ | pow_.Scalar | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplacePowTensorTensor | ✅ | pow_.Tensor | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplacePowTensorTensor | ✅ | pow_.Scalar;pow_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplacePut | ✅ |  | ✅ | ✅ | ✅ | InplacePut |
 | aclnnInplaceQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceQuantScatter | ✅ | npu_quant_scatter;npu_quant_scatter_ | ✖️ | ✖️ | ✖️ |  |
@@ -714,7 +714,7 @@
 | aclnnPolar | ✅ | polar;polar.out | ✅ | ✅ | ✅ | Polar |
 | aclnnPowScalarTensor | ✅ | pow.Scalar;pow.Scalar_out | ✅ | ✅ | ✅ | PowScalarTensor |
 | aclnnPowTensorScalar | ✅ | pow.Tensor_Scalar;pow.Tensor_Scalar_out | ✅ | ✅ | ✅ | PowTensorScalar |
-| aclnnPowTensorTensor | ✅ | pow.Tensor_Tensor;pow.Tensor_Tensor_out | ✅ | ✅ | ✅ | Pow |
+| aclnnPowTensorTensor | ✅ | pow.Scalar;pow.Scalar_out;pow.Tensor_Scalar;pow.Tensor_Scalar_out;pow.Tensor_Tensor;pow.Tensor_Tensor_out | ✅ | ✅ | ✅ | Pow |
 | aclnnPrecisionCompare | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnPrelu | ✅ | _prelu_kernel | ✅ | ✅ | ✅ | PReLU |
 | aclnnPreluBackward | ✅ | _prelu_kernel_backward | ✅ | ✅ | ✅ | PReLUGrad |
@@ -868,7 +868,7 @@
 | aclnnThreeInterpolateBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnThreshold | ✅ | threshold;threshold.out | ✅ | ✅ | ✅ | Threshold |
 | aclnnThresholdBackward | ✅ | threshold_backward | ✅ | ✅ | ✅ | ReluGrad;ThresholdGrad |
-| aclnnTopKTopPSample | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnTopKTopPSample | ✅ | npu_top_k_top_p_sample | ✖️ | ✖️ | ✖️ |  |
 | aclnnTopk | ✅ | topk;topk.values | ✅ | ✅ | ✅ | TopkExt |
 | aclnnTrace | ✅ | trace | ✅ | ✅ | ✅ | TraceExt |
 | aclnnTransConvolutionWeight | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
