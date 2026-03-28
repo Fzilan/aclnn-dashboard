@@ -168,7 +168,7 @@
 | aclnnDropoutGenMaskV2Tensor | 已接入 | src_scan | _npu_dropout |  | True | _npu_dropout;dropout_gen_mask_tensor_impl | src_only |
 | aclnnDynamicBlockQuant | 已接入 | src_scan | npu_dynamic_block_quant |  | True | npu_dynamic_block_quant | src_only |
 | aclnnDynamicQuant | 已接入 | src_scan |  |  | True | npu_dynamic_quant_v0 | src_only;src_hit_but_op_name_unresolved |
-| aclnnDynamicQuantV2 | 已接入 | src_scan | npu_dynamic_quant;npu_dynamic_quant_asymmetric |  | True | npu_dynamic_quant;npu_dynamic_quant_asymmetric | shared_by_2_ops;src_only |
+| aclnnDynamicQuantV2 | 已接入 | src_scan | npu_dynamic_quant |  | True | dynamic_quant_run_aclnn;npu_dynamic_quant | src_only |
 | aclnnEinsum | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnElu | 已接入 | yaml_exec | elu;elu.out | elu;elu.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnEluBackward | 已接入 | yaml_exec | elu_backward;elu_backward.grad_input | elu_backward;elu_backward.grad_input | False |  | shared_by_2_ops;yaml_only |

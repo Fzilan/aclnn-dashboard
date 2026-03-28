@@ -165,7 +165,7 @@ all,aclnnDropoutGenMaskV2,已接入,src_scan,_npu_dropout;_npu_dropout_gen_mask.
 all,aclnnDropoutGenMaskV2Tensor,已接入,src_scan,_npu_dropout,,_npu_dropout,_npu_dropout;dropout_gen_mask_tensor_impl,external/op-plugin/op_plugin/ops/opapi/FlashAttentionKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnDynamicBlockQuant,已接入,src_scan,npu_dynamic_block_quant,,npu_dynamic_block_quant,npu_dynamic_block_quant,external/op-plugin/op_plugin/ops/opapi/DynamicBlockQuantNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnDynamicQuant,已接入,src_scan,,,,npu_dynamic_quant_v0,external/op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
-all,aclnnDynamicQuantV2,已接入,src_scan,npu_dynamic_quant;npu_dynamic_quant_asymmetric,,npu_dynamic_quant;npu_dynamic_quant_asymmetric,npu_dynamic_quant;npu_dynamic_quant_asymmetric,external/op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,shared_by_2_ops;src_only
+all,aclnnDynamicQuantV2,已接入,src_scan,npu_dynamic_quant,,npu_dynamic_quant,dynamic_quant_run_aclnn;npu_dynamic_quant,external/op-plugin/op_plugin/ops/opapi/DynamicQuantKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
 all,aclnnEinsum,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnElu,已接入,yaml_exec,elu;elu.out,elu;elu.out,,,,all_version,elu;elu.out,False,shared_by_2_ops;yaml_only
 all,aclnnEluBackward,已接入,yaml_exec,elu_backward;elu_backward.grad_input,elu_backward;elu_backward.grad_input,,,,all_version,elu_backward;elu_backward.grad_input,False,shared_by_2_ops;yaml_only

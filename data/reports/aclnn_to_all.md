@@ -178,7 +178,7 @@
 | aclnnDropoutGenMaskV2Tensor | ✅ | _npu_dropout | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicBlockQuant | ✅ | npu_dynamic_block_quant | ✅ | ✅ | ✖️ | DynamicBlockQuant |
 | aclnnDynamicQuant | ✅ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnDynamicQuantV2 | ✅ | npu_dynamic_quant;npu_dynamic_quant_asymmetric | ✖️ | ✖️ | ✖️ |  |
+| aclnnDynamicQuantV2 | ✅ | npu_dynamic_quant | ✖️ | ✖️ | ✖️ |  |
 | aclnnEinsum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnElu | ✅ | elu;elu.out | ✅ | ✅ | ✅ | EluExt |
 | aclnnEluBackward | ✅ | elu_backward;elu_backward.grad_input | ✅ | ✅ | ✅ | EluGradExt |
