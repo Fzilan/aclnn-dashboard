@@ -715,7 +715,7 @@
 | aclnnPromptFlashAttentionV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQr | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantConvolution | 已接入 | src_scan | npu_quant_conv2d |  | True | npu_quant_conv2d;npu_quant_conv2d_out | src_only |
-| aclnnQuantGroupedMatmulDequant | 已接入 | yaml_exec | npu_quant_grouped_matmul_dequant |  | True |  | yaml_only |
+| aclnnQuantGroupedMatmulDequant | 已接入 | src_scan | npu_quant_grouped_matmul_dequant |  | True | npu_quant_grouped_matmul_dequant | src_only |
 | aclnnQuantMatmul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulAllReduce | 已接入 | src_scan | npu_mm_all_reduce_base |  | True | npu_mm_all_reduce_base | src_only |
 | aclnnQuantMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

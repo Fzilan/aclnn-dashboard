@@ -712,7 +712,7 @@ all,aclnnPromptFlashAttentionV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_
 all,aclnnPromptFlashAttentionV3,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQr,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantConvolution,已接入,src_scan,npu_quant_conv2d,,npu_quant_conv2d,npu_quant_conv2d;npu_quant_conv2d_out,external/op-plugin/op_plugin/ops/opapi/QuantConv2DKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
-all,aclnnQuantGroupedMatmulDequant,已接入,yaml_exec,npu_quant_grouped_matmul_dequant,npu_quant_grouped_matmul_dequant,,,,all_version,,True,yaml_only
+all,aclnnQuantGroupedMatmulDequant,已接入,src_scan,npu_quant_grouped_matmul_dequant,,npu_quant_grouped_matmul_dequant,npu_quant_grouped_matmul_dequant,external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulDequantNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnQuantMatmul,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulAllReduce,已接入,src_scan,npu_mm_all_reduce_base,,npu_mm_all_reduce_base,npu_mm_all_reduce_base,external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnQuantMatmulAllReduceAddRmsNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
