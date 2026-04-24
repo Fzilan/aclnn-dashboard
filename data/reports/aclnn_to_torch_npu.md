@@ -738,7 +738,7 @@
 | aclnnReciprocal | 已接入 | yaml_exec | reciprocal;reciprocal.out | reciprocal;reciprocal.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnRecurrentGatedDeltaRule | 已接入 | src_scan | npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional |  | True | npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional | shared_by_2_ops;src_only |
 | aclnnReduceLogSum | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnReduceNansum | 已接入 | src_scan |  |  | True | scalar_type | src_only;src_hit_but_op_name_unresolved |
+| aclnnReduceNansum | 已接入 | src_scan | nansum.out |  | True | nansum_out | src_only |
 | aclnnReduceSum | 已接入 | src_scan | sum;sum.DimnameList_out;sum.IntList_out;sum.dim_DimnameList;sum.dim_IntList |  | True | sum | shared_by_5_ops;src_only |
 | aclnnReflectionPad1d | 已接入 | yaml_exec | reflection_pad1d;reflection_pad1d.out | reflection_pad1d;reflection_pad1d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnReflectionPad1dBackward | 已接入 | yaml_exec | reflection_pad1d_backward;reflection_pad1d_backward.grad_input | reflection_pad1d_backward;reflection_pad1d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |

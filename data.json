@@ -10,9 +10,9 @@
     "torch_coverage_rate": 78.1,
     "mindspore_coverage_rate": 47.3,
     "both_coverage_rate": 42.9,
-    "last_update_time": "2026-04-23T11:51:28+08:00",
-    "generated_at": "2026-04-23T11:51:28+08:00",
-    "pipeline_run_time": "2026-04-23T11:51:25+08:00",
+    "last_update_time": "2026-04-24T11:55:57+08:00",
+    "generated_at": "2026-04-24T11:55:57+08:00",
+    "pipeline_run_time": "2026-04-24T11:55:54+08:00",
     "torch_speed_pp_per_day_7d": 0.0,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-04-23T11:50:22+08:00"
+        "mtime": "2026-04-24T11:54:55+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-04-23T11:51:26+08:00"
+        "mtime": "2026-04-24T11:55:55+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-04-23T11:51:26+08:00"
+        "mtime": "2026-04-24T11:55:55+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-04-23T11:51:28+08:00"
+        "mtime": "2026-04-24T11:55:56+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-04-23T11:51:28+08:00"
+        "mtime": "2026-04-24T11:55:56+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-04-23T11:51:28+08:00"
+        "mtime": "2026-04-24T11:55:57+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-04-23T11:51:28+08:00"
+        "mtime": "2026-04-24T11:55:57+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -625,11 +625,9 @@
         "torch_coverage_rate": 78.1,
         "mindspore_coverage_rate": 47.3,
         "both_coverage_rate": 42.9
-      }
-    ],
-    "last_7_days": [
+      },
       {
-        "date": "2026-04-17",
+        "date": "2026-04-24",
         "total_ops": 913,
         "torch_supported": 713,
         "mindspore_supported": 432,
@@ -637,7 +635,9 @@
         "torch_coverage_rate": 78.1,
         "mindspore_coverage_rate": 47.3,
         "both_coverage_rate": 42.9
-      },
+      }
+    ],
+    "last_7_days": [
       {
         "date": "2026-04-18",
         "total_ops": 913,
@@ -690,6 +690,16 @@
       },
       {
         "date": "2026-04-23",
+        "total_ops": 913,
+        "torch_supported": 713,
+        "mindspore_supported": 432,
+        "both_supported": 392,
+        "torch_coverage_rate": 78.1,
+        "mindspore_coverage_rate": 47.3,
+        "both_coverage_rate": 42.9
+      },
+      {
+        "date": "2026-04-24",
         "total_ops": 913,
         "torch_supported": 713,
         "mindspore_supported": 432,
@@ -24118,8 +24128,7 @@
           "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -25226,8 +25235,7 @@
           "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -26943,8 +26951,7 @@
           "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_5_ops;src_only"
       },
@@ -29211,8 +29218,7 @@
           "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -32997,23 +33003,21 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [],
+        "via_ops": [
+          "nansum.out"
+        ],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "scalar_type"
+          "nansum_out"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": true,

@@ -735,7 +735,7 @@ aclnnReal,✖️,,✖️,✖️,✖️,
 aclnnReciprocal,✅,reciprocal;reciprocal.out,✅,✅,✅,Reciprocal
 aclnnRecurrentGatedDeltaRule,✅,npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional,✖️,✖️,✖️,
 aclnnReduceLogSum,✖️,,✖️,✖️,✖️,
-aclnnReduceNansum,✅,,✅,✅,✅,Nansum
+aclnnReduceNansum,✅,nansum.out,✅,✅,✅,Nansum
 aclnnReduceSum,✅,sum;sum.DimnameList_out;sum.IntList_out;sum.dim_DimnameList;sum.dim_IntList,✅,✅,✅,CountNonZero;ReduceSum;SumExt
 aclnnReflectionPad1d,✅,reflection_pad1d;reflection_pad1d.out,✅,✅,✅,ReflectionPad1D
 aclnnReflectionPad1dBackward,✅,reflection_pad1d_backward;reflection_pad1d_backward.grad_input,✅,✅,✅,ReflectionPad1DGrad
