@@ -30,8 +30,8 @@
 | aclnnAddbmm | 已接入 | src_scan | addbmm;addbmm.out;addbmm_ | addbmm;addbmm.out | False | addbmm;addbmm_;addbmm_out | shared_by_3_ops;src_only |
 | aclnnAddcdiv | 已接入 | src_scan | addcdiv;addcdiv.out | addcdiv;addcdiv.out | False | addcdiv;addcdiv_out | shared_by_2_ops;src_only |
 | aclnnAddcmul | 已接入 | src_scan | addcmul;addcmul.out | addcmul;addcmul.out | False | addcmul;addcmul_out | shared_by_2_ops;src_only |
-| aclnnAddmm | 已接入 | src_scan | addmm;addmm.out;npu_linear | addmm;addmm.out | False | addmm;addmm_out;npu_linear | shared_by_3_ops;src_only |
-| aclnnAddmmWeightNz | 已接入 | src_scan | addmm;addmm.out |  | True | addmm;addmm_out | shared_by_2_ops;src_only |
+| aclnnAddmm | 已接入 | src_scan | addmm;addmm.dtype;addmm.dtype_out;addmm.out;npu_linear | addmm;addmm.dtype;addmm.dtype_out;addmm.out | False | addmm;addmm_out;npu_linear | shared_by_5_ops;src_only |
+| aclnnAddmmWeightNz | 已接入 | src_scan | addmm;addmm.dtype;addmm.dtype_out;addmm.out |  | True | addmm;addmm_out | shared_by_4_ops;src_only |
 | aclnnAddmv | 已接入 | src_scan | addmv;addmv.out;addmv_ | addmv;addmv.out | False | addmv;addmv_;addmv_out;addmv_out_op_api | shared_by_3_ops;src_only |
 | aclnnAddr | 已接入 | yaml_exec | addr;addr.out | addr;addr.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAdds | 已接入 | src_scan | add.Scalar;add.Tensor;add.out |  | True | add;add_out;add_out_npu_nocheck | shared_by_3_ops;src_only |
@@ -75,9 +75,9 @@
 | aclnnAvgPool3dBackward | 已接入 | src_scan | avg_pool3d_backward;avg_pool3d_backward.grad_input | avg_pool3d_backward;avg_pool3d_backward.grad_input | False | avg_pool3d_backward;avg_pool3d_backward_out;avg_pool3d_backward_out_npu_nocheck_api | shared_by_2_ops;src_only |
 | aclnnBackgroundReplace | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBaddbmm | 已接入 | src_scan | baddbmm;baddbmm.out;baddbmm_ | baddbmm;baddbmm.out | False | baddbmm;baddbmm_;baddbmm_out | shared_by_3_ops;src_only |
-| aclnnBatchMatMul | 已接入 | src_scan | affine_grid_generator_backward;bmm;bmm.out |  | True | affine_grid_generator_backward;bmm;bmm_out | shared_by_3_ops;src_only |
+| aclnnBatchMatMul | 已接入 | src_scan | affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out |  | True | affine_grid_generator_backward;bmm;bmm_out | shared_by_5_ops;src_only |
 | aclnnBatchMatMulReduceScatterAlltoAll | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnBatchMatMulWeightNz | 已接入 | src_scan | bmm;bmm.out |  | True | bmm;bmm_out | shared_by_2_ops;src_only |
+| aclnnBatchMatMulWeightNz | 已接入 | src_scan | bmm;bmm.dtype;bmm.dtype_out;bmm.out |  | True | bmm;bmm_out | shared_by_4_ops;src_only |
 | aclnnBatchMatmulQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBatchNorm | 已接入 | yaml_exec | native_batch_norm;native_batch_norm.out |  | True |  | shared_by_2_ops;yaml_only |
 | aclnnBatchNormBackward | 已接入 | src_scan | native_batch_norm_backward |  | True | native_batch_norm_backward | src_only |
@@ -580,7 +580,7 @@
 | aclnnMatmulCompressDequant | 已接入 | src_scan | npu_matmul_compress_dequant |  | True | npu_matmul_compress_dequant | src_only |
 | aclnnMatmulReduceScatter | 已接入 | src_scan |  |  | True | size | src_only;src_hit_but_op_name_unresolved |
 | aclnnMatmulReduceScatterV2 | 已接入 | src_scan | npu_quant_mm_reduce_scatter |  | True | npu_quant_mm_reduce_scatter;size | src_only |
-| aclnnMatmulWeightNz | 已接入 | src_scan | mm;mm.out |  | True | matmul_implement_npu;mm;mm_out | shared_by_2_ops;src_only |
+| aclnnMatmulWeightNz | 已接入 | src_scan | mm;mm.dtype;mm.dtype_out;mm.out |  | True | matmul_implement_npu;mm;mm_out | shared_by_4_ops;src_only |
 | aclnnMax | 已接入 | src_scan | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | False | max | shared_by_6_ops;src_only |
 | aclnnMaxDim | 已接入 | src_scan | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out |  | True | max;max_out | shared_by_6_ops;src_only |
 | aclnnMaxN | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -612,7 +612,7 @@
 | aclnnMlaProlog | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMlaPrologV2WeightNz | 已接入 | src_scan | npu_mla_prolog_v2 |  | True | npu_mla_prolog_v2 | src_only |
 | aclnnMlaPrologV3WeightNz | 已接入 | src_scan | npu_mla_prolog_v3;npu_mla_prolog_v3_functional |  | True | npu_mla_prolog_v3;npu_mla_prolog_v3_functional | shared_by_2_ops;src_only |
-| aclnnMm | 已接入 | src_scan | mm;mm.out;npu_linear;npu_linear_backward | mm;mm.out | False | mm;mm_out;npu_linear;npu_linear_backward | shared_by_4_ops;src_only |
+| aclnnMm | 已接入 | src_scan | mm;mm.dtype;mm.dtype_out;mm.out;npu_linear;npu_linear_backward | mm;mm.dtype;mm.dtype_out;mm.out | False | mm;mm_out;npu_linear;npu_linear_backward | shared_by_6_ops;src_only |
 | aclnnModulate | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnModulateBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeComputeExpertTokens | 已接入 | yaml_exec | npu_moe_compute_expert_tokens |  | True |  | yaml_only |

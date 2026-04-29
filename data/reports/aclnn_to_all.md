@@ -40,8 +40,8 @@
 | aclnnAddbmm | ✅ | addbmm;addbmm.out;addbmm_ | ✅ | ✅ | ✅ | Addbmm |
 | aclnnAddcdiv | ✅ | addcdiv;addcdiv.out | ✅ | ✅ | ✅ | AddcdivExt |
 | aclnnAddcmul | ✅ | addcmul;addcmul.out | ✅ | ✅ | ✅ | AddcmulExt |
-| aclnnAddmm | ✅ | addmm;addmm.out;npu_linear | ✅ | ✅ | ✅ | Addmm;Dense |
-| aclnnAddmmWeightNz | ✅ | addmm;addmm.out | ✖️ | ✖️ | ✖️ |  |
+| aclnnAddmm | ✅ | addmm;addmm.dtype;addmm.dtype_out;addmm.out;npu_linear | ✅ | ✅ | ✅ | Addmm;Dense |
+| aclnnAddmmWeightNz | ✅ | addmm;addmm.dtype;addmm.dtype_out;addmm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnAddmv | ✅ | addmv;addmv.out;addmv_ | ✅ | ✅ | ✅ | Addmv |
 | aclnnAddr | ✅ | addr;addr.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnAdds | ✅ | add.Scalar;add.Tensor;add.out | ✅ | ✅ | ✅ | AddScalar |
@@ -85,9 +85,9 @@
 | aclnnAvgPool3dBackward | ✅ | avg_pool3d_backward;avg_pool3d_backward.grad_input | ✅ | ✅ | ✅ | AvgPool3DGradExt;AvgPool3dGradExt |
 | aclnnBackgroundReplace | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnBaddbmm | ✅ | baddbmm;baddbmm.out;baddbmm_ | ✅ | ✅ | ✅ | Baddbmm |
-| aclnnBatchMatMul | ✅ | affine_grid_generator_backward;bmm;bmm.out | ✅ | ✅ | ✅ | BatchMatMulExt;BmmExt |
+| aclnnBatchMatMul | ✅ | affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out | ✅ | ✅ | ✅ | BatchMatMulExt;BmmExt |
 | aclnnBatchMatMulReduceScatterAlltoAll | ✖️ |  | ✅ | ✖️ | ✅ | BatchMatMulReduceScatterAlltoAll |
-| aclnnBatchMatMulWeightNz | ✅ | bmm;bmm.out | ✖️ | ✖️ | ✖️ |  |
+| aclnnBatchMatMulWeightNz | ✅ | bmm;bmm.dtype;bmm.dtype_out;bmm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnBatchMatmulQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnBatchNorm | ✅ | native_batch_norm;native_batch_norm.out | ✅ | ✅ | ✅ | BatchNormExt |
 | aclnnBatchNormBackward | ✅ | native_batch_norm_backward | ✅ | ✅ | ✅ | BatchNormGradExt |
@@ -590,7 +590,7 @@
 | aclnnMatmulCompressDequant | ✅ | npu_matmul_compress_dequant | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulReduceScatter | ✅ |  | ✅ | ✅ | ✅ | MatmulReduceScatter |
 | aclnnMatmulReduceScatterV2 | ✅ | npu_quant_mm_reduce_scatter | ✖️ | ✖️ | ✖️ |  |
-| aclnnMatmulWeightNz | ✅ | mm;mm.out | ✖️ | ✖️ | ✖️ |  |
+| aclnnMatmulWeightNz | ✅ | mm;mm.dtype;mm.dtype_out;mm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnMax | ✅ | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | ✅ | ✅ | ✅ | BincountExt;Max |
 | aclnnMaxDim | ✅ | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | ✅ | ✅ | ✅ | ArgMaxWithValue;ArgmaxWithValue;MaxDim |
 | aclnnMaxN | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -622,7 +622,7 @@
 | aclnnMlaProlog | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMlaPrologV2WeightNz | ✅ | npu_mla_prolog_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnMlaPrologV3WeightNz | ✅ | npu_mla_prolog_v3;npu_mla_prolog_v3_functional | ✖️ | ✖️ | ✖️ |  |
-| aclnnMm | ✅ | mm;mm.out;npu_linear;npu_linear_backward | ✅ | ✅ | ✅ | Matmul;Mm;MmExt |
+| aclnnMm | ✅ | mm;mm.dtype;mm.dtype_out;mm.out;npu_linear;npu_linear_backward | ✅ | ✅ | ✅ | Matmul;Mm;MmExt |
 | aclnnModulate | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnModulateBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeComputeExpertTokens | ✅ | npu_moe_compute_expert_tokens | ✖️ | ✖️ | ✖️ |  |

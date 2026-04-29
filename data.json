@@ -10,9 +10,9 @@
     "torch_coverage_rate": 78.1,
     "mindspore_coverage_rate": 47.3,
     "both_coverage_rate": 42.9,
-    "last_update_time": "2026-04-28T12:11:43+08:00",
-    "generated_at": "2026-04-28T12:11:43+08:00",
-    "pipeline_run_time": "2026-04-28T12:11:41+08:00",
+    "last_update_time": "2026-04-29T12:08:36+08:00",
+    "generated_at": "2026-04-29T12:08:36+08:00",
+    "pipeline_run_time": "2026-04-29T12:08:33+08:00",
     "torch_speed_pp_per_day_7d": 0.0,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-04-28T12:10:38+08:00"
+        "mtime": "2026-04-29T12:07:30+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-04-28T12:11:42+08:00"
+        "mtime": "2026-04-29T12:08:34+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-04-28T12:11:42+08:00"
+        "mtime": "2026-04-29T12:08:34+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-04-28T12:11:43+08:00"
+        "mtime": "2026-04-29T12:08:36+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-04-28T12:11:43+08:00"
+        "mtime": "2026-04-29T12:08:36+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-04-28T12:11:43+08:00"
+        "mtime": "2026-04-29T12:08:36+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-04-28T12:11:43+08:00"
+        "mtime": "2026-04-29T12:08:36+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -675,11 +675,9 @@
         "torch_coverage_rate": 78.1,
         "mindspore_coverage_rate": 47.3,
         "both_coverage_rate": 42.9
-      }
-    ],
-    "last_7_days": [
+      },
       {
-        "date": "2026-04-22",
+        "date": "2026-04-29",
         "total_ops": 913,
         "torch_supported": 713,
         "mindspore_supported": 432,
@@ -687,7 +685,9 @@
         "torch_coverage_rate": 78.1,
         "mindspore_coverage_rate": 47.3,
         "both_coverage_rate": 42.9
-      },
+      }
+    ],
+    "last_7_days": [
       {
         "date": "2026-04-23",
         "total_ops": 913,
@@ -740,6 +740,16 @@
       },
       {
         "date": "2026-04-28",
+        "total_ops": 913,
+        "torch_supported": 713,
+        "mindspore_supported": 432,
+        "both_supported": 392,
+        "torch_coverage_rate": 78.1,
+        "mindspore_coverage_rate": 47.3,
+        "both_coverage_rate": 42.9
+      },
+      {
+        "date": "2026-04-29",
         "total_ops": 913,
         "torch_supported": 713,
         "mindspore_supported": 432,
@@ -2022,11 +2032,15 @@
         "status": "已接入",
         "via_ops": [
           "addmm",
+          "addmm.dtype",
+          "addmm.dtype_out",
           "addmm.out",
           "npu_linear"
         ],
         "direct_match_ops": [
           "addmm",
+          "addmm.dtype",
+          "addmm.dtype_out",
           "addmm.out"
         ],
         "evidence": [
@@ -2042,7 +2056,7 @@
           "external/op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LinearKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_3_ops;src_only"
+        "remarks": "shared_by_5_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -2089,6 +2103,8 @@
         "status": "已接入",
         "via_ops": [
           "addmm",
+          "addmm.dtype",
+          "addmm.dtype_out",
           "addmm.out"
         ],
         "direct_match_ops": [],
@@ -2103,7 +2119,7 @@
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/AddmmKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_2_ops;src_only"
+        "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -4092,6 +4108,8 @@
         "via_ops": [
           "affine_grid_generator_backward",
           "bmm",
+          "bmm.dtype",
+          "bmm.dtype_out",
           "bmm.out"
         ],
         "direct_match_ops": [],
@@ -4108,7 +4126,7 @@
           "external/op-plugin/op_plugin/ops/opapi/AffineGridGeneratorBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_3_ops;src_only"
+        "remarks": "shared_by_5_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -4193,6 +4211,8 @@
         "status": "已接入",
         "via_ops": [
           "bmm",
+          "bmm.dtype",
+          "bmm.dtype_out",
           "bmm.out"
         ],
         "direct_match_ops": [],
@@ -4207,7 +4227,7 @@
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_2_ops;src_only"
+        "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -26185,6 +26205,8 @@
         "status": "已接入",
         "via_ops": [
           "mm",
+          "mm.dtype",
+          "mm.dtype_out",
           "mm.out"
         ],
         "direct_match_ops": [],
@@ -26203,7 +26225,7 @@
           "external/op-plugin/op_plugin/ops/opapi/MatmulKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MmKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_2_ops;src_only"
+        "remarks": "shared_by_4_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -27621,12 +27643,16 @@
         "status": "已接入",
         "via_ops": [
           "mm",
+          "mm.dtype",
+          "mm.dtype_out",
           "mm.out",
           "npu_linear",
           "npu_linear_backward"
         ],
         "direct_match_ops": [
           "mm",
+          "mm.dtype",
+          "mm.dtype_out",
           "mm.out"
         ],
         "evidence": [
@@ -27643,7 +27669,7 @@
           "external/op-plugin/op_plugin/ops/opapi/LinearKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MmKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_4_ops;src_only"
+        "remarks": "shared_by_6_ops;src_only"
       },
       "mindspore": {
         "supported": true,
