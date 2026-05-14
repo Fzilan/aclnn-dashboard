@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：713 / 913（78.1%）
+- torch-npu 已接入：711 / 913（77.9%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：327 / 913（35.8%）
+- 仅 torch-npu：325 / 913（35.6%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -120,7 +120,7 @@
 | aclnnCalculateMatmulWeightSizeV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnCast | ✅ | _npu_dtype_cast;npu_dtype_cast | ✅ | ✅ | ✅ | Cast;MultiScaleDeformableAttn;MultiScaleDeformableAttnGrad |
 | aclnnCat | ✅ | cat;cat.names;cat.names_out;cat.out | ✅ | ✖️ | ✅ | Concat |
-| aclnnCeil | ✅ | ceil;ceil.out | ✅ | ✅ | ✅ | Ceil |
+| aclnnCeil | ✅ | ceil;ceil.out;ceil_ | ✅ | ✅ | ✅ | Ceil |
 | aclnnCelu | ✅ | celu | ✖️ | ✖️ | ✖️ |  |
 | aclnnChamferDistanceBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnChannelShuffle | ✅ | channel_shuffle | ✖️ | ✖️ | ✖️ |  |
@@ -419,7 +419,7 @@
 | aclnnInplaceBitwiseOrTensor | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseXorScalar | ✅ | bitwise_xor_.Scalar;bitwise_xor_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseXorTensor | ✅ | bitwise_xor_.Scalar;bitwise_xor_.Tensor | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceCeil | ✅ | ceil_ | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceCeil | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceCelu | ✅ | celu_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceClampMax | ✅ | clamp_max_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceClampMaxTensor | ✅ | clamp_max_.Tensor | ✖️ | ✖️ | ✖️ |  |
@@ -521,7 +521,7 @@
 | aclnnInplaceThreshold | ✅ | threshold_ | ✅ | ✅ | ✅ | InplaceThreshold |
 | aclnnInplaceTril | ✅ | tril_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceTriu | ✅ | triu_ | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceTrunc | ✅ | trunc_ | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceTrunc | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceUniform | ✅ | uniform_ | ✅ | ✅ | ✅ | InplaceUniform;RandExt;RandLikeExt;UniformExt |
 | aclnnInplaceUniformTensor | ✅ | uniform_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceWeightQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -881,7 +881,7 @@
 | aclnnTriangularSolve | ✅ | triangular_solve.X | ✅ | ✅ | ✅ | TriangularSolve |
 | aclnnTril | ✅ | tril;tril.out | ✅ | ✅ | ✅ | TrilExt |
 | aclnnTriu | ✅ | triu;triu.out | ✅ | ✅ | ✅ | Triu |
-| aclnnTrunc | ✅ | trunc;trunc.out | ✅ | ✅ | ✅ | Trunc |
+| aclnnTrunc | ✅ | trunc;trunc.out;trunc_ | ✅ | ✅ | ✅ | Trunc |
 | aclnnUnfoldGrad | ✅ | unfold_backward | ✖️ | ✖️ | ✖️ |  |
 | aclnnUnique | ✅ | _unique | ✅ | ✖️ | ✅ | InnerUnique |
 | aclnnUnique2 | ✅ | _unique2 | ✅ | ✅ | ✅ | Unique2 |

@@ -107,7 +107,7 @@ aclnnCalculateMatmulWeightSize,✖️,,✖️,✖️,✖️,
 aclnnCalculateMatmulWeightSizeV2,✖️,,✖️,✖️,✖️,
 aclnnCast,✅,_npu_dtype_cast;npu_dtype_cast,✅,✅,✅,Cast;MultiScaleDeformableAttn;MultiScaleDeformableAttnGrad
 aclnnCat,✅,cat;cat.names;cat.names_out;cat.out,✅,✖️,✅,Concat
-aclnnCeil,✅,ceil;ceil.out,✅,✅,✅,Ceil
+aclnnCeil,✅,ceil;ceil.out;ceil_,✅,✅,✅,Ceil
 aclnnCelu,✅,celu,✖️,✖️,✖️,
 aclnnChamferDistanceBackward,✖️,,✖️,✖️,✖️,
 aclnnChannelShuffle,✅,channel_shuffle,✖️,✖️,✖️,
@@ -406,7 +406,7 @@ aclnnInplaceBitwiseOrScalar,✖️,,✖️,✖️,✖️,
 aclnnInplaceBitwiseOrTensor,✖️,,✖️,✖️,✖️,
 aclnnInplaceBitwiseXorScalar,✅,bitwise_xor_.Scalar;bitwise_xor_.Tensor,✖️,✖️,✖️,
 aclnnInplaceBitwiseXorTensor,✅,bitwise_xor_.Scalar;bitwise_xor_.Tensor,✖️,✖️,✖️,
-aclnnInplaceCeil,✅,ceil_,✖️,✖️,✖️,
+aclnnInplaceCeil,✖️,,✖️,✖️,✖️,
 aclnnInplaceCelu,✅,celu_,✖️,✖️,✖️,
 aclnnInplaceClampMax,✅,clamp_max_,✖️,✖️,✖️,
 aclnnInplaceClampMaxTensor,✅,clamp_max_.Tensor,✖️,✖️,✖️,
@@ -508,7 +508,7 @@ aclnnInplaceTanh,✅,tanh_,✅,✅,✅,InplaceTanh
 aclnnInplaceThreshold,✅,threshold_,✅,✅,✅,InplaceThreshold
 aclnnInplaceTril,✅,tril_,✖️,✖️,✖️,
 aclnnInplaceTriu,✅,triu_,✖️,✖️,✖️,
-aclnnInplaceTrunc,✅,trunc_,✖️,✖️,✖️,
+aclnnInplaceTrunc,✖️,,✖️,✖️,✖️,
 aclnnInplaceUniform,✅,uniform_,✅,✅,✅,InplaceUniform;RandExt;RandLikeExt;UniformExt
 aclnnInplaceUniformTensor,✅,uniform_,✖️,✖️,✖️,
 aclnnInplaceWeightQuantMatmulAllReduceAddRmsNorm,✖️,,✖️,✖️,✖️,
@@ -868,7 +868,7 @@ aclnnTransposeBatchMatMul,✅,npu_transpose_batchmatmul,✖️,✖️,✖️,
 aclnnTriangularSolve,✅,triangular_solve.X,✅,✅,✅,TriangularSolve
 aclnnTril,✅,tril;tril.out,✅,✅,✅,TrilExt
 aclnnTriu,✅,triu;triu.out,✅,✅,✅,Triu
-aclnnTrunc,✅,trunc;trunc.out,✅,✅,✅,Trunc
+aclnnTrunc,✅,trunc;trunc.out;trunc_,✅,✅,✅,Trunc
 aclnnUnfoldGrad,✅,unfold_backward,✖️,✖️,✖️,
 aclnnUnique,✅,_unique,✅,✖️,✅,InnerUnique
 aclnnUnique2,✅,_unique2,✅,✅,✅,Unique2

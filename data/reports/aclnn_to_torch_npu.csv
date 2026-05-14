@@ -107,7 +107,7 @@ all,aclnnCalculateMatmulWeightSize,未接入,,,,,,,,,False,no_yaml_exec_and_no_s
 all,aclnnCalculateMatmulWeightSizeV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnCast,已接入,src_scan,_npu_dtype_cast;npu_dtype_cast,,_npu_dtype_cast;npu_dtype_cast,_npu_dtype_cast;npu_dtype_cast;npu_dtype_cast_impl_op_api,external/op-plugin/op_plugin/ops/opapi/CastKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnCat,已接入,src_scan,cat;cat.names;cat.names_out;cat.out,,cat;cat.names;cat.names_out;cat.out,cat;cat_out,external/op-plugin/op_plugin/ops/opapi/CatKernelNpuOpApi.cpp,all_version,cat;cat.names;cat.names_out;cat.out,False,shared_by_4_ops;src_only
-all,aclnnCeil,已接入,yaml_exec,ceil;ceil.out,ceil;ceil.out,,,,all_version,ceil;ceil.out,False,shared_by_2_ops;yaml_only
+all,aclnnCeil,已接入,yaml_exec,ceil;ceil.out;ceil_,ceil;ceil.out;ceil_,,,,all_version,ceil;ceil.out,False,shared_by_3_ops;yaml_only
 all,aclnnCelu,已接入,yaml_exec,celu,celu,,,,all_version,celu,False,yaml_only
 all,aclnnChamferDistanceBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnChannelShuffle,已接入,yaml_exec,channel_shuffle,channel_shuffle,,,,all_version,channel_shuffle,False,yaml_only
@@ -406,7 +406,7 @@ all,aclnnInplaceBitwiseOrScalar,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_
 all,aclnnInplaceBitwiseOrTensor,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceBitwiseXorScalar,已接入,src_scan,bitwise_xor_.Scalar;bitwise_xor_.Tensor,,bitwise_xor_.Scalar;bitwise_xor_.Tensor,bitwise_xor_,external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplaceBitwiseXorTensor,已接入,src_scan,bitwise_xor_.Scalar;bitwise_xor_.Tensor,,bitwise_xor_.Scalar;bitwise_xor_.Tensor,bitwise_xor_,external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
-all,aclnnInplaceCeil,已接入,yaml_exec,ceil_,ceil_,,,,all_version,ceil_,False,yaml_only
+all,aclnnInplaceCeil,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceCelu,已接入,yaml_exec,celu_,celu_,,,,all_version,celu_,False,yaml_only
 all,aclnnInplaceClampMax,已接入,yaml_exec,clamp_max_,clamp_max_,,,,all_version,clamp_max_,False,yaml_only
 all,aclnnInplaceClampMaxTensor,已接入,yaml_exec,clamp_max_.Tensor,clamp_max_.Tensor,,,,all_version,,True,yaml_only
@@ -508,7 +508,7 @@ all,aclnnInplaceTanh,已接入,src_scan,tanh_,,tanh_,tanh_,external/op-plugin/op
 all,aclnnInplaceThreshold,已接入,src_scan,threshold_,,threshold_,threshold_,external/op-plugin/op_plugin/ops/opapi/ThresholdKernelNpuOpApi.cpp,all_version,threshold_,False,src_only
 all,aclnnInplaceTril,已接入,yaml_exec,tril_,tril_,,,,all_version,tril_,False,yaml_only
 all,aclnnInplaceTriu,已接入,yaml_exec,triu_,triu_,,,,all_version,triu_,False,yaml_only
-all,aclnnInplaceTrunc,已接入,yaml_exec,trunc_,trunc_,,,,all_version,trunc_,False,yaml_only
+all,aclnnInplaceTrunc,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceUniform,已接入,src_scan,uniform_,,uniform_,uniform_,external/op-plugin/op_plugin/ops/opapi/UniformKernelNpuOpApi.cpp,all_version,uniform_,False,src_only
 all,aclnnInplaceUniformTensor,已接入,src_scan,uniform_,,uniform_,uniform_,external/op-plugin/op_plugin/ops/opapi/UniformKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnInplaceWeightQuantMatmulAllReduceAddRmsNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
@@ -868,7 +868,7 @@ all,aclnnTransposeBatchMatMul,已接入,src_scan,npu_transpose_batchmatmul,,npu_
 all,aclnnTriangularSolve,已接入,yaml_exec+src_scan,triangular_solve.X,triangular_solve.X,,exec_triangular_solve,external/op-plugin/op_plugin/ops/opapi/LinalgSolveTriangularKernelNpuOpApi.cpp,all_version,triangular_solve.X,False,yaml+src;src_hit_but_op_name_unresolved
 all,aclnnTril,已接入,yaml_exec,tril;tril.out,tril;tril.out,,,,all_version,tril;tril.out,False,shared_by_2_ops;yaml_only
 all,aclnnTriu,已接入,yaml_exec,triu;triu.out,triu;triu.out,,,,all_version,triu;triu.out,False,shared_by_2_ops;yaml_only
-all,aclnnTrunc,已接入,yaml_exec,trunc;trunc.out,trunc;trunc.out,,,,all_version,trunc;trunc.out,False,shared_by_2_ops;yaml_only
+all,aclnnTrunc,已接入,yaml_exec,trunc;trunc.out;trunc_,trunc;trunc.out;trunc_,,,,all_version,trunc;trunc.out,False,shared_by_3_ops;yaml_only
 all,aclnnUnfoldGrad,已接入,src_scan,unfold_backward,,unfold_backward,unfold_backward,external/op-plugin/op_plugin/ops/opapi/UnfoldBackwardLernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
 all,aclnnUnique,已接入,src_scan,_unique,,_unique,_unique,external/op-plugin/op_plugin/ops/opapi/_UniqueKernelNpuOpApi.cpp,all_version,_unique,False,src_only
 all,aclnnUnique2,已接入,src_scan,_unique2,,_unique2,_unique2,external/op-plugin/op_plugin/ops/opapi/Unique2KernelNpuOpApi.cpp,all_version,_unique2,False,src_only
