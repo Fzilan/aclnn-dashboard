@@ -489,7 +489,7 @@ all,aclnnInplaceRelu,已接入,yaml_exec,relu_,relu_,,,,all_version,relu_,False,
 all,aclnnInplaceRemainderTensorScalar,已接入,src_scan,remainder_.Scalar;remainder_.Tensor,,remainder_.Scalar;remainder_.Tensor,remainder_,external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplaceRemainderTensorTensor,已接入,src_scan,remainder_.Scalar;remainder_.Tensor,,remainder_.Scalar;remainder_.Tensor,remainder_,external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplaceRenorm,已接入,src_scan,renorm_,,renorm_,renorm_,external/op-plugin/op_plugin/ops/opapi/RenormKernelNpuOpApi.cpp,all_version,renorm_,False,src_only
-all,aclnnInplaceRound,已接入,yaml_exec,round_,round_,,,,all_version,round_,False,yaml_only
+all,aclnnInplaceRound,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceRoundDecimals,已接入,src_scan,round_;round_.decimals,,round_;round_.decimals,round_,external/op-plugin/op_plugin/ops/opapi/RoundDecimalsKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplaceRsqrt,已接入,yaml_exec,rsqrt_,rsqrt_,,,,all_version,rsqrt_,False,yaml_only
 all,aclnnInplaceScatter,已接入,src_scan,scatter_.src;scatter_.value,,scatter_.src;scatter_.value,scatter_,external/op-plugin/op_plugin/ops/opapi/ScatterKernelNpuOpApi.cpp,all_version,scatter_.src;scatter_.value,False,shared_by_2_ops;src_only
@@ -774,7 +774,7 @@ all,aclnnRoll,已接入,yaml_exec,roll,roll,,,,"['v2.1', 'newest']",roll,False,y
 all,aclnnRopeWithSinCosCache,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnRotaryPositionEmbedding,已接入,src_scan,npu_rotary_mul,,npu_rotary_mul,npu_rotary_mul,external/op-plugin/op_plugin/ops/opapi/RotaryMulKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnRotaryPositionEmbeddingGrad,已接入,src_scan,npu_rotary_mul_backward,,npu_rotary_mul_backward,npu_rotary_mul_backward,external/op-plugin/op_plugin/ops/opapi/RotaryMulBackwardKernelNpuOpApi.cpp,all_version,,True,src_only
-all,aclnnRound,已接入,yaml_exec,round;round.out,round;round.out,,,,all_version,round;round.out,False,shared_by_2_ops;yaml_only
+all,aclnnRound,已接入,yaml_exec,round;round.out;round_,round;round.out;round_,,,,all_version,round;round.out,False,shared_by_3_ops;yaml_only
 all,aclnnRoundDecimals,已接入,src_scan,round;round.decimals;round.decimals_out;round.out,,round;round.decimals;round.decimals_out;round.out,round;round_out,external/op-plugin/op_plugin/ops/opapi/RoundDecimalsKernelNpuOpApi.cpp,all_version,,True,shared_by_4_ops;src_only
 all,aclnnRsqrt,已接入,yaml_exec,rsqrt;rsqrt.out,rsqrt;rsqrt.out,,,,all_version,rsqrt;rsqrt.out,False,shared_by_2_ops;yaml_only
 all,aclnnRsub,已接入,yaml_exec,rsub.Tensor,rsub.Tensor,,,,all_version,rsub.Tensor,False,yaml_only

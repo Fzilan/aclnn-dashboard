@@ -492,7 +492,7 @@
 | aclnnInplaceRemainderTensorScalar | 已接入 | src_scan | remainder_.Scalar;remainder_.Tensor |  | True | remainder_ | shared_by_2_ops;src_only |
 | aclnnInplaceRemainderTensorTensor | 已接入 | src_scan | remainder_.Scalar;remainder_.Tensor |  | True | remainder_ | shared_by_2_ops;src_only |
 | aclnnInplaceRenorm | 已接入 | src_scan | renorm_ | renorm_ | False | renorm_ | src_only |
-| aclnnInplaceRound | 已接入 | yaml_exec | round_ | round_ | False |  | yaml_only |
+| aclnnInplaceRound | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceRoundDecimals | 已接入 | src_scan | round_;round_.decimals |  | True | round_ | shared_by_2_ops;src_only |
 | aclnnInplaceRsqrt | 已接入 | yaml_exec | rsqrt_ | rsqrt_ | False |  | yaml_only |
 | aclnnInplaceScatter | 已接入 | src_scan | scatter_.src;scatter_.value | scatter_.src;scatter_.value | False | scatter_ | shared_by_2_ops;src_only |
@@ -777,7 +777,7 @@
 | aclnnRopeWithSinCosCache | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRotaryPositionEmbedding | 已接入 | src_scan | npu_rotary_mul |  | True | npu_rotary_mul | src_only |
 | aclnnRotaryPositionEmbeddingGrad | 已接入 | src_scan | npu_rotary_mul_backward |  | True | npu_rotary_mul_backward | src_only |
-| aclnnRound | 已接入 | yaml_exec | round;round.out | round;round.out | False |  | shared_by_2_ops;yaml_only |
+| aclnnRound | 已接入 | yaml_exec | round;round.out;round_ | round;round.out | False |  | shared_by_3_ops;yaml_only |
 | aclnnRoundDecimals | 已接入 | src_scan | round;round.decimals;round.decimals_out;round.out |  | True | round;round_out | shared_by_4_ops;src_only |
 | aclnnRsqrt | 已接入 | yaml_exec | rsqrt;rsqrt.out | rsqrt;rsqrt.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnRsub | 已接入 | yaml_exec | rsub.Tensor | rsub.Tensor | False |  | yaml_only |

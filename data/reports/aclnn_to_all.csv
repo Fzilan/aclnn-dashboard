@@ -489,7 +489,7 @@ aclnnInplaceRelu,✅,relu_,✅,✖️,✅,InplaceReLU
 aclnnInplaceRemainderTensorScalar,✅,remainder_.Scalar;remainder_.Tensor,✅,✅,✅,
 aclnnInplaceRemainderTensorTensor,✅,remainder_.Scalar;remainder_.Tensor,✅,✅,✅,
 aclnnInplaceRenorm,✅,renorm_,✖️,✖️,✖️,
-aclnnInplaceRound,✅,round_,✖️,✖️,✖️,
+aclnnInplaceRound,✖️,,✖️,✖️,✖️,
 aclnnInplaceRoundDecimals,✅,round_;round_.decimals,✖️,✖️,✖️,
 aclnnInplaceRsqrt,✅,rsqrt_,✖️,✖️,✖️,
 aclnnInplaceScatter,✅,scatter_.src;scatter_.value,✅,✖️,✅,InplaceScatterSrc
@@ -774,7 +774,7 @@ aclnnRoll,✅,roll,✅,✅,✅,Roll
 aclnnRopeWithSinCosCache,✖️,,✖️,✖️,✖️,
 aclnnRotaryPositionEmbedding,✅,npu_rotary_mul,✅,✅,✅,RotaryPositionEmbedding
 aclnnRotaryPositionEmbeddingGrad,✅,npu_rotary_mul_backward,✅,✅,✅,RotaryPositionEmbeddingGrad
-aclnnRound,✅,round;round.out,✅,✅,✅,
+aclnnRound,✅,round;round.out;round_,✅,✅,✅,
 aclnnRoundDecimals,✅,round;round.decimals;round.decimals_out;round.out,✅,✖️,✅,Round
 aclnnRsqrt,✅,rsqrt;rsqrt.out,✅,✅,✅,Rsqrt
 aclnnRsub,✅,rsub.Tensor,✖️,✖️,✖️,

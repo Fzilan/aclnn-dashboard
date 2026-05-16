@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：711 / 913（77.9%）
+- torch-npu 已接入：710 / 913（77.8%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：325 / 913（35.6%）
+- 仅 torch-npu：324 / 913（35.5%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -502,7 +502,7 @@
 | aclnnInplaceRemainderTensorScalar | ✅ | remainder_.Scalar;remainder_.Tensor | ✅ | ✅ | ✅ |  |
 | aclnnInplaceRemainderTensorTensor | ✅ | remainder_.Scalar;remainder_.Tensor | ✅ | ✅ | ✅ |  |
 | aclnnInplaceRenorm | ✅ | renorm_ | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceRound | ✅ | round_ | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceRound | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceRoundDecimals | ✅ | round_;round_.decimals | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceRsqrt | ✅ | rsqrt_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceScatter | ✅ | scatter_.src;scatter_.value | ✅ | ✖️ | ✅ | InplaceScatterSrc |
@@ -787,7 +787,7 @@
 | aclnnRopeWithSinCosCache | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRotaryPositionEmbedding | ✅ | npu_rotary_mul | ✅ | ✅ | ✅ | RotaryPositionEmbedding |
 | aclnnRotaryPositionEmbeddingGrad | ✅ | npu_rotary_mul_backward | ✅ | ✅ | ✅ | RotaryPositionEmbeddingGrad |
-| aclnnRound | ✅ | round;round.out | ✅ | ✅ | ✅ |  |
+| aclnnRound | ✅ | round;round.out;round_ | ✅ | ✅ | ✅ |  |
 | aclnnRoundDecimals | ✅ | round;round.decimals;round.decimals_out;round.out | ✅ | ✖️ | ✅ | Round |
 | aclnnRsqrt | ✅ | rsqrt;rsqrt.out | ✅ | ✅ | ✅ | Rsqrt |
 | aclnnRsub | ✅ | rsub.Tensor | ✖️ | ✖️ | ✖️ |  |
