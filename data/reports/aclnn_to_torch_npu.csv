@@ -637,7 +637,7 @@ all,aclnnMoeInitRoutingV2,已接入,src_scan,npu_moe_init_routing_v2,,npu_moe_in
 all,aclnnMoeInitRoutingV2Grad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeInitRoutingV3,已接入,src_scan,npu_moe_init_routing_v2,,npu_moe_init_routing_v2,npu_moe_init_routing_v2,external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnMoeTokenPermute,已接入,yaml_exec,npu_moe_token_permute,npu_moe_token_permute,,,,"['v2.1', 'newest']",,True,yaml_only
-all,aclnnMoeTokenPermuteGrad,已接入,yaml_exec,npu_moe_token_permute_grad,npu_moe_token_permute_grad,,,,"['v2.1', 'newest']",,True,yaml_only
+all,aclnnMoeTokenPermuteGrad,已接入,yaml_exec,npu_moe_token_permute_grad;npu_moe_token_permute_grad_v2,npu_moe_token_permute_grad;npu_moe_token_permute_grad_v2,,,,"['v2.1', 'newest']",,True,shared_by_2_ops;yaml_only
 all,aclnnMoeTokenPermuteWithEp,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeTokenPermuteWithEpGrad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeTokenPermuteWithRoutingMap,已接入,src_scan,npu_moe_token_permute_with_routing_map,,npu_moe_token_permute_with_routing_map,npu_moe_token_permute_with_routing_map,external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapOpApi.cpp,all_version,,True,src_only

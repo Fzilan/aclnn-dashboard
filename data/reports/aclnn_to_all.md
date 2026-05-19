@@ -650,7 +650,7 @@
 | aclnnMoeInitRoutingV2Grad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeInitRoutingV3 | ✅ | npu_moe_init_routing_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenPermute | ✅ | npu_moe_token_permute | ✅ | ✅ | ✅ | MoeTokenPermute |
-| aclnnMoeTokenPermuteGrad | ✅ | npu_moe_token_permute_grad | ✅ | ✅ | ✅ | MoeTokenPermuteGrad |
+| aclnnMoeTokenPermuteGrad | ✅ | npu_moe_token_permute_grad;npu_moe_token_permute_grad_v2 | ✅ | ✅ | ✅ | MoeTokenPermuteGrad |
 | aclnnMoeTokenPermuteWithEp | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenPermuteWithEpGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenPermuteWithRoutingMap | ✅ | npu_moe_token_permute_with_routing_map | ✖️ | ✖️ | ✖️ |  |

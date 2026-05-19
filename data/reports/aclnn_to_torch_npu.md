@@ -640,7 +640,7 @@
 | aclnnMoeInitRoutingV2Grad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeInitRoutingV3 | 已接入 | src_scan | npu_moe_init_routing_v2 |  | True | npu_moe_init_routing_v2 | src_only |
 | aclnnMoeTokenPermute | 已接入 | yaml_exec | npu_moe_token_permute |  | True |  | yaml_only |
-| aclnnMoeTokenPermuteGrad | 已接入 | yaml_exec | npu_moe_token_permute_grad |  | True |  | yaml_only |
+| aclnnMoeTokenPermuteGrad | 已接入 | yaml_exec | npu_moe_token_permute_grad;npu_moe_token_permute_grad_v2 |  | True |  | shared_by_2_ops;yaml_only |
 | aclnnMoeTokenPermuteWithEp | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenPermuteWithEpGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenPermuteWithRoutingMap | 已接入 | src_scan | npu_moe_token_permute_with_routing_map |  | True | npu_moe_token_permute_with_routing_map | src_only |
