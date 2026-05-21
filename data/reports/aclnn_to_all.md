@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：710 / 913（77.8%）
+- torch-npu 已接入：711 / 913（77.9%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：324 / 913（35.5%）
+- 仅 torch-npu：325 / 913（35.6%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -530,7 +530,7 @@
 | aclnnInplaceZero | ✅ | zero_;zeros;zeros.names;zeros.out | ✅ | ✅ | ✅ | GatherDGradV2;InplaceZero;IsInf;MaskedSelectGrad;MultiScaleDeformableAttnGrad;NewZeros;Zeros;ZerosLikeExt |
 | aclnnInstanceNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInverse | ✅ | inverse;inverse.out | ✅ | ✅ | ✅ | MatrixInverseExt |
-| aclnnIou | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnIou | ✅ | npu_iou | ✖️ | ✖️ | ✖️ |  |
 | aclnnIsClose | ✅ | isclose | ✅ | ✅ | ✅ | IsClose |
 | aclnnIsFinite | ✅ | isfinite | ✅ | ✅ | ✅ | IsFinite |
 | aclnnIsInScalarTensor | ✅ | isin.Scalar_Tensor_out | ✖️ | ✖️ | ✖️ |  |

@@ -1,50 +1,50 @@
 {
   "metrics": {
     "total_ops": 913,
-    "torch_supported": 710,
+    "torch_supported": 711,
     "mindspore_supported": 420,
     "both_supported": 386,
-    "torch_only": 324,
+    "torch_only": 325,
     "mindspore_only": 34,
-    "unsupported": 169,
-    "torch_coverage_rate": 77.8,
+    "unsupported": 168,
+    "torch_coverage_rate": 77.9,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 42.3,
-    "last_update_time": "2026-05-20T12:43:25+08:00",
-    "generated_at": "2026-05-20T12:43:25+08:00",
-    "pipeline_run_time": "2026-05-20T12:43:22+08:00",
-    "torch_speed_pp_per_day_7d": -0.017,
+    "last_update_time": "2026-05-21T12:55:00+08:00",
+    "generated_at": "2026-05-21T12:55:01+08:00",
+    "pipeline_run_time": "2026-05-21T12:54:58+08:00",
+    "torch_speed_pp_per_day_7d": 0.0,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
   "meta": {
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-05-20T12:42:18+08:00"
+        "mtime": "2026-05-21T12:49:58+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-05-20T12:43:24+08:00"
+        "mtime": "2026-05-21T12:54:59+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-05-20T12:43:24+08:00"
+        "mtime": "2026-05-21T12:54:59+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-05-20T12:43:25+08:00"
+        "mtime": "2026-05-21T12:55:00+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-05-20T12:43:25+08:00"
+        "mtime": "2026-05-21T12:55:00+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-05-20T12:43:25+08:00"
+        "mtime": "2026-05-21T12:55:00+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-05-20T12:43:25+08:00"
+        "mtime": "2026-05-21T12:55:00+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -895,11 +895,9 @@
         "torch_coverage_rate": 77.8,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
-      }
-    ],
-    "last_7_days": [
+      },
       {
-        "date": "2026-05-14",
+        "date": "2026-05-21",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 420,
@@ -907,7 +905,9 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
-      },
+      }
+    ],
+    "last_7_days": [
       {
         "date": "2026-05-15",
         "total_ops": 913,
@@ -965,6 +965,16 @@
         "mindspore_supported": 420,
         "both_supported": 386,
         "torch_coverage_rate": 77.8,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-05-21",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
       }
@@ -23021,17 +23031,25 @@
     {
       "aclnn_api": "aclnnIou",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "npu_iou"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "npu_iou"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/IouKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,

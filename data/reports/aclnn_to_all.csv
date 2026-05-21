@@ -517,7 +517,7 @@ aclnnInplaceXLogYTensor,✖️,,✖️,✖️,✖️,
 aclnnInplaceZero,✅,zero_;zeros;zeros.names;zeros.out,✅,✅,✅,GatherDGradV2;InplaceZero;IsInf;MaskedSelectGrad;MultiScaleDeformableAttnGrad;NewZeros;Zeros;ZerosLikeExt
 aclnnInstanceNorm,✖️,,✖️,✖️,✖️,
 aclnnInverse,✅,inverse;inverse.out,✅,✅,✅,MatrixInverseExt
-aclnnIou,✖️,,✖️,✖️,✖️,
+aclnnIou,✅,npu_iou,✖️,✖️,✖️,
 aclnnIsClose,✅,isclose,✅,✅,✅,IsClose
 aclnnIsFinite,✅,isfinite,✅,✅,✅,IsFinite
 aclnnIsInScalarTensor,✅,isin.Scalar_Tensor_out,✖️,✖️,✖️,

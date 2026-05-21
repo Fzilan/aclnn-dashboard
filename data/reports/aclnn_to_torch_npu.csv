@@ -517,7 +517,7 @@ all,aclnnInplaceXLogYTensor,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan
 all,aclnnInplaceZero,已接入,src_scan,zero_;zeros;zeros.names;zeros.out,,zero_;zeros;zeros.names;zeros.out,zero_;zeros;zeros_out;zeros_symint,external/op-plugin/op_plugin/ops/opapi/ZerosKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ZerosLikeKernelNpuOpApi.cpp,"['v2.1', 'newest'];all_version",zero_,False,shared_by_4_ops;src_only
 all,aclnnInstanceNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInverse,已接入,yaml_exec,inverse;inverse.out,inverse;inverse.out,,,,all_version,inverse;inverse.out,False,shared_by_2_ops;yaml_only
-all,aclnnIou,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnIou,已接入,src_scan,npu_iou,,npu_iou,npu_iou,external/op-plugin/op_plugin/ops/opapi/IouKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnIsClose,已接入,yaml_exec,isclose,isclose,,,,all_version,,True,yaml_only
 all,aclnnIsFinite,已接入,yaml_exec,isfinite,isfinite,,,,all_version,,True,yaml_only
 all,aclnnIsInScalarTensor,已接入,yaml_exec,isin.Scalar_Tensor_out,isin.Scalar_Tensor_out,,,,all_version,,True,yaml_only

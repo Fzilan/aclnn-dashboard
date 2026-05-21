@@ -520,7 +520,7 @@
 | aclnnInplaceZero | 已接入 | src_scan | zero_;zeros;zeros.names;zeros.out | zero_ | False | zero_;zeros;zeros_out;zeros_symint | shared_by_4_ops;src_only |
 | aclnnInstanceNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInverse | 已接入 | yaml_exec | inverse;inverse.out | inverse;inverse.out | False |  | shared_by_2_ops;yaml_only |
-| aclnnIou | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnIou | 已接入 | src_scan | npu_iou |  | True | npu_iou | src_only |
 | aclnnIsClose | 已接入 | yaml_exec | isclose |  | True |  | yaml_only |
 | aclnnIsFinite | 已接入 | yaml_exec | isfinite |  | True |  | yaml_only |
 | aclnnIsInScalarTensor | 已接入 | yaml_exec | isin.Scalar_Tensor_out |  | True |  | yaml_only |
