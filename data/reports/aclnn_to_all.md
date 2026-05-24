@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：711 / 913（77.9%）
+- torch-npu 已接入：712 / 913（78.0%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：325 / 913（35.6%）
+- 仅 torch-npu：326 / 913（35.7%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -322,7 +322,7 @@
 | aclnnGeGluBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGeGluV3 | ✅ | npu_geglu | ✖️ | ✖️ | ✖️ |  |
 | aclnnGeGluV3Backward | ✅ | npu_geglu_grad | ✖️ | ✖️ | ✖️ |  |
-| aclnnGeScalar | ✅ | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out | ✅ | ✅ | ✅ | GreaterEqualScalar |
+| aclnnGeScalar | ✅ | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out;le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out | ✅ | ✅ | ✅ | GreaterEqualScalar |
 | aclnnGeTensor | ✅ | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out | ✅ | ✅ | ✅ | GreaterEqual |
 | aclnnGelu | ✅ | gelu.out | ✅ | ✅ | ✅ | GeLU |
 | aclnnGeluBackward | ✅ | gelu_backward | ✅ | ✅ | ✅ | GeLUGrad |
@@ -366,7 +366,7 @@
 | aclnnGroupedMatmulV4 | ✅ | npu_grouped_matmul;npu_grouped_matmul.List | ✅ | ✖️ | ✅ | GroupedMatmulV4 |
 | aclnnGroupedMatmulV5 | ✅ | npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulWeightNz | ✅ | npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
-| aclnnGtScalar | ✅ | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out | ✖️ | ✖️ | ✖️ |  |
+| aclnnGtScalar | ✅ | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✖️ | ✖️ | ✖️ |  |
 | aclnnGtTensor | ✅ | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out | ✅ | ✅ | ✅ | Greater |
 | aclnnHardshrink | ✅ | hardshrink;hardshrink.out | ✅ | ✅ | ✅ | HShrink |
 | aclnnHardshrinkBackward | ✅ | hardshrink_backward;hardshrink_backward.grad_input | ✅ | ✅ | ✅ | HShrinkGrad |
@@ -374,7 +374,7 @@
 | aclnnHardsigmoidBackward | ✅ | hardsigmoid_backward | ✅ | ✅ | ✅ | HSigmoidGrad |
 | aclnnHardswish | ✅ | hardswish;hardswish.out | ✅ | ✅ | ✅ | HSwish |
 | aclnnHardswishBackward | ✅ | hardswish_backward | ✅ | ✅ | ✅ | HSwishGrad |
-| aclnnHardswishBackwardV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnHardswishBackwardV2 | ✅ | hardswish_backward | ✖️ | ✖️ | ✖️ |  |
 | aclnnHardtanh | ✅ | hardtanh;hardtanh.out | ✅ | ✅ | ✅ | Hardtanh |
 | aclnnHardtanhBackward | ✅ | hardtanh_backward;hardtanh_backward.grad_input | ✅ | ✅ | ✅ | HardtanhGrad |
 | aclnnHeaviside | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -578,7 +578,7 @@
 | aclnnLogicalXor | ✅ | logical_xor;logical_xor.out | ✅ | ✅ | ✅ | LogicalXor |
 | aclnnLogit | ✅ | logit;logit.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnLogitGrad | ✅ | logit_backward;logit_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
-| aclnnLtScalar | ✅ | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✅ | ✅ | ✅ | LessScalar |
+| aclnnLtScalar | ✅ | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✅ | ✅ | ✅ | LessScalar |
 | aclnnLtTensor | ✅ | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✅ | ✅ | ✅ | Less |
 | aclnnMaskedSelect | ✅ | masked_select;masked_select.out | ✅ | ✅ | ✅ | MaskedSelect |
 | aclnnMaskedSoftmaxWithRelPosBias | ✅ | npu_masked_softmax_with_rel_pos_bias | ✖️ | ✖️ | ✖️ |  |

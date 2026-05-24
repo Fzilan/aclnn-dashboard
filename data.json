@@ -1,50 +1,50 @@
 {
   "metrics": {
     "total_ops": 913,
-    "torch_supported": 711,
+    "torch_supported": 712,
     "mindspore_supported": 420,
     "both_supported": 386,
-    "torch_only": 325,
+    "torch_only": 326,
     "mindspore_only": 34,
-    "unsupported": 168,
-    "torch_coverage_rate": 77.9,
+    "unsupported": 167,
+    "torch_coverage_rate": 78.0,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 42.3,
-    "last_update_time": "2026-05-23T12:17:51+08:00",
-    "generated_at": "2026-05-23T12:17:51+08:00",
-    "pipeline_run_time": "2026-05-23T12:17:48+08:00",
-    "torch_speed_pp_per_day_7d": 0.017,
+    "last_update_time": "2026-05-24T12:46:18+08:00",
+    "generated_at": "2026-05-24T12:46:18+08:00",
+    "pipeline_run_time": "2026-05-24T12:46:15+08:00",
+    "torch_speed_pp_per_day_7d": 0.033,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
   "meta": {
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-05-23T12:12:28+08:00"
+        "mtime": "2026-05-24T12:45:06+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-05-23T12:17:50+08:00"
+        "mtime": "2026-05-24T12:46:16+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-05-23T12:17:50+08:00"
+        "mtime": "2026-05-24T12:46:16+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-05-23T12:17:51+08:00"
+        "mtime": "2026-05-24T12:46:18+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-05-23T12:17:51+08:00"
+        "mtime": "2026-05-24T12:46:18+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-05-23T12:17:51+08:00"
+        "mtime": "2026-05-24T12:46:18+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-05-23T12:17:51+08:00"
+        "mtime": "2026-05-24T12:46:18+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -925,19 +925,19 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-05-24",
+        "total_ops": 913,
+        "torch_supported": 712,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 78.0,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
       }
     ],
     "last_7_days": [
-      {
-        "date": "2026-05-17",
-        "total_ops": 913,
-        "torch_supported": 710,
-        "mindspore_supported": 420,
-        "both_supported": 386,
-        "torch_coverage_rate": 77.8,
-        "mindspore_coverage_rate": 46.0,
-        "both_coverage_rate": 42.3
-      },
       {
         "date": "2026-05-18",
         "total_ops": 913,
@@ -995,6 +995,16 @@
         "mindspore_supported": 420,
         "both_supported": 386,
         "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-05-24",
+        "total_ops": 913,
+        "torch_supported": 712,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 78.0,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
       }
@@ -14283,7 +14293,11 @@
           "ge.Scalar",
           "ge.Scalar_out",
           "ge.Tensor",
-          "ge.Tensor_out"
+          "ge.Tensor_out",
+          "le.Scalar",
+          "le.Scalar_out",
+          "le.Tensor",
+          "le.Tensor_out"
         ],
         "direct_match_ops": [],
         "evidence": [
@@ -14292,12 +14306,18 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "ge",
-          "ge_out"
+          "ge_out",
+          "le",
+          "scalar_type"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_4_ops;src_only"
+        "remarks": "shared_by_8_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -15998,7 +16018,11 @@
           "gt.Scalar",
           "gt.Scalar_out",
           "gt.Tensor",
-          "gt.Tensor_out"
+          "gt.Tensor_out",
+          "lt.Scalar",
+          "lt.Scalar_out",
+          "lt.Tensor",
+          "lt.Tensor_out"
         ],
         "direct_match_ops": [],
         "evidence": [
@@ -16007,12 +16031,15 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "gt",
-          "gt_out"
+          "gt_out",
+          "lt",
+          "lt_out"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_4_ops;src_only"
+        "remarks": "shared_by_8_ops;src_only"
       },
       "mindspore": {
         "supported": false,
@@ -16352,17 +16379,25 @@
     {
       "aclnn_api": "aclnnHardswishBackwardV2",
       "tag": "all",
-      "coverage_status": "neither",
+      "coverage_status": "torch_only",
       "torch": {
-        "supported": false,
-        "status": "未接入",
-        "via_ops": [],
+        "supported": true,
+        "status": "已接入",
+        "via_ops": [
+          "hardswish_backward"
+        ],
         "direct_match_ops": [],
-        "evidence": [],
-        "suspected_fusion": false,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "no_yaml_exec_and_no_src_scan_hit"
+        "evidence": [
+          "src_scan"
+        ],
+        "suspected_fusion": true,
+        "cpp_funcs": [
+          "hardswish_backward"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/HardSwishBackwardKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": false,
@@ -23764,10 +23799,14 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "le",
-          "le_out"
+          "le_out",
+          "scalar_type"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -25226,6 +25265,10 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
+          "gt.Scalar",
+          "gt.Scalar_out",
+          "gt.Tensor",
+          "gt.Tensor_out",
           "lt.Scalar",
           "lt.Scalar_out",
           "lt.Tensor",
@@ -25237,13 +25280,16 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
+          "gt",
+          "gt_out",
           "lt",
           "lt_out"
         ],
         "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_4_ops;src_only"
+        "remarks": "shared_by_8_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -32908,7 +32954,8 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "remainder"
+          "remainder",
+          "remainder_out"
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/RemainderKernelNpuOpApi.cpp"

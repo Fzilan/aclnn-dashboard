@@ -312,7 +312,7 @@
 | aclnnGeGluBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGeGluV3 | 已接入 | src_scan | npu_geglu |  | True | npu_geglu | src_only |
 | aclnnGeGluV3Backward | 已接入 | src_scan | npu_geglu_grad |  | True | npu_geglu_grad | src_only |
-| aclnnGeScalar | 已接入 | src_scan | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out |  | True | ge;ge_out | shared_by_4_ops;src_only |
+| aclnnGeScalar | 已接入 | src_scan | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out;le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out |  | True | ge;ge_out;le;scalar_type | shared_by_8_ops;src_only |
 | aclnnGeTensor | 已接入 | src_scan | ge.Scalar;ge.Scalar_out;ge.Tensor;ge.Tensor_out |  | True | ge;ge_out | shared_by_4_ops;src_only |
 | aclnnGelu | 已接入 | src_scan | gelu.out | gelu.out | False | gelu_out | src_only |
 | aclnnGeluBackward | 已接入 | src_scan | gelu_backward | gelu_backward | False | gelu_backward | src_only |
@@ -356,7 +356,7 @@
 | aclnnGroupedMatmulV4 | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
 | aclnnGroupedMatmulV5 | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
 | aclnnGroupedMatmulWeightNz | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
-| aclnnGtScalar | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out |  | True | gt;gt_out | shared_by_4_ops;src_only |
+| aclnnGtScalar | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | gt;gt_out;lt;lt_out | shared_by_8_ops;src_only |
 | aclnnGtTensor | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out |  | True | gt;gt_out | shared_by_4_ops;src_only |
 | aclnnHardshrink | 已接入 | yaml_exec | hardshrink;hardshrink.out | hardshrink;hardshrink.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnHardshrinkBackward | 已接入 | yaml_exec | hardshrink_backward;hardshrink_backward.grad_input | hardshrink_backward;hardshrink_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
@@ -364,7 +364,7 @@
 | aclnnHardsigmoidBackward | 已接入 | yaml_exec | hardsigmoid_backward | hardsigmoid_backward | False |  | yaml_only |
 | aclnnHardswish | 已接入 | yaml_exec | hardswish;hardswish.out | hardswish;hardswish.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnHardswishBackward | 已接入 | src_scan | hardswish_backward | hardswish_backward | False | hardswish_backward | src_only |
-| aclnnHardswishBackwardV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnHardswishBackwardV2 | 已接入 | src_scan | hardswish_backward |  | True | hardswish_backward | src_only |
 | aclnnHardtanh | 已接入 | yaml_exec | hardtanh;hardtanh.out | hardtanh;hardtanh.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnHardtanhBackward | 已接入 | yaml_exec | hardtanh_backward;hardtanh_backward.grad_input | hardtanh_backward;hardtanh_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnHeaviside | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -536,7 +536,7 @@
 | aclnnLayerNorm | 已接入 | src_scan |  |  | True | Tensor | src_only;src_hit_but_op_name_unresolved |
 | aclnnLayerNormBackward | 已接入 | src_scan | native_layer_norm_backward |  | True | native_layer_norm_backward | src_only |
 | aclnnLayerNormWithImplMode | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnLeScalar | 已接入 | src_scan | le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out |  | True | le;le_out | shared_by_4_ops;src_only |
+| aclnnLeScalar | 已接入 | src_scan | le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out |  | True | le;le_out;scalar_type | shared_by_4_ops;src_only |
 | aclnnLeTensor | 已接入 | src_scan | le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out |  | True | le;scalar_type | shared_by_4_ops;src_only |
 | aclnnLeakyRelu | 已接入 | yaml_exec | leaky_relu;leaky_relu.out | leaky_relu;leaky_relu.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnLeakyReluBackward | 已接入 | yaml_exec | leaky_relu_backward;leaky_relu_backward.grad_input | leaky_relu_backward;leaky_relu_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
@@ -568,7 +568,7 @@
 | aclnnLogicalXor | 已接入 | yaml_exec | logical_xor;logical_xor.out | logical_xor;logical_xor.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnLogit | 已接入 | src_scan | logit;logit.out | logit;logit.out | False | logit;logit_out | shared_by_2_ops;src_only |
 | aclnnLogitGrad | 已接入 | src_scan | logit_backward;logit_backward.grad_input |  | True | logit_backward;logit_backward_out | shared_by_2_ops;src_only |
-| aclnnLtScalar | 已接入 | src_scan | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | lt;lt_out | shared_by_4_ops;src_only |
+| aclnnLtScalar | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | gt;gt_out;lt;lt_out | shared_by_8_ops;src_only |
 | aclnnLtTensor | 已接入 | src_scan | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | lt;lt_out | shared_by_4_ops;src_only |
 | aclnnMaskedSelect | 已接入 | src_scan | masked_select;masked_select.out | masked_select;masked_select.out | False | exec_aclnn_masked_select;masked_select;masked_select_out | shared_by_2_ops;src_only |
 | aclnnMaskedSoftmaxWithRelPosBias | 已接入 | yaml_exec | npu_masked_softmax_with_rel_pos_bias |  | True |  | yaml_only |
@@ -747,7 +747,7 @@
 | aclnnReflectionPad3d | 已接入 | yaml_exec | reflection_pad3d;reflection_pad3d.out | reflection_pad3d;reflection_pad3d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnReflectionPad3dBackward | 已接入 | yaml_exec | reflection_pad3d_backward;reflection_pad3d_backward.grad_input | reflection_pad3d_backward;reflection_pad3d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnRelu | 已接入 | yaml_exec | relu | relu | False |  | yaml_only |
-| aclnnRemainderScalarTensor | 已接入 | src_scan | remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out |  | True | remainder | shared_by_5_ops;src_only |
+| aclnnRemainderScalarTensor | 已接入 | src_scan | remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out |  | True | remainder;remainder_out | shared_by_5_ops;src_only |
 | aclnnRemainderTensorScalar | 已接入 | src_scan | remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out |  | True | remainder;remainder_out | shared_by_5_ops;src_only |
 | aclnnRemainderTensorTensor | 已接入 | src_scan | remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out |  | True | remainder;remainder_out | shared_by_5_ops;src_only |
 | aclnnRenorm | 已接入 | src_scan | renorm;renorm.out | renorm;renorm.out | False | renorm;renorm_out | shared_by_2_ops;src_only |
