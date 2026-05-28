@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：712 / 913（78.0%）
+- torch-npu 已接入：711 / 913（77.9%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：326 / 913（35.7%）
+- 仅 torch-npu：325 / 913（35.6%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -817,7 +817,7 @@
 | aclnnSilentCheckV2 | ✅ | _npu_silent_check_v3 | ✅ | ✅ | ✅ | SilentCheckV3 |
 | aclnnSilu | ✅ | silu;silu.out;silu_ | ✅ | ✅ | ✅ | InplaceSiLU;SiLU |
 | aclnnSiluBackward | ✅ | silu_backward;silu_backward.grad_input | ✅ | ✅ | ✅ | SiLUGrad |
-| aclnnSimThreadExponential | ✅ | npu_sim_exponential_ | ✖️ | ✖️ | ✖️ |  |
+| aclnnSimThreadExponential | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSin | ✅ | sin;sin.out | ✅ | ✅ | ✅ | Sin |
 | aclnnSinc | ✅ | sinc;sinc.out | ✅ | ✅ | ✅ | Sinc |
 | aclnnSinh | ✅ | sinh;sinh.out | ✅ | ✅ | ✅ | Sinh |

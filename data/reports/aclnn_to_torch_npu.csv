@@ -804,7 +804,7 @@ all,aclnnSilentCheck,已接入,src_scan,_npu_silent_check_v2,,_npu_silent_check_
 all,aclnnSilentCheckV2,已接入,src_scan,_npu_silent_check_v3,,_npu_silent_check_v3,_npu_silent_check_v3,external/op-plugin/op_plugin/ops/opapi/SilentCheckV3KernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnSilu,已接入,yaml_exec,silu;silu.out;silu_,silu;silu.out;silu_,,,,all_version,silu;silu.out,False,shared_by_3_ops;yaml_only
 all,aclnnSiluBackward,已接入,src_scan,silu_backward;silu_backward.grad_input,,silu_backward;silu_backward.grad_input,silu_backward,external/op-plugin/op_plugin/ops/opapi/SiluBackwardKernelNpuOpApi.cpp,all_version,silu_backward;silu_backward.grad_input,False,shared_by_2_ops;src_only
-all,aclnnSimThreadExponential,已接入,src_scan,npu_sim_exponential_,,npu_sim_exponential_,npu_sim_exponential_,external/op-plugin/op_plugin/ops/opapi/SimExponentialNpuOpApi.cpp,"['v2.6', 'newest']",,True,src_only
+all,aclnnSimThreadExponential,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSin,已接入,yaml_exec,sin;sin.out,sin;sin.out,,,,all_version,sin;sin.out,False,shared_by_2_ops;yaml_only
 all,aclnnSinc,已接入,yaml_exec,sinc;sinc.out,sinc;sinc.out,,,,all_version,sinc;sinc.out,False,shared_by_2_ops;yaml_only
 all,aclnnSinh,已接入,yaml_exec,sinh;sinh.out,sinh;sinh.out,,,,all_version,sinh;sinh.out,False,shared_by_2_ops;yaml_only

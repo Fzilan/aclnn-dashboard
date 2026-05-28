@@ -804,7 +804,7 @@ aclnnSilentCheck,✅,_npu_silent_check_v2,✅,✖️,✅,SilentCheckV2
 aclnnSilentCheckV2,✅,_npu_silent_check_v3,✅,✅,✅,SilentCheckV3
 aclnnSilu,✅,silu;silu.out;silu_,✅,✅,✅,InplaceSiLU;SiLU
 aclnnSiluBackward,✅,silu_backward;silu_backward.grad_input,✅,✅,✅,SiLUGrad
-aclnnSimThreadExponential,✅,npu_sim_exponential_,✖️,✖️,✖️,
+aclnnSimThreadExponential,✖️,,✖️,✖️,✖️,
 aclnnSin,✅,sin;sin.out,✅,✅,✅,Sin
 aclnnSinc,✅,sinc;sinc.out,✅,✅,✅,Sinc
 aclnnSinh,✅,sinh;sinh.out,✅,✅,✅,Sinh

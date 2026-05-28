@@ -807,7 +807,7 @@
 | aclnnSilentCheckV2 | 已接入 | src_scan | _npu_silent_check_v3 |  | True | _npu_silent_check_v3 | src_only |
 | aclnnSilu | 已接入 | yaml_exec | silu;silu.out;silu_ | silu;silu.out | False |  | shared_by_3_ops;yaml_only |
 | aclnnSiluBackward | 已接入 | src_scan | silu_backward;silu_backward.grad_input | silu_backward;silu_backward.grad_input | False | silu_backward | shared_by_2_ops;src_only |
-| aclnnSimThreadExponential | 已接入 | src_scan | npu_sim_exponential_ |  | True | npu_sim_exponential_ | src_only |
+| aclnnSimThreadExponential | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSin | 已接入 | yaml_exec | sin;sin.out | sin;sin.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnSinc | 已接入 | yaml_exec | sinc;sinc.out | sinc;sinc.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnSinh | 已接入 | yaml_exec | sinh;sinh.out | sinh;sinh.out | False |  | shared_by_2_ops;yaml_only |
