@@ -558,7 +558,7 @@
 | aclnnLogSigmoid | 已接入 | src_scan | log_sigmoid;log_sigmoid.out;log_sigmoid_forward;log_sigmoid_forward.output | log_sigmoid;log_sigmoid.out | False | log_sigmoid;log_sigmoid_forward;log_sigmoid_out | shared_by_4_ops;src_only |
 | aclnnLogSigmoidBackward | 已接入 | yaml_exec | log_sigmoid_backward;log_sigmoid_backward.grad_input | log_sigmoid_backward;log_sigmoid_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnLogSigmoidForward | 已接入 | src_scan | log_sigmoid_forward;log_sigmoid_forward.output | log_sigmoid_forward;log_sigmoid_forward.output | False | check_tensor;log_sigmoid_forward | shared_by_2_ops;src_only |
-| aclnnLogSoftmax | 已接入 | yaml_exec | _log_softmax | _log_softmax | False |  | yaml_only |
+| aclnnLogSoftmax | 已接入 | yaml_exec | _log_softmax;_log_softmax.out | _log_softmax;_log_softmax.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnLogSoftmaxBackward | 已接入 | yaml_exec | _log_softmax_backward_data;_log_softmax_backward_data.out |  | True |  | shared_by_2_ops;yaml_only |
 | aclnnLogSumExp | 已接入 | src_scan | logsumexp;logsumexp.names;logsumexp.names_out;logsumexp.out |  | True | logsumexp;scalar_type | shared_by_4_ops;src_only |
 | aclnnLogdet | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

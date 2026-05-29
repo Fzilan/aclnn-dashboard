@@ -555,7 +555,7 @@ aclnnLogAddExp2,✅,logaddexp2;logaddexp2.out,✅,✅,✅,LogAddExp2
 aclnnLogSigmoid,✅,log_sigmoid;log_sigmoid.out;log_sigmoid_forward;log_sigmoid_forward.output,✖️,✖️,✖️,
 aclnnLogSigmoidBackward,✅,log_sigmoid_backward;log_sigmoid_backward.grad_input,✅,✅,✅,LogSigmoidGrad
 aclnnLogSigmoidForward,✅,log_sigmoid_forward;log_sigmoid_forward.output,✅,✅,✅,LogSigmoid
-aclnnLogSoftmax,✅,_log_softmax,✅,✅,✅,LogSoftmax
+aclnnLogSoftmax,✅,_log_softmax;_log_softmax.out,✅,✅,✅,LogSoftmax
 aclnnLogSoftmaxBackward,✅,_log_softmax_backward_data;_log_softmax_backward_data.out,✅,✅,✅,LogSoftmaxGrad
 aclnnLogSumExp,✅,logsumexp;logsumexp.names;logsumexp.names_out;logsumexp.out,✅,✅,✅,LogSumExp
 aclnnLogdet,✖️,,✖️,✖️,✖️,
