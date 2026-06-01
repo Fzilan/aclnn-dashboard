@@ -817,7 +817,7 @@ aclnnSmoothL1LossBackward,✅,smooth_l1_loss_backward;smooth_l1_loss_backward.gr
 aclnnSoftMarginLoss,✅,soft_margin_loss;soft_margin_loss.out,✅,✅,✅,SoftMarginLoss
 aclnnSoftMarginLossBackward,✅,soft_margin_loss_backward;soft_margin_loss_backward.grad_input,✅,✖️,✅,SoftMarginLossGrad
 aclnnSoftmax,✅,_softmax;_softmax.out;npu_attn_softmax_,✅,✅,✅,Softmax
-aclnnSoftmaxBackward,✅,_softmax_backward_data;_softmax_backward_data.out;npu_attn_softmax_backward_,✅,✅,✅,SoftmaxBackward
+aclnnSoftmaxBackward,✅,_softmax_backward_data.out;npu_attn_softmax_backward_,✅,✅,✅,SoftmaxBackward
 aclnnSoftmaxCrossEntropyWithLogits,✖️,,✖️,✖️,✖️,
 aclnnSoftplus,✅,softplus;softplus.out,✅,✅,✅,SoftplusExt
 aclnnSoftplusBackward,✅,softplus_backward.grad_input,✅,✅,✅,SoftplusGradExt
@@ -837,7 +837,7 @@ aclnnStridedSliceAssignV2,✖️,,✖️,✖️,✖️,
 aclnnSub,✅,sub.Scalar;sub.Tensor;sub.out,✅,✅,✅,Sub;SubExt
 aclnnSubs,✅,sub.Scalar;sub.Tensor;sub.out,✅,✅,✅,SubScalar
 aclnnSum,✖️,,✖️,✖️,✖️,
-aclnnSvd,✅,_linalg_svd.U,✖️,✖️,✖️,
+aclnnSvd,✖️,,✖️,✖️,✖️,
 aclnnSwiGlu,✅,npu_swiglu,✅,✅,✅,Swiglu
 aclnnSwiGluGrad,✅,npu_swiglu_backward,✅,✅,✅,SwigluGrad
 aclnnSwiGluQuant,✖️,,✖️,✖️,✖️,

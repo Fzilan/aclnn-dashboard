@@ -817,7 +817,7 @@ all,aclnnSmoothL1LossBackward,已接入,src_scan,smooth_l1_loss_backward;smooth_
 all,aclnnSoftMarginLoss,已接入,yaml_exec,soft_margin_loss;soft_margin_loss.out,soft_margin_loss;soft_margin_loss.out,,,,all_version,soft_margin_loss;soft_margin_loss.out,False,shared_by_2_ops;yaml_only
 all,aclnnSoftMarginLossBackward,已接入,yaml_exec,soft_margin_loss_backward;soft_margin_loss_backward.grad_input,soft_margin_loss_backward;soft_margin_loss_backward.grad_input,,,,all_version,soft_margin_loss_backward;soft_margin_loss_backward.grad_input,False,shared_by_2_ops;yaml_only
 all,aclnnSoftmax,已接入,yaml_exec,_softmax;_softmax.out;npu_attn_softmax_,_softmax;_softmax.out;npu_attn_softmax_,,,,all_version,_softmax;_softmax.out,False,shared_by_3_ops;yaml_only
-all,aclnnSoftmaxBackward,已接入,yaml_exec+src_scan,_softmax_backward_data;_softmax_backward_data.out;npu_attn_softmax_backward_,_softmax_backward_data;_softmax_backward_data.out,npu_attn_softmax_backward_,npu_attn_softmax_backward_,external/op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp,all_version,,True,shared_by_3_ops;yaml+src
+all,aclnnSoftmaxBackward,已接入,yaml_exec+src_scan,_softmax_backward_data.out;npu_attn_softmax_backward_,_softmax_backward_data.out,npu_attn_softmax_backward_,npu_attn_softmax_backward_,external/op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;yaml+src
 all,aclnnSoftmaxCrossEntropyWithLogits,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSoftplus,已接入,yaml_exec,softplus;softplus.out,softplus;softplus.out,,,,all_version,softplus;softplus.out,False,shared_by_2_ops;yaml_only
 all,aclnnSoftplusBackward,已接入,yaml_exec,softplus_backward.grad_input,softplus_backward.grad_input,,,,all_version,softplus_backward.grad_input,False,yaml_only
@@ -837,7 +837,7 @@ all,aclnnStridedSliceAssignV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_sc
 all,aclnnSub,已接入,src_scan,sub.Scalar;sub.Tensor;sub.out,,sub.Scalar;sub.Tensor;sub.out,sub;sub_out;sub_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp,all_version,sub.Scalar;sub.Tensor;sub.out,False,shared_by_3_ops;src_only
 all,aclnnSubs,已接入,src_scan,sub.Scalar;sub.Tensor;sub.out,,sub.Scalar;sub.Tensor;sub.out,sub;sub_out;sub_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp,all_version,,True,shared_by_3_ops;src_only
 all,aclnnSum,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnSvd,已接入,yaml_exec,_linalg_svd.U,_linalg_svd.U,,,,all_version,,True,yaml_only
+all,aclnnSvd,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSwiGlu,已接入,yaml_exec,npu_swiglu,npu_swiglu,,,,all_version,,True,yaml_only
 all,aclnnSwiGluGrad,已接入,yaml_exec,npu_swiglu_backward,npu_swiglu_backward,,,,all_version,,True,yaml_only
 all,aclnnSwiGluQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit

@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：711 / 913（77.9%）
+- torch-npu 已接入：710 / 913（77.8%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：325 / 913（35.6%）
+- 仅 torch-npu：324 / 913（35.5%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -830,7 +830,7 @@
 | aclnnSoftMarginLoss | ✅ | soft_margin_loss;soft_margin_loss.out | ✅ | ✅ | ✅ | SoftMarginLoss |
 | aclnnSoftMarginLossBackward | ✅ | soft_margin_loss_backward;soft_margin_loss_backward.grad_input | ✅ | ✖️ | ✅ | SoftMarginLossGrad |
 | aclnnSoftmax | ✅ | _softmax;_softmax.out;npu_attn_softmax_ | ✅ | ✅ | ✅ | Softmax |
-| aclnnSoftmaxBackward | ✅ | _softmax_backward_data;_softmax_backward_data.out;npu_attn_softmax_backward_ | ✅ | ✅ | ✅ | SoftmaxBackward |
+| aclnnSoftmaxBackward | ✅ | _softmax_backward_data.out;npu_attn_softmax_backward_ | ✅ | ✅ | ✅ | SoftmaxBackward |
 | aclnnSoftmaxCrossEntropyWithLogits | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSoftplus | ✅ | softplus;softplus.out | ✅ | ✅ | ✅ | SoftplusExt |
 | aclnnSoftplusBackward | ✅ | softplus_backward.grad_input | ✅ | ✅ | ✅ | SoftplusGradExt |
@@ -850,7 +850,7 @@
 | aclnnSub | ✅ | sub.Scalar;sub.Tensor;sub.out | ✅ | ✅ | ✅ | Sub;SubExt |
 | aclnnSubs | ✅ | sub.Scalar;sub.Tensor;sub.out | ✅ | ✅ | ✅ | SubScalar |
 | aclnnSum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnSvd | ✅ | _linalg_svd.U | ✖️ | ✖️ | ✖️ |  |
+| aclnnSvd | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwiGlu | ✅ | npu_swiglu | ✅ | ✅ | ✅ | Swiglu |
 | aclnnSwiGluGrad | ✅ | npu_swiglu_backward | ✅ | ✅ | ✅ | SwigluGrad |
 | aclnnSwiGluQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
