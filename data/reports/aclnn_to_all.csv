@@ -338,7 +338,7 @@ aclnnGroupedBiasAddGrad,✖️,,✖️,✖️,✖️,
 aclnnGroupedBiasAddGradV2,✖️,,✖️,✖️,✖️,
 aclnnGroupedMatMulAllReduce,✖️,,✖️,✖️,✖️,
 aclnnGroupedMatMulAlltoAllv,✅,,✖️,✖️,✖️,
-aclnnGroupedMatmul,✅,npu_grouped_matmul;npu_grouped_matmul.List,✖️,✖️,✖️,
+aclnnGroupedMatmul,✅,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,✖️,✖️,✖️,
 aclnnGroupedMatmulAdd,✅,npu_grouped_matmul_add,✖️,✖️,✖️,
 aclnnGroupedMatmulFinalizeRouting,✖️,,✖️,✖️,✖️,
 aclnnGroupedMatmulFinalizeRoutingV2,✅,npu_grouped_matmul_finalize_routing,✖️,✖️,✖️,
@@ -350,9 +350,9 @@ aclnnGroupedMatmulSwigluQuantV2,✖️,,✖️,✖️,✖️,
 aclnnGroupedMatmulSwigluQuantWeightNZ,✖️,,✖️,✖️,✖️,
 aclnnGroupedMatmulV2,✖️,,✅,✖️,✅,GroupedMatmulV2
 aclnnGroupedMatmulV3,✖️,,✅,✖️,✅,GroupedMatmul
-aclnnGroupedMatmulV4,✅,npu_grouped_matmul;npu_grouped_matmul.List,✅,✖️,✅,GroupedMatmulV4
-aclnnGroupedMatmulV5,✅,npu_grouped_matmul;npu_grouped_matmul.List,✖️,✖️,✖️,
-aclnnGroupedMatmulWeightNz,✅,npu_grouped_matmul;npu_grouped_matmul.List,✖️,✖️,✖️,
+aclnnGroupedMatmulV4,✅,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,✅,✖️,✅,GroupedMatmulV4
+aclnnGroupedMatmulV5,✅,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,✖️,✖️,✖️,
+aclnnGroupedMatmulWeightNz,✅,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,✖️,✖️,✖️,
 aclnnGtScalar,✅,gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out,✖️,✖️,✖️,
 aclnnGtTensor,✅,gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out,✅,✅,✅,Greater
 aclnnHardshrink,✅,hardshrink;hardshrink.out,✅,✅,✅,HShrink
@@ -723,8 +723,8 @@ aclnnQuantMatmulReduceSumWeightNz,✅,npu_quant_matmul_reduce_sum,✖️,✖️,
 aclnnQuantMatmulV2,✖️,,✖️,✖️,✖️,
 aclnnQuantMatmulV3,✖️,,✖️,✖️,✖️,
 aclnnQuantMatmulV4,✖️,,✅,✖️,✅,QuantBatchMatmul
-aclnnQuantMatmulV5,✅,npu_quant_matmul,✖️,✖️,✖️,
-aclnnQuantMatmulWeightNz,✅,npu_quant_matmul,✖️,✖️,✖️,
+aclnnQuantMatmulV5,✅,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,✖️,✖️,✖️,
+aclnnQuantMatmulWeightNz,✅,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,✖️,✖️,✖️,
 aclnnQuantize,✅,_quantize_per_channel_impl.out;_quantize_per_tensor_impl.out,✖️,✖️,✖️,
 aclnnQuantizedBatchNorm,✖️,,✖️,✖️,✖️,
 aclnnRReluWithNoise,✅,rrelu_with_noise;rrelu_with_noise.out,✖️,✖️,✖️,

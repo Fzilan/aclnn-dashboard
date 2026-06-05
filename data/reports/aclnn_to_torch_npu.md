@@ -341,7 +341,7 @@
 | aclnnGroupedBiasAddGradV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatMulAllReduce | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatMulAlltoAllv | 已接入 | src_scan |  |  | True | options | src_only;src_hit_but_op_name_unresolved |
-| aclnnGroupedMatmul | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
+| aclnnGroupedMatmul | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
 | aclnnGroupedMatmulAdd | 已接入 | src_scan | npu_grouped_matmul_add |  | True | IsAclnnOnly;npu_grouped_matmul_add | src_only |
 | aclnnGroupedMatmulFinalizeRouting | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulFinalizeRoutingV2 | 已接入 | src_scan | npu_grouped_matmul_finalize_routing |  | True | npu_grouped_matmul_finalize_routing | src_only |
@@ -353,9 +353,9 @@
 | aclnnGroupedMatmulSwigluQuantWeightNZ | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnGroupedMatmulV4 | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
-| aclnnGroupedMatmulV5 | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
-| aclnnGroupedMatmulWeightNz | 已接入 | src_scan | npu_grouped_matmul;npu_grouped_matmul.List |  | True | npu_grouped_matmul | shared_by_2_ops;src_only |
+| aclnnGroupedMatmulV4 | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
+| aclnnGroupedMatmulV5 | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
+| aclnnGroupedMatmulWeightNz | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
 | aclnnGtScalar | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | gt;gt_out;lt;lt_out | shared_by_8_ops;src_only |
 | aclnnGtTensor | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out |  | True | gt;gt_out | shared_by_4_ops;src_only |
 | aclnnHardshrink | 已接入 | yaml_exec | hardshrink;hardshrink.out | hardshrink;hardshrink.out | False |  | shared_by_2_ops;yaml_only |
@@ -726,8 +726,8 @@
 | aclnnQuantMatmulV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnQuantMatmulV5 | 已接入 | src_scan | npu_quant_matmul |  | True | npu_quant_matmul | src_only |
-| aclnnQuantMatmulWeightNz | 已接入 | src_scan | npu_quant_matmul |  | True | npu_quant_matmul | src_only |
+| aclnnQuantMatmulV5 | 已接入 | src_scan | _scaled_mm;_scaled_mm_v2;npu_quant_matmul |  | True | _scaled_mm;_scaled_mm_v2;npu_quant_matmul | shared_by_3_ops;src_only |
+| aclnnQuantMatmulWeightNz | 已接入 | src_scan | _scaled_mm;_scaled_mm_v2;npu_quant_matmul |  | True | _scaled_mm;_scaled_mm_v2;npu_quant_matmul | shared_by_3_ops;src_only |
 | aclnnQuantize | 已接入 | src_scan | _quantize_per_channel_impl.out;_quantize_per_tensor_impl.out |  | True | _quantize_per_channel_impl_out;_quantize_per_tensor_impl_out;npu_quantize_by_kernel | shared_by_2_ops;src_only |
 | aclnnQuantizedBatchNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRReluWithNoise | 已接入 | src_scan | rrelu_with_noise;rrelu_with_noise.out |  | True | rrelu_with_noise;rrelu_with_noise_out | shared_by_2_ops;src_only |
