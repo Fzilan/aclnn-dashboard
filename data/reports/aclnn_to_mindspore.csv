@@ -578,7 +578,7 @@ aclnnMatmulCompressDequant,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,
 aclnnMatmulReduceScatter,✅,✅,✅,✅,✖️,✖️,✖️,kernel_mod_src+custom_dispatch,MatmulReduceScatter,MatmulReduceScatter,,,,MatmulReduceScatter,MatmulReduceScatterAscend,MatmulReduceScatter,False,MatmulReduceScatterAscend,kernel_mod_impl/customize/matmul_reduce_scatter_aclnn_kernel.cc;kernel_mod_impl/customize/matmul_reduce_scatter_aclnn_kernel.h,,has_custom_dispatch
 aclnnMatmulReduceScatterV2,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
 aclnnMatmulWeightNz,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
-aclnnMax,✅,✅,✅,✅,✖️,✅,✅,kernel_mod_src+kernel_mod_gen+pyboost_gen,BincountExt;Max,BincountExt,,Max,Max,,,Max,False,BincountExtAscend,kernel_mod_impl/customize/bincount_ext_aclnn_kernel.cc;kernel_mod_impl/customize/bincount_ext_aclnn_kernel.h,,shared_by_2_ops
+aclnnMax,✅,✅,✅,✅,✖️,✅,✅,kernel_mod_src+kernel_mod_gen+pyboost_gen,BincountExt;Max;OneHotExt,BincountExt;OneHotExt,,Max,Max,,,Max,False,BincountExtAscend;OneHotExtAscend,kernel_mod_impl/customize/bincount_ext_aclnn_kernel.cc;kernel_mod_impl/customize/bincount_ext_aclnn_kernel.h;kernel_mod_impl/customize/one_hot_ext_aclnn_kernel.cc;kernel_mod_impl/customize/one_hot_ext_aclnn_kernel.h,,shared_by_3_ops
 aclnnMaxDim,✅,✅,✅,✅,✖️,✅,✅,kernel_mod_src+kernel_mod_gen+pyboost_gen+custom_dispatch,ArgMaxWithValue;MaxDim,ArgMaxWithValue,,MaxDim,MaxDim,ArgMaxWithValue,ArgMaxWithValueAscend,MaxDim,False,ArgMaxWithValueAscend,kernel_mod_impl/customize/arg_with_value_aclnn_kernel.cc;kernel_mod_impl/customize/arg_with_value_aclnn_kernel.h,,shared_by_2_ops;has_custom_dispatch
 aclnnMaxN,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,
 aclnnMaxPool,✖️,✖️,✖️,✖️,✖️,✖️,✖️,,,,,,,,,,False,,,,

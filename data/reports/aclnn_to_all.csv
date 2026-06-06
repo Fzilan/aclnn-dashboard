@@ -578,7 +578,7 @@ aclnnMatmulCompressDequant,✅,npu_matmul_compress_dequant,✖️,✖️,✖️,
 aclnnMatmulReduceScatter,✅,,✅,✅,✅,MatmulReduceScatter
 aclnnMatmulReduceScatterV2,✅,npu_quant_mm_reduce_scatter,✖️,✖️,✖️,
 aclnnMatmulWeightNz,✅,mm;mm.dtype;mm.dtype_out;mm.out,✖️,✖️,✖️,
-aclnnMax,✅,max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out,✅,✅,✅,BincountExt;Max
+aclnnMax,✅,max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out,✅,✅,✅,BincountExt;Max;OneHotExt
 aclnnMaxDim,✅,max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out,✅,✅,✅,ArgMaxWithValue;MaxDim
 aclnnMaxN,✖️,,✖️,✖️,✖️,
 aclnnMaxPool,✖️,,✖️,✖️,✖️,
