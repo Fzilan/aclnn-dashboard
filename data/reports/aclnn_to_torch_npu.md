@@ -74,7 +74,7 @@
 | aclnnAvgPool3d | 已接入 | src_scan | avg_pool3d;avg_pool3d.out | avg_pool3d;avg_pool3d.out | False | avg_pool3d;avg_pool3d_out;avg_pool3d_out_npu_nocheck_opapi | shared_by_2_ops;src_only |
 | aclnnAvgPool3dBackward | 已接入 | src_scan | avg_pool3d_backward;avg_pool3d_backward.grad_input | avg_pool3d_backward;avg_pool3d_backward.grad_input | False | avg_pool3d_backward;avg_pool3d_backward_out;avg_pool3d_backward_out_npu_nocheck_api | shared_by_2_ops;src_only |
 | aclnnBackgroundReplace | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnBaddbmm | 已接入 | src_scan | baddbmm;baddbmm.out;baddbmm_ | baddbmm;baddbmm.out | False | baddbmm;baddbmm_;baddbmm_out | shared_by_3_ops;src_only |
+| aclnnBaddbmm | 已接入 | src_scan | baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out;baddbmm_ | baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out | False | baddbmm;baddbmm_;baddbmm_out | shared_by_5_ops;src_only |
 | aclnnBatchMatMul | 已接入 | src_scan | affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out |  | True | affine_grid_generator_backward;bmm;bmm_out | shared_by_5_ops;src_only |
 | aclnnBatchMatMulReduceScatterAlltoAll | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBatchMatMulWeightNz | 已接入 | src_scan | bmm;bmm.dtype;bmm.dtype_out;bmm.out |  | True | bmm;bmm_out | shared_by_4_ops;src_only |

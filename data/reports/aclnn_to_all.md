@@ -84,7 +84,7 @@
 | aclnnAvgPool3d | ✅ | avg_pool3d;avg_pool3d.out | ✅ | ✅ | ✅ | AvgPool3DExt |
 | aclnnAvgPool3dBackward | ✅ | avg_pool3d_backward;avg_pool3d_backward.grad_input | ✅ | ✅ | ✅ | AvgPool3DGradExt |
 | aclnnBackgroundReplace | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnBaddbmm | ✅ | baddbmm;baddbmm.out;baddbmm_ | ✅ | ✅ | ✅ | Baddbmm |
+| aclnnBaddbmm | ✅ | baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out;baddbmm_ | ✅ | ✅ | ✅ | Baddbmm |
 | aclnnBatchMatMul | ✅ | affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out | ✅ | ✅ | ✅ | BatchMatMulExt |
 | aclnnBatchMatMulReduceScatterAlltoAll | ✖️ |  | ✅ | ✖️ | ✅ | BatchMatMulReduceScatterAlltoAll |
 | aclnnBatchMatMulWeightNz | ✅ | bmm;bmm.dtype;bmm.dtype_out;bmm.out | ✖️ | ✖️ | ✖️ |  |
