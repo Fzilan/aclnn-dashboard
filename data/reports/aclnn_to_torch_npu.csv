@@ -837,7 +837,7 @@ all,aclnnStridedSliceAssignV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_sc
 all,aclnnSub,已接入,src_scan,sub.Scalar;sub.Tensor;sub.out,,sub.Scalar;sub.Tensor;sub.out,sub;sub_out;sub_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp,all_version,sub.Scalar;sub.Tensor;sub.out,False,shared_by_3_ops;src_only
 all,aclnnSubs,已接入,src_scan,sub.Scalar;sub.Tensor;sub.out,,sub.Scalar;sub.Tensor;sub.out,sub;sub_out;sub_out_npu_nocheck,external/op-plugin/op_plugin/ops/opapi/SubKernelNpuOpApi.cpp,all_version,,True,shared_by_3_ops;src_only
 all,aclnnSum,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnSvd,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnSvd,已接入,yaml_exec,_linalg_svd.U,_linalg_svd.U,,,,all_version,,True,yaml_only
 all,aclnnSwiGlu,已接入,yaml_exec,npu_swiglu,npu_swiglu,,,,all_version,,True,yaml_only
 all,aclnnSwiGluGrad,已接入,yaml_exec,npu_swiglu_backward,npu_swiglu_backward,,,,all_version,,True,yaml_only
 all,aclnnSwiGluQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit

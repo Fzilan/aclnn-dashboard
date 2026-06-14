@@ -837,7 +837,7 @@ aclnnStridedSliceAssignV2,✖️,,✖️,✖️,✖️,
 aclnnSub,✅,sub.Scalar;sub.Tensor;sub.out,✅,✅,✅,Sub;SubExt
 aclnnSubs,✅,sub.Scalar;sub.Tensor;sub.out,✅,✅,✅,SubScalar
 aclnnSum,✖️,,✖️,✖️,✖️,
-aclnnSvd,✖️,,✖️,✖️,✖️,
+aclnnSvd,✅,_linalg_svd.U,✖️,✖️,✖️,
 aclnnSwiGlu,✅,npu_swiglu,✅,✅,✅,Swiglu
 aclnnSwiGluGrad,✅,npu_swiglu_backward,✅,✅,✅,SwigluGrad
 aclnnSwiGluQuant,✖️,,✖️,✖️,✖️,

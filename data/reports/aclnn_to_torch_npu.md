@@ -840,7 +840,7 @@
 | aclnnSub | 已接入 | src_scan | sub.Scalar;sub.Tensor;sub.out | sub.Scalar;sub.Tensor;sub.out | False | sub;sub_out;sub_out_npu_nocheck | shared_by_3_ops;src_only |
 | aclnnSubs | 已接入 | src_scan | sub.Scalar;sub.Tensor;sub.out |  | True | sub;sub_out;sub_out_npu_nocheck | shared_by_3_ops;src_only |
 | aclnnSum | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnSvd | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnSvd | 已接入 | yaml_exec | _linalg_svd.U |  | True |  | yaml_only |
 | aclnnSwiGlu | 已接入 | yaml_exec | npu_swiglu |  | True |  | yaml_only |
 | aclnnSwiGluGrad | 已接入 | yaml_exec | npu_swiglu_backward |  | True |  | yaml_only |
 | aclnnSwiGluQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
