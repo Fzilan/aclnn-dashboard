@@ -295,13 +295,13 @@
 | aclnnForeachTanh | 已接入 | src_scan | _foreach_tanh;_foreach_tanh_ | _foreach_tanh | False | _foreach_tanh;_foreach_tanh_;_split_and_exec_npu_cmd_tanh | shared_by_2_ops;src_only |
 | aclnnForeachZeroInplace | 已接入 | src_scan | _foreach_zero_ |  | True | _foreach_zero_;_split_and_exec_npu_cmd_zero | src_only |
 | aclnnFrac | 已接入 | yaml_exec | frac;frac.out | frac;frac.out | False |  | shared_by_2_ops;yaml_only |
-| aclnnFusedCrossEntropyLossWithMaxSum | 已接入 | src_scan | fused_cross_entropy_loss_with_max_sum | fused_cross_entropy_loss_with_max_sum | False | fused_cross_entropy_loss_with_max_sum | src_only |
+| aclnnFusedCrossEntropyLossWithMaxSum | 已接入 | src_scan | npu_fused_cross_entropy_loss_with_max_sum |  | True | npu_fused_cross_entropy_loss_with_max_sum | src_only |
 | aclnnFusedInferAttentionScore | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFusedInferAttentionScoreV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFusedInferAttentionScoreV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFusedInferAttentionScoreV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnFusedLinearCrossEntropyLossGrad | 已接入 | src_scan | fused_linear_cross_entropy_loss_with_max_sum_grad |  | True | fused_linear_cross_entropy_loss_with_max_sum_grad | src_only |
-| aclnnFusedLinearOnlineMaxSum | 已接入 | src_scan | fused_linear_online_max_sum | fused_linear_online_max_sum | False | fused_linear_online_max_sum | src_only |
+| aclnnFusedLinearCrossEntropyLossGrad | 已接入 | src_scan | npu_fused_linear_cross_entropy_loss_with_max_sum_backward |  | True | npu_fused_linear_cross_entropy_loss_with_max_sum_backward | src_only |
+| aclnnFusedLinearOnlineMaxSum | 已接入 | src_scan | npu_fused_linear_online_max_sum |  | True | npu_fused_linear_online_max_sum | src_only |
 | aclnnGather | 已接入 | src_scan | gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample | gather;gather.dimname;gather.dimname_out;gather.out | False | gather;gather_out;npu_top_k_top_p_sample | shared_by_5_ops;src_only |
 | aclnnGatherNd | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGatherPaKvCache | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

@@ -305,13 +305,13 @@
 | aclnnForeachTanh | ✅ | _foreach_tanh;_foreach_tanh_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachZeroInplace | ✅ | _foreach_zero_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnFrac | ✅ | frac;frac.out | ✅ | ✅ | ✅ | Frac |
-| aclnnFusedCrossEntropyLossWithMaxSum | ✅ | fused_cross_entropy_loss_with_max_sum | ✖️ | ✖️ | ✖️ |  |
+| aclnnFusedCrossEntropyLossWithMaxSum | ✅ | npu_fused_cross_entropy_loss_with_max_sum | ✖️ | ✖️ | ✖️ |  |
 | aclnnFusedInferAttentionScore | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnFusedInferAttentionScoreV2 | ✖️ |  | ✅ | ✖️ | ✅ | FusedInferAttentionScore |
 | aclnnFusedInferAttentionScoreV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnFusedInferAttentionScoreV4 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnFusedLinearCrossEntropyLossGrad | ✅ | fused_linear_cross_entropy_loss_with_max_sum_grad | ✖️ | ✖️ | ✖️ |  |
-| aclnnFusedLinearOnlineMaxSum | ✅ | fused_linear_online_max_sum | ✖️ | ✖️ | ✖️ |  |
+| aclnnFusedLinearCrossEntropyLossGrad | ✅ | npu_fused_linear_cross_entropy_loss_with_max_sum_backward | ✖️ | ✖️ | ✖️ |  |
+| aclnnFusedLinearOnlineMaxSum | ✅ | npu_fused_linear_online_max_sum | ✖️ | ✖️ | ✖️ |  |
 | aclnnGather | ✅ | gather;gather.dimname;gather.dimname_out;gather.out;npu_top_k_top_p_sample | ✅ | ✅ | ✅ | GatherD |
 | aclnnGatherNd | ✖️ |  | ✅ | ✖️ | ✅ | GatherNdExt |
 | aclnnGatherPaKvCache | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
