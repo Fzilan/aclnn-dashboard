@@ -10,9 +10,9 @@
     "torch_coverage_rate": 77.9,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 42.3,
-    "last_update_time": "2026-06-23T12:37:46+08:00",
-    "generated_at": "2026-06-23T12:37:46+08:00",
-    "pipeline_run_time": "2026-06-23T12:37:43+08:00",
+    "last_update_time": "2026-06-24T12:45:16+08:00",
+    "generated_at": "2026-06-24T12:45:16+08:00",
+    "pipeline_run_time": "2026-06-24T12:45:14+08:00",
     "torch_speed_pp_per_day_7d": 0.0,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-06-23T12:36:28+08:00"
+        "mtime": "2026-06-24T12:44:12+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-06-23T12:37:44+08:00"
+        "mtime": "2026-06-24T12:45:15+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-06-23T12:37:44+08:00"
+        "mtime": "2026-06-24T12:45:15+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-06-23T12:37:46+08:00"
+        "mtime": "2026-06-24T12:45:16+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-06-23T12:37:46+08:00"
+        "mtime": "2026-06-24T12:45:16+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-06-23T12:37:46+08:00"
+        "mtime": "2026-06-24T12:45:16+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-06-23T12:37:46+08:00"
+        "mtime": "2026-06-24T12:45:16+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1235,11 +1235,9 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
-      }
-    ],
-    "last_7_days": [
+      },
       {
-        "date": "2026-06-17",
+        "date": "2026-06-24",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 420,
@@ -1247,7 +1245,9 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
-      },
+      }
+    ],
+    "last_7_days": [
       {
         "date": "2026-06-18",
         "total_ops": 913,
@@ -1300,6 +1300,16 @@
       },
       {
         "date": "2026-06-23",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-06-24",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 420,
@@ -25792,6 +25802,10 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
+          "bmm",
+          "bmm.dtype",
+          "bmm.dtype_out",
+          "bmm.out",
           "npu_attn_softmax_backward_"
         ],
         "direct_match_ops": [],
@@ -25801,17 +25815,20 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "_exec_fft",
+          "bmm",
+          "bmm_out",
           "matmul_implement_npu",
           "npu_attn_softmax_backward_"
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/AttnSoftMaxBackwardKernelNpuOpApi.cpp",
+          "external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/FFTc2cKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MatmulBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MatmulDoubleBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MatmulKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "shared_by_5_ops;src_only"
       },
       "mindspore": {
         "supported": true,

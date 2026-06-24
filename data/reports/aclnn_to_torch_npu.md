@@ -572,7 +572,7 @@
 | aclnnLtTensor | 已接入 | src_scan | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | lt;lt_out | shared_by_4_ops;src_only |
 | aclnnMaskedSelect | 已接入 | src_scan | masked_select;masked_select.out | masked_select;masked_select.out | False | exec_aclnn_masked_select;masked_select;masked_select_out | shared_by_2_ops;src_only |
 | aclnnMaskedSoftmaxWithRelPosBias | 已接入 | yaml_exec | npu_masked_softmax_with_rel_pos_bias |  | True |  | yaml_only |
-| aclnnMatmul | 已接入 | src_scan | npu_attn_softmax_backward_ |  | True | _exec_fft;matmul_implement_npu;npu_attn_softmax_backward_ | src_only |
+| aclnnMatmul | 已接入 | src_scan | bmm;bmm.dtype;bmm.dtype_out;bmm.out;npu_attn_softmax_backward_ |  | True | _exec_fft;bmm;bmm_out;matmul_implement_npu;npu_attn_softmax_backward_ | shared_by_5_ops;src_only |
 | aclnnMatmulAllReduce | 已接入 | src_scan | npu_mm_all_reduce_base |  | True | npu_mm_all_reduce_base | src_only |
 | aclnnMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMatmulAllReduceV2 | 已接入 | src_scan | npu_mm_all_reduce_base |  | True | npu_mm_all_reduce_base | src_only |

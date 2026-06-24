@@ -582,7 +582,7 @@
 | aclnnLtTensor | ✅ | lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✅ | ✅ | ✅ | Less |
 | aclnnMaskedSelect | ✅ | masked_select;masked_select.out | ✅ | ✅ | ✅ | MaskedSelect |
 | aclnnMaskedSoftmaxWithRelPosBias | ✅ | npu_masked_softmax_with_rel_pos_bias | ✖️ | ✖️ | ✖️ |  |
-| aclnnMatmul | ✅ | npu_attn_softmax_backward_ | ✅ | ✅ | ✅ | BatchMatMul;Dense;MatMul;MatMulExt;MatMulV2 |
+| aclnnMatmul | ✅ | bmm;bmm.dtype;bmm.dtype_out;bmm.out;npu_attn_softmax_backward_ | ✅ | ✅ | ✅ | BatchMatMul;Dense;MatMul;MatMulExt;MatMulV2 |
 | aclnnMatmulAllReduce | ✅ | npu_mm_all_reduce_base | ✅ | ✖️ | ✅ | MatMulAllReduce |
 | aclnnMatmulAllReduceAddRmsNorm | ✖️ |  | ✅ | ✖️ | ✅ | MatmulAllReduceAddRmsNorm |
 | aclnnMatmulAllReduceV2 | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
