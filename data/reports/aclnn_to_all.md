@@ -614,7 +614,7 @@
 | aclnnMin | ✅ | min;min.dim;min.dim_min;min.names_dim;min.names_dim_min;min.out | ✅ | ✅ | ✅ | BincountExt;Min |
 | aclnnMinDim | ✅ | min;min.dim;min.dim_min;min.names_dim;min.names_dim_min;min.out | ✅ | ✅ | ✅ | ArgMinWithValue;MinDim |
 | aclnnMinN | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMinimum | ✅ | min.out;minimum.out | ✅ | ✅ | ✅ | Minimum |
+| aclnnMinimum | ✅ | min.out;minimum;minimum.out | ✅ | ✅ | ✅ | Minimum |
 | aclnnMish | ✅ | mish;mish.out | ✅ | ✅ | ✅ | MishExt |
 | aclnnMishBackward | ✅ | mish_backward | ✅ | ✅ | ✅ | MishGradExt |
 | aclnnMlaPreprocess | ✖️ |  | ✖️ | ✖️ | ✖️ |  |

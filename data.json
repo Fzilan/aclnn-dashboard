@@ -10,9 +10,9 @@
     "torch_coverage_rate": 77.9,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 42.3,
-    "last_update_time": "2026-06-26T12:48:27+08:00",
-    "generated_at": "2026-06-26T12:48:27+08:00",
-    "pipeline_run_time": "2026-06-26T12:48:25+08:00",
+    "last_update_time": "2026-06-27T12:32:47+08:00",
+    "generated_at": "2026-06-27T12:32:47+08:00",
+    "pipeline_run_time": "2026-06-27T12:32:45+08:00",
     "torch_speed_pp_per_day_7d": 0.0,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-06-26T12:47:11+08:00"
+        "mtime": "2026-06-27T12:31:02+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-06-26T12:48:26+08:00"
+        "mtime": "2026-06-27T12:32:46+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-06-26T12:48:26+08:00"
+        "mtime": "2026-06-27T12:32:46+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-06-26T12:48:27+08:00"
+        "mtime": "2026-06-27T12:32:47+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-06-26T12:48:27+08:00"
+        "mtime": "2026-06-27T12:32:47+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-06-26T12:48:27+08:00"
+        "mtime": "2026-06-27T12:32:47+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-06-26T12:48:27+08:00"
+        "mtime": "2026-06-27T12:32:47+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1265,11 +1265,9 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
-      }
-    ],
-    "last_7_days": [
+      },
       {
-        "date": "2026-06-20",
+        "date": "2026-06-27",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 420,
@@ -1277,7 +1275,9 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
-      },
+      }
+    ],
+    "last_7_days": [
       {
         "date": "2026-06-21",
         "total_ops": 913,
@@ -1330,6 +1330,16 @@
       },
       {
         "date": "2026-06-26",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-06-27",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 420,
@@ -14638,14 +14648,11 @@
           "ge",
           "ge_out",
           "le",
-          "scalar_type"
+          "le_out"
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/GeKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_8_ops;src_only"
       },
@@ -17242,7 +17249,6 @@
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
@@ -24153,14 +24159,10 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "le",
-          "le_out",
-          "scalar_type"
+          "le_out"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -24200,13 +24202,10 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "le",
-          "scalar_type"
+          "le_out"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_4_ops;src_only"
       },
@@ -25141,7 +25140,6 @@
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
@@ -25283,7 +25281,6 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
@@ -26917,15 +26914,12 @@
         ],
         "suspected_fusion": false,
         "cpp_funcs": [
-          "check_tensor",
           "max_out",
-          "maximum"
+          "maximum",
+          "maximum_out"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
       },
@@ -26982,7 +26976,6 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
@@ -27294,9 +27287,11 @@
         "status": "已接入",
         "via_ops": [
           "min.out",
+          "minimum",
           "minimum.out"
         ],
         "direct_match_ops": [
+          "minimum",
           "minimum.out"
         ],
         "evidence": [
@@ -27305,12 +27300,13 @@
         "suspected_fusion": false,
         "cpp_funcs": [
           "min_out",
+          "minimum",
           "minimum_out"
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_2_ops;src_only"
+        "remarks": "shared_by_3_ops;src_only"
       },
       "mindspore": {
         "supported": true,
@@ -29222,7 +29218,6 @@
           "scalar_type"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSumExpKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MeanKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/MseLossKernelNpuOpApi.cpp"
@@ -31800,7 +31795,6 @@
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/IndexAddKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/LogSigmoidNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/ProdKernelNpuOpApi.cpp"
         ],
         "remarks": "shared_by_3_ops;src_only"
