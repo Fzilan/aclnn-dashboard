@@ -630,7 +630,7 @@
 | aclnnMoeFinalizeRoutingV2 | 已接入 | src_scan | npu_moe_finalize_routing |  | True | npu_moe_finalize_routing | src_only |
 | aclnnMoeFinalizeRoutingV2Grad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeFusedTopk | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnMoeGatingTopK | 已接入 | src_scan | npu_moe_gating_top_k |  | True | npu_moe_gating_top_k | src_only |
+| aclnnMoeGatingTopK | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeGatingTopKSoftmax | 已接入 | src_scan | npu_moe_gating_top_k_softmax |  | True | npu_moe_gating_top_k_softmax | src_only |
 | aclnnMoeGatingTopKSoftmaxV2 | 已接入 | src_scan | npu_moe_gating_top_k_softmax_v2 |  | True | npu_moe_gating_top_k_softmax_v2 | src_only |
 | aclnnMoeInitRouting | 已接入 | src_scan | npu_moe_init_routing |  | True | npu_moe_init_routing | src_only |
