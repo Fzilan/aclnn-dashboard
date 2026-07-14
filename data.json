@@ -10,9 +10,9 @@
     "torch_coverage_rate": 77.8,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 42.3,
-    "last_update_time": "2026-07-13T12:07:48+08:00",
-    "generated_at": "2026-07-13T12:07:48+08:00",
-    "pipeline_run_time": "2026-07-13T12:07:45+08:00",
+    "last_update_time": "2026-07-14T11:42:52+08:00",
+    "generated_at": "2026-07-14T11:42:53+08:00",
+    "pipeline_run_time": "2026-07-14T11:42:50+08:00",
     "torch_speed_pp_per_day_7d": -0.017,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-07-13T12:06:39+08:00"
+        "mtime": "2026-07-14T11:41:47+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-07-13T12:07:46+08:00"
+        "mtime": "2026-07-14T11:42:51+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-07-13T12:07:46+08:00"
+        "mtime": "2026-07-14T11:42:51+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-07-13T12:07:47+08:00"
+        "mtime": "2026-07-14T11:42:52+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-07-13T12:07:47+08:00"
+        "mtime": "2026-07-14T11:42:52+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-07-13T12:07:48+08:00"
+        "mtime": "2026-07-14T11:42:52+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-07-13T12:07:48+08:00"
+        "mtime": "2026-07-14T11:42:52+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1435,19 +1435,19 @@
         "torch_coverage_rate": 77.8,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-07-14",
+        "total_ops": 913,
+        "torch_supported": 710,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.8,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
       }
     ],
     "last_7_days": [
-      {
-        "date": "2026-07-07",
-        "total_ops": 913,
-        "torch_supported": 711,
-        "mindspore_supported": 420,
-        "both_supported": 386,
-        "torch_coverage_rate": 77.9,
-        "mindspore_coverage_rate": 46.0,
-        "both_coverage_rate": 42.3
-      },
       {
         "date": "2026-07-08",
         "total_ops": 913,
@@ -1500,6 +1500,16 @@
       },
       {
         "date": "2026-07-13",
+        "total_ops": 913,
+        "torch_supported": 710,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.8,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-07-14",
         "total_ops": 913,
         "torch_supported": 710,
         "mindspore_supported": 420,
@@ -9661,6 +9671,8 @@
         "pyboost": false,
         "kbk": true,
         "via_ops": [
+          "BinaryCrossEntropy",
+          "BinaryCrossEntropyGrad",
           "BroadcastTo",
           "ExpandAs",
           "L1LossBackwardExt",
@@ -9674,6 +9686,8 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
+          "BinaryCrossEntropyAclnnKernelMod",
+          "BinaryCrossEntropyGradAclnnKernelMod",
           "BroadcastToAclnnKernelMod",
           "ExpandAsAclnnKernelMod",
           "L1LossBackwardExtAclnnKernelMod",
@@ -9682,17 +9696,17 @@
           "MSELossGradExtAclnnKernelMod"
         ],
         "kernel_mod_files": [
+          "kernel_mod_impl/customize/binary_cross_entropy.cc",
+          "kernel_mod_impl/customize/binary_cross_entropy.h",
+          "kernel_mod_impl/customize/binary_cross_entropy_grad.cc",
+          "kernel_mod_impl/customize/binary_cross_entropy_grad.h",
           "kernel_mod_impl/customize/broadcastto_aclnn_kernel.cc",
           "kernel_mod_impl/customize/broadcastto_aclnn_kernel.h",
-          "kernel_mod_impl/customize/expandas_aclnn_kernel.cc",
-          "kernel_mod_impl/customize/expandas_aclnn_kernel.h",
-          "kernel_mod_impl/customize/l1_loss_backward_ext_aclnn_kernel.cc",
-          "kernel_mod_impl/customize/l1_loss_backward_ext_aclnn_kernel.h",
-          "...(+6)"
+          "...(+10)"
         ],
         "pyboost_files": [],
         "custom_dispatch_names": [],
-        "remarks": "shared_by_6_ops"
+        "remarks": "shared_by_8_ops"
       }
     },
     {

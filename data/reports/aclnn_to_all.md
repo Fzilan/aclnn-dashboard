@@ -196,7 +196,7 @@
 | aclnnExp2 | ✅ | exp2;exp2.out | ✅ | ✅ | ✅ | Exp2 |
 | aclnnExpSegsum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnExpSegsumBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnExpand | ✖️ |  | ✅ | ✖️ | ✅ | BroadcastTo;ExpandAs;L1LossBackwardExt;L1LossExt;MSELossExt;MSELossGradExt |
+| aclnnExpand | ✖️ |  | ✅ | ✖️ | ✅ | BinaryCrossEntropy;BinaryCrossEntropyGrad;BroadcastTo;ExpandAs;L1LossBackwardExt;L1LossExt;MSELossExt;MSELossGradExt |
 | aclnnExpandIntoJaggedPermute | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnExpm1 | ✅ | expm1;expm1.out | ✅ | ✅ | ✅ | Expm1 |
 | aclnnEye | ✅ | eye;eye.m;eye.m_out;eye.out | ✅ | ✅ | ✅ | Eye |
