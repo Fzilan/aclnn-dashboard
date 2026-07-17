@@ -627,7 +627,7 @@ all,aclnnMoeFinalizeRouting,已接入,src_scan,npu_moe_finalize_routing,,npu_moe
 all,aclnnMoeFinalizeRoutingV2,已接入,src_scan,npu_moe_finalize_routing,,npu_moe_finalize_routing,npu_moe_finalize_routing,external/op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnMoeFinalizeRoutingV2Grad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeFusedTopk,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnMoeGatingTopK,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnMoeGatingTopK,已接入,src_scan,npu_moe_gating_top_k,,npu_moe_gating_top_k,npu_moe_gating_top_k,external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnMoeGatingTopKSoftmax,已接入,src_scan,npu_moe_gating_top_k_softmax,,npu_moe_gating_top_k_softmax,npu_moe_gating_top_k_softmax,external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKSoftmaxKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnMoeGatingTopKSoftmaxV2,已接入,src_scan,npu_moe_gating_top_k_softmax_v2,,npu_moe_gating_top_k_softmax_v2,npu_moe_gating_top_k_softmax_v2,external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKSoftmaxV2KernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnMoeInitRouting,已接入,src_scan,npu_moe_init_routing,,npu_moe_init_routing,npu_moe_init_routing,external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingKernelNpuOpApi.cpp,all_version,,True,src_only

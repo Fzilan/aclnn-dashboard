@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：710 / 913（77.8%）
+- torch-npu 已接入：711 / 913（77.9%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：324 / 913（35.5%）
+- 仅 torch-npu：325 / 913（35.6%）
 - 仅 mindspore：34 / 913（3.7%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -640,7 +640,7 @@
 | aclnnMoeFinalizeRoutingV2 | ✅ | npu_moe_finalize_routing | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFinalizeRoutingV2Grad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFusedTopk | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeGatingTopK | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeGatingTopK | ✅ | npu_moe_gating_top_k | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeGatingTopKSoftmax | ✅ | npu_moe_gating_top_k_softmax | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeGatingTopKSoftmaxV2 | ✅ | npu_moe_gating_top_k_softmax_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeInitRouting | ✅ | npu_moe_init_routing | ✖️ | ✖️ | ✖️ |  |
