@@ -642,8 +642,8 @@ aclnnMoeTokenPermuteWithEp,✖️,,✖️,✖️,✖️,
 aclnnMoeTokenPermuteWithEpGrad,✖️,,✖️,✖️,✖️,
 aclnnMoeTokenPermuteWithRoutingMap,✅,npu_moe_token_permute_with_routing_map,✖️,✖️,✖️,
 aclnnMoeTokenPermuteWithRoutingMapGrad,✅,,✖️,✖️,✖️,
-aclnnMoeTokenUnpermute,✅,npu_moe_token_unpermute,✅,✖️,✅,InnerMoeTokenUnpermute
-aclnnMoeTokenUnpermuteGrad,✅,npu_moe_token_unpermute_grad,✅,✅,✅,MoeTokenUnpermuteGrad
+aclnnMoeTokenUnpermute,✅,_npu_moe_token_unpermute,✅,✖️,✅,InnerMoeTokenUnpermute
+aclnnMoeTokenUnpermuteGrad,✅,npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2,✅,✅,✅,MoeTokenUnpermuteGrad
 aclnnMoeTokenUnpermuteWithEp,✖️,,✖️,✖️,✖️,
 aclnnMoeTokenUnpermuteWithEpGrad,✖️,,✖️,✖️,✖️,
 aclnnMoeTokenUnpermuteWithRoutingMap,✅,_npu_moe_token_unpermute_with_routing_map,✖️,✖️,✖️,

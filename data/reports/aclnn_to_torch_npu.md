@@ -645,8 +645,8 @@
 | aclnnMoeTokenPermuteWithEpGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenPermuteWithRoutingMap | 已接入 | src_scan | npu_moe_token_permute_with_routing_map |  | True | npu_moe_token_permute_with_routing_map | src_only |
 | aclnnMoeTokenPermuteWithRoutingMapGrad | 已接入 | src_scan |  |  | True | npu_moe_token_permute_with_routing_map_grad_symint | src_only;src_hit_but_op_name_unresolved |
-| aclnnMoeTokenUnpermute | 已接入 | yaml_exec | npu_moe_token_unpermute |  | True |  | yaml_only |
-| aclnnMoeTokenUnpermuteGrad | 已接入 | yaml_exec | npu_moe_token_unpermute_grad |  | True |  | yaml_only |
+| aclnnMoeTokenUnpermute | 已接入 | src_scan | _npu_moe_token_unpermute |  | True | _npu_moe_token_unpermute | src_only |
+| aclnnMoeTokenUnpermuteGrad | 已接入 | yaml_exec | npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2 |  | True |  | shared_by_2_ops;yaml_only |
 | aclnnMoeTokenUnpermuteWithEp | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenUnpermuteWithEpGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenUnpermuteWithRoutingMap | 已接入 | src_scan | _npu_moe_token_unpermute_with_routing_map |  | True | _npu_moe_token_unpermute_with_routing_map | src_only |

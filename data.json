@@ -10,9 +10,9 @@
     "torch_coverage_rate": 77.9,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 42.3,
-    "last_update_time": "2026-07-21T11:53:32+08:00",
-    "generated_at": "2026-07-21T11:53:32+08:00",
-    "pipeline_run_time": "2026-07-21T11:53:29+08:00",
+    "last_update_time": "2026-07-22T11:55:19+08:00",
+    "generated_at": "2026-07-22T11:55:19+08:00",
+    "pipeline_run_time": "2026-07-22T11:55:16+08:00",
     "torch_speed_pp_per_day_7d": 0.017,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-07-21T11:52:28+08:00"
+        "mtime": "2026-07-22T11:54:11+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-07-21T11:53:30+08:00"
+        "mtime": "2026-07-22T11:55:17+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-07-21T11:53:30+08:00"
+        "mtime": "2026-07-22T11:55:17+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-07-21T11:53:32+08:00"
+        "mtime": "2026-07-22T11:55:19+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-07-21T11:53:32+08:00"
+        "mtime": "2026-07-22T11:55:19+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-07-21T11:53:32+08:00"
+        "mtime": "2026-07-22T11:55:19+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-07-21T11:53:32+08:00"
+        "mtime": "2026-07-22T11:55:19+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1515,19 +1515,19 @@
         "torch_coverage_rate": 77.9,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-07-22",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
       }
     ],
     "last_7_days": [
-      {
-        "date": "2026-07-15",
-        "total_ops": 913,
-        "torch_supported": 710,
-        "mindspore_supported": 420,
-        "both_supported": 386,
-        "torch_coverage_rate": 77.8,
-        "mindspore_coverage_rate": 46.0,
-        "both_coverage_rate": 42.3
-      },
       {
         "date": "2026-07-16",
         "total_ops": 913,
@@ -1580,6 +1580,16 @@
       },
       {
         "date": "2026-07-21",
+        "total_ops": 913,
+        "torch_supported": 711,
+        "mindspore_supported": 420,
+        "both_supported": 386,
+        "torch_coverage_rate": 77.9,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 42.3
+      },
+      {
+        "date": "2026-07-22",
         "total_ops": 913,
         "torch_supported": 711,
         "mindspore_supported": 420,
@@ -29148,16 +29158,20 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "npu_moe_token_unpermute"
+          "_npu_moe_token_unpermute"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "yaml_only"
+        "cpp_funcs": [
+          "_npu_moe_token_unpermute"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteKernelNpuOpApi.cpp"
+        ],
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": true,
@@ -29192,7 +29206,8 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "npu_moe_token_unpermute_grad"
+          "npu_moe_token_unpermute_grad",
+          "npu_moe_token_unpermute_grad_v2"
         ],
         "direct_match_ops": [],
         "evidence": [
@@ -29201,7 +29216,7 @@
         "suspected_fusion": true,
         "cpp_funcs": [],
         "cpp_files": [],
-        "remarks": "yaml_only"
+        "remarks": "shared_by_2_ops;yaml_only"
       },
       "mindspore": {
         "supported": true,

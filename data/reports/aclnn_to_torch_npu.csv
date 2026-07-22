@@ -642,8 +642,8 @@ all,aclnnMoeTokenPermuteWithEp,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_s
 all,aclnnMoeTokenPermuteWithEpGrad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeTokenPermuteWithRoutingMap,已接入,src_scan,npu_moe_token_permute_with_routing_map,,npu_moe_token_permute_with_routing_map,npu_moe_token_permute_with_routing_map,external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapOpApi.cpp,all_version,,True,src_only
 all,aclnnMoeTokenPermuteWithRoutingMapGrad,已接入,src_scan,,,,npu_moe_token_permute_with_routing_map_grad_symint,external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapGradOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
-all,aclnnMoeTokenUnpermute,已接入,yaml_exec,npu_moe_token_unpermute,npu_moe_token_unpermute,,,,"['v2.1', 'newest']",,True,yaml_only
-all,aclnnMoeTokenUnpermuteGrad,已接入,yaml_exec,npu_moe_token_unpermute_grad,npu_moe_token_unpermute_grad,,,,"['v2.1', 'newest']",,True,yaml_only
+all,aclnnMoeTokenUnpermute,已接入,src_scan,_npu_moe_token_unpermute,,_npu_moe_token_unpermute,_npu_moe_token_unpermute,external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
+all,aclnnMoeTokenUnpermuteGrad,已接入,yaml_exec,npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2,npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2,,,,"['v2.1', 'newest']",,True,shared_by_2_ops;yaml_only
 all,aclnnMoeTokenUnpermuteWithEp,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeTokenUnpermuteWithEpGrad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMoeTokenUnpermuteWithRoutingMap,已接入,src_scan,_npu_moe_token_unpermute_with_routing_map,,_npu_moe_token_unpermute_with_routing_map,_npu_moe_token_unpermute_with_routing_map,external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapKernelOpApi.cpp,"['v2.1', 'newest']",,True,src_only
