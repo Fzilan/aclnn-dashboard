@@ -8,26 +8,26 @@
 | aclnnAdaLayerNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAdaLayerNormQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAdaLayerNormV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnAdaptiveAvgPool2d | 已接入 | src_scan | _adaptive_avg_pool2d;adaptive_avg_pool2d;adaptive_avg_pool2d.out | _adaptive_avg_pool2d;adaptive_avg_pool2d;adaptive_avg_pool2d.out | False | _adaptive_avg_pool2d;adaptive_avg_pool2d;adaptive_avg_pool2d_out | shared_by_3_ops;src_only |
+| aclnnAdaptiveAvgPool2d | 已接入 | src_scan | adaptive_avg_pool2d.out | adaptive_avg_pool2d.out | False | adaptive_avg_pool2d_out | src_only |
 | aclnnAdaptiveAvgPool2dBackward | 已接入 | yaml_exec | _adaptive_avg_pool2d_backward | _adaptive_avg_pool2d_backward | False |  | yaml_only |
 | aclnnAdaptiveAvgPool3d | 已接入 | yaml_exec | _adaptive_avg_pool3d;adaptive_avg_pool3d.out | _adaptive_avg_pool3d;adaptive_avg_pool3d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAdaptiveAvgPool3dBackward | 已接入 | yaml_exec | _adaptive_avg_pool3d_backward;adaptive_avg_pool3d_backward.grad_input | _adaptive_avg_pool3d_backward;adaptive_avg_pool3d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnAdaptiveMaxPool2d | 已接入 | yaml_exec | adaptive_max_pool2d;adaptive_max_pool2d.out | adaptive_max_pool2d;adaptive_max_pool2d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAdaptiveMaxPool2dBackward | 已接入 | yaml_exec | adaptive_max_pool2d_backward;adaptive_max_pool2d_backward.grad_input | adaptive_max_pool2d_backward;adaptive_max_pool2d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnAdaptiveMaxPool3d | 已接入 | src_scan | adaptive_max_pool3d;adaptive_max_pool3d.out | adaptive_max_pool3d;adaptive_max_pool3d.out | False | adaptive_max_pool3d;adaptive_max_pool3d_out | shared_by_2_ops;src_only |
-| aclnnAdaptiveMaxPool3dBackward | 已接入 | src_scan | adaptive_max_pool3d_backward;adaptive_max_pool3d_backward.grad_input | adaptive_max_pool3d_backward;adaptive_max_pool3d_backward.grad_input | False | adaptive_max_pool3d_backward;adaptive_max_pool3d_backward_out | shared_by_2_ops;src_only |
+| aclnnAdaptiveMaxPool3dBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAdd | 已接入 | src_scan | add.Scalar;add.Tensor;add.out | add.Scalar;add.Tensor;add.out | False | add;add_out;add_out_npu_nocheck | shared_by_3_ops;src_only |
-| aclnnAddLayerNorm | 已接入 | src_scan | npu_add_layer_norm |  | True | npu_add_layer_norm | src_only |
-| aclnnAddLayerNormGrad | 已接入 | src_scan | npu_add_layer_norm_backward |  | True | npu_add_layer_norm_backward | src_only |
+| aclnnAddLayerNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAddLayerNormGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAddLora | 已接入 | src_scan | npu_batch_gather_matmul;npu_batch_gather_matmul_ |  | True | npu_batch_gather_matmul;npu_batch_gather_matmul_ | shared_by_2_ops;src_only |
 | aclnnAddRelu | 已接入 | yaml_exec | _add_relu.Tensor;_add_relu.out | _add_relu.Tensor;_add_relu.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAddRmsNorm | 已接入 | yaml_exec | npu_add_rms_norm |  | True |  | yaml_only |
 | aclnnAddRmsNormCast | 已接入 | yaml_exec | npu_add_rms_norm_cast |  | True |  | yaml_only |
 | aclnnAddRmsNormDynamicQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAddRmsNormDynamicQuantV2 | 已接入 | yaml_exec | npu_add_rms_norm_dynamic_quant |  | True |  | yaml_only |
-| aclnnAddRmsNormQuant | 已接入 | src_scan | npu_add_rms_norm_quant |  | True | npu_add_rms_norm_quant | src_only |
-| aclnnAddRmsNormQuantV2 | 已接入 | src_scan | npu_add_rms_norm_quant |  | True | npu_add_rms_norm_quant | src_only |
-| aclnnAddbmm | 已接入 | src_scan | addbmm;addbmm.out;addbmm_ | addbmm;addbmm.out | False | addbmm;addbmm_;addbmm_out | shared_by_3_ops;src_only |
+| aclnnAddRmsNormQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAddRmsNormQuantV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAddbmm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAddcdiv | 已接入 | src_scan | addcdiv;addcdiv.out | addcdiv;addcdiv.out | False | addcdiv;addcdiv_out | shared_by_2_ops;src_only |
 | aclnnAddcmul | 已接入 | src_scan | addcmul;addcmul.out | addcmul;addcmul.out | False | addcmul;addcmul_out | shared_by_2_ops;src_only |
 | aclnnAddmm | 已接入 | src_scan | addmm;addmm.dtype;addmm.dtype_out;addmm.out;npu_linear | addmm;addmm.dtype;addmm.dtype_out;addmm.out | False | addmm;addmm_out;npu_linear | shared_by_5_ops;src_only |
@@ -35,32 +35,32 @@
 | aclnnAddmv | 已接入 | src_scan | addmv;addmv.out;addmv_ | addmv;addmv.out | False | addmv;addmv_;addmv_out;addmv_out_op_api | shared_by_3_ops;src_only |
 | aclnnAddr | 已接入 | yaml_exec | addr;addr.out | addr;addr.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAdds | 已接入 | src_scan | add.Scalar;add.Tensor;add.out |  | True | add;add_out;add_out_npu_nocheck | shared_by_3_ops;src_only |
-| aclnnAdvanceStep | 已接入 | src_scan | npu_advance_step_flashattn |  | True | npu_advance_step_flashattn | src_only |
-| aclnnAdvanceStepV2 | 已接入 | src_scan | npu_advance_step_flashattn |  | True | npu_advance_step_flashattn | src_only |
+| aclnnAdvanceStep | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAdvanceStepV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAffineGrid | 已接入 | src_scan |  |  | True | OPS_ERROR | src_only;src_hit_but_op_name_unresolved |
 | aclnnAll | 已接入 | src_scan | all;all.all_out;all.dim;all.out | all;all.all_out;all.dim;all.out | False | all;all_out | shared_by_4_ops;src_only |
-| aclnnAllGatherMatmul | 已接入 | src_scan | npu_all_gather_base_mm |  | True | npu_all_gather_base_mm | src_only |
-| aclnnAllGatherMatmulV2 | 已接入 | src_scan | npu_all_gather_base_mm;npu_all_gather_quant_mm |  | True | npu_all_gather_base_mm;npu_all_gather_quant_mm | shared_by_2_ops;src_only |
+| aclnnAllGatherMatmul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAllGatherMatmulV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAlltoAllAllGatherBatchMatMul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnAlltoAllvGroupedMatMul | 已接入 | src_scan |  |  | True | options | src_only;src_hit_but_op_name_unresolved |
+| aclnnAlltoAllvGroupedMatMul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAmax | 已接入 | yaml_exec | amax;amax.out | amax;amax.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAmin | 已接入 | yaml_exec | amin;amin.out | amin;amin.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAminmax | 已接入 | src_scan | aminmax.out | aminmax.out | False | aminmax_out | src_only |
 | aclnnAminmaxAll | 已接入 | yaml_exec | _aminmax |  | True |  | yaml_only |
 | aclnnAminmaxDim | 已接入 | yaml_exec | _aminmax.dim |  | True |  | yaml_only |
 | aclnnAny | 已接入 | src_scan | any;any.all_out;any.dim;any.out | any;any.all_out;any.dim;any.out | False | any;any_out | shared_by_4_ops;src_only |
-| aclnnApplyAdamW | 已接入 | src_scan | npu_apply_adam_w.out |  | True | npu_apply_adam_w_out | src_only |
+| aclnnApplyAdamW | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnApplyAdamWQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnApplyAdamWV2 | 已接入 | src_scan |  |  | True | size | src_only;src_hit_but_op_name_unresolved |
 | aclnnApplyFusedEmaAdam | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnApplyRotaryPosEmb | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnApplyRotaryPosEmbV2 | 已接入 | src_scan | npu_apply_rotary_pos_emb |  | True | npu_apply_rotary_pos_emb | src_only |
+| aclnnApplyRotaryPosEmbV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnApplyTopKTopP | 已接入 | yaml_exec | npu_top_k_top_p |  | True |  | yaml_only |
-| aclnnArange | 已接入 | src_scan | arange;arange.out;arange.start;arange.start_out;arange.start_step | arange;arange.out;arange.start;arange.start_out;arange.start_step | False | arange;arange_out;arange_out_op_api | shared_by_5_ops;src_only |
+| aclnnArange | 已接入 | src_scan | arange.out;arange.start_out | arange.out;arange.start_out | False | arange_out;arange_out_op_api | shared_by_2_ops;src_only |
 | aclnnArgMax | 已接入 | src_scan | argmax.out |  | True | argmax_exec;argmax_out | src_only |
 | aclnnArgMin | 已接入 | src_scan | argmin;argmin.out |  | True | argmin;argmin_exec;argmin_out | shared_by_2_ops;src_only |
 | aclnnArgsort | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnAscendAntiQuant | 已接入 | src_scan | npu_anti_quant |  | True | npu_anti_quant | src_only |
+| aclnnAscendAntiQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAscendQuant | 已接入 | src_scan |  |  | True | npu_quantize_by_ascend_quant | src_only;src_hit_but_op_name_unresolved |
 | aclnnAscendQuantV3 | 已接入 | src_scan |  |  | True | npu_quantize_by_ascend_quant | src_only;src_hit_but_op_name_unresolved |
 | aclnnAsin | 已接入 | yaml_exec | asin;asin.out | asin;asin.out | False |  | shared_by_2_ops;yaml_only |
@@ -271,7 +271,7 @@
 | aclnnForeachMulScalarList | 已接入 | src_scan | _foreach_mul.List;_foreach_mul.Scalar;_foreach_mul.ScalarList;_foreach_mul_.List;_foreach_mul_.Scalar;_foreach_mul_.ScalarList |  | True | _foreach_mul;_foreach_mul_;_split_and_exec_npu_cmd_mul_scalarlist | shared_by_6_ops;src_only |
 | aclnnForeachMulScalarV2 | 已接入 | src_scan | _foreach_mul.List;_foreach_mul.Scalar;_foreach_mul.ScalarList;_foreach_mul_.List;_foreach_mul_.Scalar;_foreach_mul_.ScalarList |  | True | _foreach_mul;_foreach_mul_;_split_and_exec_npu_cmd_mul | shared_by_6_ops;src_only |
 | aclnnForeachNeg | 已接入 | src_scan | _foreach_neg;_foreach_neg_ | _foreach_neg | False | _foreach_neg;_foreach_neg_;_split_and_exec_npu_cmd_neg | shared_by_2_ops;src_only |
-| aclnnForeachNonFiniteCheckAndUnscale | 已接入 | src_scan |  |  | True | _split_and_exec_npu_cmd_ | src_only;src_hit_but_op_name_unresolved |
+| aclnnForeachNonFiniteCheckAndUnscale | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnForeachNorm | 已接入 | src_scan | _foreach_norm.Scalar | _foreach_norm.Scalar | False | _foreach_norm;_split_and_exec_npu_cmd_norm | src_only |
 | aclnnForeachPowList | 已接入 | src_scan | _foreach_pow.List;_foreach_pow.Scalar;_foreach_pow.ScalarAndTensor;_foreach_pow.ScalarList;_foreach_pow_.List;_foreach_pow_.Scalar;_foreach_pow_.ScalarList |  | True | _foreach_pow;_foreach_pow_;_split_and_exec_npu_cmd_pow | shared_by_7_ops;src_only |
 | aclnnForeachPowScalar | 已接入 | src_scan |  |  | True | _foreach_pow_v1;_foreach_pow_v1_ | src_only;src_hit_but_op_name_unresolved |
@@ -387,7 +387,7 @@
 | aclnnInplaceAcosh | 已接入 | yaml_exec | acosh_ | acosh_ | False |  | yaml_only |
 | aclnnInplaceAdd | 已接入 | src_scan | add_.Scalar;add_.Tensor | add_.Scalar;add_.Tensor | False | add_;inplace_add_out_npu_no_check | shared_by_2_ops;src_only |
 | aclnnInplaceAddRelu | 已接入 | yaml_exec | _add_relu_.Tensor | _add_relu_.Tensor | False |  | yaml_only |
-| aclnnInplaceAddRmsNorm | 已接入 | src_scan | npu_add_rms_norm_v2;npu_add_rms_norm_v2_functional |  | True | npu_add_rms_norm_v2;npu_add_rms_norm_v2_functional | shared_by_2_ops;src_only |
+| aclnnInplaceAddRmsNorm | 已接入 | src_scan | npu_add_rms_norm_v2 |  | True | npu_add_rms_norm_v2 | src_only |
 | aclnnInplaceAddbmm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceAddcdiv | 已接入 | src_scan | addcdiv_ | addcdiv_ | False | addcdiv_ | src_only |
 | aclnnInplaceAddcmul | 已接入 | src_scan | addcmul_ | addcmul_ | False | addcmul_ | src_only |

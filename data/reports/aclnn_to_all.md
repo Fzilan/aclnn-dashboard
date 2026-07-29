@@ -1,11 +1,11 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：711 / 913（77.9%）
+- torch-npu 已接入：696 / 913（76.2%）
 - mindspore 已接入：420 / 913（46.0%）
-- 两者都接入：386 / 913（42.3%）
-- 仅 torch-npu：325 / 913（35.6%）
-- 仅 mindspore：34 / 913（3.7%）
+- 两者都接入：381 / 913（41.7%）
+- 仅 torch-npu：315 / 913（34.5%）
+- 仅 mindspore：39 / 913（4.3%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
 复算命令：`python3 scripts/scan/aclnn_merge_report.py --torch-npu-csv data/reports/aclnn_to_torch_npu.csv --mindspore-csv data/reports/aclnn_to_mindspore.csv --out-md data/reports/aclnn_to_all.md --out-csv data/reports/aclnn_to_all.csv`
@@ -18,26 +18,26 @@
 | aclnnAdaLayerNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAdaLayerNormQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAdaLayerNormV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnAdaptiveAvgPool2d | ✅ | _adaptive_avg_pool2d;adaptive_avg_pool2d;adaptive_avg_pool2d.out | ✅ | ✅ | ✅ | AdaptiveAvgPool2DExt |
+| aclnnAdaptiveAvgPool2d | ✅ | adaptive_avg_pool2d.out | ✅ | ✅ | ✅ | AdaptiveAvgPool2DExt |
 | aclnnAdaptiveAvgPool2dBackward | ✅ | _adaptive_avg_pool2d_backward | ✅ | ✅ | ✅ | AdaptiveAvgPool2DGradExt |
 | aclnnAdaptiveAvgPool3d | ✅ | _adaptive_avg_pool3d;adaptive_avg_pool3d.out | ✅ | ✖️ | ✅ | AdaptiveAvgPool3DExt |
 | aclnnAdaptiveAvgPool3dBackward | ✅ | _adaptive_avg_pool3d_backward;adaptive_avg_pool3d_backward.grad_input | ✅ | ✅ | ✅ | AdaptiveAvgPool3DGradExt |
 | aclnnAdaptiveMaxPool2d | ✅ | adaptive_max_pool2d;adaptive_max_pool2d.out | ✅ | ✖️ | ✅ | AdaptiveMaxPool2D |
 | aclnnAdaptiveMaxPool2dBackward | ✅ | adaptive_max_pool2d_backward;adaptive_max_pool2d_backward.grad_input | ✅ | ✖️ | ✅ | AdaptiveMaxPool2DGrad |
 | aclnnAdaptiveMaxPool3d | ✅ | adaptive_max_pool3d;adaptive_max_pool3d.out | ✖️ | ✖️ | ✖️ |  |
-| aclnnAdaptiveMaxPool3dBackward | ✅ | adaptive_max_pool3d_backward;adaptive_max_pool3d_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
+| aclnnAdaptiveMaxPool3dBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAdd | ✅ | add.Scalar;add.Tensor;add.out | ✅ | ✅ | ✅ | Add;AddExt;Dense |
-| aclnnAddLayerNorm | ✅ | npu_add_layer_norm | ✅ | ✖️ | ✅ | AddLayerNormV2 |
-| aclnnAddLayerNormGrad | ✅ | npu_add_layer_norm_backward | ✅ | ✅ | ✅ | AddLayerNormGrad |
+| aclnnAddLayerNorm | ✖️ |  | ✅ | ✖️ | ✅ | AddLayerNormV2 |
+| aclnnAddLayerNormGrad | ✖️ |  | ✅ | ✅ | ✅ | AddLayerNormGrad |
 | aclnnAddLora | ✅ | npu_batch_gather_matmul;npu_batch_gather_matmul_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnAddRelu | ✅ | _add_relu.Tensor;_add_relu.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnAddRmsNorm | ✅ | npu_add_rms_norm | ✅ | ✅ | ✅ | AddRmsNorm |
 | aclnnAddRmsNormCast | ✅ | npu_add_rms_norm_cast | ✖️ | ✖️ | ✖️ |  |
 | aclnnAddRmsNormDynamicQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAddRmsNormDynamicQuantV2 | ✅ | npu_add_rms_norm_dynamic_quant | ✖️ | ✖️ | ✖️ |  |
-| aclnnAddRmsNormQuant | ✅ | npu_add_rms_norm_quant | ✅ | ✖️ | ✅ | AddRmsNormQuantV2 |
-| aclnnAddRmsNormQuantV2 | ✅ | npu_add_rms_norm_quant | ✖️ | ✖️ | ✖️ |  |
-| aclnnAddbmm | ✅ | addbmm;addbmm.out;addbmm_ | ✅ | ✅ | ✅ | Addbmm |
+| aclnnAddRmsNormQuant | ✖️ |  | ✅ | ✖️ | ✅ | AddRmsNormQuantV2 |
+| aclnnAddRmsNormQuantV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnAddbmm | ✖️ |  | ✅ | ✅ | ✅ | Addbmm |
 | aclnnAddcdiv | ✅ | addcdiv;addcdiv.out | ✅ | ✅ | ✅ | AddcdivExt |
 | aclnnAddcmul | ✅ | addcmul;addcmul.out | ✅ | ✅ | ✅ | AddcmulExt |
 | aclnnAddmm | ✅ | addmm;addmm.dtype;addmm.dtype_out;addmm.out;npu_linear | ✅ | ✅ | ✅ | Addmm;Dense |
@@ -45,32 +45,32 @@
 | aclnnAddmv | ✅ | addmv;addmv.out;addmv_ | ✅ | ✅ | ✅ | Addmv |
 | aclnnAddr | ✅ | addr;addr.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnAdds | ✅ | add.Scalar;add.Tensor;add.out | ✅ | ✅ | ✅ | AddScalar |
-| aclnnAdvanceStep | ✅ | npu_advance_step_flashattn | ✖️ | ✖️ | ✖️ |  |
-| aclnnAdvanceStepV2 | ✅ | npu_advance_step_flashattn | ✖️ | ✖️ | ✖️ |  |
+| aclnnAdvanceStep | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnAdvanceStepV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAffineGrid | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAll | ✅ | all;all.all_out;all.dim;all.out | ✅ | ✖️ | ✅ | ReduceAll |
-| aclnnAllGatherMatmul | ✅ | npu_all_gather_base_mm | ✅ | ✅ | ✅ | AllGatherMatmul |
-| aclnnAllGatherMatmulV2 | ✅ | npu_all_gather_base_mm;npu_all_gather_quant_mm | ✖️ | ✖️ | ✖️ |  |
+| aclnnAllGatherMatmul | ✖️ |  | ✅ | ✅ | ✅ | AllGatherMatmul |
+| aclnnAllGatherMatmulV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAlltoAllAllGatherBatchMatMul | ✖️ |  | ✅ | ✖️ | ✅ | AlltoAllAllGatherBatchMatMul |
-| aclnnAlltoAllvGroupedMatMul | ✅ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnAlltoAllvGroupedMatMul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAmax | ✅ | amax;amax.out | ✅ | ✅ | ✅ | ReduceMax |
 | aclnnAmin | ✅ | amin;amin.out | ✅ | ✅ | ✅ | ReduceMin |
 | aclnnAminmax | ✅ | aminmax.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnAminmaxAll | ✅ | _aminmax | ✖️ | ✖️ | ✖️ |  |
 | aclnnAminmaxDim | ✅ | _aminmax.dim | ✖️ | ✖️ | ✖️ |  |
 | aclnnAny | ✅ | any;any.all_out;any.dim;any.out | ✅ | ✅ | ✅ | ReduceAny |
-| aclnnApplyAdamW | ✅ | npu_apply_adam_w.out | ✖️ | ✖️ | ✖️ |  |
+| aclnnApplyAdamW | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnApplyAdamWQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnApplyAdamWV2 | ✅ |  | ✅ | ✅ | ✅ | AdamW |
 | aclnnApplyFusedEmaAdam | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnApplyRotaryPosEmb | ✖️ |  | ✅ | ✅ | ✅ | ApplyRotaryPosEmb |
-| aclnnApplyRotaryPosEmbV2 | ✅ | npu_apply_rotary_pos_emb | ✖️ | ✖️ | ✖️ |  |
+| aclnnApplyRotaryPosEmbV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnApplyTopKTopP | ✅ | npu_top_k_top_p | ✖️ | ✖️ | ✖️ |  |
-| aclnnArange | ✅ | arange;arange.out;arange.start;arange.start_out;arange.start_step | ✅ | ✅ | ✅ | Arange |
+| aclnnArange | ✅ | arange.out;arange.start_out | ✅ | ✅ | ✅ | Arange |
 | aclnnArgMax | ✅ | argmax.out | ✅ | ✅ | ✅ | ArgMaxExt |
 | aclnnArgMin | ✅ | argmin;argmin.out | ✅ | ✅ | ✅ | ArgMinExt |
 | aclnnArgsort | ✖️ |  | ✅ | ✅ | ✅ |  |
-| aclnnAscendAntiQuant | ✅ | npu_anti_quant | ✖️ | ✖️ | ✖️ |  |
+| aclnnAscendAntiQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAscendQuant | ✅ |  | ✅ | ✖️ | ✅ | QuantV2 |
 | aclnnAscendQuantV3 | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnAsin | ✅ | asin;asin.out | ✅ | ✅ | ✅ | AsinExt |
@@ -281,7 +281,7 @@
 | aclnnForeachMulScalarList | ✅ | _foreach_mul.List;_foreach_mul.Scalar;_foreach_mul.ScalarList;_foreach_mul_.List;_foreach_mul_.Scalar;_foreach_mul_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMulScalarV2 | ✅ | _foreach_mul.List;_foreach_mul.Scalar;_foreach_mul.ScalarList;_foreach_mul_.List;_foreach_mul_.Scalar;_foreach_mul_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachNeg | ✅ | _foreach_neg;_foreach_neg_ | ✖️ | ✖️ | ✖️ |  |
-| aclnnForeachNonFiniteCheckAndUnscale | ✅ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnForeachNonFiniteCheckAndUnscale | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachNorm | ✅ | _foreach_norm.Scalar | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachPowList | ✅ | _foreach_pow.List;_foreach_pow.Scalar;_foreach_pow.ScalarAndTensor;_foreach_pow.ScalarList;_foreach_pow_.List;_foreach_pow_.Scalar;_foreach_pow_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachPowScalar | ✅ |  | ✖️ | ✖️ | ✖️ |  |
@@ -397,7 +397,7 @@
 | aclnnInplaceAcosh | ✅ | acosh_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAdd | ✅ | add_.Scalar;add_.Tensor | ✅ | ✖️ | ✅ | InplaceAddExt |
 | aclnnInplaceAddRelu | ✅ | _add_relu_.Tensor | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceAddRmsNorm | ✅ | npu_add_rms_norm_v2;npu_add_rms_norm_v2_functional | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceAddRmsNorm | ✅ | npu_add_rms_norm_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAddbmm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAddcdiv | ✅ | addcdiv_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceAddcmul | ✅ | addcmul_ | ✖️ | ✖️ | ✖️ |  |
