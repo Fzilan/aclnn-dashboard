@@ -166,14 +166,14 @@
 | aclnnDropoutGenMask | 已接入 | src_scan | npu_dropout_gen_mask |  | True | npu_dropout_gen_mask | src_only |
 | aclnnDropoutGenMaskV2 | 已接入 | src_scan | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout |  | True | _npu_dropout;_npu_dropout_gen_mask;dropout_gen_mask_impl;dropout_gen_mask_tensor_impl;gen_mask_impl;native_dropout | shared_by_3_ops;src_only |
 | aclnnDropoutGenMaskV2Tensor | 已接入 | src_scan | _npu_dropout |  | True | _npu_dropout;dropout_gen_mask_tensor_impl | src_only |
-| aclnnDynamicBlockQuant | 已接入 | src_scan | npu_dynamic_block_quant |  | True | npu_dynamic_block_quant | src_only |
+| aclnnDynamicBlockQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDynamicQuant | 已接入 | src_scan |  |  | True | npu_dynamic_quant_v0 | src_only;src_hit_but_op_name_unresolved |
 | aclnnDynamicQuantV2 | 已接入 | src_scan | npu_dynamic_quant |  | True | dynamic_quant_run_aclnn;npu_dynamic_quant | src_only |
 | aclnnEinsum | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnElu | 已接入 | yaml_exec | elu;elu.out | elu;elu.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnEluBackward | 已接入 | yaml_exec | elu_backward;elu_backward.grad_input | elu_backward;elu_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnEmbedding | 已接入 | src_scan |  |  | True | embedding_symint | src_only;src_hit_but_op_name_unresolved |
-| aclnnEmbeddingBag | 已接入 | src_scan | _embedding_bag;_embedding_bag_forward_only | _embedding_bag | False | _embedding_bag;_embedding_bag_forward_only | shared_by_2_ops;src_only |
+| aclnnEmbeddingBag | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnEmbeddingDenseBackward | 已接入 | yaml_exec | embedding_dense_backward | embedding_dense_backward | False |  | yaml_only |
 | aclnnEmbeddingRenorm | 已接入 | src_scan | embedding_renorm_ |  | True | embedding_renorm_ | src_only |
 | aclnnEqScalar | 已接入 | src_scan | eq.Scalar;eq.Scalar_out;eq.Tensor;eq.Tensor_out |  | True | eq;eq_out;eq_out_npu_scalar | shared_by_4_ops;src_only |
@@ -191,7 +191,7 @@
 | aclnnExpm1 | 已接入 | yaml_exec | expm1;expm1.out | expm1;expm1.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnEye | 已接入 | src_scan | eye;eye.m;eye.m_out;eye.out | eye;eye.m;eye.m_out;eye.out | False | eye;eye_out | shared_by_4_ops;src_only |
 | aclnnFFN | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnFFNV2 | 已接入 | src_scan | npu_ffn |  | True | npu_ffn | src_only |
+| aclnnFFNV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFFNV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnFakeQuantPerChannelAffineCachemask | 已接入 | src_scan | fake_quantize_per_channel_affine_cachemask |  | True | fake_quantize_per_channel_affine_cachemask | src_only |
 | aclnnFakeQuantPerTensorAffineCachemask | 已接入 | src_scan | _fake_quantize_per_tensor_affine_cachemask_tensor_qparams |  | True | _fake_quantize_per_tensor_affine_cachemask_tensor_qparams | src_only |
@@ -253,18 +253,18 @@
 | aclnnForeachExp | 已接入 | src_scan | _foreach_exp;_foreach_exp_ | _foreach_exp | False | _foreach_exp;_foreach_exp_;_split_and_exec_npu_cmd_exp | shared_by_2_ops;src_only |
 | aclnnForeachExpm1 | 已接入 | src_scan | _foreach_expm1;_foreach_expm1_ | _foreach_expm1 | False | _foreach_expm1;_foreach_expm1_;_split_and_exec_npu_cmd_expm1 | shared_by_2_ops;src_only |
 | aclnnForeachLerpList | 已接入 | src_scan | _foreach_lerp.List;_foreach_lerp.Scalar;_foreach_lerp_.List;_foreach_lerp_.Scalar |  | True | _foreach_lerp;_foreach_lerp_ | shared_by_4_ops;src_only |
-| aclnnForeachLerpScalar | 已接入 | src_scan | _foreach_lerp.List;_foreach_lerp.Scalar;_foreach_lerp_.List;_foreach_lerp_.Scalar |  | True | _foreach_lerp;_foreach_lerp_;adaptToDouble | shared_by_4_ops;src_only |
+| aclnnForeachLerpScalar | 已接入 | src_scan |  |  | True | adaptToDouble | src_only;src_hit_but_op_name_unresolved |
 | aclnnForeachLog | 已接入 | src_scan | _foreach_log;_foreach_log_ | _foreach_log | False | _foreach_log;_foreach_log_;_split_and_exec_npu_cmd_log | shared_by_2_ops;src_only |
 | aclnnForeachLog10 | 已接入 | src_scan | _foreach_log10;_foreach_log10_ | _foreach_log10 | False | _foreach_log10;_foreach_log10_;_split_and_exec_npu_cmd_log10 | shared_by_2_ops;src_only |
 | aclnnForeachLog1p | 已接入 | src_scan | _foreach_log1p;_foreach_log1p_ | _foreach_log1p | False | _foreach_log1p;_foreach_log1p_;_split_and_exec_npu_cmd_log1p | shared_by_2_ops;src_only |
 | aclnnForeachLog2 | 已接入 | src_scan | _foreach_log2;_foreach_log2_ | _foreach_log2 | False | _foreach_log2;_foreach_log2_;_split_and_exec_npu_cmd_log2 | shared_by_2_ops;src_only |
 | aclnnForeachMaximumList | 已接入 | src_scan | _foreach_maximum.List;_foreach_maximum.Scalar;_foreach_maximum.ScalarList;_foreach_maximum_.List;_foreach_maximum_.Scalar;_foreach_maximum_.ScalarList |  | True | _foreach_maximum;_foreach_maximum_;_split_and_exec_npu_cmd_max | shared_by_6_ops;src_only |
 | aclnnForeachMaximumScalar | 已接入 | src_scan |  |  | True | _foreach_maximum_v1;_foreach_maximum_v1_ | src_only;src_hit_but_op_name_unresolved |
-| aclnnForeachMaximumScalarList | 已接入 | src_scan | _foreach_maximum.List;_foreach_maximum.Scalar;_foreach_maximum.ScalarList;_foreach_maximum_.List;_foreach_maximum_.Scalar;_foreach_maximum_.ScalarList |  | True | _foreach_maximum;_foreach_maximum_;_split_and_exec_npu_cmd_max_scalar_list | shared_by_6_ops;src_only |
+| aclnnForeachMaximumScalarList | 已接入 | src_scan |  |  | True | _split_and_exec_npu_cmd_max_scalar_list | src_only;src_hit_but_op_name_unresolved |
 | aclnnForeachMaximumScalarV2 | 已接入 | src_scan | _foreach_maximum.List;_foreach_maximum.Scalar;_foreach_maximum.ScalarList;_foreach_maximum_.List;_foreach_maximum_.Scalar;_foreach_maximum_.ScalarList |  | True | _foreach_maximum;_foreach_maximum_;_split_and_exec_npu_cmd_max_scalar | shared_by_6_ops;src_only |
 | aclnnForeachMinimumList | 已接入 | src_scan | _foreach_minimum.List;_foreach_minimum.Scalar;_foreach_minimum.ScalarList;_foreach_minimum_.List;_foreach_minimum_.Scalar;_foreach_minimum_.ScalarList |  | True | _foreach_minimum;_foreach_minimum_;_split_and_exec_npu_cmd_min | shared_by_6_ops;src_only |
 | aclnnForeachMinimumScalar | 已接入 | src_scan |  |  | True | _foreach_minimum_v1;_foreach_minimum_v1_ | src_only;src_hit_but_op_name_unresolved |
-| aclnnForeachMinimumScalarList | 已接入 | src_scan | _foreach_minimum.List;_foreach_minimum.Scalar;_foreach_minimum.ScalarList;_foreach_minimum_.List;_foreach_minimum_.Scalar;_foreach_minimum_.ScalarList |  | True | _foreach_minimum;_foreach_minimum_;_split_and_exec_npu_cmd_min_scalar_list | shared_by_6_ops;src_only |
+| aclnnForeachMinimumScalarList | 已接入 | src_scan |  |  | True | _split_and_exec_npu_cmd_min_scalar_list | src_only;src_hit_but_op_name_unresolved |
 | aclnnForeachMinimumScalarV2 | 已接入 | src_scan | _foreach_minimum.List;_foreach_minimum.Scalar;_foreach_minimum.ScalarList;_foreach_minimum_.List;_foreach_minimum_.Scalar;_foreach_minimum_.ScalarList |  | True | _foreach_minimum;_foreach_minimum_;_split_and_exec_npu_cmd_min_scalar | shared_by_6_ops;src_only |
 | aclnnForeachMulList | 已接入 | src_scan | _foreach_mul.List;_foreach_mul.Scalar;_foreach_mul.ScalarList;_foreach_mul_.List;_foreach_mul_.Scalar;_foreach_mul_.ScalarList |  | True | _foreach_mul;_foreach_mul_;_split_and_exec_npu_cmd_mul | shared_by_6_ops;src_only |
 | aclnnForeachMulScalar | 已接入 | src_scan |  |  | True | _foreach_mul_v1;_foreach_mul_v1_ | src_only;src_hit_but_op_name_unresolved |
@@ -623,9 +623,9 @@
 | aclnnMoeDistributeCombineV3 | 已接入 | src_scan | npu_moe_distribute_combine_v2 |  | True | npu_moe_distribute_combine_v2 | src_only |
 | aclnnMoeDistributeCombineV4 | 已接入 | src_scan | npu_moe_distribute_combine_v2 |  | True | npu_moe_distribute_combine_v2 | src_only |
 | aclnnMoeDistributeDispatch | 已接入 | src_scan | npu_moe_distribute_dispatch |  | True | npu_moe_distribute_dispatch | src_only |
-| aclnnMoeDistributeDispatchV2 | 已接入 | src_scan | npu_moe_distribute_dispatch_v2 |  | True | npu_moe_distribute_dispatch_v2 | src_only |
-| aclnnMoeDistributeDispatchV3 | 已接入 | src_scan | npu_moe_distribute_dispatch_v2 |  | True | npu_moe_distribute_dispatch_v2 | src_only |
-| aclnnMoeDistributeDispatchV4 | 已接入 | src_scan | npu_moe_distribute_dispatch_v2 |  | True | npu_moe_distribute_dispatch_v2 | src_only |
+| aclnnMoeDistributeDispatchV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnMoeDistributeDispatchV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnMoeDistributeDispatchV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeFinalizeRouting | 已接入 | src_scan | npu_moe_finalize_routing |  | True | npu_moe_finalize_routing | src_only |
 | aclnnMoeFinalizeRoutingV2 | 已接入 | src_scan | npu_moe_finalize_routing |  | True | npu_moe_finalize_routing | src_only |
 | aclnnMoeFinalizeRoutingV2Grad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

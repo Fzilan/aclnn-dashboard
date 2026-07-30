@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：696 / 913（76.2%）
+- torch-npu 已接入：690 / 913（75.6%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：381 / 913（41.7%）
-- 仅 torch-npu：315 / 913（34.5%）
+- 仅 torch-npu：309 / 913（33.8%）
 - 仅 mindspore：39 / 913（4.3%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -176,14 +176,14 @@
 | aclnnDropoutGenMask | ✅ | npu_dropout_gen_mask | ✖️ | ✖️ | ✖️ |  |
 | aclnnDropoutGenMaskV2 | ✅ | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout | ✅ | ✖️ | ✅ | DropoutExt;DropoutGenMaskExt |
 | aclnnDropoutGenMaskV2Tensor | ✅ | _npu_dropout | ✖️ | ✖️ | ✖️ |  |
-| aclnnDynamicBlockQuant | ✅ | npu_dynamic_block_quant | ✖️ | ✖️ | ✖️ |  |
+| aclnnDynamicBlockQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicQuant | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicQuantV2 | ✅ | npu_dynamic_quant | ✖️ | ✖️ | ✖️ |  |
 | aclnnEinsum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnElu | ✅ | elu;elu.out | ✅ | ✖️ | ✅ | EluExt |
 | aclnnEluBackward | ✅ | elu_backward;elu_backward.grad_input | ✅ | ✖️ | ✅ | EluGradExt |
 | aclnnEmbedding | ✅ |  | ✅ | ✅ | ✅ | Embedding |
-| aclnnEmbeddingBag | ✅ | _embedding_bag;_embedding_bag_forward_only | ✖️ | ✖️ | ✖️ |  |
+| aclnnEmbeddingBag | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnEmbeddingDenseBackward | ✅ | embedding_dense_backward | ✅ | ✅ | ✅ | EmbeddingDenseBackward |
 | aclnnEmbeddingRenorm | ✅ | embedding_renorm_ | ✅ | ✖️ | ✅ | Embedding |
 | aclnnEqScalar | ✅ | eq.Scalar;eq.Scalar_out;eq.Tensor;eq.Tensor_out | ✅ | ✅ | ✅ | EqScalar;IsInf |
@@ -201,7 +201,7 @@
 | aclnnExpm1 | ✅ | expm1;expm1.out | ✅ | ✅ | ✅ | Expm1 |
 | aclnnEye | ✅ | eye;eye.m;eye.m_out;eye.out | ✅ | ✅ | ✅ | Eye |
 | aclnnFFN | ✖️ |  | ✅ | ✅ | ✅ | FFNExt |
-| aclnnFFNV2 | ✅ | npu_ffn | ✖️ | ✖️ | ✖️ |  |
+| aclnnFFNV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnFFNV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnFakeQuantPerChannelAffineCachemask | ✅ | fake_quantize_per_channel_affine_cachemask | ✖️ | ✖️ | ✖️ |  |
 | aclnnFakeQuantPerTensorAffineCachemask | ✅ | _fake_quantize_per_tensor_affine_cachemask_tensor_qparams | ✖️ | ✖️ | ✖️ |  |
@@ -263,18 +263,18 @@
 | aclnnForeachExp | ✅ | _foreach_exp;_foreach_exp_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachExpm1 | ✅ | _foreach_expm1;_foreach_expm1_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachLerpList | ✅ | _foreach_lerp.List;_foreach_lerp.Scalar;_foreach_lerp_.List;_foreach_lerp_.Scalar | ✖️ | ✖️ | ✖️ |  |
-| aclnnForeachLerpScalar | ✅ | _foreach_lerp.List;_foreach_lerp.Scalar;_foreach_lerp_.List;_foreach_lerp_.Scalar | ✖️ | ✖️ | ✖️ |  |
+| aclnnForeachLerpScalar | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachLog | ✅ | _foreach_log;_foreach_log_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachLog10 | ✅ | _foreach_log10;_foreach_log10_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachLog1p | ✅ | _foreach_log1p;_foreach_log1p_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachLog2 | ✅ | _foreach_log2;_foreach_log2_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMaximumList | ✅ | _foreach_maximum.List;_foreach_maximum.Scalar;_foreach_maximum.ScalarList;_foreach_maximum_.List;_foreach_maximum_.Scalar;_foreach_maximum_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMaximumScalar | ✅ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnForeachMaximumScalarList | ✅ | _foreach_maximum.List;_foreach_maximum.Scalar;_foreach_maximum.ScalarList;_foreach_maximum_.List;_foreach_maximum_.Scalar;_foreach_maximum_.ScalarList | ✖️ | ✖️ | ✖️ |  |
+| aclnnForeachMaximumScalarList | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMaximumScalarV2 | ✅ | _foreach_maximum.List;_foreach_maximum.Scalar;_foreach_maximum.ScalarList;_foreach_maximum_.List;_foreach_maximum_.Scalar;_foreach_maximum_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMinimumList | ✅ | _foreach_minimum.List;_foreach_minimum.Scalar;_foreach_minimum.ScalarList;_foreach_minimum_.List;_foreach_minimum_.Scalar;_foreach_minimum_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMinimumScalar | ✅ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnForeachMinimumScalarList | ✅ | _foreach_minimum.List;_foreach_minimum.Scalar;_foreach_minimum.ScalarList;_foreach_minimum_.List;_foreach_minimum_.Scalar;_foreach_minimum_.ScalarList | ✖️ | ✖️ | ✖️ |  |
+| aclnnForeachMinimumScalarList | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMinimumScalarV2 | ✅ | _foreach_minimum.List;_foreach_minimum.Scalar;_foreach_minimum.ScalarList;_foreach_minimum_.List;_foreach_minimum_.Scalar;_foreach_minimum_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMulList | ✅ | _foreach_mul.List;_foreach_mul.Scalar;_foreach_mul.ScalarList;_foreach_mul_.List;_foreach_mul_.Scalar;_foreach_mul_.ScalarList | ✖️ | ✖️ | ✖️ |  |
 | aclnnForeachMulScalar | ✅ |  | ✖️ | ✖️ | ✖️ |  |
@@ -633,9 +633,9 @@
 | aclnnMoeDistributeCombineV3 | ✅ | npu_moe_distribute_combine_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeDistributeCombineV4 | ✅ | npu_moe_distribute_combine_v2 | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeDistributeDispatch | ✅ | npu_moe_distribute_dispatch | ✅ | ✅ | ✅ | MoeDistributeDispatch |
-| aclnnMoeDistributeDispatchV2 | ✅ | npu_moe_distribute_dispatch_v2 | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeDistributeDispatchV3 | ✅ | npu_moe_distribute_dispatch_v2 | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeDistributeDispatchV4 | ✅ | npu_moe_distribute_dispatch_v2 | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeDistributeDispatchV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeDistributeDispatchV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeDistributeDispatchV4 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFinalizeRouting | ✅ | npu_moe_finalize_routing | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFinalizeRoutingV2 | ✅ | npu_moe_finalize_routing | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFinalizeRoutingV2Grad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
