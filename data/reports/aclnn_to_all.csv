@@ -21,7 +21,7 @@ aclnnAddRelu,✅,_add_relu.Tensor;_add_relu.out,✖️,✖️,✖️,
 aclnnAddRmsNorm,✅,npu_add_rms_norm,✅,✅,✅,AddRmsNorm
 aclnnAddRmsNormCast,✅,npu_add_rms_norm_cast,✖️,✖️,✖️,
 aclnnAddRmsNormDynamicQuant,✖️,,✖️,✖️,✖️,
-aclnnAddRmsNormDynamicQuantV2,✅,npu_add_rms_norm_dynamic_quant,✖️,✖️,✖️,
+aclnnAddRmsNormDynamicQuantV2,✅,,✖️,✖️,✖️,
 aclnnAddRmsNormQuant,✖️,,✅,✖️,✅,AddRmsNormQuantV2
 aclnnAddRmsNormQuantV2,✖️,,✖️,✖️,✖️,
 aclnnAddbmm,✖️,,✅,✅,✅,Addbmm

@@ -24,7 +24,7 @@
 | aclnnAddRmsNorm | 已接入 | yaml_exec | npu_add_rms_norm |  | True |  | yaml_only |
 | aclnnAddRmsNormCast | 已接入 | yaml_exec | npu_add_rms_norm_cast |  | True |  | yaml_only |
 | aclnnAddRmsNormDynamicQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnAddRmsNormDynamicQuantV2 | 已接入 | yaml_exec | npu_add_rms_norm_dynamic_quant |  | True |  | yaml_only |
+| aclnnAddRmsNormDynamicQuantV2 | 已接入 | src_scan |  |  | True | dtype | src_only;src_hit_but_op_name_unresolved |
 | aclnnAddRmsNormQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAddRmsNormQuantV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnAddbmm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
