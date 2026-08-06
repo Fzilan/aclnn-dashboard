@@ -1,11 +1,11 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：690 / 913（75.6%）
+- torch-npu 已接入：680 / 913（74.5%）
 - mindspore 已接入：420 / 913（46.0%）
-- 两者都接入：381 / 913（41.7%）
-- 仅 torch-npu：309 / 913（33.8%）
-- 仅 mindspore：39 / 913（4.3%）
+- 两者都接入：374 / 913（41.0%）
+- 仅 torch-npu：306 / 913（33.5%）
+- 仅 mindspore：46 / 913（5.0%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
 复算命令：`python3 scripts/scan/aclnn_merge_report.py --torch-npu-csv data/reports/aclnn_to_torch_npu.csv --mindspore-csv data/reports/aclnn_to_mindspore.csv --out-md data/reports/aclnn_to_all.md --out-csv data/reports/aclnn_to_all.csv`
@@ -79,10 +79,10 @@
 | aclnnAtan2 | ✅ | atan2;atan2.out | ✅ | ✅ | ✅ | Atan2Ext |
 | aclnnAtanh | ✅ | atanh;atanh.out | ✅ | ✅ | ✅ | Atanh |
 | aclnnAttentionUpdate | ✅ | npu_attention_update | ✖️ | ✖️ | ✖️ |  |
-| aclnnAvgPool2d | ✅ | avg_pool2d;avg_pool2d.out | ✅ | ✖️ | ✅ | AvgPool1D;AvgPool2D |
-| aclnnAvgPool2dBackward | ✅ | avg_pool2d_backward;avg_pool2d_backward.grad_input | ✅ | ✖️ | ✅ | AvgPool2DGrad |
-| aclnnAvgPool3d | ✅ | avg_pool3d;avg_pool3d.out | ✅ | ✅ | ✅ | AvgPool3DExt |
-| aclnnAvgPool3dBackward | ✅ | avg_pool3d_backward;avg_pool3d_backward.grad_input | ✅ | ✅ | ✅ | AvgPool3DGradExt |
+| aclnnAvgPool2d | ✖️ |  | ✅ | ✖️ | ✅ | AvgPool1D;AvgPool2D |
+| aclnnAvgPool2dBackward | ✖️ |  | ✅ | ✖️ | ✅ | AvgPool2DGrad |
+| aclnnAvgPool3d | ✅ |  | ✅ | ✅ | ✅ | AvgPool3DExt |
+| aclnnAvgPool3dBackward | ✖️ |  | ✅ | ✅ | ✅ | AvgPool3DGradExt |
 | aclnnBackgroundReplace | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnBaddbmm | ✅ | baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out;baddbmm_ | ✅ | ✅ | ✅ | Baddbmm |
 | aclnnBatchMatMul | ✅ | affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out | ✅ | ✅ | ✅ | BatchMatMulExt |
@@ -90,12 +90,12 @@
 | aclnnBatchMatMulWeightNz | ✅ | bmm;bmm.dtype;bmm.dtype_out;bmm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnBatchMatmulQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnBatchNorm | ✅ | native_batch_norm;native_batch_norm.out | ✅ | ✅ | ✅ | BatchNormExt |
-| aclnnBatchNormBackward | ✅ | native_batch_norm_backward | ✅ | ✅ | ✅ | BatchNormGradExt |
+| aclnnBatchNormBackward | ✖️ |  | ✅ | ✅ | ✅ | BatchNormGradExt |
 | aclnnBatchNormElemt | ✅ | batch_norm_elemt;batch_norm_elemt.out | ✅ | ✅ | ✅ | BatchNormElemt |
 | aclnnBatchNormElemtBackward | ✅ | batch_norm_backward_elemt | ✅ | ✅ | ✅ | BatchNormElemtGrad |
 | aclnnBatchNormGatherStatsWithCounts | ✅ | batch_norm_gather_stats_with_counts | ✅ | ✅ | ✅ | BatchNormGatherStatsWithCounts |
 | aclnnBatchNormReduce | ✅ | batch_norm_reduce | ✖️ | ✖️ | ✖️ |  |
-| aclnnBatchNormReduceBackward | ✅ | batch_norm_backward_reduce | ✅ | ✅ | ✅ | BatchNormReduceGrad |
+| aclnnBatchNormReduceBackward | ✖️ |  | ✅ | ✅ | ✅ | BatchNormReduceGrad |
 | aclnnBatchNormStats | ✅ | batch_norm_stats | ✅ | ✅ | ✅ | BatchNormStats |
 | aclnnBernoulli | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnBernoulliTensor | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -141,13 +141,13 @@
 | aclnnConvTbc | ✅ | conv_tbc | ✖️ | ✖️ | ✖️ |  |
 | aclnnConvTbcBackward | ✅ | conv_tbc_backward | ✖️ | ✖️ | ✖️ |  |
 | aclnnConvertWeightToINT4Pack | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnConvolution | ✅ | _convolution;_nnpack_spatial_convolution;_slow_conv2d_forward;_slow_conv2d_forward.output;convolution_overrideable;slow_conv3d_forward;slow_conv3d_forward.output;slow_conv_dilated2d;slow_conv_transpose2d;slow_conv_transpose2d.out | ✅ | ✅ | ✅ | Conv1DExt;Conv2DExt;Conv3DExt;ConvTranspose2D;Convolution;ConvolutionStr |
-| aclnnConvolutionBackward | ✅ | _slow_conv2d_backward.output_mask;convolution_backward;convolution_backward_overrideable;slow_conv_dilated2d_backward;slow_conv_transpose2d_backward | ✅ | ✅ | ✅ | ConvolutionGrad;ConvolutionStrGrad |
+| aclnnConvolution | ✅ | _nnpack_spatial_convolution | ✅ | ✅ | ✅ | Conv1DExt;Conv2DExt;Conv3DExt;ConvTranspose2D;Convolution;ConvolutionStr |
+| aclnnConvolutionBackward | ✖️ |  | ✅ | ✅ | ✅ | ConvolutionGrad;ConvolutionStrGrad |
 | aclnnCos | ✅ | cos;cos.out | ✅ | ✅ | ✅ | Cos |
 | aclnnCosh | ✅ | cosh;cosh.out | ✅ | ✅ | ✅ | Cosh |
 | aclnnCrossEntropyLoss | ✅ | npu_cross_entropy_loss | ✅ | ✅ | ✅ | CrossEntropyLoss |
 | aclnnCrossEntropyLossGrad | ✅ | npu_cross_entropy_loss_backward | ✅ | ✅ | ✅ | CrossEntropyLossGrad |
-| aclnnCtcLoss | ✅ | _ctc_loss | ✖️ | ✖️ | ✖️ |  |
+| aclnnCtcLoss | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnCtcLossBackward | ✅ | _ctc_loss_backward | ✖️ | ✖️ | ✖️ |  |
 | aclnnCummax | ✅ | _cummax_helper | ✅ | ✅ | ✅ | Cummax |
 | aclnnCummin | ✅ | _cummin_helper | ✅ | ✅ | ✅ | CumminExt |
@@ -156,10 +156,10 @@
 | aclnnCumsumV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDeepNorm | ✅ | npu_deep_norm | ✖️ | ✖️ | ✖️ |  |
 | aclnnDeepNormGrad | ✅ | npu_deep_norm_backward | ✖️ | ✖️ | ✖️ |  |
-| aclnnDeformableConv2d | ✅ | npu_deformable_conv2d | ✖️ | ✖️ | ✖️ |  |
+| aclnnDeformableConv2d | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDequantBias | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnDequantRopeQuantKvcache | ✅ | npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache | ✖️ | ✖️ | ✖️ |  |
-| aclnnDequantSwigluQuant | ✅ | npu_dequant_swiglu_quant | ✅ | ✅ | ✅ | DequantSwigluQuant |
+| aclnnDequantRopeQuantKvcache | ✅ | npu_rope_quant_kvcache | ✖️ | ✖️ | ✖️ |  |
+| aclnnDequantSwigluQuant | ✖️ |  | ✅ | ✅ | ✅ | DequantSwigluQuant |
 | aclnnDiag | ✖️ |  | ✅ | ✖️ | ✅ | DiagExt |
 | aclnnDiagFlat | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDigamma | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -859,7 +859,7 @@
 | aclnnSwinTransformerLnQkvQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwish | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwishBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnSyncBatchNormGatherStats | ✅ | batch_norm_gather_stats_update | ✖️ | ✖️ | ✖️ |  |
+| aclnnSyncBatchNormGatherStats | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnTake | ✅ | take;take.out | ✅ | ✅ | ✅ | Take |
 | aclnnTan | ✅ | tan;tan.out | ✅ | ✅ | ✅ | Tan |
 | aclnnTanh | ✅ | tanh;tanh.out | ✅ | ✅ | ✅ | Tanh |

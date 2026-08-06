@@ -66,10 +66,10 @@ all,aclnnAtan,已接入,yaml_exec,atan;atan.out,atan;atan.out,,,,all_version,ata
 all,aclnnAtan2,已接入,src_scan,atan2;atan2.out,,atan2;atan2.out,atan2;atan2_out,external/op-plugin/op_plugin/ops/opapi/Atan2KernelNpuOpApi.cpp,all_version,atan2;atan2.out,False,shared_by_2_ops;src_only
 all,aclnnAtanh,已接入,yaml_exec,atanh;atanh.out,atanh;atanh.out,,,,all_version,atanh;atanh.out,False,shared_by_2_ops;yaml_only
 all,aclnnAttentionUpdate,已接入,src_scan,npu_attention_update,,npu_attention_update,npu_attention_update,external/op-plugin/op_plugin/ops/opapi/AttentionUpdateKernelNpuOpApi.cpp,all_version,,True,src_only
-all,aclnnAvgPool2d,已接入,src_scan,avg_pool2d;avg_pool2d.out,,avg_pool2d;avg_pool2d.out,avg_pool2d;avg_pool2d_out;avg_pool2d_out_npu_nocheck_opapi,external/op-plugin/op_plugin/ops/opapi/AvgPool2dKernelNpuOpApi.cpp,all_version,avg_pool2d;avg_pool2d.out,False,shared_by_2_ops;src_only
-all,aclnnAvgPool2dBackward,已接入,src_scan,avg_pool2d_backward;avg_pool2d_backward.grad_input,,avg_pool2d_backward;avg_pool2d_backward.grad_input,avg_pool2d_backward;avg_pool2d_backward_out;avg_pool2d_backward_out_npu_nocheck_api,external/op-plugin/op_plugin/ops/opapi/AvgPool2dBackwardKernelNpuOpApi.cpp,all_version,avg_pool2d_backward;avg_pool2d_backward.grad_input,False,shared_by_2_ops;src_only
-all,aclnnAvgPool3d,已接入,src_scan,avg_pool3d;avg_pool3d.out,,avg_pool3d;avg_pool3d.out,avg_pool3d;avg_pool3d_out,external/op-plugin/op_plugin/ops/opapi/AvgPool3dKernelNpuOpApi.cpp,all_version,avg_pool3d;avg_pool3d.out,False,shared_by_2_ops;src_only
-all,aclnnAvgPool3dBackward,已接入,src_scan,avg_pool3d_backward;avg_pool3d_backward.grad_input,,avg_pool3d_backward;avg_pool3d_backward.grad_input,avg_pool3d_backward;avg_pool3d_backward_out;avg_pool3d_backward_out_npu_nocheck_api,external/op-plugin/op_plugin/ops/opapi/AvgPool3dBackwardKernelNpuOpApi.cpp,all_version,avg_pool3d_backward;avg_pool3d_backward.grad_input,False,shared_by_2_ops;src_only
+all,aclnnAvgPool2d,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnAvgPool2dBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnAvgPool3d,已接入,src_scan,,,,avg_pool3d_out_npu_nocheck_opapi,external/op-plugin/op_plugin/ops/opapi/AvgPool3dKernelNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
+all,aclnnAvgPool3dBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnBackgroundReplace,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnBaddbmm,已接入,src_scan,baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out;baddbmm_,,baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out;baddbmm_,baddbmm;baddbmm_;baddbmm_out,external/op-plugin/op_plugin/ops/opapi/BaddbmmKernelNpuOpApi.cpp,"['v2.9', 'newest'];all_version",baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out,False,shared_by_5_ops;src_only
 all,aclnnBatchMatMul,已接入,src_scan,affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out,,affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out,affine_grid_generator_backward;bmm;bmm_out,external/op-plugin/op_plugin/ops/opapi/AffineGridGeneratorBackwardKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.9', 'newest'];all_version",,True,shared_by_5_ops;src_only
@@ -77,12 +77,12 @@ all,aclnnBatchMatMulReduceScatterAlltoAll,未接入,,,,,,,,,False,no_yaml_exec_a
 all,aclnnBatchMatMulWeightNz,已接入,src_scan,bmm;bmm.dtype;bmm.dtype_out;bmm.out,,bmm;bmm.dtype;bmm.dtype_out;bmm.out,bmm;bmm_out,external/op-plugin/op_plugin/ops/opapi/BmmKernelNpuOpApi.cpp,"['v2.9', 'newest'];all_version",,True,shared_by_4_ops;src_only
 all,aclnnBatchMatmulQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnBatchNorm,已接入,yaml_exec,native_batch_norm;native_batch_norm.out,native_batch_norm;native_batch_norm.out,,,,all_version,,True,shared_by_2_ops;yaml_only
-all,aclnnBatchNormBackward,已接入,src_scan,native_batch_norm_backward,,native_batch_norm_backward,native_batch_norm_backward,external/op-plugin/op_plugin/ops/opapi/BatchNormBackwardKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnBatchNormBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnBatchNormElemt,已接入,src_scan,batch_norm_elemt;batch_norm_elemt.out,,batch_norm_elemt;batch_norm_elemt.out,batch_norm_elemt;batch_norm_elemt_out,external/op-plugin/op_plugin/ops/opapi/BatchNormElemtKernelNpuOpApi.cpp,all_version,batch_norm_elemt;batch_norm_elemt.out,False,shared_by_2_ops;src_only
 all,aclnnBatchNormElemtBackward,已接入,yaml_exec,batch_norm_backward_elemt,batch_norm_backward_elemt,,,,all_version,,True,yaml_only
 all,aclnnBatchNormGatherStatsWithCounts,已接入,yaml_exec,batch_norm_gather_stats_with_counts,batch_norm_gather_stats_with_counts,,,,all_version,batch_norm_gather_stats_with_counts,False,yaml_only
 all,aclnnBatchNormReduce,已接入,src_scan,batch_norm_reduce,,batch_norm_reduce,batch_norm_reduce,external/op-plugin/op_plugin/ops/opapi/BatchNormReduceKernelNpuOpApi.cpp,all_version,batch_norm_reduce,False,src_only
-all,aclnnBatchNormReduceBackward,已接入,src_scan,batch_norm_backward_reduce,,batch_norm_backward_reduce,batch_norm_backward_reduce,external/op-plugin/op_plugin/ops/opapi/BatchNormBackwardReduceKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnBatchNormReduceBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnBatchNormStats,已接入,yaml_exec,batch_norm_stats,batch_norm_stats,,,,all_version,batch_norm_stats,False,yaml_only
 all,aclnnBernoulli,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnBernoulliTensor,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
@@ -128,13 +128,13 @@ all,aclnnConvDepthwise2d,已接入,src_scan,_conv_depthwise2d;_conv_depthwise2d.
 all,aclnnConvTbc,已接入,yaml_exec,conv_tbc,conv_tbc,,,,all_version,conv_tbc,False,yaml_only
 all,aclnnConvTbcBackward,已接入,src_scan,conv_tbc_backward,,conv_tbc_backward,conv_tbc_backward,external/op-plugin/op_plugin/ops/opapi/ConvolutionBackwardKernelNpuOpApi.cpp,all_version,conv_tbc_backward,False,src_only
 all,aclnnConvertWeightToINT4Pack,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnConvolution,已接入,src_scan,_convolution;_nnpack_spatial_convolution;_slow_conv2d_forward;_slow_conv2d_forward.output;convolution_overrideable;slow_conv3d_forward;slow_conv3d_forward.output;slow_conv_dilated2d;slow_conv_transpose2d;slow_conv_transpose2d.out,,_convolution;_nnpack_spatial_convolution;_slow_conv2d_forward;_slow_conv2d_forward.output;convolution_overrideable;slow_conv3d_forward;slow_conv3d_forward.output;slow_conv_dilated2d;slow_conv_transpose2d;slow_conv_transpose2d.out,_calc_convolution;_convolution;_nnpack_spatial_convolution;_slow_conv2d_forward;_slow_conv2d_forward_out;convolution_overrideable;slow_conv3d_forward;slow_conv3d_forward_out;...(+3),external/op-plugin/op_plugin/ops/opapi/ConvolutionKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NnpackSpatialConvolutionKernelNpuOpApi.cpp,"['v2.1', 'newest'];all_version",_convolution,False,shared_by_10_ops;src_only
-all,aclnnConvolutionBackward,已接入,src_scan,_slow_conv2d_backward.output_mask;convolution_backward;convolution_backward_overrideable;slow_conv_dilated2d_backward;slow_conv_transpose2d_backward,,_slow_conv2d_backward.output_mask;convolution_backward;convolution_backward_overrideable;slow_conv_dilated2d_backward;slow_conv_transpose2d_backward,_calc_convolution_backward;_slow_conv2d_backward;convolution_backward;convolution_backward_overrideable;slow_conv_dilated2d_backward;slow_conv_transpose2d_backward,external/op-plugin/op_plugin/ops/opapi/ConvolutionBackwardKernelNpuOpApi.cpp,"['v2.1', 'newest'];all_version",convolution_backward,False,shared_by_5_ops;src_only
+all,aclnnConvolution,已接入,src_scan,_nnpack_spatial_convolution,,_nnpack_spatial_convolution,_nnpack_spatial_convolution,external/op-plugin/op_plugin/ops/opapi/NnpackSpatialConvolutionKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
+all,aclnnConvolutionBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnCos,已接入,yaml_exec,cos;cos.out,cos;cos.out,,,,all_version,cos;cos.out,False,shared_by_2_ops;yaml_only
 all,aclnnCosh,已接入,yaml_exec,cosh;cosh.out,cosh;cosh.out,,,,all_version,cosh;cosh.out,False,shared_by_2_ops;yaml_only
 all,aclnnCrossEntropyLoss,已接入,yaml_exec,npu_cross_entropy_loss,npu_cross_entropy_loss,,,,all_version,,True,yaml_only
 all,aclnnCrossEntropyLossGrad,已接入,yaml_exec,npu_cross_entropy_loss_backward,npu_cross_entropy_loss_backward,,,,all_version,,True,yaml_only
-all,aclnnCtcLoss,已接入,src_scan,_ctc_loss,,_ctc_loss,_ctc_loss,external/op-plugin/op_plugin/ops/opapi/CtcLossKernelNpuOpApi.cpp,all_version,_ctc_loss,False,src_only
+all,aclnnCtcLoss,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnCtcLossBackward,已接入,yaml_exec,_ctc_loss_backward,_ctc_loss_backward,,,,all_version,_ctc_loss_backward,False,yaml_only
 all,aclnnCummax,已接入,src_scan,_cummax_helper,,_cummax_helper,_cummax_helper,external/op-plugin/op_plugin/ops/opapi/CummaxKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnCummin,已接入,src_scan,_cummin_helper,,_cummin_helper,_cummin_helper,external/op-plugin/op_plugin/ops/opapi/CumminKernelNpuOpApi.cpp,all_version,,True,src_only
@@ -143,10 +143,10 @@ all,aclnnCumsum,已接入,src_scan,cumsum;cumsum.dimname_out;cumsum.out,,cumsum;
 all,aclnnCumsumV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDeepNorm,已接入,src_scan,npu_deep_norm,,npu_deep_norm,npu_deep_norm,external/op-plugin/op_plugin/ops/opapi/DeepNormKernelOpApi.cpp,all_version,,True,src_only
 all,aclnnDeepNormGrad,已接入,src_scan,npu_deep_norm_backward,,npu_deep_norm_backward,npu_deep_norm_backward,external/op-plugin/op_plugin/ops/opapi/DeepNormBackwardKernelOpApi.cpp,all_version,,True,src_only
-all,aclnnDeformableConv2d,已接入,src_scan,npu_deformable_conv2d,,npu_deformable_conv2d,npu_deformable_conv2d;npu_deformable_conv2d_out,external/op-plugin/op_plugin/ops/opapi/DeformableConv2dKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnDeformableConv2d,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDequantBias,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnDequantRopeQuantKvcache,已接入,src_scan,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache,external/op-plugin/op_plugin/ops/opapi/DequantRopeQuantKVCacheKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/RopeQuantKVCacheKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
-all,aclnnDequantSwigluQuant,已接入,src_scan,npu_dequant_swiglu_quant,,npu_dequant_swiglu_quant,npu_dequant_swiglu_quant,external/op-plugin/op_plugin/ops/opapi/DequantSwigluQuantOpApi.cpp,all_version,,True,src_only
+all,aclnnDequantRopeQuantKvcache,已接入,src_scan,npu_rope_quant_kvcache,,npu_rope_quant_kvcache,npu_rope_quant_kvcache,external/op-plugin/op_plugin/ops/opapi/RopeQuantKVCacheKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnDequantSwigluQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDiag,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDiagFlat,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDigamma,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
@@ -846,7 +846,7 @@ all,aclnnSwinAttentionScoreQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src
 all,aclnnSwinTransformerLnQkvQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSwish,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSwishBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnSyncBatchNormGatherStats,已接入,src_scan,batch_norm_gather_stats_update,,batch_norm_gather_stats_update,batch_norm_gather_stats_update;batch_norm_gather_stats_update_npu_impl,external/op-plugin/op_plugin/ops/opapi/BatchNormGatherStatsUpdateKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnSyncBatchNormGatherStats,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnTake,已接入,yaml_exec,take;take.out,take;take.out,,,,all_version,take;take.out,False,shared_by_2_ops;yaml_only
 all,aclnnTan,已接入,yaml_exec,tan;tan.out,tan;tan.out,,,,all_version,tan;tan.out,False,shared_by_2_ops;yaml_only
 all,aclnnTanh,已接入,src_scan,tanh;tanh.out,,tanh;tanh.out,tanh;tanh_out,external/op-plugin/op_plugin/ops/opapi/TanhKernelNpuOpApi.cpp,all_version,tanh;tanh.out,False,shared_by_2_ops;src_only

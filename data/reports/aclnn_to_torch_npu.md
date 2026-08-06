@@ -69,10 +69,10 @@
 | aclnnAtan2 | 已接入 | src_scan | atan2;atan2.out | atan2;atan2.out | False | atan2;atan2_out | shared_by_2_ops;src_only |
 | aclnnAtanh | 已接入 | yaml_exec | atanh;atanh.out | atanh;atanh.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnAttentionUpdate | 已接入 | src_scan | npu_attention_update |  | True | npu_attention_update | src_only |
-| aclnnAvgPool2d | 已接入 | src_scan | avg_pool2d;avg_pool2d.out | avg_pool2d;avg_pool2d.out | False | avg_pool2d;avg_pool2d_out;avg_pool2d_out_npu_nocheck_opapi | shared_by_2_ops;src_only |
-| aclnnAvgPool2dBackward | 已接入 | src_scan | avg_pool2d_backward;avg_pool2d_backward.grad_input | avg_pool2d_backward;avg_pool2d_backward.grad_input | False | avg_pool2d_backward;avg_pool2d_backward_out;avg_pool2d_backward_out_npu_nocheck_api | shared_by_2_ops;src_only |
-| aclnnAvgPool3d | 已接入 | src_scan | avg_pool3d;avg_pool3d.out | avg_pool3d;avg_pool3d.out | False | avg_pool3d;avg_pool3d_out | shared_by_2_ops;src_only |
-| aclnnAvgPool3dBackward | 已接入 | src_scan | avg_pool3d_backward;avg_pool3d_backward.grad_input | avg_pool3d_backward;avg_pool3d_backward.grad_input | False | avg_pool3d_backward;avg_pool3d_backward_out;avg_pool3d_backward_out_npu_nocheck_api | shared_by_2_ops;src_only |
+| aclnnAvgPool2d | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAvgPool2dBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnAvgPool3d | 已接入 | src_scan |  |  | True | avg_pool3d_out_npu_nocheck_opapi | src_only;src_hit_but_op_name_unresolved |
+| aclnnAvgPool3dBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBackgroundReplace | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBaddbmm | 已接入 | src_scan | baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out;baddbmm_ | baddbmm;baddbmm.dtype;baddbmm.dtype_out;baddbmm.out | False | baddbmm;baddbmm_;baddbmm_out | shared_by_5_ops;src_only |
 | aclnnBatchMatMul | 已接入 | src_scan | affine_grid_generator_backward;bmm;bmm.dtype;bmm.dtype_out;bmm.out |  | True | affine_grid_generator_backward;bmm;bmm_out | shared_by_5_ops;src_only |
@@ -80,12 +80,12 @@
 | aclnnBatchMatMulWeightNz | 已接入 | src_scan | bmm;bmm.dtype;bmm.dtype_out;bmm.out |  | True | bmm;bmm_out | shared_by_4_ops;src_only |
 | aclnnBatchMatmulQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBatchNorm | 已接入 | yaml_exec | native_batch_norm;native_batch_norm.out |  | True |  | shared_by_2_ops;yaml_only |
-| aclnnBatchNormBackward | 已接入 | src_scan | native_batch_norm_backward |  | True | native_batch_norm_backward | src_only |
+| aclnnBatchNormBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBatchNormElemt | 已接入 | src_scan | batch_norm_elemt;batch_norm_elemt.out | batch_norm_elemt;batch_norm_elemt.out | False | batch_norm_elemt;batch_norm_elemt_out | shared_by_2_ops;src_only |
 | aclnnBatchNormElemtBackward | 已接入 | yaml_exec | batch_norm_backward_elemt |  | True |  | yaml_only |
 | aclnnBatchNormGatherStatsWithCounts | 已接入 | yaml_exec | batch_norm_gather_stats_with_counts | batch_norm_gather_stats_with_counts | False |  | yaml_only |
 | aclnnBatchNormReduce | 已接入 | src_scan | batch_norm_reduce | batch_norm_reduce | False | batch_norm_reduce | src_only |
-| aclnnBatchNormReduceBackward | 已接入 | src_scan | batch_norm_backward_reduce |  | True | batch_norm_backward_reduce | src_only |
+| aclnnBatchNormReduceBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBatchNormStats | 已接入 | yaml_exec | batch_norm_stats | batch_norm_stats | False |  | yaml_only |
 | aclnnBernoulli | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnBernoulliTensor | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -131,13 +131,13 @@
 | aclnnConvTbc | 已接入 | yaml_exec | conv_tbc | conv_tbc | False |  | yaml_only |
 | aclnnConvTbcBackward | 已接入 | src_scan | conv_tbc_backward | conv_tbc_backward | False | conv_tbc_backward | src_only |
 | aclnnConvertWeightToINT4Pack | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnConvolution | 已接入 | src_scan | _convolution;_nnpack_spatial_convolution;_slow_conv2d_forward;_slow_conv2d_forward.output;convolution_overrideable;slow_conv3d_forward;slow_conv3d_forward.output;slow_conv_dilated2d;slow_conv_transpose2d;slow_conv_transpose2d.out | _convolution | False | _calc_convolution;_convolution;_nnpack_spatial_convolution;_slow_conv2d_forward;_slow_conv2d_forward_out;convolution_overrideable;slow_conv3d_forward;slow_conv3d_forward_out;...(+3) | shared_by_10_ops;src_only |
-| aclnnConvolutionBackward | 已接入 | src_scan | _slow_conv2d_backward.output_mask;convolution_backward;convolution_backward_overrideable;slow_conv_dilated2d_backward;slow_conv_transpose2d_backward | convolution_backward | False | _calc_convolution_backward;_slow_conv2d_backward;convolution_backward;convolution_backward_overrideable;slow_conv_dilated2d_backward;slow_conv_transpose2d_backward | shared_by_5_ops;src_only |
+| aclnnConvolution | 已接入 | src_scan | _nnpack_spatial_convolution |  | True | _nnpack_spatial_convolution | src_only |
+| aclnnConvolutionBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnCos | 已接入 | yaml_exec | cos;cos.out | cos;cos.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnCosh | 已接入 | yaml_exec | cosh;cosh.out | cosh;cosh.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnCrossEntropyLoss | 已接入 | yaml_exec | npu_cross_entropy_loss |  | True |  | yaml_only |
 | aclnnCrossEntropyLossGrad | 已接入 | yaml_exec | npu_cross_entropy_loss_backward |  | True |  | yaml_only |
-| aclnnCtcLoss | 已接入 | src_scan | _ctc_loss | _ctc_loss | False | _ctc_loss | src_only |
+| aclnnCtcLoss | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnCtcLossBackward | 已接入 | yaml_exec | _ctc_loss_backward | _ctc_loss_backward | False |  | yaml_only |
 | aclnnCummax | 已接入 | src_scan | _cummax_helper |  | True | _cummax_helper | src_only |
 | aclnnCummin | 已接入 | src_scan | _cummin_helper |  | True | _cummin_helper | src_only |
@@ -146,10 +146,10 @@
 | aclnnCumsumV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDeepNorm | 已接入 | src_scan | npu_deep_norm |  | True | npu_deep_norm | src_only |
 | aclnnDeepNormGrad | 已接入 | src_scan | npu_deep_norm_backward |  | True | npu_deep_norm_backward | src_only |
-| aclnnDeformableConv2d | 已接入 | src_scan | npu_deformable_conv2d |  | True | npu_deformable_conv2d;npu_deformable_conv2d_out | src_only |
+| aclnnDeformableConv2d | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDequantBias | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnDequantRopeQuantKvcache | 已接入 | src_scan | npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache |  | True | npu_dequant_rope_quant_kvcache;npu_rope_quant_kvcache | shared_by_2_ops;src_only |
-| aclnnDequantSwigluQuant | 已接入 | src_scan | npu_dequant_swiglu_quant |  | True | npu_dequant_swiglu_quant | src_only |
+| aclnnDequantRopeQuantKvcache | 已接入 | src_scan | npu_rope_quant_kvcache |  | True | npu_rope_quant_kvcache | src_only |
+| aclnnDequantSwigluQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDiag | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDiagFlat | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDigamma | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -849,7 +849,7 @@
 | aclnnSwinTransformerLnQkvQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwish | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwishBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnSyncBatchNormGatherStats | 已接入 | src_scan | batch_norm_gather_stats_update |  | True | batch_norm_gather_stats_update;batch_norm_gather_stats_update_npu_impl | src_only |
+| aclnnSyncBatchNormGatherStats | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnTake | 已接入 | yaml_exec | take;take.out | take;take.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnTan | 已接入 | yaml_exec | tan;tan.out | tan;tan.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnTanh | 已接入 | src_scan | tanh;tanh.out | tanh;tanh.out | False | tanh;tanh_out | shared_by_2_ops;src_only |
