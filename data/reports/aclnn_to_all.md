@@ -1,11 +1,11 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：680 / 913（74.5%）
+- torch-npu 已接入：665 / 913（72.8%）
 - mindspore 已接入：420 / 913（46.0%）
-- 两者都接入：374 / 913（41.0%）
-- 仅 torch-npu：306 / 913（33.5%）
-- 仅 mindspore：46 / 913（5.0%）
+- 两者都接入：367 / 913（40.2%）
+- 仅 torch-npu：298 / 913（32.6%）
+- 仅 mindspore：53 / 913（5.8%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
 复算命令：`python3 scripts/scan/aclnn_merge_report.py --torch-npu-csv data/reports/aclnn_to_torch_npu.csv --mindspore-csv data/reports/aclnn_to_mindspore.csv --out-md data/reports/aclnn_to_all.md --out-csv data/reports/aclnn_to_all.csv`
@@ -868,7 +868,7 @@
 | aclnnThreeInterpolateBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnThreshold | ✅ | threshold;threshold.out | ✅ | ✅ | ✅ | Threshold |
 | aclnnThresholdBackward | ✅ | threshold_backward | ✅ | ✖️ | ✅ | ReluGrad;ThresholdGrad |
-| aclnnTopKTopPSample | ✅ | npu_top_k_top_p_sample | ✖️ | ✖️ | ✖️ |  |
+| aclnnTopKTopPSample | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnTopk | ✅ | topk;topk.values | ✅ | ✅ | ✅ | TopkExt |
 | aclnnTrace | ✅ | trace | ✅ | ✅ | ✅ | TraceExt |
 | aclnnTransConvolutionWeight | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -877,7 +877,7 @@
 | aclnnTransQuantParamV2 | ✅ | npu_trans_quant_param;npu_weight_quant_batchmatmul | ✖️ | ✖️ | ✖️ |  |
 | aclnnTransQuantParamV3 | ✅ | npu_trans_quant_param | ✖️ | ✖️ | ✖️ |  |
 | aclnnTransformBiasRescaleQkv | ✅ | _transform_bias_rescale_qkv | ✖️ | ✖️ | ✖️ |  |
-| aclnnTransposeBatchMatMul | ✅ | npu_transpose_batchmatmul | ✖️ | ✖️ | ✖️ |  |
+| aclnnTransposeBatchMatMul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnTriangularSolve | ✅ | triangular_solve.X | ✅ | ✅ | ✅ | TriangularSolve |
 | aclnnTril | ✅ | tril;tril.out | ✅ | ✅ | ✅ | TrilExt |
 | aclnnTriu | ✅ | triu;triu.out | ✅ | ✅ | ✅ | Triu |
@@ -887,39 +887,39 @@
 | aclnnUnique2 | ✅ | _unique2 | ✅ | ✅ | ✅ | Unique2 |
 | aclnnUniqueConsecutive | ✅ | unique_consecutive | ✅ | ✅ | ✅ | UniqueConsecutive |
 | aclnnUniqueDim | ✅ | unique_dim | ✅ | ✅ | ✅ | UniqueDim |
-| aclnnUpsampleBicubic2d | ✅ | upsample_bicubic2d;upsample_bicubic2d.out | ✅ | ✖️ | ✅ | UpsampleBicubic2D |
+| aclnnUpsampleBicubic2d | ✅ |  | ✅ | ✖️ | ✅ | UpsampleBicubic2D |
 | aclnnUpsampleBicubic2dAA | ✅ | _upsample_bicubic2d_aa;_upsample_bicubic2d_aa.out | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleBicubic2dAAGrad | ✅ | _upsample_bicubic2d_aa_backward;_upsample_bicubic2d_aa_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleBicubic2dBackward | ✅ | upsample_bicubic2d_backward;upsample_bicubic2d_backward.grad_input | ✅ | ✖️ | ✅ | UpsampleBicubic2DGrad |
+| aclnnUpsampleBicubic2dAAGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnUpsampleBicubic2dBackward | ✖️ |  | ✅ | ✖️ | ✅ | UpsampleBicubic2DGrad |
 | aclnnUpsampleBilinear2d | ✅ | upsample_bilinear2d;upsample_bilinear2d.out | ✅ | ✖️ | ✅ | UpsampleBilinear2D |
 | aclnnUpsampleBilinear2dAA | ✅ | _upsample_bilinear2d_aa;_upsample_bilinear2d_aa.out | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleBilinear2dAABackward | ✅ | _upsample_bilinear2d_aa_backward;_upsample_bilinear2d_aa_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleBilinear2dBackward | ✅ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleBilinear2dBackwardV2 | ✅ | upsample_bilinear2d_backward;upsample_bilinear2d_backward.grad_input | ✅ | ✖️ | ✅ | UpsampleBilinear2DGrad |
+| aclnnUpsampleBilinear2dAABackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnUpsampleBilinear2dBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnUpsampleBilinear2dBackwardV2 | ✖️ |  | ✅ | ✖️ | ✅ | UpsampleBilinear2DGrad |
 | aclnnUpsampleLinear1d | ✅ | upsample_linear1d;upsample_linear1d.out | ✅ | ✖️ | ✅ | UpsampleLinear1D |
-| aclnnUpsampleLinear1dBackward | ✅ | upsample_linear1d_backward | ✅ | ✖️ | ✅ | UpsampleLinear1DGrad |
+| aclnnUpsampleLinear1dBackward | ✖️ |  | ✅ | ✖️ | ✅ | UpsampleLinear1DGrad |
 | aclnnUpsampleNearest1d | ✅ |  | ✅ | ✖️ | ✅ | UpsampleNearest1D |
 | aclnnUpsampleNearest1dBackward | ✅ | upsample_nearest1d_backward;upsample_nearest1d_backward.grad_input | ✅ | ✖️ | ✅ | UpsampleNearest1DGrad |
 | aclnnUpsampleNearest1dV2 | ✅ | upsample_nearest1d;upsample_nearest1d.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnUpsampleNearest2d | ✅ |  | ✅ | ✖️ | ✅ | UpsampleNearest2D |
-| aclnnUpsampleNearest2dBackward | ✅ | upsample_nearest2d_backward;upsample_nearest2d_backward.grad_input | ✅ | ✖️ | ✅ | UpsampleNearest2DGrad |
+| aclnnUpsampleNearest2dBackward | ✖️ |  | ✅ | ✖️ | ✅ | UpsampleNearest2DGrad |
 | aclnnUpsampleNearest2dV2 | ✅ | upsample_nearest2d;upsample_nearest2d.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnUpsampleNearest3d | ✅ | upsample_nearest3d;upsample_nearest3d.out | ✅ | ✖️ | ✅ | UpsampleNearest3D |
 | aclnnUpsampleNearest3dBackward | ✅ | upsample_nearest3d_backward;upsample_nearest3d_backward.grad_input | ✅ | ✖️ | ✅ | UpsampleNearest3DGrad |
 | aclnnUpsampleNearestExact1d | ✅ | _upsample_nearest_exact1d;_upsample_nearest_exact1d.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnUpsampleNearestExact1dBackward | ✅ | _upsample_nearest_exact1d_backward;_upsample_nearest_exact1d_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
 | aclnnUpsampleNearestExact2d | ✅ | _upsample_nearest_exact2d;_upsample_nearest_exact2d.out | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleNearestExact2dBackward | ✅ | _upsample_nearest_exact2d_backward;_upsample_nearest_exact2d_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
+| aclnnUpsampleNearestExact2dBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnUpsampleNearestExact3d | ✅ | _upsample_nearest_exact3d;_upsample_nearest_exact3d.out | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleNearestExact3dBackward | ✅ | _upsample_nearest_exact3d_backward;_upsample_nearest_exact3d_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
-| aclnnUpsampleTrilinear3d | ✅ | upsample_trilinear3d;upsample_trilinear3d.out | ✅ | ✖️ | ✅ | UpsampleTrilinear3D |
-| aclnnUpsampleTrilinear3dBackward | ✅ | upsample_trilinear3d_backward;upsample_trilinear3d_backward.grad_input | ✅ | ✖️ | ✅ | UpsampleTrilinear3DGrad |
+| aclnnUpsampleNearestExact3dBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnUpsampleTrilinear3d | ✖️ |  | ✅ | ✖️ | ✅ | UpsampleTrilinear3D |
+| aclnnUpsampleTrilinear3dBackward | ✖️ |  | ✅ | ✖️ | ✅ | UpsampleTrilinear3DGrad |
 | aclnnVar | ✖️ |  | ✅ | ✅ | ✅ |  |
 | aclnnVarCorrection | ✅ | var.correction;var.correction_out | ✅ | ✖️ | ✅ | Var |
 | aclnnVarMean | ✅ | var_mean.correction | ✅ | ✅ | ✅ | VarMean |
 | aclnnWeightQuantBatchMatmul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnWeightQuantBatchMatmulV2 | ✅ | npu_weight_quant_batchmatmul | ✅ | ✖️ | ✅ | WeightQuantBatchMatmul |
-| aclnnWeightQuantBatchMatmulV3 | ✅ | npu_weight_quant_batchmatmul | ✖️ | ✖️ | ✖️ |  |
+| aclnnWeightQuantBatchMatmulV2 | ✖️ |  | ✅ | ✖️ | ✅ | WeightQuantBatchMatmul |
+| aclnnWeightQuantBatchMatmulV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnWeightQuantMatmulAllReduce | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
 | aclnnWeightQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnXLogYScalarOther | ✅ | xlogy.OutScalar_Other;xlogy.Scalar_Other | ✅ | ✅ | ✅ | XLogYScalarOther |

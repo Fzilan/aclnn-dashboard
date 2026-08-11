@@ -1658,5 +1658,15 @@
     "torch_coverage_rate": 74.5,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 41.0
+  },
+  {
+    "date": "2026-08-11",
+    "total_ops": 913,
+    "torch_supported": 665,
+    "mindspore_supported": 420,
+    "both_supported": 367,
+    "torch_coverage_rate": 72.8,
+    "mindspore_coverage_rate": 46.0,
+    "both_coverage_rate": 40.2
   }
 ]
