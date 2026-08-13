@@ -1,11 +1,11 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：665 / 913（72.8%）
+- torch-npu 已接入：642 / 913（70.3%）
 - mindspore 已接入：420 / 913（46.0%）
-- 两者都接入：367 / 913（40.2%）
-- 仅 torch-npu：298 / 913（32.6%）
-- 仅 mindspore：53 / 913（5.8%）
+- 两者都接入：361 / 913（39.5%）
+- 仅 torch-npu：281 / 913（30.8%）
+- 仅 mindspore：59 / 913（6.5%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
 复算命令：`python3 scripts/scan/aclnn_merge_report.py --torch-npu-csv data/reports/aclnn_to_torch_npu.csv --mindspore-csv data/reports/aclnn_to_mindspore.csv --out-md data/reports/aclnn_to_all.md --out-csv data/reports/aclnn_to_all.csv`
@@ -175,7 +175,7 @@
 | aclnnDropoutDoMask | ✅ | _npu_dropout;native_dropout;native_dropout_backward;npu_dropout_backward | ✅ | ✖️ | ✅ | DropoutDoMaskExt;DropoutExt;DropoutGradExt |
 | aclnnDropoutGenMask | ✅ | npu_dropout_gen_mask | ✖️ | ✖️ | ✖️ |  |
 | aclnnDropoutGenMaskV2 | ✅ | _npu_dropout;_npu_dropout_gen_mask.Tensor;native_dropout | ✅ | ✖️ | ✅ | DropoutExt;DropoutGenMaskExt |
-| aclnnDropoutGenMaskV2Tensor | ✅ | _npu_dropout | ✖️ | ✖️ | ✖️ |  |
+| aclnnDropoutGenMaskV2Tensor | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicBlockQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicQuant | ✅ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDynamicQuantV2 | ✅ | npu_dynamic_quant | ✖️ | ✖️ | ✖️ |  |
@@ -585,19 +585,19 @@
 | aclnnMatmul | ✅ | bmm;bmm.dtype;bmm.dtype_out;bmm.out;npu_attn_softmax_backward_ | ✅ | ✅ | ✅ | BatchMatMul;Dense;MatMul;MatMulExt;MatMulV2 |
 | aclnnMatmulAllReduce | ✅ | npu_mm_all_reduce_base | ✅ | ✖️ | ✅ | MatMulAllReduce |
 | aclnnMatmulAllReduceAddRmsNorm | ✖️ |  | ✅ | ✖️ | ✅ | MatmulAllReduceAddRmsNorm |
-| aclnnMatmulAllReduceV2 | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
+| aclnnMatmulAllReduceV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulCompress | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMatmulCompressDequant | ✅ | npu_matmul_compress_dequant | ✖️ | ✖️ | ✖️ |  |
-| aclnnMatmulReduceScatter | ✅ |  | ✅ | ✅ | ✅ | MatmulReduceScatter |
+| aclnnMatmulCompressDequant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMatmulReduceScatter | ✖️ |  | ✅ | ✅ | ✅ | MatmulReduceScatter |
 | aclnnMatmulReduceScatterV2 | ✅ | npu_quant_mm_reduce_scatter | ✖️ | ✖️ | ✖️ |  |
 | aclnnMatmulWeightNz | ✅ | mm;mm.dtype;mm.dtype_out;mm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnMax | ✅ | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | ✅ | ✅ | ✅ | BincountExt;Max;OneHotExt |
 | aclnnMaxDim | ✅ | max;max.dim;max.dim_max;max.names_dim;max.names_dim_max;max.out | ✅ | ✅ | ✅ | ArgMaxWithValue;MaxDim |
 | aclnnMaxN | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMaxPool | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMaxPool2dWithIndices | ✅ | max_pool2d_with_indices;max_pool2d_with_indices.out | ✅ | ✅ | ✅ | MaxPoolWithIndices |
+| aclnnMaxPool2dWithIndices | ✅ | max_pool2d_with_indices.out | ✅ | ✅ | ✅ | MaxPoolWithIndices |
 | aclnnMaxPool2dWithIndicesBackward | ✅ | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input | ✅ | ✖️ | ✅ | MaxPoolGradWithIndices |
-| aclnnMaxPool2dWithMask | ✅ | max_pool2d_with_indices;max_pool2d_with_indices.out | ✅ | ✅ | ✅ | MaxPoolWithMask |
+| aclnnMaxPool2dWithMask | ✅ | max_pool2d_with_indices.out | ✅ | ✅ | ✅ | MaxPoolWithMask |
 | aclnnMaxPool2dWithMaskBackward | ✅ | max_pool2d_with_indices_backward;max_pool2d_with_indices_backward.grad_input | ✅ | ✅ | ✅ | MaxPoolGradWithMask |
 | aclnnMaxPool3dWithArgmax | ✅ | max_pool3d_with_indices;max_pool3d_with_indices.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnMaxPool3dWithArgmaxBackward | ✅ | max_pool3d_with_indices_backward;max_pool3d_with_indices_backward.grad_input | ✖️ | ✖️ | ✖️ |  |
@@ -620,8 +620,8 @@
 | aclnnMlaPreprocess | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMlaPreprocessV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMlaProlog | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMlaPrologV2WeightNz | ✅ | npu_mla_prolog_v2 | ✖️ | ✖️ | ✖️ |  |
-| aclnnMlaPrologV3WeightNz | ✅ | npu_mla_prolog_v3;npu_mla_prolog_v3_functional | ✖️ | ✖️ | ✖️ |  |
+| aclnnMlaPrologV2WeightNz | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMlaPrologV3WeightNz | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMm | ✅ | mm;mm.dtype;mm.dtype_out;mm.out;npu_linear;npu_linear_backward | ✅ | ✅ | ✅ | Mm |
 | aclnnModulate | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnModulateBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -636,31 +636,31 @@
 | aclnnMoeDistributeDispatchV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeDistributeDispatchV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeDistributeDispatchV4 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeFinalizeRouting | ✅ | npu_moe_finalize_routing | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeFinalizeRoutingV2 | ✅ | npu_moe_finalize_routing | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeFinalizeRouting | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeFinalizeRoutingV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFinalizeRoutingV2Grad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeFusedTopk | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeGatingTopK | ✅ | npu_moe_gating_top_k | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeGatingTopK | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeGatingTopKSoftmax | ✅ | npu_moe_gating_top_k_softmax | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeGatingTopKSoftmaxV2 | ✅ | npu_moe_gating_top_k_softmax_v2 | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeInitRouting | ✅ | npu_moe_init_routing | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeInitRouting | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeInitRoutingQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeInitRoutingQuantV2 | ✅ | npu_moe_init_routing_quant | ✅ | ✖️ | ✅ | MoeInitRoutingQuantV2 |
-| aclnnMoeInitRoutingV2 | ✅ | npu_moe_init_routing_v2 | ✅ | ✖️ | ✅ | MoeInitRoutingV2 |
+| aclnnMoeInitRoutingQuantV2 | ✖️ |  | ✅ | ✖️ | ✅ | MoeInitRoutingQuantV2 |
+| aclnnMoeInitRoutingV2 | ✖️ |  | ✅ | ✖️ | ✅ | MoeInitRoutingV2 |
 | aclnnMoeInitRoutingV2Grad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeInitRoutingV3 | ✅ | npu_moe_init_routing_v2 | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeInitRoutingV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenPermute | ✅ | npu_moe_token_permute | ✅ | ✅ | ✅ | MoeTokenPermute |
 | aclnnMoeTokenPermuteGrad | ✅ | npu_moe_token_permute_grad;npu_moe_token_permute_grad_v2 | ✅ | ✅ | ✅ | MoeTokenPermuteGrad |
 | aclnnMoeTokenPermuteWithEp | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenPermuteWithEpGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeTokenPermuteWithRoutingMap | ✅ | npu_moe_token_permute_with_routing_map | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeTokenPermuteWithRoutingMapGrad | ✅ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeTokenUnpermute | ✅ | _npu_moe_token_unpermute | ✅ | ✖️ | ✅ | InnerMoeTokenUnpermute |
+| aclnnMoeTokenPermuteWithRoutingMap | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeTokenPermuteWithRoutingMapGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeTokenUnpermute | ✖️ |  | ✅ | ✖️ | ✅ | InnerMoeTokenUnpermute |
 | aclnnMoeTokenUnpermuteGrad | ✅ | npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2 | ✅ | ✅ | ✅ | MoeTokenUnpermuteGrad |
 | aclnnMoeTokenUnpermuteWithEp | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenUnpermuteWithEpGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeTokenUnpermuteWithRoutingMap | ✅ | _npu_moe_token_unpermute_with_routing_map | ✖️ | ✖️ | ✖️ |  |
-| aclnnMoeTokenUnpermuteWithRoutingMapGrad | ✅ | npu_moe_token_unpermute_with_routing_map_grad | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeTokenUnpermuteWithRoutingMap | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMoeTokenUnpermuteWithRoutingMapGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeUpdateExpert | ✅ | npu_moe_update_expert | ✖️ | ✖️ | ✖️ |  |
 | aclnnMrgbaCustom | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMseLoss | ✅ | mse_loss;mse_loss.out | ✅ | ✖️ | ✅ | MSELossExt |
@@ -672,11 +672,11 @@
 | aclnnMultiScaleDeformableAttnFunction | ✖️ |  | ✅ | ✖️ | ✅ | MultiScaleDeformableAttn |
 | aclnnMultilabelMarginLoss | ✅ | multilabel_margin_loss.out;multilabel_margin_loss_forward;multilabel_margin_loss_forward.output | ✖️ | ✖️ | ✖️ |  |
 | aclnnMultinomial | ✅ | multinomial;multinomial.out | ✅ | ✖️ | ✅ | MultinomialExt |
-| aclnnMultinomialTensor | ✅ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnMultinomialTensor | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMv | ✅ | mv;mv.out | ✅ | ✅ | ✅ | Mv |
 | aclnnNLLLoss | ✅ | nll_loss_forward;nll_loss_forward.output | ✅ | ✅ | ✅ | NLLLoss |
 | aclnnNLLLoss2d | ✅ | nll_loss2d_forward;nll_loss2d_forward.output | ✅ | ✅ | ✅ | NLLLoss2d |
-| aclnnNLLLoss2dBackward | ✅ | nll_loss2d_backward;nll_loss2d_backward.grad_input | ✅ | ✖️ | ✅ | NLLLoss2dGrad |
+| aclnnNLLLoss2dBackward | ✖️ |  | ✅ | ✖️ | ✅ | NLLLoss2dGrad |
 | aclnnNLLLossBackward | ✅ | nll_loss_backward;nll_loss_backward.grad_input | ✅ | ✖️ | ✅ | NLLLossGrad |
 | aclnnNanMedian | ✅ | nanmedian | ✖️ | ✖️ | ✖️ |  |
 | aclnnNanMedianDim | ✅ | nanmedian.dim | ✖️ | ✖️ | ✖️ |  |
@@ -727,10 +727,10 @@
 | aclnnQuantConvolution | ✅ | npu_quant_conv2d | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantGroupedMatmulDequant | ✅ | npu_quant_grouped_matmul_dequant | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantMatmulAllReduce | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantMatmulAllReduce | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantMatmulAllReduceV2 | ✅ | npu_mm_all_reduce_base | ✅ | ✖️ | ✅ | QuantBatchMatmulAllReduce |
-| aclnnQuantMatmulAllReduceV3 | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantMatmulAllReduceV2 | ✖️ |  | ✅ | ✖️ | ✅ | QuantBatchMatmulAllReduce |
+| aclnnQuantMatmulAllReduceV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulDequant | ✅ | npu_quant_matmul_dequant | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulReduceSumWeightNz | ✅ | npu_quant_matmul_reduce_sum | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -920,7 +920,7 @@
 | aclnnWeightQuantBatchMatmul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnWeightQuantBatchMatmulV2 | ✖️ |  | ✅ | ✖️ | ✅ | WeightQuantBatchMatmul |
 | aclnnWeightQuantBatchMatmulV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnWeightQuantMatmulAllReduce | ✅ | npu_mm_all_reduce_base | ✖️ | ✖️ | ✖️ |  |
+| aclnnWeightQuantMatmulAllReduce | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnWeightQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnXLogYScalarOther | ✅ | xlogy.OutScalar_Other;xlogy.Scalar_Other | ✅ | ✅ | ✅ | XLogYScalarOther |
 | aclnnXLogYScalarSelf | ✅ | xlogy.OutScalar_Self;xlogy.Scalar_Self | ✅ | ✅ | ✅ | XLogYScalarSelf |

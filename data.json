@@ -1,50 +1,50 @@
 {
   "metrics": {
     "total_ops": 913,
-    "torch_supported": 665,
+    "torch_supported": 642,
     "mindspore_supported": 420,
-    "both_supported": 367,
-    "torch_only": 298,
-    "mindspore_only": 53,
-    "unsupported": 195,
-    "torch_coverage_rate": 72.8,
+    "both_supported": 361,
+    "torch_only": 281,
+    "mindspore_only": 59,
+    "unsupported": 212,
+    "torch_coverage_rate": 70.3,
     "mindspore_coverage_rate": 46.0,
-    "both_coverage_rate": 40.2,
-    "last_update_time": "2026-08-12T11:02:55+08:00",
-    "generated_at": "2026-08-12T11:02:55+08:00",
-    "pipeline_run_time": "2026-08-12T11:02:52+08:00",
-    "torch_speed_pp_per_day_7d": -0.283,
+    "both_coverage_rate": 39.5,
+    "last_update_time": "2026-08-13T11:05:49+08:00",
+    "generated_at": "2026-08-13T11:05:49+08:00",
+    "pipeline_run_time": "2026-08-13T11:05:46+08:00",
+    "torch_speed_pp_per_day_7d": -0.7,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
   "meta": {
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-08-12T11:01:34+08:00"
+        "mtime": "2026-08-13T11:04:45+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-08-12T11:02:53+08:00"
+        "mtime": "2026-08-13T11:05:47+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-08-12T11:02:53+08:00"
+        "mtime": "2026-08-13T11:05:47+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-08-12T11:02:54+08:00"
+        "mtime": "2026-08-13T11:05:49+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-08-12T11:02:54+08:00"
+        "mtime": "2026-08-13T11:05:49+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-08-12T11:02:55+08:00"
+        "mtime": "2026-08-13T11:05:49+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-08-12T11:02:55+08:00"
+        "mtime": "2026-08-13T11:05:49+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1735,19 +1735,19 @@
         "torch_coverage_rate": 72.8,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 40.2
+      },
+      {
+        "date": "2026-08-13",
+        "total_ops": 913,
+        "torch_supported": 642,
+        "mindspore_supported": 420,
+        "both_supported": 361,
+        "torch_coverage_rate": 70.3,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 39.5
       }
     ],
     "last_7_days": [
-      {
-        "date": "2026-08-06",
-        "total_ops": 913,
-        "torch_supported": 680,
-        "mindspore_supported": 420,
-        "both_supported": 374,
-        "torch_coverage_rate": 74.5,
-        "mindspore_coverage_rate": 46.0,
-        "both_coverage_rate": 41.0
-      },
       {
         "date": "2026-08-07",
         "total_ops": 913,
@@ -1807,6 +1807,16 @@
         "torch_coverage_rate": 72.8,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 40.2
+      },
+      {
+        "date": "2026-08-13",
+        "total_ops": 913,
+        "torch_supported": 642,
+        "mindspore_supported": 420,
+        "both_supported": 361,
+        "torch_coverage_rate": 70.3,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 39.5
       }
     ]
   },
@@ -3875,8 +3885,7 @@
           "size"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -8762,23 +8771,19 @@
       "torch": {
         "supported": true,
         "status": "已接入",
-        "via_ops": [
-          "_npu_dropout"
-        ],
+        "via_ops": [],
         "direct_match_ops": [],
         "evidence": [
           "src_scan"
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "_npu_dropout",
           "dropout_gen_mask_tensor_impl"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/FlashAttentionKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NativeDropoutKernelNpuOpApi.cpp"
+          "external/op-plugin/op_plugin/ops/opapi/FlashAttentionKernelNpuOpApi.cpp"
         ],
-        "remarks": "src_only"
+        "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
       "mindspore": {
         "supported": false,
@@ -24150,12 +24155,11 @@
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
-          "...(+1)"
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulInplaceAddNpuOpApi.cpp"
         ],
         "remarks": "src_only;src_hit_but_op_name_unresolved"
       },
@@ -26110,25 +26114,17 @@
     {
       "aclnn_api": "aclnnMatmulAllReduceV2",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mm_all_reduce_base"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mm_all_reduce_base"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -26180,25 +26176,17 @@
     {
       "aclnn_api": "aclnnMatmulCompressDequant",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_matmul_compress_dequant"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_matmul_compress_dequant"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MatmulCompressDequantKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -26219,24 +26207,17 @@
     {
       "aclnn_api": "aclnnMatmulReduceScatter",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
+        "supported": false,
+        "status": "未接入",
         "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "size"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -26283,12 +26264,9 @@
         ],
         "suspected_fusion": true,
         "cpp_funcs": [
-          "npu_quant_mm_reduce_scatter",
-          "size"
+          "npu_quant_mm_reduce_scatter"
         ],
         "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/FusedAdamWKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/MatmulReduceScatterBaseKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantMatmulReduceScatterKernelNpuOpApi.cpp"
         ],
         "remarks": "src_only"
@@ -26552,11 +26530,9 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "max_pool2d_with_indices",
           "max_pool2d_with_indices.out"
         ],
         "direct_match_ops": [
-          "max_pool2d_with_indices",
           "max_pool2d_with_indices.out"
         ],
         "evidence": [
@@ -26564,14 +26540,12 @@
         ],
         "suspected_fusion": false,
         "cpp_funcs": [
-          "exec_max_pool2d_with_indices",
-          "max_pool2d_with_indices",
           "max_pool2d_with_indices_out"
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_2_ops;src_only"
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": true,
@@ -26661,7 +26635,6 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "max_pool2d_with_indices",
           "max_pool2d_with_indices.out"
         ],
         "direct_match_ops": [],
@@ -26671,13 +26644,12 @@
         "suspected_fusion": true,
         "cpp_funcs": [
           "exec_max_pool2d_with_indices",
-          "max_pool2d_with_indices",
           "max_pool2d_with_indices_out"
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/MaxPool2dWithIndicesKernelNpuOpApi.cpp"
         ],
-        "remarks": "shared_by_2_ops;src_only"
+        "remarks": "src_only"
       },
       "mindspore": {
         "supported": true,
@@ -27643,25 +27615,17 @@
     {
       "aclnn_api": "aclnnMlaPrologV2WeightNz",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mla_prolog_v2"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mla_prolog_v2"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MlaPrologV2KernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -27682,27 +27646,17 @@
     {
       "aclnn_api": "aclnnMlaPrologV3WeightNz",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mla_prolog_v3",
-          "npu_mla_prolog_v3_functional"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mla_prolog_v3",
-          "npu_mla_prolog_v3_functional"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MlaPrologV3KernelNpuOpApi.cpp"
-        ],
-        "remarks": "shared_by_2_ops;src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28278,25 +28232,17 @@
     {
       "aclnn_api": "aclnnMoeFinalizeRouting",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_finalize_routing"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_finalize_routing"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28317,25 +28263,17 @@
     {
       "aclnn_api": "aclnnMoeFinalizeRoutingV2",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_finalize_routing"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_finalize_routing"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeFinalizeRoutingV2KernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28418,25 +28356,17 @@
     {
       "aclnn_api": "aclnnMoeGatingTopK",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_gating_top_k"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_gating_top_k"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeGatingTopKKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28535,25 +28465,17 @@
     {
       "aclnn_api": "aclnnMoeInitRouting",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_init_routing"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_init_routing"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28605,25 +28527,17 @@
     {
       "aclnn_api": "aclnnMoeInitRoutingQuantV2",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_init_routing_quant"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_init_routing_quant"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingQuantKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -28655,25 +28569,17 @@
     {
       "aclnn_api": "aclnnMoeInitRoutingV2",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_init_routing_v2"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_init_routing_v2"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -28736,25 +28642,17 @@
     {
       "aclnn_api": "aclnnMoeInitRoutingV3",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_init_routing_v2"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_init_routing_v2"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeInitRoutingV2KernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28927,25 +28825,17 @@
     {
       "aclnn_api": "aclnnMoeTokenPermuteWithRoutingMap",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_token_permute_with_routing_map"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_token_permute_with_routing_map"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -28966,23 +28856,17 @@
     {
       "aclnn_api": "aclnnMoeTokenPermuteWithRoutingMapGrad",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
+        "supported": false,
+        "status": "未接入",
         "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_token_permute_with_routing_map_grad_symint"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeTokenPermuteWithRoutingMapGradOpApi.cpp"
-        ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -29003,25 +28887,17 @@
     {
       "aclnn_api": "aclnnMoeTokenUnpermute",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "_npu_moe_token_unpermute"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "_npu_moe_token_unpermute"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -29162,25 +29038,17 @@
     {
       "aclnn_api": "aclnnMoeTokenUnpermuteWithRoutingMap",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "_npu_moe_token_unpermute_with_routing_map"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "_npu_moe_token_unpermute_with_routing_map"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapKernelOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -29201,25 +29069,17 @@
     {
       "aclnn_api": "aclnnMoeTokenUnpermuteWithRoutingMapGrad",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_moe_token_unpermute_with_routing_map_grad"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_moe_token_unpermute_with_routing_map_grad"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteWithRoutingMapGradKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -29741,23 +29601,17 @@
     {
       "aclnn_api": "aclnnMultinomialTensor",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
+        "supported": false,
+        "status": "未接入",
         "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "currentStreamCaptureStatusMayInitCtx"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MultinomialKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only;src_hit_but_op_name_unresolved"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -29908,12 +29762,11 @@
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
-          "...(+1)"
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulInplaceAddNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -29949,33 +29802,17 @@
     {
       "aclnn_api": "aclnnNLLLoss2dBackward",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "nll_loss2d_backward",
-          "nll_loss2d_backward.grad_input"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "Tensor",
-          "nll_loss2d_backward"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
-          "...(+1)"
-        ],
-        "remarks": "shared_by_2_ops;src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -30024,12 +29861,11 @@
         ],
         "cpp_files": [
           "external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp",
-          "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp",
           "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp",
-          "...(+1)"
+          "external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulInplaceAddNpuOpApi.cpp"
         ],
         "remarks": "shared_by_2_ops;src_only"
       },
@@ -32179,25 +32015,17 @@
     {
       "aclnn_api": "aclnnQuantMatmulAllReduce",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mm_all_reduce_base"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mm_all_reduce_base"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -32249,25 +32077,17 @@
     {
       "aclnn_api": "aclnnQuantMatmulAllReduceV2",
       "tag": "all",
-      "coverage_status": "both",
+      "coverage_status": "mindspore_only",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mm_all_reduce_base"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mm_all_reduce_base"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": true,
@@ -32297,25 +32117,17 @@
     {
       "aclnn_api": "aclnnQuantMatmulAllReduceV3",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mm_all_reduce_base"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mm_all_reduce_base"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
@@ -40371,25 +40183,17 @@
     {
       "aclnn_api": "aclnnWeightQuantMatmulAllReduce",
       "tag": "all",
-      "coverage_status": "torch_only",
+      "coverage_status": "neither",
       "torch": {
-        "supported": true,
-        "status": "已接入",
-        "via_ops": [
-          "npu_mm_all_reduce_base"
-        ],
+        "supported": false,
+        "status": "未接入",
+        "via_ops": [],
         "direct_match_ops": [],
-        "evidence": [
-          "src_scan"
-        ],
-        "suspected_fusion": true,
-        "cpp_funcs": [
-          "npu_mm_all_reduce_base"
-        ],
-        "cpp_files": [
-          "external/op-plugin/op_plugin/ops/opapi/MatmulAllReduceBaseKernelNpuOpApi.cpp"
-        ],
-        "remarks": "src_only"
+        "evidence": [],
+        "suspected_fusion": false,
+        "cpp_funcs": [],
+        "cpp_files": [],
+        "remarks": "no_yaml_exec_and_no_src_scan_hit"
       },
       "mindspore": {
         "supported": false,
