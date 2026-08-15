@@ -145,7 +145,7 @@ all,aclnnDeepNorm,已接入,src_scan,npu_deep_norm,,npu_deep_norm,npu_deep_norm,
 all,aclnnDeepNormGrad,已接入,src_scan,npu_deep_norm_backward,,npu_deep_norm_backward,npu_deep_norm_backward,external/op-plugin/op_plugin/ops/opapi/DeepNormBackwardKernelOpApi.cpp,all_version,,True,src_only
 all,aclnnDeformableConv2d,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDequantBias,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnDequantRopeQuantKvcache,已接入,src_scan,npu_rope_quant_kvcache,,npu_rope_quant_kvcache,npu_rope_quant_kvcache,external/op-plugin/op_plugin/ops/opapi/RopeQuantKVCacheKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnDequantRopeQuantKvcache,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDequantSwigluQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDiag,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnDiagFlat,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
@@ -338,7 +338,7 @@ all,aclnnGroupedBiasAddGrad,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan
 all,aclnnGroupedBiasAddGradV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGroupedMatMulAllReduce,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGroupedMatMulAlltoAllv,已接入,src_scan,,,,options,external/op-plugin/op_plugin/ops/opapi/GmmAllToAllvNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
-all,aclnnGroupedMatmul,已接入,src_scan,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest'];['v2.7', 'newest']",,True,shared_by_4_ops;src_only
+all,aclnnGroupedMatmul,已接入,src_scan,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest']",,True,shared_by_3_ops;src_only
 all,aclnnGroupedMatmulAdd,已接入,src_scan,npu_grouped_matmul_add,,npu_grouped_matmul_add,IsAclnnOnly;npu_grouped_matmul_add,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulAddNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnGroupedMatmulFinalizeRouting,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGroupedMatmulFinalizeRoutingV2,已接入,src_scan,npu_grouped_matmul_finalize_routing,,npu_grouped_matmul_finalize_routing,npu_grouped_matmul_finalize_routing,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulFinalizeRoutingKernelNpuOpApi.cpp,all_version,,True,src_only
@@ -350,9 +350,9 @@ all,aclnnGroupedMatmulSwigluQuantV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_
 all,aclnnGroupedMatmulSwigluQuantWeightNZ,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGroupedMatmulV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnGroupedMatmulV3,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnGroupedMatmulV4,已接入,src_scan,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest'];['v2.7', 'newest']",,True,shared_by_4_ops;src_only
-all,aclnnGroupedMatmulV5,已接入,src_scan,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest'];['v2.7', 'newest']",,True,shared_by_4_ops;src_only
-all,aclnnGroupedMatmulWeightNz,已接入,src_scan,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest'];['v2.7', 'newest']",,True,shared_by_4_ops;src_only
+all,aclnnGroupedMatmulV4,已接入,src_scan,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest']",,True,shared_by_3_ops;src_only
+all,aclnnGroupedMatmulV5,已接入,src_scan,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest']",,True,shared_by_3_ops;src_only
+all,aclnnGroupedMatmulWeightNz,已接入,src_scan,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,,_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List,_scaled_grouped_mm_v2;npu_grouped_matmul,external/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledGroupMmV2KernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.10', 'newest']",,True,shared_by_3_ops;src_only
 all,aclnnGtScalar,已接入,src_scan,gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out,,gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out,gt;gt_out;lt;lt_out,external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/LtKernelNpuOpApi.cpp,all_version,,True,shared_by_8_ops;src_only
 all,aclnnGtTensor,已接入,src_scan,gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out,,gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out,gt;gt_out,external/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp,all_version,,True,shared_by_4_ops;src_only
 all,aclnnHardshrink,已接入,yaml_exec,hardshrink;hardshrink.out,hardshrink;hardshrink.out,,,,all_version,hardshrink;hardshrink.out,False,shared_by_2_ops;yaml_only
@@ -480,7 +480,7 @@ all,aclnnInplacePowTensorScalar,已接入,yaml_exec+src_scan,pow_.Scalar,pow_.Sc
 all,aclnnInplacePowTensorTensor,已接入,src_scan,pow_.Scalar;pow_.Tensor,,pow_.Scalar;pow_.Tensor,inplace_pow_out_npu_nocheck;pow_,external/op-plugin/op_plugin/ops/opapi/PowKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplacePut,已接入,src_scan,,,,check_memory,external/op-plugin/op_plugin/ops/opapi/LogKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/MaskedScatterKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/PutKernelNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
 all,aclnnInplaceQuantMatmulAllReduceAddRmsNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnInplaceQuantScatter,已接入,src_scan,npu_quant_scatter;npu_quant_scatter_,,npu_quant_scatter;npu_quant_scatter_,npu_quant_scatter;npu_quant_scatter_,external/op-plugin/op_plugin/ops/opapi/QuantScatterKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
+all,aclnnInplaceQuantScatter,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceRReluWithNoise,已接入,src_scan,rrelu_with_noise_,,rrelu_with_noise_,rrelu_with_noise_,external/op-plugin/op_plugin/ops/opapi/RReluWithNoiseKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnInplaceRandom,已接入,src_scan,random_;random_.from;random_.to,,random_;random_.from;random_.to,random_;random_op_api_,external/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp,all_version,random_;random_.from;random_.to,False,shared_by_3_ops;src_only
 all,aclnnInplaceRandomTensor,已接入,src_scan,,,,random_op_api_,external/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
@@ -530,7 +530,7 @@ all,aclnnKlDivBackward,已接入,yaml_exec,kl_div_backward,kl_div_backward,,,,"[
 all,aclnnKthvalue,已接入,src_scan,kthvalue;kthvalue.dimname;kthvalue.dimname_out;kthvalue.values,,kthvalue;kthvalue.dimname;kthvalue.dimname_out;kthvalue.values,kthvalue;kthvalue_out,external/op-plugin/op_plugin/ops/opapi/KthvalueKernelNpuOpApi.cpp,"['v2.1', 'v2.12'];all_version",kthvalue;kthvalue.dimname;kthvalue.dimname_out;kthvalue.values,False,shared_by_4_ops;src_only
 all,aclnnL1Loss,已接入,yaml_exec,l1_loss,l1_loss,,,,all_version,l1_loss,False,yaml_only
 all,aclnnL1LossBackward,已接入,yaml_exec,l1_loss_backward,l1_loss_backward,,,,"['v2.1', 'newest']",l1_loss_backward,False,yaml_only
-all,aclnnLayerNorm,已接入,src_scan,,,,Tensor,external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulInplaceAddNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
+all,aclnnLayerNorm,已接入,src_scan,,,,Tensor,external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp,,,True,src_only;src_hit_but_op_name_unresolved
 all,aclnnLayerNormBackward,已接入,src_scan,native_layer_norm_backward,,native_layer_norm_backward,native_layer_norm_backward,external/op-plugin/op_plugin/ops/opapi/LayerNormBackwardKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
 all,aclnnLayerNormWithImplMode,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnLeScalar,已接入,src_scan,le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out,,le.Scalar;le.Scalar_out;le.Tensor;le.Tensor_out,le;le_out,external/op-plugin/op_plugin/ops/opapi/LeKernelNpuOpApi.cpp,all_version,,True,shared_by_4_ops;src_only
@@ -662,9 +662,9 @@ all,aclnnMultinomial,已接入,src_scan,multinomial;multinomial.out,,multinomial
 all,aclnnMultinomialTensor,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnMv,已接入,src_scan,mv;mv.out,,mv;mv.out,mv;mv_out,external/op-plugin/op_plugin/ops/opapi/MvKernelNpuOpApi.cpp,all_version,mv;mv.out,False,shared_by_2_ops;src_only
 all,aclnnNLLLoss,已接入,src_scan,nll_loss_forward;nll_loss_forward.output,,nll_loss_forward;nll_loss_forward.output,nll_loss_forward;nll_loss_forward_out,external/op-plugin/op_plugin/ops/opapi/NLLLossKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,shared_by_2_ops;src_only
-all,aclnnNLLLoss2d,已接入,src_scan,nll_loss2d_forward;nll_loss2d_forward.output,,nll_loss2d_forward;nll_loss2d_forward.output,Tensor;nll_loss2d_forward,external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulInplaceAddNpuOpApi.cpp,"['v2.1', 'newest']",,True,shared_by_2_ops;src_only
+all,aclnnNLLLoss2d,已接入,src_scan,nll_loss2d_forward;nll_loss2d_forward.output,,nll_loss2d_forward;nll_loss2d_forward.output,Tensor;nll_loss2d_forward,external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,shared_by_2_ops;src_only
 all,aclnnNLLLoss2dBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnNLLLossBackward,已接入,src_scan,nll_loss_backward;nll_loss_backward.grad_input,,nll_loss_backward;nll_loss_backward.grad_input,Tensor;nll_loss_backward,external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantBatchMatmulInplaceAddNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulAddNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulInplaceAddNpuOpApi.cpp,"['v2.1', 'newest']",,True,shared_by_2_ops;src_only
+all,aclnnNLLLossBackward,已接入,src_scan,nll_loss_backward;nll_loss_backward.grad_input,,nll_loss_backward;nll_loss_backward.grad_input,Tensor;nll_loss_backward,external/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLoss2dKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/NLLLossBackwardKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,shared_by_2_ops;src_only
 all,aclnnNanMedian,已接入,yaml_exec,nanmedian,nanmedian,,,,all_version,,True,yaml_only
 all,aclnnNanMedianDim,已接入,yaml_exec,nanmedian.dim,nanmedian.dim,,,,all_version,,True,yaml_only
 all,aclnnNanToNum,已接入,src_scan,nan_to_num;nan_to_num.out,,nan_to_num;nan_to_num.out,nan_to_num;nan_to_num_out,external/op-plugin/op_plugin/ops/opapi/NanToNumKernelNpuOpApi.cpp,all_version,nan_to_num;nan_to_num.out,False,shared_by_2_ops;src_only
@@ -693,7 +693,7 @@ all,aclnnNsaSelectedAttentionInfer,已接入,yaml_exec,npu_nsa_select_attention_
 all,aclnnObfuscationCalculate,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnObfuscationCalculateV2,已接入,src_scan,obfuscation_calculate,,obfuscation_calculate,obfuscation_calculate,external/op-plugin/op_plugin/ops/opapi/ObfuscationCalculateKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnObfuscationSetup,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnObfuscationSetupV2,已接入,src_scan,obfuscation_finalize;obfuscation_initialize,,obfuscation_finalize;obfuscation_initialize,obfuscation_finalize;obfuscation_initialize,external/op-plugin/op_plugin/ops/opapi/ObfuscationFinalizeKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ObfuscationInitializeKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
+all,aclnnObfuscationSetupV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnOneHot,已接入,src_scan,npu_one_hot;one_hot,,npu_one_hot;one_hot,npu_one_hot;one_hot,external/op-plugin/op_plugin/ops/opapi/OneHotKernelNpuOpApi.cpp,all_version,one_hot,False,shared_by_2_ops;src_only
 all,aclnnPdist,已接入,src_scan,_pdist_forward,,_pdist_forward,_pdist_forward,external/op-plugin/op_plugin/ops/opapi/PdistKernelNpuOpApi.cpp,all_version,,True,src_only
 all,aclnnPdistForward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
@@ -711,20 +711,20 @@ all,aclnnPromptFlashAttention,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_sc
 all,aclnnPromptFlashAttentionV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnPromptFlashAttentionV3,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQr,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnQuantConvolution,已接入,src_scan,npu_quant_conv2d,,npu_quant_conv2d,npu_quant_conv2d;npu_quant_conv2d_out,external/op-plugin/op_plugin/ops/opapi/QuantConv2DKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
-all,aclnnQuantGroupedMatmulDequant,已接入,src_scan,npu_quant_grouped_matmul_dequant,,npu_quant_grouped_matmul_dequant,npu_quant_grouped_matmul_dequant,external/op-plugin/op_plugin/ops/opapi/QuantGroupedMatmulDequantNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnQuantConvolution,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnQuantGroupedMatmulDequant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmul,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulAllReduce,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulAllReduceAddRmsNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulAllReduceV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulAllReduceV3,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulDequant,已接入,yaml_exec,npu_quant_matmul_dequant,npu_quant_matmul_dequant,,,,all_version,,True,yaml_only
-all,aclnnQuantMatmulReduceSumWeightNz,已接入,src_scan,npu_quant_matmul_reduce_sum,,npu_quant_matmul_reduce_sum,npu_quant_matmul_reduce_sum,external/op-plugin/op_plugin/ops/opapi/QuantMatmulReduceSumKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnQuantMatmulReduceSumWeightNz,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulV3,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantMatmulV4,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnQuantMatmulV5,已接入,src_scan,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,external/op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledMmKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledMmV2KernelNpuOpApi.cpp,"['v2.10', 'newest'];['v2.7', 'newest'];all_version",,True,shared_by_3_ops;src_only
-all,aclnnQuantMatmulWeightNz,已接入,src_scan,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,_scaled_mm;_scaled_mm_v2;npu_quant_matmul,external/op-plugin/op_plugin/ops/opapi/QuantMatmulKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledMmKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/ScaledMmV2KernelNpuOpApi.cpp,"['v2.10', 'newest'];['v2.7', 'newest'];all_version",,True,shared_by_3_ops;src_only
+all,aclnnQuantMatmulV5,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnQuantMatmulWeightNz,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnQuantize,已接入,src_scan,_quantize_per_channel_impl.out;_quantize_per_tensor_impl.out,,_quantize_per_channel_impl.out;_quantize_per_tensor_impl.out,_quantize_per_channel_impl_out;_quantize_per_tensor_impl_out;npu_quantize_by_kernel,external/op-plugin/op_plugin/ops/opapi/QuantizeKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantizePerChannelKernelNpuOpApi.cpp;external/op-plugin/op_plugin/ops/opapi/QuantizePerTensorKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnQuantizedBatchNorm,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnRReluWithNoise,已接入,src_scan,rrelu_with_noise;rrelu_with_noise.out,,rrelu_with_noise;rrelu_with_noise.out,rrelu_with_noise;rrelu_with_noise_out,external/op-plugin/op_plugin/ops/opapi/RReluWithNoiseKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
@@ -733,7 +733,7 @@ all,aclnnRandperm,已接入,src_scan,randperm;randperm.generator;randperm.genera
 all,aclnnRange,已接入,src_scan,range;range.out;range.step,,range;range.out;range.step,range;range_out,external/op-plugin/op_plugin/ops/opapi/RangeKernelNpuOpApi.cpp,all_version,range;range.out;range.step,False,shared_by_3_ops;src_only
 all,aclnnReal,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnReciprocal,已接入,yaml_exec,reciprocal;reciprocal.out,reciprocal;reciprocal.out,,,,all_version,reciprocal;reciprocal.out,False,shared_by_2_ops;yaml_only
-all,aclnnRecurrentGatedDeltaRule,已接入,src_scan,npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional,,npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional,npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional,external/op-plugin/op_plugin/ops/opapi/RecurrentGatedDeltaRuleKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
+all,aclnnRecurrentGatedDeltaRule,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnReduceLogSum,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnReduceNansum,已接入,src_scan,nansum.out,,nansum.out,nansum_out,external/op-plugin/op_plugin/ops/opapi/NansumKernelNpuOpApi.cpp,"['v2.1', 'newest']",,True,src_only
 all,aclnnReduceSum,已接入,src_scan,sum;sum.DimnameList_out;sum.IntList_out;sum.dim_DimnameList;sum.dim_IntList,,sum;sum.DimnameList_out;sum.IntList_out;sum.dim_DimnameList;sum.dim_IntList,sum,external/op-plugin/op_plugin/ops/opapi/SumKernelNpuOpApi.cpp,"['v2.1', 'newest'];['v2.1', 'v2.12'];all_version",,True,shared_by_5_ops;src_only
@@ -841,7 +841,7 @@ all,aclnnSvd,已接入,yaml_exec,_linalg_svd.U,_linalg_svd.U,,,,all_version,,Tru
 all,aclnnSwiGlu,已接入,yaml_exec,npu_swiglu,npu_swiglu,,,,all_version,,True,yaml_only
 all,aclnnSwiGluGrad,已接入,yaml_exec,npu_swiglu_backward,npu_swiglu_backward,,,,all_version,,True,yaml_only
 all,aclnnSwiGluQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
-all,aclnnSwiGluQuantV2,已接入,src_scan,npu_swiglu_quant,,npu_swiglu_quant,npu_swiglu_quant,external/op-plugin/op_plugin/ops/opapi/SwigluquantKernelNpuOpApi.cpp,all_version,,True,src_only
+all,aclnnSwiGluQuantV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSwinAttentionScoreQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSwinTransformerLnQkvQuant,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnSwish,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit

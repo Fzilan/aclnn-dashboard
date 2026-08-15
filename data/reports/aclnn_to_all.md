@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：642 / 913（70.3%）
+- torch-npu 已接入：632 / 913（69.2%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：361 / 913（39.5%）
-- 仅 torch-npu：281 / 913（30.8%）
+- 仅 torch-npu：271 / 913（29.7%）
 - 仅 mindspore：59 / 913（6.5%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -158,7 +158,7 @@
 | aclnnDeepNormGrad | ✅ | npu_deep_norm_backward | ✖️ | ✖️ | ✖️ |  |
 | aclnnDeformableConv2d | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDequantBias | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnDequantRopeQuantKvcache | ✅ | npu_rope_quant_kvcache | ✖️ | ✖️ | ✖️ |  |
+| aclnnDequantRopeQuantKvcache | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnDequantSwigluQuant | ✖️ |  | ✅ | ✅ | ✅ | DequantSwigluQuant |
 | aclnnDiag | ✖️ |  | ✅ | ✖️ | ✅ | DiagExt |
 | aclnnDiagFlat | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -351,7 +351,7 @@
 | aclnnGroupedBiasAddGradV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatMulAllReduce | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatMulAlltoAllv | ✅ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnGroupedMatmul | ✅ | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
+| aclnnGroupedMatmul | ✅ | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulAdd | ✅ | npu_grouped_matmul_add | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulFinalizeRouting | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulFinalizeRoutingV2 | ✅ | npu_grouped_matmul_finalize_routing | ✖️ | ✖️ | ✖️ |  |
@@ -363,9 +363,9 @@
 | aclnnGroupedMatmulSwigluQuantWeightNZ | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnGroupedMatmulV2 | ✖️ |  | ✅ | ✖️ | ✅ | GroupedMatmulV2 |
 | aclnnGroupedMatmulV3 | ✖️ |  | ✅ | ✖️ | ✅ | GroupedMatmul |
-| aclnnGroupedMatmulV4 | ✅ | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✅ | ✖️ | ✅ | GroupedMatmulV4 |
-| aclnnGroupedMatmulV5 | ✅ | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
-| aclnnGroupedMatmulWeightNz | ✅ | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
+| aclnnGroupedMatmulV4 | ✅ | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✅ | ✖️ | ✅ | GroupedMatmulV4 |
+| aclnnGroupedMatmulV5 | ✅ | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
+| aclnnGroupedMatmulWeightNz | ✅ | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List | ✖️ | ✖️ | ✖️ |  |
 | aclnnGtScalar | ✅ | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out | ✖️ | ✖️ | ✖️ |  |
 | aclnnGtTensor | ✅ | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out | ✅ | ✅ | ✅ | Greater |
 | aclnnHardshrink | ✅ | hardshrink;hardshrink.out | ✅ | ✅ | ✅ | HShrink |
@@ -493,7 +493,7 @@
 | aclnnInplacePowTensorTensor | ✅ | pow_.Scalar;pow_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplacePut | ✅ |  | ✅ | ✅ | ✅ | InplacePut |
 | aclnnInplaceQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceQuantScatter | ✅ | npu_quant_scatter;npu_quant_scatter_ | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceQuantScatter | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceRReluWithNoise | ✅ | rrelu_with_noise_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceRandom | ✅ | random_;random_.from;random_.to | ✅ | ✅ | ✅ | RandInt |
 | aclnnInplaceRandomTensor | ✅ |  | ✖️ | ✖️ | ✖️ |  |
@@ -706,7 +706,7 @@
 | aclnnObfuscationCalculate | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnObfuscationCalculateV2 | ✅ | obfuscation_calculate | ✖️ | ✖️ | ✖️ |  |
 | aclnnObfuscationSetup | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnObfuscationSetupV2 | ✅ | obfuscation_finalize;obfuscation_initialize | ✖️ | ✖️ | ✖️ |  |
+| aclnnObfuscationSetupV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnOneHot | ✅ | npu_one_hot;one_hot | ✅ | ✅ | ✅ | OneHotExt |
 | aclnnPdist | ✅ | _pdist_forward | ✖️ | ✖️ | ✖️ |  |
 | aclnnPdistForward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
@@ -724,20 +724,20 @@
 | aclnnPromptFlashAttentionV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnPromptFlashAttentionV3 | ✖️ |  | ✅ | ✅ | ✅ | PromptFlashAttention |
 | aclnnQr | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantConvolution | ✅ | npu_quant_conv2d | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantGroupedMatmulDequant | ✅ | npu_quant_grouped_matmul_dequant | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantConvolution | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantGroupedMatmulDequant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmul | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulAllReduce | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulAllReduceAddRmsNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulAllReduceV2 | ✖️ |  | ✅ | ✖️ | ✅ | QuantBatchMatmulAllReduce |
 | aclnnQuantMatmulAllReduceV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulDequant | ✅ | npu_quant_matmul_dequant | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantMatmulReduceSumWeightNz | ✅ | npu_quant_matmul_reduce_sum | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantMatmulReduceSumWeightNz | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulV3 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantMatmulV4 | ✖️ |  | ✅ | ✖️ | ✅ | QuantBatchMatmul |
-| aclnnQuantMatmulV5 | ✅ | _scaled_mm;_scaled_mm_v2;npu_quant_matmul | ✖️ | ✖️ | ✖️ |  |
-| aclnnQuantMatmulWeightNz | ✅ | _scaled_mm;_scaled_mm_v2;npu_quant_matmul | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantMatmulV5 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnQuantMatmulWeightNz | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantize | ✅ | _quantize_per_channel_impl.out;_quantize_per_tensor_impl.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnQuantizedBatchNorm | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRReluWithNoise | ✅ | rrelu_with_noise;rrelu_with_noise.out | ✖️ | ✖️ | ✖️ |  |
@@ -746,7 +746,7 @@
 | aclnnRange | ✅ | range;range.out;range.step | ✖️ | ✖️ | ✖️ |  |
 | aclnnReal | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnReciprocal | ✅ | reciprocal;reciprocal.out | ✅ | ✅ | ✅ | Reciprocal |
-| aclnnRecurrentGatedDeltaRule | ✅ | npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional | ✖️ | ✖️ | ✖️ |  |
+| aclnnRecurrentGatedDeltaRule | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnReduceLogSum | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnReduceNansum | ✅ | nansum.out | ✅ | ✖️ | ✅ | Nansum |
 | aclnnReduceSum | ✅ | sum;sum.DimnameList_out;sum.IntList_out;sum.dim_DimnameList;sum.dim_IntList | ✅ | ✖️ | ✅ | CountNonZero;ReduceSum;SumExt |
@@ -854,7 +854,7 @@
 | aclnnSwiGlu | ✅ | npu_swiglu | ✅ | ✅ | ✅ | Swiglu |
 | aclnnSwiGluGrad | ✅ | npu_swiglu_backward | ✅ | ✅ | ✅ | SwigluGrad |
 | aclnnSwiGluQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnSwiGluQuantV2 | ✅ | npu_swiglu_quant | ✖️ | ✖️ | ✖️ |  |
+| aclnnSwiGluQuantV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwinAttentionScoreQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwinTransformerLnQkvQuant | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSwish | ✖️ |  | ✖️ | ✖️ | ✖️ |  |

@@ -148,7 +148,7 @@
 | aclnnDeepNormGrad | 已接入 | src_scan | npu_deep_norm_backward |  | True | npu_deep_norm_backward | src_only |
 | aclnnDeformableConv2d | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDequantBias | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnDequantRopeQuantKvcache | 已接入 | src_scan | npu_rope_quant_kvcache |  | True | npu_rope_quant_kvcache | src_only |
+| aclnnDequantRopeQuantKvcache | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDequantSwigluQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDiag | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnDiagFlat | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -341,7 +341,7 @@
 | aclnnGroupedBiasAddGradV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatMulAllReduce | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatMulAlltoAllv | 已接入 | src_scan |  |  | True | options | src_only;src_hit_but_op_name_unresolved |
-| aclnnGroupedMatmul | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
+| aclnnGroupedMatmul | 已接入 | src_scan | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_3_ops;src_only |
 | aclnnGroupedMatmulAdd | 已接入 | src_scan | npu_grouped_matmul_add |  | True | IsAclnnOnly;npu_grouped_matmul_add | src_only |
 | aclnnGroupedMatmulFinalizeRouting | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulFinalizeRoutingV2 | 已接入 | src_scan | npu_grouped_matmul_finalize_routing |  | True | npu_grouped_matmul_finalize_routing | src_only |
@@ -353,9 +353,9 @@
 | aclnnGroupedMatmulSwigluQuantWeightNZ | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnGroupedMatmulV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnGroupedMatmulV4 | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
-| aclnnGroupedMatmulV5 | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
-| aclnnGroupedMatmulWeightNz | 已接入 | src_scan | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm;_scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_4_ops;src_only |
+| aclnnGroupedMatmulV4 | 已接入 | src_scan | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_3_ops;src_only |
+| aclnnGroupedMatmulV5 | 已接入 | src_scan | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_3_ops;src_only |
+| aclnnGroupedMatmulWeightNz | 已接入 | src_scan | _scaled_grouped_mm_v2;npu_grouped_matmul;npu_grouped_matmul.List |  | True | _scaled_grouped_mm_v2;npu_grouped_matmul | shared_by_3_ops;src_only |
 | aclnnGtScalar | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out;lt.Scalar;lt.Scalar_out;lt.Tensor;lt.Tensor_out |  | True | gt;gt_out;lt;lt_out | shared_by_8_ops;src_only |
 | aclnnGtTensor | 已接入 | src_scan | gt.Scalar;gt.Scalar_out;gt.Tensor;gt.Tensor_out |  | True | gt;gt_out | shared_by_4_ops;src_only |
 | aclnnHardshrink | 已接入 | yaml_exec | hardshrink;hardshrink.out | hardshrink;hardshrink.out | False |  | shared_by_2_ops;yaml_only |
@@ -483,7 +483,7 @@
 | aclnnInplacePowTensorTensor | 已接入 | src_scan | pow_.Scalar;pow_.Tensor |  | True | inplace_pow_out_npu_nocheck;pow_ | shared_by_2_ops;src_only |
 | aclnnInplacePut | 已接入 | src_scan |  |  | True | check_memory | src_only;src_hit_but_op_name_unresolved |
 | aclnnInplaceQuantMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnInplaceQuantScatter | 已接入 | src_scan | npu_quant_scatter;npu_quant_scatter_ |  | True | npu_quant_scatter;npu_quant_scatter_ | shared_by_2_ops;src_only |
+| aclnnInplaceQuantScatter | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceRReluWithNoise | 已接入 | src_scan | rrelu_with_noise_ |  | True | rrelu_with_noise_ | src_only |
 | aclnnInplaceRandom | 已接入 | src_scan | random_;random_.from;random_.to | random_;random_.from;random_.to | False | random_;random_op_api_ | shared_by_3_ops;src_only |
 | aclnnInplaceRandomTensor | 已接入 | src_scan |  |  | True | random_op_api_ | src_only;src_hit_but_op_name_unresolved |
@@ -696,7 +696,7 @@
 | aclnnObfuscationCalculate | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnObfuscationCalculateV2 | 已接入 | src_scan | obfuscation_calculate |  | True | obfuscation_calculate | src_only |
 | aclnnObfuscationSetup | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnObfuscationSetupV2 | 已接入 | src_scan | obfuscation_finalize;obfuscation_initialize |  | True | obfuscation_finalize;obfuscation_initialize | shared_by_2_ops;src_only |
+| aclnnObfuscationSetupV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnOneHot | 已接入 | src_scan | npu_one_hot;one_hot | one_hot | False | npu_one_hot;one_hot | shared_by_2_ops;src_only |
 | aclnnPdist | 已接入 | src_scan | _pdist_forward |  | True | _pdist_forward | src_only |
 | aclnnPdistForward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
@@ -714,20 +714,20 @@
 | aclnnPromptFlashAttentionV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnPromptFlashAttentionV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQr | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnQuantConvolution | 已接入 | src_scan | npu_quant_conv2d |  | True | npu_quant_conv2d;npu_quant_conv2d_out | src_only |
-| aclnnQuantGroupedMatmulDequant | 已接入 | src_scan | npu_quant_grouped_matmul_dequant |  | True | npu_quant_grouped_matmul_dequant | src_only |
+| aclnnQuantConvolution | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnQuantGroupedMatmulDequant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmul | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulAllReduce | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulAllReduceAddRmsNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulAllReduceV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulAllReduceV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulDequant | 已接入 | yaml_exec | npu_quant_matmul_dequant |  | True |  | yaml_only |
-| aclnnQuantMatmulReduceSumWeightNz | 已接入 | src_scan | npu_quant_matmul_reduce_sum |  | True | npu_quant_matmul_reduce_sum | src_only |
+| aclnnQuantMatmulReduceSumWeightNz | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulV3 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantMatmulV4 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnQuantMatmulV5 | 已接入 | src_scan | _scaled_mm;_scaled_mm_v2;npu_quant_matmul |  | True | _scaled_mm;_scaled_mm_v2;npu_quant_matmul | shared_by_3_ops;src_only |
-| aclnnQuantMatmulWeightNz | 已接入 | src_scan | _scaled_mm;_scaled_mm_v2;npu_quant_matmul |  | True | _scaled_mm;_scaled_mm_v2;npu_quant_matmul | shared_by_3_ops;src_only |
+| aclnnQuantMatmulV5 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnQuantMatmulWeightNz | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnQuantize | 已接入 | src_scan | _quantize_per_channel_impl.out;_quantize_per_tensor_impl.out |  | True | _quantize_per_channel_impl_out;_quantize_per_tensor_impl_out;npu_quantize_by_kernel | shared_by_2_ops;src_only |
 | aclnnQuantizedBatchNorm | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRReluWithNoise | 已接入 | src_scan | rrelu_with_noise;rrelu_with_noise.out |  | True | rrelu_with_noise;rrelu_with_noise_out | shared_by_2_ops;src_only |
@@ -736,7 +736,7 @@
 | aclnnRange | 已接入 | src_scan | range;range.out;range.step | range;range.out;range.step | False | range;range_out | shared_by_3_ops;src_only |
 | aclnnReal | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnReciprocal | 已接入 | yaml_exec | reciprocal;reciprocal.out | reciprocal;reciprocal.out | False |  | shared_by_2_ops;yaml_only |
-| aclnnRecurrentGatedDeltaRule | 已接入 | src_scan | npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional |  | True | npu_recurrent_gated_delta_rule;npu_recurrent_gated_delta_rule_functional | shared_by_2_ops;src_only |
+| aclnnRecurrentGatedDeltaRule | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnReduceLogSum | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnReduceNansum | 已接入 | src_scan | nansum.out |  | True | nansum_out | src_only |
 | aclnnReduceSum | 已接入 | src_scan | sum;sum.DimnameList_out;sum.IntList_out;sum.dim_DimnameList;sum.dim_IntList |  | True | sum | shared_by_5_ops;src_only |
@@ -844,7 +844,7 @@
 | aclnnSwiGlu | 已接入 | yaml_exec | npu_swiglu |  | True |  | yaml_only |
 | aclnnSwiGluGrad | 已接入 | yaml_exec | npu_swiglu_backward |  | True |  | yaml_only |
 | aclnnSwiGluQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnSwiGluQuantV2 | 已接入 | src_scan | npu_swiglu_quant |  | True | npu_swiglu_quant | src_only |
+| aclnnSwiGluQuantV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwinAttentionScoreQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwinTransformerLnQkvQuant | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnSwish | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
