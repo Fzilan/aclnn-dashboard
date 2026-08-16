@@ -752,11 +752,11 @@
 | aclnnRemainderTensorTensor | 已接入 | src_scan | remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out |  | True | remainder;remainder_out | shared_by_5_ops;src_only |
 | aclnnRenorm | 已接入 | src_scan | renorm;renorm.out | renorm;renorm.out | False | renorm;renorm_out | shared_by_2_ops;src_only |
 | aclnnRepeat | 已接入 | yaml_exec | repeat | repeat | False |  | yaml_only |
-| aclnnRepeatInterleave | 已接入 | src_scan | repeat_interleave.self_Tensor;repeat_interleave.self_int | repeat_interleave.self_Tensor;repeat_interleave.self_int | False | repeat_interleave;repeat_interleave_symint | shared_by_2_ops;src_only |
+| aclnnRepeatInterleave | 已接入 | src_scan | repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int | repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int | False | repeat_interleave;repeat_interleave_symint | shared_by_3_ops;src_only |
 | aclnnRepeatInterleaveInt | 已接入 | src_scan |  |  | True | repeat_interleave_symint | src_only;src_hit_but_op_name_unresolved |
 | aclnnRepeatInterleaveIntWithDim | 已接入 | src_scan |  |  | True | repeat_interleave_symint | src_only;src_hit_but_op_name_unresolved |
-| aclnnRepeatInterleaveTensor | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnRepeatInterleaveWithDim | 已接入 | src_scan | repeat_interleave.self_Tensor;repeat_interleave.self_int |  | True | repeat_interleave;repeat_interleave_symint | shared_by_2_ops;src_only |
+| aclnnRepeatInterleaveTensor | 已接入 | src_scan |  |  | True | repeat_interleave_symint | src_only;src_hit_but_op_name_unresolved |
+| aclnnRepeatInterleaveWithDim | 已接入 | src_scan | repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int |  | True | repeat_interleave;repeat_interleave_symint | shared_by_3_ops;src_only |
 | aclnnReplicationPad1d | 已接入 | yaml_exec | replication_pad1d;replication_pad1d.out | replication_pad1d;replication_pad1d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnReplicationPad1dBackward | 已接入 | yaml_exec | replication_pad1d_backward;replication_pad1d_backward.grad_input | replication_pad1d_backward;replication_pad1d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnReplicationPad2d | 已接入 | yaml_exec | replication_pad2d;replication_pad2d.out | replication_pad2d;replication_pad2d.out | False |  | shared_by_2_ops;yaml_only |

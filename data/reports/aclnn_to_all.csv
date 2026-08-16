@@ -749,11 +749,11 @@ aclnnRemainderTensorScalar,✅,remainder.Scalar;remainder.Scalar_Tensor;remainde
 aclnnRemainderTensorTensor,✅,remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out,✅,✅,✅,RemainderTensorTensor
 aclnnRenorm,✅,renorm;renorm.out,✖️,✖️,✖️,
 aclnnRepeat,✅,repeat,✅,✅,✅,Repeat;Tile
-aclnnRepeatInterleave,✅,repeat_interleave.self_Tensor;repeat_interleave.self_int,✖️,✖️,✖️,
+aclnnRepeatInterleave,✅,repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int,✖️,✖️,✖️,
 aclnnRepeatInterleaveInt,✅,,✅,✅,✅,
 aclnnRepeatInterleaveIntWithDim,✅,,✅,✖️,✅,RepeatInterleaveInt
-aclnnRepeatInterleaveTensor,✖️,,✅,✅,✅,
-aclnnRepeatInterleaveWithDim,✅,repeat_interleave.self_Tensor;repeat_interleave.self_int,✅,✖️,✅,RepeatInterleaveTensor
+aclnnRepeatInterleaveTensor,✅,,✅,✅,✅,
+aclnnRepeatInterleaveWithDim,✅,repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int,✅,✖️,✅,RepeatInterleaveTensor
 aclnnReplicationPad1d,✅,replication_pad1d;replication_pad1d.out,✅,✅,✅,ReplicationPad1D
 aclnnReplicationPad1dBackward,✅,replication_pad1d_backward;replication_pad1d_backward.grad_input,✅,✅,✅,ReplicationPad1DGrad
 aclnnReplicationPad2d,✅,replication_pad2d;replication_pad2d.out,✅,✅,✅,ReplicationPad2D

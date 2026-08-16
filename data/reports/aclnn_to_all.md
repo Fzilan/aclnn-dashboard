@@ -1,11 +1,11 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：632 / 913（69.2%）
+- torch-npu 已接入：633 / 913（69.3%）
 - mindspore 已接入：420 / 913（46.0%）
-- 两者都接入：361 / 913（39.5%）
+- 两者都接入：362 / 913（39.6%）
 - 仅 torch-npu：271 / 913（29.7%）
-- 仅 mindspore：59 / 913（6.5%）
+- 仅 mindspore：58 / 913（6.4%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
 复算命令：`python3 scripts/scan/aclnn_merge_report.py --torch-npu-csv data/reports/aclnn_to_torch_npu.csv --mindspore-csv data/reports/aclnn_to_mindspore.csv --out-md data/reports/aclnn_to_all.md --out-csv data/reports/aclnn_to_all.csv`
@@ -762,11 +762,11 @@
 | aclnnRemainderTensorTensor | ✅ | remainder.Scalar;remainder.Scalar_Tensor;remainder.Scalar_out;remainder.Tensor;remainder.Tensor_out | ✅ | ✅ | ✅ | RemainderTensorTensor |
 | aclnnRenorm | ✅ | renorm;renorm.out | ✖️ | ✖️ | ✖️ |  |
 | aclnnRepeat | ✅ | repeat | ✅ | ✅ | ✅ | Repeat;Tile |
-| aclnnRepeatInterleave | ✅ | repeat_interleave.self_Tensor;repeat_interleave.self_int | ✖️ | ✖️ | ✖️ |  |
+| aclnnRepeatInterleave | ✅ | repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int | ✖️ | ✖️ | ✖️ |  |
 | aclnnRepeatInterleaveInt | ✅ |  | ✅ | ✅ | ✅ |  |
 | aclnnRepeatInterleaveIntWithDim | ✅ |  | ✅ | ✖️ | ✅ | RepeatInterleaveInt |
-| aclnnRepeatInterleaveTensor | ✖️ |  | ✅ | ✅ | ✅ |  |
-| aclnnRepeatInterleaveWithDim | ✅ | repeat_interleave.self_Tensor;repeat_interleave.self_int | ✅ | ✖️ | ✅ | RepeatInterleaveTensor |
+| aclnnRepeatInterleaveTensor | ✅ |  | ✅ | ✅ | ✅ |  |
+| aclnnRepeatInterleaveWithDim | ✅ | repeat_interleave.Tensor;repeat_interleave.self_Tensor;repeat_interleave.self_int | ✅ | ✖️ | ✅ | RepeatInterleaveTensor |
 | aclnnReplicationPad1d | ✅ | replication_pad1d;replication_pad1d.out | ✅ | ✅ | ✅ | ReplicationPad1D |
 | aclnnReplicationPad1dBackward | ✅ | replication_pad1d_backward;replication_pad1d_backward.grad_input | ✅ | ✅ | ✅ | ReplicationPad1DGrad |
 | aclnnReplicationPad2d | ✅ | replication_pad2d;replication_pad2d.out | ✅ | ✅ | ✅ | ReplicationPad2D |
