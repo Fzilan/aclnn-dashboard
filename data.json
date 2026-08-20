@@ -10,41 +10,41 @@
     "torch_coverage_rate": 69.3,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 39.6,
-    "last_update_time": "2026-08-19T09:59:36+08:00",
-    "generated_at": "2026-08-19T09:59:36+08:00",
-    "pipeline_run_time": "2026-08-19T09:59:33+08:00",
-    "torch_speed_pp_per_day_7d": -0.583,
+    "last_update_time": "2026-08-20T09:57:13+08:00",
+    "generated_at": "2026-08-20T09:57:13+08:00",
+    "pipeline_run_time": "2026-08-20T09:57:10+08:00",
+    "torch_speed_pp_per_day_7d": -0.167,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
   "meta": {
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-08-19T09:57:15+08:00"
+        "mtime": "2026-08-20T09:56:10+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-08-19T09:59:34+08:00"
+        "mtime": "2026-08-20T09:57:12+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-08-19T09:59:34+08:00"
+        "mtime": "2026-08-20T09:57:12+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-08-19T09:59:36+08:00"
+        "mtime": "2026-08-20T09:57:13+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-08-19T09:59:36+08:00"
+        "mtime": "2026-08-20T09:57:13+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-08-19T09:59:36+08:00"
+        "mtime": "2026-08-20T09:57:13+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-08-19T09:59:36+08:00"
+        "mtime": "2026-08-20T09:57:13+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1795,19 +1795,19 @@
         "torch_coverage_rate": 69.3,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 39.6
+      },
+      {
+        "date": "2026-08-20",
+        "total_ops": 913,
+        "torch_supported": 633,
+        "mindspore_supported": 420,
+        "both_supported": 362,
+        "torch_coverage_rate": 69.3,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 39.6
       }
     ],
     "last_7_days": [
-      {
-        "date": "2026-08-12",
-        "total_ops": 913,
-        "torch_supported": 665,
-        "mindspore_supported": 420,
-        "both_supported": 367,
-        "torch_coverage_rate": 72.8,
-        "mindspore_coverage_rate": 46.0,
-        "both_coverage_rate": 40.2
-      },
       {
         "date": "2026-08-13",
         "total_ops": 913,
@@ -1860,6 +1860,16 @@
       },
       {
         "date": "2026-08-19",
+        "total_ops": 913,
+        "torch_supported": 633,
+        "mindspore_supported": 420,
+        "both_supported": 362,
+        "torch_coverage_rate": 69.3,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 39.6
+      },
+      {
+        "date": "2026-08-20",
         "total_ops": 913,
         "torch_supported": 633,
         "mindspore_supported": 420,
