@@ -774,7 +774,7 @@
 | aclnnReplicationPad3d | ✅ | replication_pad3d;replication_pad3d.out | ✅ | ✅ | ✅ | ReplicationPad3D |
 | aclnnReplicationPad3dBackward | ✅ | replication_pad3d_backward;replication_pad3d_backward.grad_input | ✅ | ✅ | ✅ | ReplicationPad3DGrad |
 | aclnnResize | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnRightShift | ✅ | __irshift__.Scalar;__irshift__.Tensor;__rshift__.Scalar;__rshift__.Tensor | ✖️ | ✖️ | ✖️ |  |
+| aclnnRightShift | ✅ | __irshift__.Scalar;__irshift__.Tensor;__rshift__.Scalar;__rshift__.Tensor;bitwise_right_shift.Tensor_out | ✖️ | ✖️ | ✖️ |  |
 | aclnnRingAttentionUpdate | ✖️ |  | ✅ | ✅ | ✅ | RingAttentionUpdate |
 | aclnnRingAttentionUpdateV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnRmsNorm | ✅ | npu_rms_norm | ✅ | ✅ | ✅ | RmsNorm |

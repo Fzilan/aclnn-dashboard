@@ -764,7 +764,7 @@
 | aclnnReplicationPad3d | 已接入 | yaml_exec | replication_pad3d;replication_pad3d.out | replication_pad3d;replication_pad3d.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnReplicationPad3dBackward | 已接入 | yaml_exec | replication_pad3d_backward;replication_pad3d_backward.grad_input | replication_pad3d_backward;replication_pad3d_backward.grad_input | False |  | shared_by_2_ops;yaml_only |
 | aclnnResize | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnRightShift | 已接入 | src_scan | __irshift__.Scalar;__irshift__.Tensor;__rshift__.Scalar;__rshift__.Tensor |  | True | __irshift__;__rshift__ | shared_by_4_ops;src_only |
+| aclnnRightShift | 已接入 | yaml_exec+src_scan | __irshift__.Scalar;__irshift__.Tensor;__rshift__.Scalar;__rshift__.Tensor;bitwise_right_shift.Tensor_out |  | True | __irshift__;__rshift__ | shared_by_5_ops;yaml+src |
 | aclnnRingAttentionUpdate | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRingAttentionUpdateV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnRmsNorm | 已接入 | src_scan | npu_rms_norm |  | True | npu_rms_norm | src_only |
