@@ -110,7 +110,7 @@
 | aclnnCalculateMatmulWeightSizeV2 | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnCast | 已接入 | src_scan | _npu_dtype_cast;npu_dtype_cast |  | True | _npu_dtype_cast;npu_dtype_cast;npu_dtype_cast_impl_op_api | shared_by_2_ops;src_only |
 | aclnnCat | 已接入 | src_scan | cat;cat.names;cat.names_out;cat.out | cat;cat.names;cat.names_out;cat.out | False | cat;cat_out | shared_by_4_ops;src_only |
-| aclnnCeil | 已接入 | yaml_exec | ceil;ceil.out;ceil_ | ceil;ceil.out | False |  | shared_by_3_ops;yaml_only |
+| aclnnCeil | 已接入 | yaml_exec | ceil;ceil.out | ceil;ceil.out | False |  | shared_by_2_ops;yaml_only |
 | aclnnCelu | 已接入 | yaml_exec | celu | celu | False |  | yaml_only |
 | aclnnChamferDistanceBackward | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnChannelShuffle | 已接入 | yaml_exec | channel_shuffle | channel_shuffle | False |  | yaml_only |
@@ -409,7 +409,7 @@
 | aclnnInplaceBitwiseOrTensor | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnInplaceBitwiseXorScalar | 已接入 | src_scan | bitwise_xor_.Scalar;bitwise_xor_.Tensor |  | True | bitwise_xor_ | shared_by_2_ops;src_only |
 | aclnnInplaceBitwiseXorTensor | 已接入 | src_scan | bitwise_xor_.Scalar;bitwise_xor_.Tensor |  | True | bitwise_xor_ | shared_by_2_ops;src_only |
-| aclnnInplaceCeil | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
+| aclnnInplaceCeil | 已接入 | yaml_exec | ceil_ | ceil_ | False |  | yaml_only |
 | aclnnInplaceCelu | 已接入 | yaml_exec | celu_ | celu_ | False |  | yaml_only |
 | aclnnInplaceClampMax | 已接入 | yaml_exec | clamp_max_ | clamp_max_ | False |  | yaml_only |
 | aclnnInplaceClampMaxTensor | 已接入 | yaml_exec | clamp_max_.Tensor |  | True |  | yaml_only |

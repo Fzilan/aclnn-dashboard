@@ -1,10 +1,10 @@
 # ACLNN coverage comparison (torch-npu vs MindSpore)
 
 **统计（基于 913 个 ACLNN API）**
-- torch-npu 已接入：633 / 913（69.3%）
+- torch-npu 已接入：634 / 913（69.4%）
 - mindspore 已接入：420 / 913（46.0%）
 - 两者都接入：362 / 913（39.6%）
-- 仅 torch-npu：271 / 913（29.7%）
+- 仅 torch-npu：272 / 913（29.8%）
 - 仅 mindspore：58 / 913（6.4%）
 
 计算公式：`占比 = 对应数量 / ACLNN 总数`
@@ -120,7 +120,7 @@
 | aclnnCalculateMatmulWeightSizeV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnCast | ✅ | _npu_dtype_cast;npu_dtype_cast | ✅ | ✅ | ✅ | Cast;MultiScaleDeformableAttn;MultiScaleDeformableAttnGrad |
 | aclnnCat | ✅ | cat;cat.names;cat.names_out;cat.out | ✅ | ✖️ | ✅ | Concat |
-| aclnnCeil | ✅ | ceil;ceil.out;ceil_ | ✅ | ✅ | ✅ | Ceil |
+| aclnnCeil | ✅ | ceil;ceil.out | ✅ | ✅ | ✅ | Ceil |
 | aclnnCelu | ✅ | celu | ✖️ | ✖️ | ✖️ |  |
 | aclnnChamferDistanceBackward | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnChannelShuffle | ✅ | channel_shuffle | ✖️ | ✖️ | ✖️ |  |
@@ -419,7 +419,7 @@
 | aclnnInplaceBitwiseOrTensor | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseXorScalar | ✅ | bitwise_xor_.Scalar;bitwise_xor_.Tensor | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceBitwiseXorTensor | ✅ | bitwise_xor_.Scalar;bitwise_xor_.Tensor | ✖️ | ✖️ | ✖️ |  |
-| aclnnInplaceCeil | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
+| aclnnInplaceCeil | ✅ | ceil_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceCelu | ✅ | celu_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceClampMax | ✅ | clamp_max_ | ✖️ | ✖️ | ✖️ |  |
 | aclnnInplaceClampMaxTensor | ✅ | clamp_max_.Tensor | ✖️ | ✖️ | ✖️ |  |

@@ -107,7 +107,7 @@ aclnnCalculateMatmulWeightSize,✖️,,✖️,✖️,✖️,
 aclnnCalculateMatmulWeightSizeV2,✖️,,✖️,✖️,✖️,
 aclnnCast,✅,_npu_dtype_cast;npu_dtype_cast,✅,✅,✅,Cast;MultiScaleDeformableAttn;MultiScaleDeformableAttnGrad
 aclnnCat,✅,cat;cat.names;cat.names_out;cat.out,✅,✖️,✅,Concat
-aclnnCeil,✅,ceil;ceil.out;ceil_,✅,✅,✅,Ceil
+aclnnCeil,✅,ceil;ceil.out,✅,✅,✅,Ceil
 aclnnCelu,✅,celu,✖️,✖️,✖️,
 aclnnChamferDistanceBackward,✖️,,✖️,✖️,✖️,
 aclnnChannelShuffle,✅,channel_shuffle,✖️,✖️,✖️,
@@ -406,7 +406,7 @@ aclnnInplaceBitwiseOrScalar,✖️,,✖️,✖️,✖️,
 aclnnInplaceBitwiseOrTensor,✖️,,✖️,✖️,✖️,
 aclnnInplaceBitwiseXorScalar,✅,bitwise_xor_.Scalar;bitwise_xor_.Tensor,✖️,✖️,✖️,
 aclnnInplaceBitwiseXorTensor,✅,bitwise_xor_.Scalar;bitwise_xor_.Tensor,✖️,✖️,✖️,
-aclnnInplaceCeil,✖️,,✖️,✖️,✖️,
+aclnnInplaceCeil,✅,ceil_,✖️,✖️,✖️,
 aclnnInplaceCelu,✅,celu_,✖️,✖️,✖️,
 aclnnInplaceClampMax,✅,clamp_max_,✖️,✖️,✖️,
 aclnnInplaceClampMaxTensor,✅,clamp_max_.Tensor,✖️,✖️,✖️,

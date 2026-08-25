@@ -107,7 +107,7 @@ all,aclnnCalculateMatmulWeightSize,未接入,,,,,,,,,False,no_yaml_exec_and_no_s
 all,aclnnCalculateMatmulWeightSizeV2,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnCast,已接入,src_scan,_npu_dtype_cast;npu_dtype_cast,,_npu_dtype_cast;npu_dtype_cast,_npu_dtype_cast;npu_dtype_cast;npu_dtype_cast_impl_op_api,external/op-plugin/op_plugin/ops/opapi/CastKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnCat,已接入,src_scan,cat;cat.names;cat.names_out;cat.out,,cat;cat.names;cat.names_out;cat.out,cat;cat_out,external/op-plugin/op_plugin/ops/opapi/CatKernelNpuOpApi.cpp,"['v2.1', 'v2.12'];all_version",cat;cat.names;cat.names_out;cat.out,False,shared_by_4_ops;src_only
-all,aclnnCeil,已接入,yaml_exec,ceil;ceil.out;ceil_,ceil;ceil.out;ceil_,,,,all_version,ceil;ceil.out,False,shared_by_3_ops;yaml_only
+all,aclnnCeil,已接入,yaml_exec,ceil;ceil.out,ceil;ceil.out,,,,all_version,ceil;ceil.out,False,shared_by_2_ops;yaml_only
 all,aclnnCelu,已接入,yaml_exec,celu,celu,,,,all_version,celu,False,yaml_only
 all,aclnnChamferDistanceBackward,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnChannelShuffle,已接入,yaml_exec,channel_shuffle,channel_shuffle,,,,all_version,channel_shuffle,False,yaml_only
@@ -406,7 +406,7 @@ all,aclnnInplaceBitwiseOrScalar,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_
 all,aclnnInplaceBitwiseOrTensor,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
 all,aclnnInplaceBitwiseXorScalar,已接入,src_scan,bitwise_xor_.Scalar;bitwise_xor_.Tensor,,bitwise_xor_.Scalar;bitwise_xor_.Tensor,bitwise_xor_,external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
 all,aclnnInplaceBitwiseXorTensor,已接入,src_scan,bitwise_xor_.Scalar;bitwise_xor_.Tensor,,bitwise_xor_.Scalar;bitwise_xor_.Tensor,bitwise_xor_,external/op-plugin/op_plugin/ops/opapi/BitwiseXorKernelNpuOpApi.cpp,all_version,,True,shared_by_2_ops;src_only
-all,aclnnInplaceCeil,未接入,,,,,,,,,False,no_yaml_exec_and_no_src_scan_hit
+all,aclnnInplaceCeil,已接入,yaml_exec,ceil_,ceil_,,,,all_version,ceil_,False,yaml_only
 all,aclnnInplaceCelu,已接入,yaml_exec,celu_,celu_,,,,all_version,celu_,False,yaml_only
 all,aclnnInplaceClampMax,已接入,yaml_exec,clamp_max_,clamp_max_,,,,all_version,clamp_max_,False,yaml_only
 all,aclnnInplaceClampMaxTensor,已接入,yaml_exec,clamp_max_.Tensor,clamp_max_.Tensor,,,,all_version,,True,yaml_only
