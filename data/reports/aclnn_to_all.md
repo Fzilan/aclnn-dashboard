@@ -118,7 +118,7 @@
 | aclnnCalculateConvolutionWeightSize | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnCalculateMatmulWeightSize | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnCalculateMatmulWeightSizeV2 | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
-| aclnnCast | ✅ | _npu_dtype_cast;npu_dtype_cast | ✅ | ✅ | ✅ | Cast;MultiScaleDeformableAttn;MultiScaleDeformableAttnGrad |
+| aclnnCast | ✅ | _npu_dtype_cast;npu_dtype_cast | ✅ | ✅ | ✅ | Cast;MultiScaleDeformableAttn;MultiScaleDeformableAttnGrad;STFT |
 | aclnnCat | ✅ | cat;cat.names;cat.names_out;cat.out | ✅ | ✖️ | ✅ | Concat |
 | aclnnCeil | ✅ | ceil;ceil.out | ✅ | ✅ | ✅ | Ceil |
 | aclnnCelu | ✅ | celu | ✖️ | ✖️ | ✖️ |  |
