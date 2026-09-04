@@ -10,9 +10,9 @@
     "torch_coverage_rate": 69.4,
     "mindspore_coverage_rate": 46.0,
     "both_coverage_rate": 39.6,
-    "last_update_time": "2026-09-03T12:48:08+08:00",
-    "generated_at": "2026-09-03T12:48:09+08:00",
-    "pipeline_run_time": "2026-09-03T12:48:06+08:00",
+    "last_update_time": "2026-09-04T12:49:41+08:00",
+    "generated_at": "2026-09-04T12:49:42+08:00",
+    "pipeline_run_time": "2026-09-04T12:49:39+08:00",
     "torch_speed_pp_per_day_7d": 0.0,
     "mindspore_speed_pp_per_day_7d": 0.0
   },
@@ -20,31 +20,31 @@
     "source_files": [
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/raw/aclnn-aa.generated.md",
-        "mtime": "2026-09-03T12:47:04+08:00"
+        "mtime": "2026-09-04T12:48:28+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.csv",
-        "mtime": "2026-09-03T12:48:07+08:00"
+        "mtime": "2026-09-04T12:49:40+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_torch_npu.md",
-        "mtime": "2026-09-03T12:48:07+08:00"
+        "mtime": "2026-09-04T12:49:40+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.csv",
-        "mtime": "2026-09-03T12:48:08+08:00"
+        "mtime": "2026-09-04T12:49:41+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_mindspore.md",
-        "mtime": "2026-09-03T12:48:08+08:00"
+        "mtime": "2026-09-04T12:49:41+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.csv",
-        "mtime": "2026-09-03T12:48:08+08:00"
+        "mtime": "2026-09-04T12:49:41+08:00"
       },
       {
         "path": "/home/runner/work/aclnn-dashboard/aclnn-dashboard/data/reports/aclnn_to_all.md",
-        "mtime": "2026-09-03T12:48:08+08:00"
+        "mtime": "2026-09-04T12:49:41+08:00"
       }
     ],
     "markdown_row_counts": {
@@ -1945,11 +1945,9 @@
         "torch_coverage_rate": 69.4,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 39.6
-      }
-    ],
-    "last_7_days": [
+      },
       {
-        "date": "2026-08-28",
+        "date": "2026-09-04",
         "total_ops": 913,
         "torch_supported": 634,
         "mindspore_supported": 420,
@@ -1957,7 +1955,9 @@
         "torch_coverage_rate": 69.4,
         "mindspore_coverage_rate": 46.0,
         "both_coverage_rate": 39.6
-      },
+      }
+    ],
+    "last_7_days": [
       {
         "date": "2026-08-29",
         "total_ops": 913,
@@ -2010,6 +2010,16 @@
       },
       {
         "date": "2026-09-03",
+        "total_ops": 913,
+        "torch_supported": 634,
+        "mindspore_supported": 420,
+        "both_supported": 362,
+        "torch_coverage_rate": 69.4,
+        "mindspore_coverage_rate": 46.0,
+        "both_coverage_rate": 39.6
+      },
+      {
+        "date": "2026-09-04",
         "total_ops": 913,
         "torch_supported": 634,
         "mindspore_supported": 420,
@@ -29107,17 +29117,20 @@
         "supported": true,
         "status": "已接入",
         "via_ops": [
-          "npu_moe_token_unpermute_grad",
-          "npu_moe_token_unpermute_grad_v2"
+          "npu_moe_token_unpermute_grad"
         ],
         "direct_match_ops": [],
         "evidence": [
-          "yaml_exec"
+          "yaml_exec+src_scan"
         ],
         "suspected_fusion": true,
-        "cpp_funcs": [],
-        "cpp_files": [],
-        "remarks": "shared_by_2_ops;yaml_only"
+        "cpp_funcs": [
+          "npu_moe_token_unpermute_grad_v2_symint"
+        ],
+        "cpp_files": [
+          "external/op-plugin/op_plugin/ops/opapi/MoeTokenUnpermuteKernelNpuOpApi.cpp"
+        ],
+        "remarks": "yaml+src;src_hit_but_op_name_unresolved"
       },
       "mindspore": {
         "supported": true,

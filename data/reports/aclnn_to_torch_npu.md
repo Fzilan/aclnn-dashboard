@@ -646,7 +646,7 @@
 | aclnnMoeTokenPermuteWithRoutingMap | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenPermuteWithRoutingMapGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenUnpermute | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
-| aclnnMoeTokenUnpermuteGrad | 已接入 | yaml_exec | npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2 |  | True |  | shared_by_2_ops;yaml_only |
+| aclnnMoeTokenUnpermuteGrad | 已接入 | yaml_exec+src_scan | npu_moe_token_unpermute_grad |  | True | npu_moe_token_unpermute_grad_v2_symint | yaml+src;src_hit_but_op_name_unresolved |
 | aclnnMoeTokenUnpermuteWithEp | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenUnpermuteWithEpGrad | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |
 | aclnnMoeTokenUnpermuteWithRoutingMap | 未接入 |  |  |  | False |  | no_yaml_exec_and_no_src_scan_hit |

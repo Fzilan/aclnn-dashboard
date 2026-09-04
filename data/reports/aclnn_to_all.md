@@ -656,7 +656,7 @@
 | aclnnMoeTokenPermuteWithRoutingMap | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenPermuteWithRoutingMapGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenUnpermute | ✖️ |  | ✅ | ✖️ | ✅ | InnerMoeTokenUnpermute |
-| aclnnMoeTokenUnpermuteGrad | ✅ | npu_moe_token_unpermute_grad;npu_moe_token_unpermute_grad_v2 | ✅ | ✅ | ✅ | MoeTokenUnpermuteGrad |
+| aclnnMoeTokenUnpermuteGrad | ✅ | npu_moe_token_unpermute_grad | ✅ | ✅ | ✅ | MoeTokenUnpermuteGrad |
 | aclnnMoeTokenUnpermuteWithEp | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenUnpermuteWithEpGrad | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnMoeTokenUnpermuteWithRoutingMap | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
