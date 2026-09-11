@@ -837,7 +837,7 @@
 | aclnnSoftshrink | ✅ | softshrink;softshrink.out | ✅ | ✅ | ✅ | SoftShrink |
 | aclnnSoftshrinkBackward | ✅ | softshrink_backward;softshrink_backward.grad_input | ✅ | ✅ | ✅ | SoftShrinkGrad |
 | aclnnSort | ✅ | sort;sort.dimname;sort.dimname_values;sort.stable;sort.values;sort.values_stable | ✅ | ✅ | ✅ | ArgSort;SortExt |
-| aclnnSparseFlashAttentionGrad | ✖️ |  | ✅ | ✅ | ✅ | SparseFlashAttentionGrad |
+| aclnnSparseFlashAttentionGrad | ✖️ |  | ✅ | ✅ | ✅ |  |
 | aclnnSparseLightningIndexerGradKLLoss | ✖️ |  | ✖️ | ✖️ | ✖️ |  |
 | aclnnSplitTensor | ✖️ |  | ✅ | ✅ | ✅ | Chunk;SplitTensor |
 | aclnnSplitWithSize | ✅ | split_with_sizes_copy.out | ✅ | ✅ | ✅ | SplitWithSize |
